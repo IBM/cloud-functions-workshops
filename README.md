@@ -1,2 +1,4 @@
-# cloud-functions-workshops
-IBM Cloud Functions workshops for Developers
+# IBM Cloud Functions Workshops
+
+IBM Cloud Functions developer workshops
+
