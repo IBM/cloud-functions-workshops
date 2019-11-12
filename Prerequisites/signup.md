@@ -2,6 +2,12 @@
 
 You must have a valid IBM Cloud Account to complete exercises in the workshops.
 
+New IBM Cloud accounts default to a [new "lite" account version](https://www.ibm.com/cloud/free/); other [IBM Cloud pricing options](https://www.ibm.com/cloud/pricing) are available if you wish to upgrade at a later time.
+
+_This account provides free access to a subset of IBM Cloud resources, including IBM Cloud Functions. Lite accounts do not need a credit-card to sign up or expire after a set time period, i.e. 30 days._
+
+Developers using "_Lite accounts_" are restricted to development within a single region. Accounts are automatically assigned to either `eu-gb` or `us-south` regions depending on user profile location.
+
 ## Create an Account
 
 1. Open a browser window
@@ -15,7 +21,6 @@ You must have a valid IBM Cloud Account to complete exercises in the workshops.
 
    ![Registration page bottom](images/IBM-Cloud-Registration-2.png)
 
-
 1. Follow link in the validation email when it arrives.
 
     ![Registration page](images/IBM-Cloud-Registration-Email.png)
@@ -26,21 +31,21 @@ You must have a valid IBM Cloud Account to complete exercises in the workshops.
 
 🚨🚨🚨 **PLEASE READ THIS SECTION.** _We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._ 🚨🚨🚨
 
-New IBM Cloud accounts default to a [new "lite" account version](https://www.ibm.com/cloud/free/); other [IBM Cloud pricing options](https://www.ibm.com/cloud/pricing) are available if you wish to upgrade at a later time.
 
-_This account provides free access to a subset of IBM Cloud resources, including IBM Cloud Functions. Lite accounts do not need a credit-card to sign up or expire after a set time period, i.e. 30 days._
-
-Developers using "_Lite accounts_" are restricted to development within a single region. Accounts are automatically assigned to either `eu-gb` or `us-south` regions depending on user profile location.
 
 **When setting up the IBM Cloud CLI, choose the API endpoint for the default account region.**
 
 Follow these instructions to check which default region your lite account has been assigned.
 
-1. From the [Cloud Foundry Organizations](https://console.bluemix.net/account/organizations) page, click the organization name listed in the table. Note that your organization is usually the email address you signed up with, so click on that.
-2. Check the "_Region_" value listed in the organization details table.
-3. If it says United Kingdom then your region is `eu-gb`, and if it says Dallas then your region is `us-south`. Remember this value for the next step.
+1. Open the [Cloud Foundry Organizations](https://cloud.ibm.com/account/cloud-foundry) page
+1. Click the organization `name` listed in the table.
+*Note that your organization is usually the email address you signed up with*
+1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
+1. If it says United Kingdom then your region is `UK South`, and if it says Dallas then your region is `US South`. Remember this value for the next step.
 
-![Registration page](images/default_region.png)
+![Registration page](images/IBM-Cloud-Cloud-Foundry-Orgs.png)
+
+IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account.
 
 🎉🎉🎉 **Congratulations, you've successfully registered an IBM Cloud account** 🎉🎉🎉
 
