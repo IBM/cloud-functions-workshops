@@ -1,2 +1,0 @@
-# Connecting Trigger Feeds
-
