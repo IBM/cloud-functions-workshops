@@ -1,2 +1,0 @@
-# Setting Up the CLI
-

@@ -17,15 +17,15 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
 1. Fill in the registration page:
 
-    ![Registration page top](images/IBM-Cloud-Registration-1.png)
+    ![Registration page top](images/ibm-cloud-registration-1.png)
 
    Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
-   ![Registration page bottom](images/IBM-Cloud-Registration-2.png)
+   ![Registration page bottom](images/ibm-cloud-registration-2.png)
 
 1. Follow link in the validation email when it arrives.
 
-    ![Registration page](images/IBM-Cloud-Registration-Email.png)
+    ![Registration page](images/ibm-cloud-registration-email.png)
 
 1. [Login into IBM Cloud](https://console.bluemix.net/login) using the account credentials you have registered.
 
@@ -39,10 +39,10 @@ Follow these instructions to check which default region your lite account has be
 1. Open the [Cloud Foundry Organizations](https://cloud.ibm.com/account/cloud-foundry) page
 1. Click the organization `name` listed in the table.
 *Note that your organization is usually the email address you signed up with*
-![Registration page](images/IBM-Cloud-Cloud-Foundry-Orgs-1.png)
+![Registration page](images/ibm-cloud-cloud-foundry-orgs-1.png)
 1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
-![Registration page](images/IBM-Cloud-Cloud-Foundry-Orgs-2.png)
+![Registration page](images/ibm-cloud-cloud-foundry-orgs-2.png)
 
 🚨The value should be either `UK South` or `US South`. **Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).🚨
 

@@ -1,2 +1,0 @@
-# Installing Cloud Functions Plugin
-
