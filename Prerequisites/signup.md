@@ -42,11 +42,9 @@ Follow these instructions to check which default region your lite account has be
 *Note that your organization is usually the email address you signed up with*
 1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
-it should have a value of `UK South` or `US South`:
-
 ![Registration page](images/IBM-Cloud-Cloud-Foundry-Orgs.png)
 
-Remember this value for the next step (Installing the IBM Cloud CLI):
+The value should be either `UK South` or `US South`. Remember this value for the next step (Installing the IBM Cloud CLI).
 
 _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account._
 
