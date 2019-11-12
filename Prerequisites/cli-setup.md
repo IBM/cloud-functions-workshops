@@ -2,28 +2,33 @@
 
 This section will take you step-by-step through [Getting started with the IBM Cloud CLI and Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) using the command line option.
 
-## Install IBM Cloud CLI
+### Install IBM Cloud CLI [:link:](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)
 
 Download the `ibmcloud` CLI by running the command appropriate for your operating system:
 
 - **MacOS & Linux**:
-`$ curl -sL https://ibm.biz/idt-installer | bash`
+    ```bash
+    $ curl -sL https://ibm.biz/idt-installer | bash
+    ```
 - **Windows 10 Pro** (Powershell)
 Run the following as Administrator:
-`$ [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')`
+    ```bash
+    $ [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
+    ```
      - _**Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator._
 
-![Registration page]()
+### Verify the Installation [:link:](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step2-verify-idt)
 
-### Verify the Installation [:bookmark:](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step2-verify-idt)
+Try running the help command:
+```bash
+$ ibmcloud dev help
+```
 
-Try running the help command: `$ ibmcloud dev help`
-
-## Log Into IBM Cloud CLI
+### Login and Configure the IBM Cloud CLI [:link:](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env)
 
 1. Use this command to authenticate the IBM Cloud CLI with your account credentials.
 
-   ```text
+   ```bash
    $ ibmcloud login
    ```
 
