@@ -1,14 +1,23 @@
 # Setting Up the CLI
 
+This section will take you step-by-step through [Getting started with the IBM Cloud CLI and Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) using the command line option.
+
 ## Install IBM Cloud CLI
 
 Download the `ibmcloud` CLI by running the command appropriate for your operating system:
 
-1. MacOS: `curl -fsSL https://clis.ng.bluemix.net/install/osx | sh`
-2. Linux: `curl -fsSL https://clis.ng.bluemix.net/install/linux | sh`
-3. Windows \(Powershell\): `iex(New-Object Net.WebClient).DownloadString('https://clis.ng.bluemix.net/install/powershell')`
+- **MacOS & Linux**:
+`$ curl -sL https://ibm.biz/idt-installer | bash`
+- **Windows 10 Pro** (Powershell)
+Run the following as Administrator:
+`$ [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')`
+     - _**Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator._
 
-![Registration page](https://github.com/mrutkows/fn-workshops/tree/f9a9f057e96f8493ab777e3d193376a2301461c5/.gitbook/assets/docs.gif)
+![Registration page]()
+
+### Verify the Installation [:bookmark:](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step2-verify-idt)
+
+Try running the help command: `$ ibmcloud dev help`
 
 ## Log Into IBM Cloud CLI
 
