@@ -24,7 +24,7 @@ The workshops are organized incrementally, by developer experience level from be
 
 The workshops are organized as follows:
 
-- [**Prequisites**](prerequisites/README.md) - Provides instructions on how to sign up for IBM Cloud and the IBM Cloud Functions service, as well as the installation of the Command Line Interface (CLI) and other tooling needed for the workshops.
-- [**NodeJS Introductory Workshop**](101-intro-workshop-nodejs/README.md) -
+- [**Prequisites**](prereqs/README.md) - Provides instructions on how to sign up for IBM Cloud and the IBM Cloud Functions service, as well as the installation of the Command Line Interface (CLI) and other tooling needed for the workshops.
+- [**NodeJS Introductory Workshop**](101-workshop-nodejs/README.md) -
 
 *Note* All workshop materials are provided under the [Apache 2 license](LICENSE).
