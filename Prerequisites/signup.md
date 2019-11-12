@@ -29,9 +29,7 @@ Developers using "_Lite accounts_" are restricted to development within a single
 
 ## Verify Default Region
 
-🚨🚨🚨 **PLEASE READ THIS SECTION.** _We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._ 🚨🚨🚨
-
-
+🚨 **PLEASE READ THIS SECTION.** _We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._
 
 **When setting up the IBM Cloud CLI, choose the API endpoint for the default account region.**
 
@@ -44,7 +42,7 @@ Follow these instructions to check which default region your lite account has be
 
 ![Registration page](images/IBM-Cloud-Cloud-Foundry-Orgs.png)
 
-The value should be either `UK South` or `US South`. Remember this value for the next step (Installing the IBM Cloud CLI).
+🚨The value should be either `UK South` or `US South`. Remember this as tge default region value for the next step (Installing the IBM Cloud CLI).
 
 _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account._
 
