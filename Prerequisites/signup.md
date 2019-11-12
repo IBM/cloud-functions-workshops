@@ -6,7 +6,9 @@ New IBM Cloud accounts default to a [new "lite" account version](https://www.ibm
 
 _This account provides free access to a subset of IBM Cloud resources, including IBM Cloud Functions. Lite accounts do not need a credit-card to sign up or expire after a set time period, i.e. 30 days._
 
-Developers using "_Lite accounts_" are restricted to development within a single region. Accounts are automatically assigned to either `eu-gb` or `us-south` regions depending on user profile location.
+Developers using "_Lite accounts_" are restricted to development within a single region. Accounts are automatically assigned to either `UK South` or `US South` regions depending on user profile location.
+
+_**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account._
 
 ## Create an Account
 
@@ -29,9 +31,8 @@ Developers using "_Lite accounts_" are restricted to development within a single
 
 ## Verify Default Region
 
-🚨 **PLEASE READ THIS SECTION.** _We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._
-
-**When setting up the IBM Cloud CLI, choose the API endpoint for the default account region.**
+🚨 **Please follow this instructions** _
+We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._🚨
 
 Follow these instructions to check which default region your lite account has been assigned.
 
@@ -42,11 +43,8 @@ Follow these instructions to check which default region your lite account has be
 
 ![Registration page](images/IBM-Cloud-Cloud-Foundry-Orgs.png)
 
-🚨The value should be either `UK South` or `US South`. Remember this as tge default region value for the next step (Installing the IBM Cloud CLI).
-
-_**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account._
+🚨The value should be either `UK South` or `US South`. **Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).🚨
 
 ---
-
-🎉🎉🎉 **Congratulations, you've successfully registered an IBM Cloud account** 🎉🎉🎉
+🎉 **Congratulations, you've successfully registered an IBM Cloud account** 🎉
 
