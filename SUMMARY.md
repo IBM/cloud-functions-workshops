@@ -1,9 +1,9 @@
 # Table of contents
 
 * [IBM Cloud Functions Workshops](README.md)
-* [Setting Up Dev Environment](Prerequisites/README.md)
-  * [Sign Up](Prerequisites/sign-up.md)
-  * [Setting Up the CLI](Prerequisites/setting-up-the-cli.md)
+* [SPrerequisites](Prerequisites/README.md)
+  * [Signing Up for an IBM Cloud Account](Prerequisites/sign-up.md)
+  * [Setting Up the IBM Cloud CLI](Prerequisites/setting-up-the-cli.md)
   * [Installing Cloud Functions Plugin](Prerequisites/installing-cloud-functions-plugin.md)
 * [Introductory Workshop for NodeJS](101-Intro-Workshop-NodeJS/README.md)
   * [IBM Cloud Functions Web UI](101-Intro-Workshop-NodeJS/ex5-ibm-cloud-functions-web-ui/README.md)
