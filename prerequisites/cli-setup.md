@@ -1,30 +1,36 @@
-# Setting Up the CLI
+# Setting Up the IBM Cloud CLI
 
 This section will take you step-by-step through [Getting started with the IBM Cloud CLI and Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) using the command line option.
 
-### Install IBM Cloud CLI [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)
+## Install IBM Cloud CLI [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)
 
 Download the `ibmcloud` CLI by running the command appropriate for your operating system:
 
-- **MacOS & Linux**:
-    ```bash
-    $ curl -sL https://ibm.biz/idt-installer | bash
-    ```
-- **Windows 10 Pro** (Powershell)
-Run the following as Administrator:
-    ```bash
-    $ [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
-    ```
-     - _**Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator._
+* **MacOS & Linux**:
 
-### Verify the Installation [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step2-verify-idt)
+  ```bash
+    $ curl -sL https://ibm.biz/idt-installer | bash
+  ```
+
+* **Windows 10 Pro** \(Powershell\)
+
+  Run the following as Administrator:
+
+  ```bash
+    $ [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
+  ```
+
+  * _**Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator._
+
+## Verify the Installation [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step2-verify-idt)
 
 Try running the help command:
+
 ```bash
 $ ibmcloud dev help
 ```
 
-### Login and Configure the IBM Cloud CLI [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env)
+## Login and Configure the IBM Cloud CLI [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env)
 
 1. Use this command to authenticate the IBM Cloud CLI with your account credentials.
 
@@ -85,6 +91,6 @@ $ ibmcloud dev help
    Org:              user@email.com
    Space:            dev
    ```
----
+
 🎉 **Congratulations, you've successfully registered an IBM Cloud account and logged into the IBM Cloud CLI.** 🎉
 

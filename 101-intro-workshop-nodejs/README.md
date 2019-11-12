@@ -1,4 +1,4 @@
-# Introductory Workshop
+# Introductory Workshop for NodeJS
 
 Hello 👋.
 
