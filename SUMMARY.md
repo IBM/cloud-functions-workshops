@@ -1,7 +1,7 @@
 # Table of contents
 
 * [IBM Cloud Functions Workshops](README.md)
-* [prerequisites](prerequisites/README.md)
+* [Prerequisites](prerequisites/README.md)
   * [Signing Up for an IBM Cloud Account](prerequisites/signup.md)
   * [Setting Up the IBM Cloud CLI](prerequisites/cli-setup.md)
   * [Installing Cloud Functions Plugin](prerequisites/cloud-functions.md)
