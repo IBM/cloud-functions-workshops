@@ -1,6 +1,10 @@
 # Table of contents
 
 * [IBM Cloud Functions Workshops](README.md)
+* [Setting Up Dev Environment](Prerequisites/README.md)
+  * [Sign Up](Prerequisites/sign-up.md)
+  * [Setting Up the CLI](Prerequisites/setting-up-the-cli.md)
+  * [Installing Cloud Functions Plugin](Prerequisites/installing-cloud-functions-plugin.md)
 * [Introductory Workshop for NodeJS](101-Intro-Workshop-NodeJS/README.md)
   * [IBM Cloud Functions Web UI](101-Intro-Workshop-NodeJS/ex5-ibm-cloud-functions-web-ui/README.md)
     * [Monitoring and APIs](101-Intro-Workshop-NodeJS/ex5-ibm-cloud-functions-web-ui/monitoring_and_apis.md)
@@ -25,9 +29,5 @@
   * [Exposing APIs from Actions](101-Intro-Workshop-NodeJS/ex4-exposing-apis-from-actions/README.md)
     * [Concepts](101/ex4-exposing-apis-from-actions/concepts.md)
     * [Web Actions](101-Intro-Workshop-NodeJS/ex4-exposing-apis-from-actions/web_actions.md)
-* [Setting Up Dev Environment](setting-up-dev-environment/README.md)
-  * [Installing Cloud Functions Plugin](setting-up-dev-environment/installing-cloud-functions-plugin.md)
-  * [Setting Up the CLI](setting-up-dev-environment/setting-up-the-cli.md)
-  * [Sign Up](setting-up-dev-environment/sign-up.md)
 * [Table of contents](table-of-contents.md)
 
