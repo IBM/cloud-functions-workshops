@@ -54,7 +54,8 @@ Follow these instructions to check which default region your lite account has be
 
 ![Registration page](images/ibm-cloud-cloud-foundry-orgs-2.png)
 
-🚨The value should be either `UK South` or `US South`. **Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).🚨
+🚨The value should be either `UK South` or `US South`.
+**Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).🚨
 
 ---
 🎉 **Congratulations, you've successfully registered an IBM Cloud account** 🎉
