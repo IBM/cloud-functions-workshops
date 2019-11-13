@@ -44,4 +44,4 @@ The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Clou
 _**Note**: This `cloud-functions` CLI plugin provides the_ [_Apache OpenWhisk CLI_](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md) _as a sub-command under the IBM Cloud CLI. Platform credentials are provided automatically by the IBM Cloud CLI. THis is why one of the aliases is named `wsk`._
 
 ---
-🎉 **Congratulations, you've successfully registered an IBM Cloud account, configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
+🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
