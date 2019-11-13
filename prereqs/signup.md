@@ -35,7 +35,7 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
     ![Registration completed](images/ibm-cloud-registration-4.png)
 
-1. [Login into IBM Cloud](https://console.bluemix.net/login) using the account credentials you have registered.
+1. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
     _**Note**: You should be redirected there automatically after confirming the account from the email._
 
