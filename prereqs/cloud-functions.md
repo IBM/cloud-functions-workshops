@@ -21,33 +21,6 @@ OK
 Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephine/.bluemix/plugins/cloud-functions. Use 'ibmcloud plugin show cloud-functions' to show its details.
 ```
 
-## Test IBM Cloud Functions From The CLI
-
-Run the following command to invoke a test function from the command-line.
-
-```bash
-$ ibmcloud fn action invoke whisk.system/utils/echo -p message hello --result
-```
-
-```bash
-{
-    "message": "hello"
-}
-```
-
-_If this command executes successfully, you have verified that the IBM Cloud CLI and Cloud Functions plugin have been installed and configured correctly. If this does not work, please contact the workshop organizer to provide assistance!_
-
-## Using aliases for the Cloud Functions plugin
-
-The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Cloud CLI by its name `cloud-functions`, but can also be referenced by the shorter aliases `functions`, `fn` and `wsk`.
-
-_**Note**: This `cloud-functions` CLI plugin provides the_ [_Apache OpenWhisk CLI_](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md) _as a sub-command under the IBM Cloud CLI. Platform credentials are provided automatically by the IBM Cloud CLI. THis is why one of the aliases is named `wsk`._
-
----
-🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
-
----
-
 ## Target a Resource Group and Namespace
 
 1. List all available resource groups on your account:
@@ -78,13 +51,38 @@ Org:               josephine.watson@gmail.com
 Space:             dev
 ```
 
-1. List all available namespaces for your resource group:
+1. Verify your (default) namespace is configured to the `cloud-functions` plugin:
 
 ```bash
 $ ibmcloud fn namespace list
-name                            type         id                                    description
+
+name                            type         id
 josephine.watson@gmail.com_dev  CF-based     josephine.watson@gmail.com_dev
 ```
 
+_**Note**: A default namespace should have been created for you as part of the installation and confuiguration of the `cloud-functions` plugin._
+
+## Test IBM Cloud Functions From The CLI
+
+Run the following command to invoke a test function from the command-line.
+
+```bash
+$ ibmcloud fn action invoke whisk.system/utils/echo -p message hello --result
+```
+
+```bash
+{
+    "message": "hello"
+}
+```
+
+_If this command executes successfully, you have verified that the IBM Cloud CLI and Cloud Functions plugin have been installed and configured correctly. If this does not work, please contact the workshop organizer to provide assistance!_
+
+## Using aliases for the Cloud Functions plugin
+
+The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Cloud CLI by its name `cloud-functions`, but can also be referenced by the shorter aliases `functions`, `fn` and `wsk`.
+
+_**Note**: This `cloud-functions` CLI plugin provides the_ [_Apache OpenWhisk CLI_](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md) _as a sub-command under the IBM Cloud CLI. Platform credentials are provided automatically by the IBM Cloud CLI. THis is why one of the aliases is named `wsk`._
+
 ---
-🎉 **Congratulations, you've successfully installed and configured the ```cloud-functions``` plugin.** 🎉
+🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
