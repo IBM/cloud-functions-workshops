@@ -35,18 +35,16 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 1. Navigate to [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
 
 1. Fill in the registration page:
-<p>
-        <img src="images/ibm-cloud-registration-1.png" width="1400" height="680" class="imgTag-b489daf6" style="cursor: zoom-in;" />
-</p>
+
+    ![Registration form](images/ibm-cloud-registration-1.png)
+
 1. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
-    ![Registration page bottom](images/ibm-cloud-registration-2.png)
+    ![Contact preferences](images/ibm-cloud-registration-2.png)
 
     You should be directed to verify your account email address:
 
-    ![Registration account email message](images/ibm-cloud-registration-3.png)
-
-       <img src="images/ibm-cloud-registration-3.png" width="640" />
+    ![Check email](images/ibm-cloud-registration-3.png)
 
 1. Look for the account confirmation email in your inbox:
 
@@ -54,7 +52,7 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
     and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
 
-    ![Registration completed](images/ibm-cloud-registration-4.png)
+    ![Registration confirmed](images/ibm-cloud-registration-4.png)
 
 1. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
@@ -63,8 +61,8 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 ## Verify Default Region
 
 {% hint style="warning" %}
-🚨 **Please follow this instructions** _
-We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._🚨
+**Please follow these instructions** _
+We know it looks boring but trust us! People often skim this part and then complain they can't login into the CLI. These instructions will save you all that inevitable confusion..._
 {% endhint %}
 
 Follow these instructions to check which default region your lite account has been assigned.
@@ -73,7 +71,7 @@ Follow these instructions to check which default region your lite account has be
 1. Click the organization `name` listed in the table.
 *Note that your organization is usually the email address you signed up with*
 ![Registration page](images/ibm-cloud-cloud-foundry-orgs-1.png)
-1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.🚨
+1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
 ![Registration page](images/ibm-cloud-cloud-foundry-orgs-2.png)
 
