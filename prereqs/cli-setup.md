@@ -32,64 +32,58 @@ $ ibmcloud dev help
    $ ibmcloud login
    ```
 
-2. Choose an API endpoint from the list. _**IBM Cloud Functions is available in the following regions:**_ `eu-de`_**,**_ `eu-gb` _**and**_ `us-south`_**. Choose the default account region from the previous section.**_
+1. Enter account credentials for your IBM Cloud account.
 
-   ```bash
-   Select an API endpoint:
-   1. eu-de - https://api.eu-de.bluemix.net
-   2. au-syd - https://api.au-syd.bluemix.net
-   3. us-east - https://api.us-east.bluemix.net
-   4. us-south - https://api.ng.bluemix.net
-   5. eu-gb - https://api.eu-gb.bluemix.net
-   6. Enter a different API endpoint
-   Enter a number>
-   ```
-
-3. Enter account credentials for your IBM Cloud account.
-
-   ```bash
+    ```bash
     Email> josephine.watson@gmail.com
 
     Password>
-   Authenticating...
-   OK
+    Authenticating...
+    OK
 
-   Select an account (or press enter to skip):
-   Select an account:
-   1. Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
-
-   Enter a number> 1
-    Targeted account Matt Rutkowski's Account (87a302ad58884640a45f959d3da6cc77)
+    Targeted account Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
 
 
     API endpoint:      https://cloud.ibm.com
     Region:            us-south
-    User:              josephine.watson@gmail.co
+    User:              josephine.watson@gmail.com
     Account:           Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
     Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
     CF API endpoint:
     Org:
     Space:
-   ```
+    ```
 
-4. Run the following command to configure the organisation and space the CLI is targeting.
+    _Note: If you already have created an IBM Cloud account you may be prompted to select the account you wish the IBM Cloud CLI to use:_
 
-   ```bash
-   $ ibmcloud target --cf
-   ```
+    ```bash
+    Select an account (or press enter to skip):
+    Select an account:
+    1. Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
 
-   ```bash
-   Targeted org josephine.watson@gmail.co
-   Targeted space dev
+    Enter a number> 1
+    ```
 
-   API endpoint:     https://api.eu-gb.bluemix.net (API version: 2.92.0)
-   Region:           eu-gb ???
-   User:             josephine.watson@gmail.co
-   Account:          No account targeted, use 'bx target -c ACCOUNT_ID' ???
-   Resource group:   No resource group targeted, use 'bx target -g RESOURCE_GROUP' ???
-   Org:              josephine.watson@gmail.co
-   Space:            dev
-   ```
+1. Configure your Cloud Foundry organization and space the CLI is targeting.
+
+    Run the following interactive command:
+    ```bash
+    $ ibmcloud target --cf
+    ```
+
+    ```bash
+    Targeted Cloud Foundry (https://api.ng.bluemix.net)
+    Targeted org josephine.watson@gmail.com
+    Targeted space dev
+
+    API endpoint:      https://cloud.ibm.com
+    Region:            us-south
+    User:              josephine.watson@gmail.com
+    Account:           Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
+    Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
+    CF API endpoint:   https://api.ng.bluemix.net (API version: 2.142.0)
+    Org:               ljosephine.watson@gmail.com
+    Space:             dev
+    ```
 ---
 🎉 **Congratulations, you've successfully registered an IBM Cloud account and logged into the IBM Cloud CLI.** 🎉
-
