@@ -19,13 +19,19 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
     ![Registration page top](images/ibm-cloud-registration-1.png)
 
-   Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
+    Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
-   ![Registration page bottom](images/ibm-cloud-registration-2.png)
+    ![Registration page bottom](images/ibm-cloud-registration-2.png)
+
+    You should be directed to verify your account email address:
+    ![Registration page bottom](images/ibm-cloud-registration-3.png)
 
 1. Follow link in the validation email when it arrives.
 
     ![Registration page](images/ibm-cloud-registration-email.png)
+
+    and click `Confirm account` which should take you back to IBM Cloud and display a confirmatiopn message:
+    ![Registration page bottom](images/ibm-cloud-registration-4.png)
 
 1. [Login into IBM Cloud](https://console.bluemix.net/login) using the account credentials you have registered.
 
