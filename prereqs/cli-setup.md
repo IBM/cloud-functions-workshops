@@ -28,14 +28,14 @@ Download the `ibmcloud` CLI by running the command appropriate for your operatin
 - **MacOS & Linux**:
 
     ```bash
-    $ curl -sL https://ibm.biz/idt-installer | bash
+    curl -sL https://ibm.biz/idt-installer | bash
     ```
 
 - **Windows 10 Pro** (Powershell)
 Run the following as Administrator:
 
     ```bash
-    $ [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
+    [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
     ```
 
      - _**Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator._
@@ -45,7 +45,7 @@ Run the following as Administrator:
 Try running the help command:
 
 ```bash
-$ ibmcloud dev help
+ibmcloud dev help
 ```
 
 ### Login and Configure the IBM Cloud CLI [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env)
@@ -53,7 +53,7 @@ $ ibmcloud dev help
 1. Use this command to authenticate the IBM Cloud CLI with your account credentials.
 
    ```bash
-   $ ibmcloud login
+   ibmcloud login
    ```
 
 1. Enter account credentials for your IBM Cloud account.
@@ -93,7 +93,7 @@ $ ibmcloud dev help
     Run the following interactive command:
 
     ```bash
-    $ ibmcloud target --cf
+    ibmcloud target --cf
     ```
 
     ```bash

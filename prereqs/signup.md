@@ -57,7 +57,7 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 1. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
 {% hint style="tip" %}
-You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)l
+You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)
 {% endhint %}
 
 ## Verify Default Region
