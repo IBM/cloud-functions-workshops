@@ -58,20 +58,21 @@ $ ibmcloud resource groups
 Retrieving all resource groups under account Josephine Watson's Account as josephine.watson@gmail.com...
 OK
 Name      ID                                 Default Group   State
-default   2cdb253b144c4d36ae8f1c125a3ab6d5   true            ACTIVE
+Default   2cdb253b144c4d36ae8f1c125a3ab6d5   true            ACTIVE
 ```
 
-1. Target the desired resource group. In this case we target the group named `default`:
+1. Target the desired resource group. In this case we target the group named `Default`:
 
 ```bash
-$ ibmcloud target -g default
+$ ibmcloud target -g Default
+
 Targeted resource group default
 
 API endpoint:      https://cloud.ibm.com
 Region:            us-south
 User:              josephine.watson@gmail.com
 Account:           Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
-Resource group:    default
+Resource group:    Default
 CF API endpoint:   https://api.ng.bluemix.net (API version: 2.142.0)
 Org:               josephine.watson@gmail.com
 Space:             dev
