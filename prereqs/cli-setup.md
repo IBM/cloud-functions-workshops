@@ -53,7 +53,7 @@ $ ibmcloud dev help
 
 1. Enter account credentials for your IBM Cloud account.
 
-    ```bash
+    ```text
     Email> josephine.watson@gmail.com
 
     Password>
@@ -86,6 +86,7 @@ $ ibmcloud dev help
 1. Configure your Cloud Foundry organization and space the CLI is targeting.
 
     Run the following interactive command:
+
     ```bash
     $ ibmcloud target --cf
     ```
@@ -107,5 +108,6 @@ $ ibmcloud dev help
 
     _**Note**: If you already have already created an Namespaces, you may ne prompted to select the Namespace you wish to use as the default for the `cloud-functions` plugin._
 
----
+{% hint style="success" %}
 🎉 **Congratulations, you've successfully registered an IBM Cloud account and logged into the IBM Cloud CLI.** 🎉
+{% endhint %}

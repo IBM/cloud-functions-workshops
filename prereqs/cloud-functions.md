@@ -96,10 +96,9 @@ You should see that the built-in `echo` function responds with a JSON result tha
 }
 ```
 
----
+{% hint style="success" %}
 🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
-
----
+{% endhint %}
 
 ## Using aliases for the Cloud Functions plugin
 
