@@ -12,13 +12,13 @@ $ ibmcloud plugin install cloud-functions
 
 ```text
 Looking up 'cloud-functions' from repository 'IBM Cloud'...
-Plug-in 'cloud-functions 1.0.36' found in repository 'IBM Cloud'
+Plug-in 'cloud-functions 1.0.xx' found in repository 'IBM Cloud'
 Attempting to download the binary file...
  12.93 MiB / 12.93 MiB [===========================================] 100.00% 1s
 13563264 bytes downloaded
 Installing binary...
 OK
-Plug-in 'cloud-functions 1.0.36' was successfully installed into /Users/Matt/.bluemix/plugins/cloud-functions. Use 'ibmcloud plugin show cloud-functions' to show its details.
+Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephine/.bluemix/plugins/cloud-functions. Use 'ibmcloud plugin show cloud-functions' to show its details.
 ```
 
 ## Test IBM Cloud Functions From The CLI
