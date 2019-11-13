@@ -85,3 +85,6 @@ $ ibmcloud fn namespace list
 name                            type         id                                    description
 josephine.watson@gmail.com_dev  CF-based     josephine.watson@gmail.com_dev
 ```
+
+---
+🎉 **Congratulations, you've successfully installed and configured the ```cloud-functions``` plugin.** 🎉
