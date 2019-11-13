@@ -1,3 +1,22 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Setting Up the CLI
 
 This section will take you step-by-step through [Getting started with the IBM Cloud CLI and Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) using the command line option.
@@ -82,8 +101,11 @@ $ ibmcloud dev help
     Account:           Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
     Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
     CF API endpoint:   https://api.ng.bluemix.net (API version: 2.142.0)
-    Org:               ljosephine.watson@gmail.com
+    Org:               josephine.watson@gmail.com
     Space:             dev
     ```
+
+    _**Note**: If you already have already created an Namespaces, you may ne prompted to select the Namespace you wish to use as the default for the `cloud-functions` plugin._
+
 ---
 🎉 **Congratulations, you've successfully registered an IBM Cloud account and logged into the IBM Cloud CLI.** 🎉
