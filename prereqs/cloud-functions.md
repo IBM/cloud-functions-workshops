@@ -26,7 +26,7 @@ This section will take you step-by-step through the [setup of the IBM Cloud Func
 Use this command to install the Cloud Functions plugin for the IBM Cloud CLI.
 
 ```bash
-$ ibmcloud plugin install cloud-functions
+ibmcloud plugin install cloud-functions
 ```
 
 ```bash
@@ -44,7 +44,7 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 
 1. List all available resource groups on your account:
     ```bash
-    $ ibmcloud resource groups
+    ibmcloud resource groups
     ```
     ```bash
     Retrieving all resource groups under account Josephine Watson's Account as josephine.watson@gmail.com...
@@ -56,8 +56,10 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 1. Target the desired resource group. In this case we target the group named `Default`:
 
     ```bash
-    $ ibmcloud target -g Default
+    ibmcloud target -g Default
+    ```
 
+    ```bash
     Targeted resource group default
 
     API endpoint:      https://cloud.ibm.com
@@ -73,8 +75,10 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 1. Verify your (default) namespace is configured to the `cloud-functions` plugin:
 
     ```bash
-    $ ibmcloud fn namespace list
+    ibmcloud fn namespace list
+    ```
 
+    ```bash
     name                            type         id
     josephine.watson@gmail.com_dev  CF-based     josephine.watson@gmail.com_dev
     ```
@@ -86,8 +90,9 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 Run the following command to invoke a test function from the command-line.
 
 ```bash
-$ ibmcloud fn action invoke whisk.system/utils/echo -p message hello --result
+ibmcloud fn action invoke whisk.system/utils/echo -p message hello --result
 ```
+
 You should see that the built-in `echo` function responds with a JSON result that set the `message` key's value to "hello":
 
 ```bash
