@@ -36,7 +36,7 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
 1. Fill in the registration page:
 
-    ![Registration page top](images/ibm-cloud-registration-1.png)
+    ![Registration page top](images/ibm-cloud-registration-1.png | width=500)
 
     Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
@@ -77,4 +77,6 @@ Follow these instructions to check which default region your lite account has be
 **Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).🚨
 
 ---
+{% hint style="success" %}
 🎉 **Congratulations, you've successfully registered an IBM Cloud account** 🎉
+{% endhint %}

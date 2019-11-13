@@ -79,7 +79,7 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
     josephine.watson@gmail.com_dev  CF-based     josephine.watson@gmail.com_dev
     ```
 
-    _**Note**: A default namespace should have been created for you as part of the installation and confuiguration of the `cloud-functions` plugin._
+    _**Note**: A default namespace should have been created for you as part of the installation and configuration of the `cloud-functions` plugin._
 
 ## Test IBM Cloud Functions From The CLI
 
