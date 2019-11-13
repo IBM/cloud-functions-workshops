@@ -6,11 +6,11 @@ This section will take you step-by-step through the [setup of the IBM Cloud Func
 
 Use this command to install the Cloud Functions plugin for the IBM Cloud CLI.
 
-```text
+```bash
 $ ibmcloud plugin install cloud-functions
 ```
 
-```text
+```bash
 Looking up 'cloud-functions' from repository 'IBM Cloud'...
 Plug-in 'cloud-functions 1.0.xx' found in repository 'IBM Cloud'
 Attempting to download the binary file...
@@ -25,17 +25,17 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 
 Run the following command to invoke a test function from the command-line.
 
-```text
+```bash
 $ ibmcloud fn action invoke whisk.system/utils/echo -p message hello --result
 ```
 
-```text
+```bash
 {
     "message": "hello"
 }
 ```
 
-_If this command executes successfully, you have verified that the IBM Cloud CLI and Cloud Functions plugin have been installed and configured correctly. If this does not work, please contact the workshop organiser to provide assistance!_
+_If this command executes successfully, you have verified that the IBM Cloud CLI and Cloud Functions plugin have been installed and configured correctly. If this does not work, please contact the workshop organizer to provide assistance!_
 
 ## Using aliases for the Cloud Functions plugin
 
@@ -45,3 +45,42 @@ _**Note**: This `cloud-functions` CLI plugin provides the_ [_Apache OpenWhisk CL
 
 ---
 🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
+
+---
+
+## Target a Resource Group and Namespace
+
+1. List all available resource groups on your account:
+```bash
+$ ibmcloud resource groups
+```
+```bash
+Retrieving all resource groups under account Josephine Watson's Account as josephine.watson@gmail.com...
+OK
+Name      ID                                 Default Group   State
+default   2cdb253b144c4d36ae8f1c125a3ab6d5   true            ACTIVE
+```
+
+1. Target the desired resource group. In this case we target the group named `default`:
+
+```bash
+$ ibmcloud target -g default
+Targeted resource group default
+
+API endpoint:      https://cloud.ibm.com
+Region:            us-south
+User:              josephine.watson@gmail.com
+Account:           Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
+Resource group:    default
+CF API endpoint:   https://api.ng.bluemix.net (API version: 2.142.0)
+Org:               josephine.watson@gmail.com
+Space:             dev
+```
+
+1. List all available namespaces for your resource group:
+
+```bash
+$ ibmcloud fn namespace list
+name                            type         id                                    description
+josephine.watson@gmail.com_dev  CF-based     josephine.watson@gmail.com_dev
+```

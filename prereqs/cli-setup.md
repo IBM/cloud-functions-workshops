@@ -34,7 +34,7 @@ $ ibmcloud dev help
 
 2. Choose an API endpoint from the list. _**IBM Cloud Functions is available in the following regions:**_ `eu-de`_**,**_ `eu-gb` _**and**_ `us-south`_**. Choose the default account region from the previous section.**_
 
-   ```text
+   ```bash
    Select an API endpoint:
    1. eu-de - https://api.eu-de.bluemix.net
    2. au-syd - https://api.au-syd.bluemix.net
@@ -47,42 +47,47 @@ $ ibmcloud dev help
 
 3. Enter account credentials for your IBM Cloud account.
 
-   ```text
-   Email> user@email.com
+   ```bash
+    Email> josephine.watson@gmail.com
 
-   Password>
+    Password>
    Authenticating...
    OK
 
    Select an account (or press enter to skip):
-   1. John Smith's Account (xxx)
-   Enter a number>
+   Select an account:
+   1. Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
 
-   API endpoint:     https://api.eu-gb.bluemix.net (API version: 2.92.0)
-   Region:           eu-gb
-   User:             user@email.com
-   Account:          No account targeted, use 'bx target -c ACCOUNT_ID'
-   Resource group:   No resource group targeted, use 'bx target -g RESOURCE_GROUP'
-   Org:
-   Space:
+   Enter a number> 1
+    Targeted account Matt Rutkowski's Account (87a302ad58884640a45f959d3da6cc77)
+
+
+    API endpoint:      https://cloud.ibm.com
+    Region:            us-south
+    User:              josephine.watson@gmail.co
+    Account:           Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
+    Resource group:    No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
+    CF API endpoint:
+    Org:
+    Space:
    ```
 
 4. Run the following command to configure the organisation and space the CLI is targeting.
 
-   ```text
+   ```bash
    $ ibmcloud target --cf
    ```
 
-   ```text
-   Targeted org user@email.com
+   ```bash
+   Targeted org josephine.watson@gmail.co
    Targeted space dev
 
    API endpoint:     https://api.eu-gb.bluemix.net (API version: 2.92.0)
-   Region:           eu-gb
-   User:             user@email.com
-   Account:          No account targeted, use 'bx target -c ACCOUNT_ID'
-   Resource group:   No resource group targeted, use 'bx target -g RESOURCE_GROUP'
-   Org:              user@email.com
+   Region:           eu-gb ???
+   User:             josephine.watson@gmail.co
+   Account:          No account targeted, use 'bx target -c ACCOUNT_ID' ???
+   Resource group:   No resource group targeted, use 'bx target -g RESOURCE_GROUP' ???
+   Org:              josephine.watson@gmail.co
    Space:            dev
    ```
 ---
