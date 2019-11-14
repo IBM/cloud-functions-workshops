@@ -114,5 +114,18 @@ The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Clou
 - `wsk`
 
 {% hint style="info" %}
-_**Info**: The `cloud-functions` plugin provides an IBM specific implementation of the [Apache OpenWhisk CLI](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). This is why one of the aliases is named `wsk`. However, the IBM version supports custom configurations needed for working the IBM Cloud and its services._
+_**Info**: The `cloud-functions` plugin provides an IBM specific implementation of the [Apache OpenWhisk CLI](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). This is why one of the aliases is named `wsk`. However, the IBM version supports custom credentials and configurations needed for working with the IBM Cloud and its services._
 {% endhint %}
+
+### Logging out
+
+{% hint style="warning" %}
+_**Warning**: This section is informational. Do not logout now or you will have to redo steps you just completed!_
+{% endhint %}
+
+Some configuration data is lost every time you logout of the IBM Cloud account, or if your login expires. You will have to follow the steps described above to configure your:
+
+- Default Resource group
+- Default Namespace
+
+once again as it is used by the IBM Cloud Functions plugin.
