@@ -120,7 +120,7 @@ _**Info**: The `cloud-functions` plugin provides an IBM specific implementation 
 ### Logging out of your IBM Cloud account
 
 {% hint style="warning" %}
-_**Warning**:_ **Do not logout now or you will have to redo steps you just completed!**
+**Warning**: _**Do not logout now or you will have to redo steps you just completed!**_
 {% endhint %}
 
 Some configuration data is lost every time you logout of the IBM Cloud account, or if your login expires including your default:
