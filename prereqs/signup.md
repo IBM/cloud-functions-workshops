@@ -77,7 +77,7 @@ Follow these instructions to check which default region your lite account has be
 
 3. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
-    [Cloud Foundry Org. Spaces](images/ibm-cloud-cloud-foundry-orgs-2.png)
+    ![Cloud Foundry Org. Spaces](images/ibm-cloud-cloud-foundry-orgs-2.png)
 
     {% hint style="info" %}
     The value should be either `UK South` or `US South`. **Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).
