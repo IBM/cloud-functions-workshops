@@ -32,29 +32,29 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 ## Create an Account
 
 1. Open a browser window
-1. Navigate to [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
+2. Navigate to [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
 
-1. Fill in the registration page:
+3. Fill in the registration page:
 
 ![IBM Cloud Registration Form](images/ibm-cloud-registration-1.png)
 
-1. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
+4. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
 ![IBM Cloud Contact, Privacy and T&C](images/ibm-cloud-registration-2.png)
 
-    You should be directed to verify your account email address:
+You should be directed to verify your account email address:
 
-    ![Check email](images/ibm-cloud-registration-3.png)
+![Check your email message](images/ibm-cloud-registration-3.png)
 
-1. Look for the account confirmation email in your inbox:
+5. Look for the account confirmation email in your inbox:
 
-    ![Confirmation email](images/ibm-cloud-registration-email.png)
+![IBM Cloud Confirmation Email](images/ibm-cloud-registration-email.png)
 
-    and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
+and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
 
-    ![Registration confirmed](images/ibm-cloud-registration-4.png)
+![Registration confirmed message](images/ibm-cloud-registration-4.png)
 
-1. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
+6. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
 {% hint style="tip" %}
 You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)
