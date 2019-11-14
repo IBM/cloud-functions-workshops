@@ -58,16 +58,13 @@ ibmcloud dev help
 
 1. Enter account credentials for your IBM Cloud account.
 
-    ```text
+    ```
     Email: josephine.watson@gmail.com
-
     Password: ********
     Authenticating...
     OK
 
     Targeted account Josephine Watson's Account (87a302ad58884640a45f959d3da6cc77)
-
-
     API endpoint:      https://cloud.ibm.com
     Region:            us-south
     User:              josephine.watson@gmail.com
