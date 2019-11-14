@@ -17,11 +17,11 @@
 #
 -->
 
-# Installing Cloud Functions Plugin
+## Installing Cloud Functions Plugin
 
 This section will take you step-by-step through the [setup of the IBM Cloud Functions CLI plugin](https://cloud.ibm.com/functions/learn/cli).
 
-## Install IBM Cloud Functions CLI plugin
+### Install IBM Cloud Functions CLI plugin
 
 Use this command to install the Cloud Functions plugin for the IBM Cloud CLI.
 
@@ -40,12 +40,14 @@ OK
 Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephine/.bluemix/plugins/cloud-functions. Use 'ibmcloud plugin show cloud-functions' to show its details.
 ```
 
-## Target a Resource Group and Namespace
+### Target a Resource Group and Namespace
 
 1. List all available resource groups on your account:
+
     ```bash
     ibmcloud resource groups
     ```
+
     ```bash
     Retrieving all resource groups under account Josephine Watson's Account as josephine.watson@gmail.com...
     OK
@@ -85,7 +87,7 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 
     _**Note**: A default namespace should have been created for you as part of the installation and configuration of the `cloud-functions` plugin._
 
-## Test IBM Cloud Functions From The CLI
+### Test IBM Cloud Functions From The CLI
 
 Run the following command to invoke a test function from the command-line.
 
@@ -105,7 +107,7 @@ You should see that the built-in `echo` function responds with a JSON result tha
 🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
 {% endhint %}
 
-## Using aliases for the Cloud Functions plugin
+### Using aliases for the Cloud Functions plugin
 
 The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Cloud CLI by its name `cloud-functions`, but can also be referenced by the shorter aliases:
 

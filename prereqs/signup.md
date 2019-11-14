@@ -17,7 +17,7 @@
 #
 -->
 
-# Sign Up for an IBM Cloud Account
+## Sign Up for an IBM Cloud Account
 
 You must have a valid IBM Cloud Account to complete exercises in the workshops.
 
@@ -29,16 +29,16 @@ Developers using "_Lite accounts_" are restricted to development within a single
 
 _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account._
 
-## Create an Account
+### Create an Account
 
 1. Open a browser window
-2. Navigate to [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
+1. Navigate to [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
 
-3. Fill in the registration page:
+1. Fill in the registration page:
 
     ![IBM Cloud Registration Form](images/ibm-cloud-registration-1.png)
 
-4. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
+1. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
     ![IBM Cloud Contact, Privacy and T&C](images/ibm-cloud-registration-2.png)
 
@@ -46,7 +46,7 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
     ![Check your email message](images/ibm-cloud-registration-3.png)
 
-5. Look for the account confirmation email in your inbox:
+1. Look for the account confirmation email in your inbox:
 
     ![IBM Cloud Confirmation Email](images/ibm-cloud-registration-email.png)
 
@@ -54,13 +54,13 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
     ![Registration confirmed message](images/ibm-cloud-registration-4.png)
 
-6. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
+1. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
     {% hint style="tip" %}
     You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)
     {% endhint %}
 
-## Verify Default Region
+### Verify Default Region
 
 {% hint style="warning" %}
 **Please follow these instructions** _
@@ -75,7 +75,7 @@ Follow these instructions to check which default region your lite account has be
 
     ![Cloud Foundry Orgs.](images/ibm-cloud-cloud-foundry-orgs-1.png)
 
-3. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
+1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
     ![Cloud Foundry Org. Spaces](images/ibm-cloud-cloud-foundry-orgs-2.png)
 
