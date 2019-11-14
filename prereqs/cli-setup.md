@@ -59,7 +59,7 @@ ibmcloud dev help
 1. Enter account credentials for your IBM Cloud account.
 
     ```
-    Email: josephine.watson@gmail.com
+    Email> josephine.watson@gmail.com
     Password: ********
     Authenticating...
     OK

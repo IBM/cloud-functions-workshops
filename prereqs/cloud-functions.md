@@ -107,6 +107,12 @@ You should see that the built-in `echo` function responds with a JSON result tha
 
 ## Using aliases for the Cloud Functions plugin
 
-The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Cloud CLI by its name `cloud-functions`, but can also be referenced by the shorter aliases `functions`, `fn` and `wsk`.
+The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Cloud CLI by its name `cloud-functions`, but can also be referenced by the shorter aliases:
 
-_**Note**: This `cloud-functions` CLI plugin provides the_ [_Apache OpenWhisk CLI_](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md) _as a sub-command under the IBM Cloud CLI. Platform credentials are provided automatically by the IBM Cloud CLI. THis is why one of the aliases is named `wsk`._
+- `functions`
+- `fn` _or_
+- `wsk`
+
+{% hint style="info" %}
+_**Note**: The `cloud-functions` plugin provides an IBM specific implementation of the [_Apache OpenWhisk CLI_](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). This is why one of the aliases is named `wsk`._
+{% endhint %}
