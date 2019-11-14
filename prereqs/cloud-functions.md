@@ -114,5 +114,5 @@ The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Clou
 - `wsk`
 
 {% hint style="info" %}
-_**Note**: The `cloud-functions` plugin provides an IBM specific implementation of the [Apache OpenWhisk CLI](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). This is why one of the aliases is named `wsk`._
+_**Info**: The `cloud-functions` plugin provides an IBM specific implementation of the [Apache OpenWhisk CLI](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). This is why one of the aliases is named `wsk`. However, the IBM version supports custom configurations needed for working the IBM Cloud and its services._
 {% endhint %}
