@@ -73,11 +73,11 @@ Follow these instructions to check which default region your lite account has be
 1. Click the organization `name` listed in the table.
 *Note that your organization is usually the email address you signed up with*
 
-![Registration page](images/ibm-cloud-cloud-foundry-orgs-1.png)
+![Verify CF Org. Name](images/ibm-cloud-cloud-foundry-orgs-1.png)
 
-1. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
+3. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
-![Registration page](images/ibm-cloud-cloud-foundry-orgs-2.png)
+![ZVerify Region](images/ibm-cloud-cloud-foundry-orgs-2.png)
 
 {% hint style="info" %}
 The value should be either `UK South` or `US South`.
