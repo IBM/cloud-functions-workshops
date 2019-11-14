@@ -36,11 +36,11 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
 1. Fill in the registration page:
 
-    ![Registration form](images/ibm-cloud-registration-1.png)
+![IBM Cloud Registration Form](images/ibm-cloud-registration-1.png)
 
 1. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
-    ![Contact preferences](images/ibm-cloud-registration-2.png)
+![IBM Cloud Contact, Privacy and T&C](images/ibm-cloud-registration-2.png)
 
     You should be directed to verify your account email address:
 
