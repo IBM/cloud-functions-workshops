@@ -126,25 +126,7 @@ If you don't need the action result right away, you can omit the `—blocking` f
    }
    ```
 
-#### Retrieve activation list
-
-1. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
-
-```bash
-ibmcloud fn activation list
-```
-
-```bash
-Activation ID                    Kind      Start Duration Status  Entity
-44794bd6aab74415b4e42a308d880e5b nodejs:10 cold  34s      success <NAMESPACE>/hello:0.0.1
-6bf1f670ee614a7eb5af3c9fde813043 nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0.1
-```
-
-{% hint style="info" %}
-**Note** The `Entity` column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
-{% endhint %}
-
-#### Retrieve the last activation result
+#### Retrieve the result from the last activation
 
 To access the most recent activation record, activation results or activation logs, use the `--last` or `-l` flag.
 
@@ -160,9 +142,51 @@ To access the most recent activation record, activation results or activation lo
   }
   ```
 
-  {% hint style="info" %}
-  _Note that you should not use an activation ID with the flag `--last`._
-  {% endhint %}
+{% hint style="warning" %}
+_Note that you should not use an activation ID with the flag `--last`._
+{% endhint %}
+
+#### Retrieve full activation record
+
+1. If you want to get the complete activation record. Run the following command:
+
+  ```bash
+  ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
+  ```
+
+  ```json
+  ok: got activation 6bf1f670ee614a7eb5af3c9fde813043
+  {
+    ...
+    "response": {
+        "result": {
+            "payload": "Hello world"
+        },
+        "size": 25,
+        "status": "success",
+        "success": true
+    },
+    ...
+  }
+  ```
+
+#### Retrieve activation list
+
+1. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
+
+```bash
+ibmcloud fn activation list
+```
+
+```bash
+Datetime   Activation ID  Kind      Start Duration Status  Entity
+y:m:d:hm:s 44794bd6...    nodejs:10 cold  34s      success <NAMESPACE>/hello:0.0.1
+y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0.1
+```
+
+{% hint style="info" %}
+**Note** The `Entity` column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
+{% endhint %}
 
 {% hint style="success" %}
 🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
