@@ -60,8 +60,8 @@ Review the following steps and examples to create your first JavaScript action.
 
 After you create your action, you can run it on IBM Cloud Functions with the `invoke` command using one of two modes:
 
-- **blocking** - _which will wait for the result \(i.e., request/response style\) by specifying the `blocking` flag on the command-line._
-- **non-blocking** - _which will invoke the action, but not wait for a response._
+- **blocking** - which will _**wait**_ for the result \(i.e., request/response style\) by specifying the `blocking` flag on the command-line.
+- **non-blocking** - which will invoke the action immediately, but _**not wait**_ for a response.
 
 Regardless, invocations always provide an **Activation ID** which can be used later to lookup the action's response.
 
@@ -99,6 +99,8 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
   ```
 
 #### Non-blocking invocations
+
+A non-blocking invocation will invoke the action immediately, but _not wait_ for a response.
 
 If you don't need the action result right away, you can omit the `—blocking` flag to make a non-blocking invocation. You can get the result later by using the **Activation ID**.
 
