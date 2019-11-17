@@ -76,17 +76,20 @@ A blocking invocation request will _wait_ for the activation result to be availa
   ```
 
   ```bash
-  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
 
+along with the complete Activation record in JSON format.  It will include the result of the invocation and the function's result as follows:
+
   ```json
-  {
-      "result": {
-          "payload": "Hello world"
-      },
-      "status": "success",
-      "success": true
-  }
+  "response": {
+        "result": {
+            "payload": "Hello world"
+        },
+        "size": 25,
+        "status": "success",
+        "success": true
+    },
   ```
 
   The command outputs two important pieces of information:
