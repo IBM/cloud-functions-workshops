@@ -1,3 +1,22 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Using Action Parameters
 
 Event parameters can be passed to the action when it is invoked. Let's look at a sample action which uses the parameters to calculate the return values.
@@ -6,7 +25,7 @@ Event parameters can be passed to the action when it is invoked. Let's look at a
 
 1. Update the file `hello.js` with the following following content:
 
-   ```text
+   ```javascript
    function main(params) {
        return {payload:  'Hello, ' + params.name + ' from ' + params.place};
    }
@@ -16,8 +35,8 @@ Event parameters can be passed to the action when it is invoked. Let's look at a
 
 2. Update the `hello` action with the new source code.
 
-   ```text
-   $ ibmcloud wsk action update hello hello.js
+   ```bash
+   ibmcloud fn action update hello hello.js
    ```
 
 ## Invoking action with parameters
@@ -26,11 +45,11 @@ When invoking actions through the command-line, parameter values can be passed a
 
 1. Invoke the `hello` action using explicit command-line parameters.
 
-   ```text
-   $ ibmcloud wsk action invoke --result hello --param name Bernie --param place Vermont
+   ```bash
+   ibmcloud fn action invoke --result hello --param name Bernie --param place Vermont
    ```
 
-   ```text
+   ```json
    {
        "payload": "Hello, Bernie from Vermont"
    }
@@ -38,7 +57,7 @@ When invoking actions through the command-line, parameter values can be passed a
 
 2. Create a file \(`parameters.json`\) containing the following JSON.
 
-   ```text
+   ```json
    {
        "name": "Bernie",
        "place": "Vermont"
@@ -47,11 +66,11 @@ When invoking actions through the command-line, parameter values can be passed a
 
 3. Invoke the `hello` action using parameters from a JSON file.
 
-   ```text
-   $ ibmcloud wsk action invoke --result hello --param-file parameters.json
+   ```bash
+   ibmcloud fn action invoke --result hello --param-file parameters.json
    ```
 
-   ```text
+   ```json
    {
        "payload": "Hello, Bernie from Vermont"
    }
@@ -65,7 +84,7 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 
 1. Create the `hello-person` action with the following source code.
 
-   ```text
+   ```javascript
    function main(params) {
        return {payload:  'Hello, ' + params.person.name + ' from ' + params.person.place};
    }
@@ -75,19 +94,21 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 
 2. Invoke the action with a single `person` parameter that is valid JSON.
 
-   ```text
-   $ ibmcloud wsk action invoke --result hello-person -p person '{"name": "Bernie", "place": "Vermont"}'
+   ```bash
+   ibmcloud fn action invoke --result hello-person -p person '{"name": "Bernie", "place": "Vermont"}'
    ```
 
    The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the action now expects:
 
-   ```text
+   ```json
    {
        "payload": "Hello, Bernie from Vermont"
    }
    ```
 
-🎉🎉🎉 **That was pretty easy, huh? We can now pass parameters and access these values in our serverless functions. What about parameters that we need but don't want to manually pass in every time? Guess what, we have a trick for that…** 🎉🎉🎉
+{% hint style="success" %}
+🎉 **That was pretty easy, huh? We can now pass parameters and access these values in our serverless functions. What about parameters that we need but don't want to manually pass in every time? Guess what, we have a trick for that…** 🎉
+{% endhint %}
 
 ## Setting default parameters
 
@@ -100,30 +121,30 @@ Let's use the `hello` action from our previous example and bind a default value 
 Update the action by using the `—param` option to bind default parameter values.
 
 ```text
-$ ibmcloud wsk action update hello --param place Vermont
+$ ibmcloud fn action update hello --param place Vermont
 ```
 
 Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `-param-file` flag:
 
 Example parameter file called parameters.json:
 
-```text
+```json
 {
     "place": "Vermont"
 }
 ```
 
-```text
-$ ibmcloud wsk action update hello --param-file parameters.json
+```bash
+ibmcloud fn action update hello --param-file parameters.json
 ```
 
 Invoke the action, passing only the `name` parameter this time.
 
-```text
-$ ibmcloud wsk action invoke --result hello --param name Bernie
+```bash
+ibmcloud fn action invoke --result hello --param name Bernie
 ```
 
-```text
+```json
 {
     "payload": "Hello, Bernie from Vermont"
 }
@@ -133,12 +154,12 @@ Notice that you did not need to specify the place parameter when you invoked the
 
 Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
-```text
-$ ibmcloud wsk action invoke --result hello --param name Bernie --param place "Washington, DC"
+```bash
+ibmcloud fn action invoke --result hello --param name Bernie --param place "Washington, DC"
 ```
 
-```text
-{  
+```json
+{
     "payload": "Hello, Bernie from Washington, DC"
 }
 ```
