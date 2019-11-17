@@ -32,6 +32,7 @@ Review the following steps and examples to create your first JavaScript action.
    ```
 
    The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action.
+  ``
 
 2. Create an action from the following JavaScript function. For this example, the action is called 'hello'.
 
@@ -60,10 +61,12 @@ Review the following steps and examples to create your first JavaScript action.
 
 **After you create your action, you can run it on IBM Cloud Functions with the 'invoke' command.**
 
-You can invoke actions as
+You can invoke actions as a
 
-- _**blocking**_ invocation which will wait for the result \(i.e., request/response style\) by specifying a flag \(`—blocking`\) on the command-line. or a
-- _**non-blocking**_ invocation which will invoke the action, but not wait for a response.
+- _**blocking**_ invocation
+  which will wait for the result \(i.e., request/response style\) by specifying a flag \(`—blocking`\) on the command-line. or a
+- _**non-blocking**_ invocation
+  which will invoke the action, but not wait for a response.
 
 Invocations always provide an **Activation ID** which can be used later to lookup the action's response.
 
