@@ -63,12 +63,10 @@ Review the following steps and examples to create your first JavaScript action.
 
 You can invoke actions as a
 
-- _**blocking**_ invocation
-  which will wait for the result \(i.e., request/response style\) by specifying a flag \(`—blocking`\) on the command-line. or a
-- _**non-blocking**_ invocation
-  which will invoke the action, but not wait for a response.
+- **blocking** invocation - _which will wait for the result \(i.e., request/response style\) by specifying a flag \(`—blocking`\) on the command-line. or a_
+- **non-blocking** invocation - _which will invoke the action, but not wait for a response._
 
-Invocations always provide an **Activation ID** which can be used later to lookup the action's response.
+Regardless, invocations always provide an **Activation ID** which can be used later to lookup the action's response.
 
 #### Blocking Invocations
 
