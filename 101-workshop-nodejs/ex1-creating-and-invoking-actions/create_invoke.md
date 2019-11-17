@@ -136,7 +136,7 @@ ibmcloud fn activation list
 
 ```bash
 Activation ID                    Kind      Start Duration Status  Entity
-44794bd6aab74415b4e42a308d880e5b nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0.1
+44794bd6aab74415b4e42a308d880e5b nodejs:10 cold  34s      success <NAMESPACE>/hello:0.0.1
 6bf1f670ee614a7eb5af3c9fde813043 nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0.1
 ```
 
