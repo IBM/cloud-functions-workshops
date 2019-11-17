@@ -45,38 +45,40 @@ When invoking actions through the command-line, parameter values can be passed a
 
 1. Invoke the `hello` action using explicit command-line parameters.
 
-   ```bash
-   ibmcloud fn action invoke --result hello --param name Bernie --param place Vermont
-   ```
+    ```bash
+    ibmcloud fn action invoke --result hello --param name Bernie --param place Vermont
+    ```
 
-   ```json
-   {
-       "payload": "Hello, Bernie from Vermont"
-   }
-   ```
+    ```json
+    {
+        "payload": "Hello, Bernie from Vermont"
+    }
+    ```
 
 2. Create a file \(`parameters.json`\) containing the following JSON.
 
-   ```json
-   {
-       "name": "Bernie",
-       "place": "Vermont"
-   }
-   ```
+    ```json
+    {
+        "name": "Bernie",
+        "place": "Vermont"
+    }
+    ```
 
 3. Invoke the `hello` action using parameters from a JSON file.
 
-   ```bash
-   ibmcloud fn action invoke --result hello --param-file parameters.json
-   ```
+    ```bash
+    ibmcloud fn action invoke --result hello --param-file parameters.json
+    ```
 
-   ```json
-   {
-       "payload": "Hello, Bernie from Vermont"
-   }
-   ```
+    ```json
+    {
+        "payload": "Hello, Bernie from Vermont"
+    }
+    ```
 
-_Notice the use of the_ `--result` _option: it implies a blocking invocation where the CLI waits for the activation to complete and then displays only the result. For convenience, this option may be used without_ `--blocking` _which is automatically inferred._
+    {% hint style="info" %}
+    _Notice the use of the_ `--result` _option: it implies a blocking invocation where the CLI waits for the activation to complete and then displays only the result. For convenience, this option may be used without_ `--blocking` _which is automatically inferred._
+    {% endhint %}
 
 ### Nested parameters
 
@@ -165,4 +167,3 @@ ibmcloud fn action invoke --result hello --param name Bernie --param place "Wash
 ```
 
 🎉🎉🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs. Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, huh?** 🎉🎉🎉
-
