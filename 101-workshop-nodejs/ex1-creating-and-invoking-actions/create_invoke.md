@@ -17,9 +17,9 @@
 #
 -->
 
-## Creating And Invoking Actions
+# Creating And Invoking Actions
 
-### Creating Node.js actions
+## Creating Node.js actions
 
 Review the following steps and examples to create your first JavaScript action.
 
@@ -56,7 +56,7 @@ Review the following steps and examples to create your first JavaScript action.
 
    You can see the `hello` action you just created under your default NAMESPACE.
 
-### Invoking Actions
+## Invoking Actions
 
 After you create your action, you can run it on IBM Cloud Functions with the `invoke` command using one of two modes:
 
@@ -65,7 +65,7 @@ After you create your action, you can run it on IBM Cloud Functions with the `in
 
 Regardless, invocations always provide an **Activation ID** which can be used later to lookup the action's response.
 
-#### Blocking Invocations
+### Blocking Invocations
 
 A blocking invocation request will _wait_ for the activation result to be available.
 
@@ -98,7 +98,7 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
     ...
   ```
 
-#### Non-blocking invocations
+### Non-blocking invocations
 
 A non-blocking invocation will invoke the action immediately, but _not wait_ for a response.
 
@@ -126,9 +126,9 @@ If you don't need the action result right away, you can omit the `—blocking` f
    }
    ```
 
-1. Retrieve the full activation record
+#### Retrieve the full activation record
 
-  If you want to get the complete activation record use the `activation get` command:
+  1. To get the complete activation record use the `activation get` command:
 
   ```bash
   ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
@@ -150,9 +150,9 @@ If you don't need the action result right away, you can omit the `—blocking` f
   }
   ```
 
-#### Retrieve the result from the last activation
+## Retrieve the last activation result
 
-To access the most recent activation record, activation results or activation logs, use the `--last` or `-l` flag.
+To access the most recent activation result use the `--last` or `-l` flag.
 
 1. Run the following command to get your last activation result.
 
@@ -167,10 +167,14 @@ To access the most recent activation record, activation results or activation lo
   ```
 
 {% hint style="warning" %}
-_Note that you should not use an activation ID with the flag `--last`._
+_Do not use an activation ID with the flag `--last`._
 {% endhint %}
 
-#### Retrieve activation list
+{% hint style="info" %}
+**Note** The `--last` flag can also be used to get the last activation record (`activation get --last), activation activation logs,
+{% endhint %}
+
+## Retrieve activation list
 
 1. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
 
