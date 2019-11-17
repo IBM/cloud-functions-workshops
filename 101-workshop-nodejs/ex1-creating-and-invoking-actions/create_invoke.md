@@ -40,7 +40,7 @@ Review the following steps and examples to create your first JavaScript action.
    ibmcloud fn action create hello hello.js
    ```
 
-   ```bash
+   ```text
    ok: created action hello
    ```
 
@@ -50,7 +50,7 @@ Review the following steps and examples to create your first JavaScript action.
    ibmcloud fn action list
    ```
 
-   ```bash
+   ```text
    actions
    <NAMESPACE>/hello       private    nodejs10
    ```
