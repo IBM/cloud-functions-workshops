@@ -111,7 +111,7 @@ If you don't need the action result right away, you can omit the `—blocking` f
    ```
 
    ```bash
-   ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+   ok: invoked /_/hello with id 6bf1f670ee614a7eb5af3c9fde813043
    ```
 
 1. Retrieve the activation result
@@ -126,29 +126,9 @@ If you don't need the action result right away, you can omit the `—blocking` f
    }
    ```
 
-#### Retrieve the result from the last activation
+1. Retrieve the full activation record
 
-To access the most recent activation record, activation results or activation logs, use the `--last` or `-l` flag.
-
-1. Run the following command to get your last activation result.
-
-  ```bash
-  ibmcloud fn activation result --last
-  ```
-
-  ```json
-  {
-      "payload": "Hello world"
-  }
-  ```
-
-{% hint style="warning" %}
-_Note that you should not use an activation ID with the flag `--last`._
-{% endhint %}
-
-#### Retrieve full activation record
-
-1. If you want to get the complete activation record. Run the following command:
+  If you want to get the complete activation record use the `activation get` command:
 
   ```bash
   ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
@@ -169,6 +149,26 @@ _Note that you should not use an activation ID with the flag `--last`._
     ...
   }
   ```
+
+#### Retrieve the result from the last activation
+
+To access the most recent activation record, activation results or activation logs, use the `--last` or `-l` flag.
+
+1. Run the following command to get your last activation result.
+
+  ```bash
+  ibmcloud fn activation result --last
+  ```
+
+  ```json
+  {
+      "payload": "Hello world"
+  }
+  ```
+
+{% hint style="warning" %}
+_Note that you should not use an activation ID with the flag `--last`._
+{% endhint %}
 
 #### Retrieve activation list
 
