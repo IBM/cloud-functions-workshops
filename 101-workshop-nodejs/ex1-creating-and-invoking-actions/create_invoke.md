@@ -51,7 +51,7 @@ Review the following steps and examples to create your first JavaScript action.
 
    ```bash
    actions
-   hello       private
+   <NAMESPACE>/hello       private    nodejs10
    ```
 
    You can see the `hello` action you just created.
