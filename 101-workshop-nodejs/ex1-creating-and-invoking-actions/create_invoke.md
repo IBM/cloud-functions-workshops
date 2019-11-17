@@ -88,7 +88,7 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
   ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
 
-  The complete **Activation record** in JSON format which contains all information about the activation including the complete function's `response`.
+  The complete **Activation record** in JSON format which contains all information about the activation including the complete function's `response`. The JavaScript function's output is the string `Hello world` which appears as the value of the `payload` key.
 
   ```json
   ...
@@ -102,8 +102,6 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
     },
     ...
   ```
-
-As you can see, the JavaScript function's output is the string `Hello world` which is the value of the `payload` key.
 
 #### Non-blocking invocations
 
@@ -151,6 +149,8 @@ To access the most recent activation record, activation results or activation lo
   _Note that you should not use an activation ID with the flag `--last`._
   {% endhint %}
 
+#### Retrieve activation list
+
 1. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
 
 ```bash
@@ -158,10 +158,14 @@ ibmcloud fn activation list
 ```
 
 ```bash
-activations
-44794bd6aab74415b4e42a308d880e5b         hello
-6bf1f670ee614a7eb5af3c9fde813043         hello
+Datetime            Activation ID                    Kind      Start Duration   Status  Entity
+20xx-11-17 14:36:29 44794bd6aab74415b4e42a308d880e5b nodejs:10 warm  2ms        success <NAMESPACE>/hello:0.0.1
+20xx-11-17 14:33:30 6bf1f670ee614a7eb5af3c9fde813043 nodejs:10 warm  2ms        success <NAMESPACE>/hello:0.0.1
 ```
+
+{% hint style="info" %}
+**Note** your Action is listed under the `Entity` column with an internal version. Every time you update your Action function's code, the Cloud Function's platform will increment the internal version number.
+{% endhint %}
 
 {% hint style="success" %}
 🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
