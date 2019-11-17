@@ -82,25 +82,28 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
 
   As you can see, the command outputs two important pieces of information:
 
-  1. The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
+  The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
 
-    ```bash
-    ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
-    ```
-  2. The complete **Activation record** in JSON format which includes the result of the invocation `response`. The `response` function's output, in this case, is the string `Hello world` as the output `payload` value returned by the JavaScript function.
+  ```bash
+  ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
+  ```
 
-    ```json
+  The complete **Activation record** in JSON format which contains all information about the activation including the complete function's `response`.
+
+  ```json
+  ...
+  "response": {
+        "result": {
+            "payload": "Hello world"
+        },
+        "size": 25,
+        "status": "success",
+        "success": true
+    },
     ...
-    "response": {
-          "result": {
-              "payload": "Hello world"
-          },
-          "size": 25,
-          "status": "success",
-          "success": true
-      },
-      ...
-    ```
+  ```
+
+As you can see, the JavaScript function's output is the string `Hello world` which is the value of the `payload` key.
 
 #### Non-blocking invocations
 
