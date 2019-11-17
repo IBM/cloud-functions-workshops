@@ -61,7 +61,7 @@ Review the following steps and examples to create your first JavaScript action.
 
 After you create your action, you can run it on IBM Cloud Functions with the `invoke` command using one of two modes:
 
-- **blocking** - _which will wait for the result \(i.e., request/response style\) by specifying a flag \(`—blocking`\) on the command-line. or a_
+- **blocking** - _which will wait for the result \(i.e., request/response style\) by specifying the `blocking` flag on the command-line._
 - **non-blocking** - _which will invoke the action, but not wait for a response._
 
 Regardless, invocations always provide an **Activation ID** which can be used later to lookup the action's response.
@@ -78,15 +78,13 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
   ibmcloud fn action invoke --blocking hello
   ```
 
-  As you can see, the command outputs two important pieces of information:
-
-  The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`) which can be used later to lookup the response.
+  The command outputs the **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`) which can always be used later to lookup the response:
 
   ```bash
   ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
 
-  and the complete **Activation record** in JSON format which contains all information about the activation including the complete function's `response`. The JavaScript function's output is the string `Hello world` which appears as the value of the `payload` key.
+  and the complete **Activation record** in JSON format which contains all information about the activation including the function's complete `response`. The JavaScript function's output is the string `Hello world` which appears as the value of the `payload` key:
 
   ```json
   ...
