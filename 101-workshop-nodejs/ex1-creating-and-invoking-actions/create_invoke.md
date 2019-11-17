@@ -78,36 +78,32 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
   ```bash
   ibmcloud fn action invoke --blocking hello
   ```
+
   As you can see, the command outputs two important pieces of information:
 
-  - The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
+  1. The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
 
-  ```bash
-  ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
-  ```
+    ```bash
+    ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
+    ```
+  2. The complete **Activation record** in JSON format which includes the result of the invocation `response`. The `response` function's output, in this case, is the string `Hello world` as the output `payload` value returned by the JavaScript function.
 
-  - along with the complete Activation record in JSON format.  It will include the result of the invocation and the function's `result` as follows:
+    ```json
+    ...
+    "response": {
+          "result": {
+              "payload": "Hello world"
+          },
+          "size": 25,
+          "status": "success",
+          "success": true
+      },
+      ...
+    ```
 
-  ```json
-  "response": {
-        "result": {
-            "payload": "Hello world"
-        },
-        "size": 25,
-        "status": "success",
-        "success": true
-    },
-  ```
+#### Non-blocking invocations
 
-  The functions `result` in this case is the string `Hello world` as the output `payload` value returned by the JavaScript function.
-
-  {% hint style="tip" %}
-  The Activation ID can be used to retrieve the result (i.e., Activation record) of the invocation at a future time.
-  {% endhint %}
-
-#### Retrieving an activation result
-
-If you don't need the action result right away, you can omit the `—blocking` flag to make a non-blocking invocation. You can get the result later by using the **activation ID**.
+If you don't need the action result right away, you can omit the `—blocking` flag to make a non-blocking invocation. You can get the result later by using the **Activation ID**.
 
 1. Invoke the `hello` Action using the command-line as a non-blocking activation.
 
