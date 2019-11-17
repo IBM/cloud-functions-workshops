@@ -54,7 +54,7 @@ Review the following steps and examples to create your first JavaScript action.
    <NAMESPACE>/hello       private    nodejs10
    ```
 
-   You can see the `hello` action you just created.
+   You can see the `hello` action you just created under your default NAMESPACE.
 
 ### Invoking Actions
 
@@ -62,8 +62,8 @@ Review the following steps and examples to create your first JavaScript action.
 
 You can invoke actions with a
 
-- _blocking_ invocation \(i.e., request/response style\) or a
-- _non-blocking_ invocation by specifying a flag \(`—blocking`\) on the command-line.
+- _**blocking**_ invocation \(i.e., request/response style\) or a
+- _**non-blocking**_ invocation by specifying a flag \(`—blocking`\) on the command-line.
 
 #### Blocking Invocations
 
