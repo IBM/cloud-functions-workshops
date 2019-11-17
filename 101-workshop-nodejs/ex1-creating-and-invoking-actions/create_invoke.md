@@ -60,14 +60,18 @@ Review the following steps and examples to create your first JavaScript action.
 
 **After you create your action, you can run it on IBM Cloud Functions with the 'invoke' command.**
 
-You can invoke actions with a
+You can invoke actions as
 
-- _**blocking**_ invocation \(i.e., request/response style\) or a
-- _**non-blocking**_ invocation by specifying a flag \(`—blocking`\) on the command-line.
+- _**blocking**_ invocation which will wait for the result \(i.e., request/response style\) by specifying a flag \(`—blocking`\) on the command-line. or a
+- _**non-blocking**_ invocation which will invoke the action, but not wait for a response.
+
+Invocations always provide an **Activation ID** which can be used later to lookup the action's response.
 
 #### Blocking Invocations
 
-A blocking invocation request will _wait_ for the activation result to be available. The wait period is the lesser of 60 seconds or the action's configured [time limit](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#per-action-timeout-ms-default-60s). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests \(see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#watching-action-output) for tips on monitoring activations\).
+A blocking invocation request will _wait_ for the activation result to be available.
+
+The wait period is the lesser of 60 seconds or the action's configured [time limit](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#per-action-timeout-ms-default-60s). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests \(see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#watching-action-output) for tips on monitoring activations\).
 
 1. Invoke the `hello` action using the command-line as a blocking activation.
 
@@ -94,8 +98,8 @@ along with the complete Activation record in JSON format.  It will include the r
 
   The command outputs two important pieces of information:
 
-  * The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
-  * The invocation result if it is available within the expected wait period
+  - The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
+  - The invocation result or **Activation record** in JSON format
 
   The result in this case is the string `Hello world` returned by the JavaScript function. The Activation ID can be used to retrieve the logs or result of the invocation at a future time.
 
