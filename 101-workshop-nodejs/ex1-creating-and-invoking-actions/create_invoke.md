@@ -78,12 +78,15 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
   ```bash
   ibmcloud fn action invoke --blocking hello
   ```
+  As you can see, the command outputs two important pieces of information:
+
+  - The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
 
   ```bash
   ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
 
-along with the complete Activation record in JSON format.  It will include the result of the invocation and the function's result as follows:
+  - along with the complete Activation record in JSON format.  It will include the result of the invocation and the function's `result` as follows:
 
   ```json
   "response": {
@@ -96,12 +99,11 @@ along with the complete Activation record in JSON format.  It will include the r
     },
   ```
 
-  The command outputs two important pieces of information:
+  The functions `result` in this case is the string `Hello world` as the output `payload` value returned by the JavaScript function.
 
-  - The **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`)
-  - The invocation result or **Activation record** in JSON format
-
-  The result in this case is the string `Hello world` returned by the JavaScript function. The Activation ID can be used to retrieve the logs or result of the invocation at a future time.
+  {% hint style="tip" %}
+  The Activation ID can be used to retrieve the result (i.e., Activation record) of the invocation at a future time.
+  {% endhint %}
 
 #### Retrieving an activation result
 
