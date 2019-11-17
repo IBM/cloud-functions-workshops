@@ -1,12 +1,31 @@
-# Creating And Invoking Actions
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
 
-## Creating Node.js actions
+## Creating And Invoking Actions
+
+### Creating Node.js actions
 
 Review the following steps and examples to create your first JavaScript action.
 
 1. Create a JavaScript file with the following content. For this example, the file name is 'hello.js'.
 
-   ```text
+   ```javascript
    function main() {
        return {payload: 'Hello world'};
    }
@@ -16,28 +35,28 @@ Review the following steps and examples to create your first JavaScript action.
 
 2. Create an action from the following JavaScript function. For this example, the action is called 'hello'.
 
-   ```text
-   $ ibmcloud wsk action create hello hello.js
+   ```bash
+   ibmcloud fn action create hello hello.js
    ```
 
-   ```text
+   ```bash
    ok: created action hello
    ```
 
 3. List the actions that you have created:
 
-   ```text
-   $ ibmcloud wsk action list
+   ```bash
+   ibmcloud fn action list
    ```
 
-   ```text
+   ```bash
    actions
    hello       private
    ```
 
    You can see the `hello` action you just created.
 
-## Invoking Actions
+### Invoking Actions
 
 **After you create your action, you can run it on IBM Cloud Functions with the 'invoke' command.**
 
@@ -45,15 +64,15 @@ You can invoke actions with a _blocking_ invocation \(i.e., request/response sty
 
 1. Invoke the `hello` action using the command-line as a blocking activation.
 
-   ```text
-   $ ibmcloud wsk action invoke --blocking hello
+   ```bash
+   ibmcloud fn action invoke --blocking hello
    ```
 
-   ```text
+   ```bash
    ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
    ```
 
-```text
+```json
 {
     "result": {
         "payload": "Hello world"
@@ -65,7 +84,7 @@ You can invoke actions with a _blocking_ invocation \(i.e., request/response sty
 
 The command outputs two important pieces of information:
 
-* The activation ID \(`44794bd6aab74415b4e42a308d880e5b`\)
+* The activation ID (`44794bd6aab74415b4e42a308d880e5b`)
 * The invocation result if it is available within the expected wait period
 
 The result in this case is the string `Hello world` returned by the JavaScript function. The activation ID can be used to retrieve the logs or result of the invocation at a future time.
@@ -74,21 +93,21 @@ If you don't need the action result right away, you can omit the `—blocking` f
 
 1. Invoke the `hello` action using the command-line as a non-blocking activation.
 
-   ```text
-   $ ibmcloud wsk action invoke hello
+   ```bash
+   ibmcloud fn action invoke hello
    ```
 
-   ```text
+   ```bash
    ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
    ```
 
 2. Retrieve the activation result
 
-   ```text
-   $ ibmcloud wsk activation result 6bf1f670ee614a7eb5af3c9fde81304
+   ```bash
+   $ ibmcloud fn activation result 6bf1f670ee614a7eb5af3c9fde81304
    ```
 
-   ```text
+   ```json
    {
        "payload": "Hello world"
    }
@@ -98,29 +117,32 @@ To access the most recent activation record, activation results or activation lo
 
 1. Run the following command to get your last activation result.
 
-```text
-$ ibmcloud wsk activation result --last
+```bash
+ibmcloud fn activation result --last
 ```
 
-```text
+```json
 {
     "payload": "Hello world"
 }
 ```
 
-Note that you should not use an activation ID with the flag `--last`.
+{% hint style="info" %}
+_Note that you should not use an activation ID with the flag `--last`._
+{% endhint %}
 
 1. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
 
-```text
-$ ibmcloud wsk activation list
+```bash
+ibmcloud fn activation list
 ```
 
-```text
+```bash
 activations
 44794bd6aab74415b4e42a308d880e5b         hello
 6bf1f670ee614a7eb5af3c9fde813043         hello
 ```
 
-🎉🎉🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉🎉🎉
-
+{% hint style="success" %}
+🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+{% endhint %}
