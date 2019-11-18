@@ -31,6 +31,8 @@ Once this exercise is finished, we will be able to create simple serverless func
 
 ## Background
 
-Actions are stateless code snippets that run on the OpenWhisk platform. An action can be written as a JavaScript, Swift, PHP, or Python function, a Java method, static binary or a custom executable packaged in a Docker container. For example, an action can be used to detect the faces in an image, respond to a database change, aggregate a set of API calls, or post a Tweet.
+Actions are stateless code snippets (functions) that run on the IBM Cloud Functions (ICF) platform. The Platform supports functions written in JavaScript (NodeJS), Python, Java, Go, PHP, Ruby, .NET or Ballerina programming languages. It also supports functions implemented as executables (binary programs) packaged in Docker containers.
+
+Actions can be used to do many things. For example, an action can be used to respond to a database change, aggregate a set of API calls, post a Tweet or work with AI and analytic services to detect objects in image or streamed video.
 
 Actions can be explicitly invoked, or run in response to an event. In either case, each run of an action results in an activation record that is identified by a unique activation ID. The input to an action and the result of an action are a dictionary of key-value pairs, where the key is a string and the value a valid JSON value. Actions can also be composed of calls to other actions or a defined sequence of actions.
