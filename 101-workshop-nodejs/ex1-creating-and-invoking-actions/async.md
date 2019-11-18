@@ -135,5 +135,5 @@ Let's look at what happens when an action invocation takes longer than the `time
 {% endhint %}
 
 {% hint style="success" %}
-🎉**Bonus Exercise** Try out this exercise [Calling an external API from an Async action](101-workshop-nodejs/bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge! 🎉
+🎉**Bonus Exercise** Try out this exercise [Calling an external API from an Async action](../bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge! 🎉
 {% endhint %}
