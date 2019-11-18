@@ -23,7 +23,7 @@ Application logs are essential to debugging production issues. In IBM Cloud Func
 
 ## Creating activation logs
 
-1. Create a new action \(`logs`\) from the following source files.
+1. Create a new action named `logs` from the following source files.
 
     ```javascript
     function main(params) {
@@ -80,7 +80,7 @@ ibmcloud fn activation logs --last
 ```
 
 ```text
-20x-11-14T09:49:03.021404683Z stdout: function called with params { hello: 'world' }
+20xx-11-14T09:49:03.021404683Z stdout: function called with params { hello: 'world' }
 20xx-11-14T09:49:03.021816473Z stderr: this is an error message
 ```
 

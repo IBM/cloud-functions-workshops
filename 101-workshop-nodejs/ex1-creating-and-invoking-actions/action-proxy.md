@@ -1,3 +1,22 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Calling Other Actions
 
 Using serverless platforms to implement reusable functions means you will often want to invoke one action from another. IBM Cloud Functions provides a [RESTful API](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json) to invoke actions programmatically.
@@ -10,9 +29,9 @@ These libraries make it simple to invoke other actions, fire triggers and access
 
 Let's look an example of creating a "proxy" action which invokes another action if a "password" is present in the input parameters.
 
-1. Create the following new action `proxy` from the following source files.
+1. Create the following new action named `proxy` from the following source files.
 
-   ```text
+   ```javascript
    var openwhisk = require('openwhisk');
 
    function main(params) {
@@ -27,17 +46,17 @@ Let's look an example of creating a "proxy" action which invokes another action 
 
    _The JavaScript library for Apache OpenWhisk is here:_ [_https://github.com/apache/incubator-openwhisk-client-js/_](https://github.com/apache/incubator-openwhisk-client-js/)_._ _This library is pre-installed in the IBM Cloud Functions runtime and does not need to be manually included._
 
-```text
-   $ ibmcloud wsk action create proxy proxy.js
+```bash
+   ibmcloud fn action create proxy proxy.js
 ```
 
 1. Invoke the proxy with an incorrect password.
 
-   ```text
-   $ ibmcloud wsk action invoke proxy -p password wrong -r
+   ```bash
+   ibmcloud fn action invoke proxy -p password wrong -r
    ```
 
-   ```text
+   ```json
    {
        "error": "Password is incorrect!"
    }
@@ -45,11 +64,11 @@ Let's look an example of creating a "proxy" action which invokes another action 
 
 2. Invoke the proxy with the correct password.
 
-   ```text
-   $ ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
+   ```bash
+   ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
    ```
 
-   ```text
+   ```json
    {
        "greeting": "Hello Bernie from Vermont"
    }
@@ -57,8 +76,8 @@ Let's look an example of creating a "proxy" action which invokes another action 
 
 3. Review the activations list to show both actions were invoked.
 
-   ```text
-   $ ibmcloud wsk activation list -l 2
+   ```bash
+   ibmcloud fn activation list -l 2
    ```
 
    ```text
