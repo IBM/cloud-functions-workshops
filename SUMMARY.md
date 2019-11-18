@@ -36,6 +36,8 @@
     * [Push Notifications]()
     * [GitHub]()
     * [Slack]()
+  * [Bonus Exercises](101-workshop-nodejs/bonus-exercises/README.md)
+    * [Calling an external API from an Async action](101-workshop-nodejs/bonus-exercises/ex1-invoking-an-async-api.md)
   * [Additional Topics]()
     * [Action Limits](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-limits)
     * [Using IAM Namespaces (Managing)](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces)

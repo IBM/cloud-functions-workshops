@@ -48,7 +48,7 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
 1. Run the following commands to create the action and invoke it:
 
    ```bash
-   ibmcloud wsk action create asyncAction asyncAction.js
+   ibmcloud fn action create asyncAction asyncAction.js
    ```
 
    ```bash
