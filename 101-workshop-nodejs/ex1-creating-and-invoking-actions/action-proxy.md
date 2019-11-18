@@ -64,7 +64,11 @@ Let's look an example of creating a "proxy" action which invokes another action 
     }
     ```
 
-2. Invoke the proxy with the correct password.
+    {% hint style="tip" %}
+    **Note** On the invoke call above, we used the short form for the `--result` flag which is `-r`.
+    {% endhint %}
+
+1. Invoke the proxy with the correct password.
 
     ```bash
     ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
@@ -76,7 +80,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
     }
     ```
 
-3. Review the activations list to show both actions were invoked.
+1. Review the activations list to show both actions were invoked.
 
    ```bash
    ibmcloud fn activation list -l 2
