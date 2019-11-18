@@ -18,3 +18,5 @@
 -->
 
 # Bonus Exercises
+
+* [Calling an external API from an Async action](ex1-invoking-an-async-api.md)
