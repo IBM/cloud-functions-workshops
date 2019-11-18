@@ -45,7 +45,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
    ```
 
 {% hint style="info" %}
-   **Note** The function above utilizes the [NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) which is pre-installed in the IBM Cloud Functions runtime so you do not need to package it. Its source code can be found here:_ [_https://github.com/apache/openwhisk-client-js/_](https://github.com/apache/openwhisk-client-js/)_.
+   **Note** The function above utilizes the **[NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk)** which is pre-installed in the IBM Cloud Functions runtime so you do not need to package it. _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
 {% endhint %}
 
 ```bash
