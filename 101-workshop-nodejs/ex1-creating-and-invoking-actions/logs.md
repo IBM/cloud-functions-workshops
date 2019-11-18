@@ -114,19 +114,19 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
    ```bash
    Activation: 'logs' (ae57d06630554ccb97d06630555ccb8b)
    [
-       "2018-03-02T09:56:17.8322445Z stdout: function called with params { hello: 'world' }",
-       "2018-03-02T09:56:17.8324766Z stderr: this is an error message"
+       "20xx-11-14T09:56:17.8322445Z stdout: function called with params { hello: 'world' }",
+       "20xx-11-14T09:56:17.8324766Z stderr: this is an error message"
    ]
 
    Activation: 'logs' (0e8d715393504f628d715393503f6227)
    [
-       "2018-03-02T09:56:20.8992704Z stdout: function called with params { hello: 'world' }",
-       "2018-03-02T09:56:20.8993178Z stderr: this is an error message"
+       "20xx-11-14T09:56:20.8992704Z stdout: function called with params { hello: 'world' }",
+       "20xx-11-14T09:56:20.8993178Z stderr: this is an error message"
    ]
 
    Activation: 'logs' (becbb9b0c37f45f98bb9b0c37fc5f9fc)
    [
-       "2018-03-02T09:56:44.6961581Z stderr: this is an error message",
-       "2018-03-02T09:56:44.6964147Z stdout: function called with params { hello: 'world' }"
+       "20xx-11-14T09:56:44.6961581Z stderr: this is an error message",
+       "20xx-11-14T09:56:44.6964147Z stdout: function called with params { hello: 'world' }"
    ]
    ```
