@@ -64,9 +64,9 @@ Let's look an example of creating a "proxy" action which invokes another action 
     }
     ```
 
-    {% hint style="success" %}
-    **Note** On the invoke call above, we used the short form for the `--result` flag which is `-r`.
-    {% endhint %}
+{% hint style="tip" %}
+**Note** On the invoke call above, we used the short form for the `--result` flag which is `-r`.
+{% endhint %}
 
 1. Invoke the proxy with the correct password.
 
@@ -86,12 +86,16 @@ Let's look an example of creating a "proxy" action which invokes another action 
    ibmcloud fn activation list -l 2
    ```
 
-   ```text
-   activations
-   8387302c81dc4d2d87302c81dc4d2dc6 hello
-   e0c603c242c646978603c242c6c6977f proxy
-   ```
+    ```text
+    Activation ID                    Kind      Start Duration   Status  Entity
+    8387302c81dc4d2d87302c81dc4d2dc6 nodejs:10 cold  35ms       success hello:0.0.4
+    e0c603c242c646978603c242c6c6977f nodejs:10 cold  438ms      success proxy:0.0.1
+    ```
 
 {% hint style="tip" %}
-_The [NPM OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used to do **[lots of cool things](https://github.com/apache/openwhisk-client-js/#examples)** within actions such "invoking triggers" to fire events and "chaining action calls"._
+**Note** On the invoke call above, we used the short form for the `--last` flag which is `-l`.
+{% endhint %}
+
+{% hint style="success" %}
+🎉Congrats on proxying an action! Be sure to _**[check out all the cool things](https://github.com/apache/openwhisk-client-js/#examples)**_ the [NPM OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used for such _"invoking triggers"_ to fire events and _"chaining action calls"_ within actions.🎉
 {% endhint %}
