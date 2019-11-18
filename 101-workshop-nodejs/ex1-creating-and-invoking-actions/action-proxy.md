@@ -93,5 +93,5 @@ Let's look an example of creating a "proxy" action which invokes another action 
    ```
 
 {% hint style="tip" %}
-_The [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used to do other things like invoking **triggers** to fire events from actions._
+_The [NPM OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used to do **[lots of cool things](https://github.com/apache/openwhisk-client-js/#examples)** within actions such "invoking triggers" to fire events and "chaining action calls"._
 {% endhint %}
