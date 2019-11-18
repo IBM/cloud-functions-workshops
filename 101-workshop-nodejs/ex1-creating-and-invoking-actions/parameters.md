@@ -92,13 +92,17 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 
 1. Create the `hello-person` action with the following source code.
 
-   ```javascript
-   function main(params) {
-       return {payload:  'Hello, ' + params.person.name + ' from ' + params.person.place};
-   }
-   ```
+    ```javascript
+    function main(params) {
+        return {payload:  'Hello, ' + params.person.name + ' from ' + params.person.place};
+    }
+    ```
 
-   Now the action expects a single `person` parameter to have fields `name` and `place`.
+    ```bash
+    ibmcloud fn action create hello-person hello-person.js
+    ```
+
+    Now the action expects a single `person` parameter to have fields `name` and `place`.
 
 2. Invoke the action with a single `person` parameter that is valid JSON.
 
