@@ -71,7 +71,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
 1. Invoke the proxy with the correct password.
 
     ```bash
-    ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
+    ibmcloud fn action invoke proxy -p password secret -p name Bernie -p place Vermont -r
     ```
 
     ```json
@@ -94,3 +94,6 @@ Let's look an example of creating a "proxy" action which invokes another action 
 
 _These libraries can also be used to invoke triggers to fire events from actions._
 
+{% hint style="success" %}
+🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+{% endhint %}
