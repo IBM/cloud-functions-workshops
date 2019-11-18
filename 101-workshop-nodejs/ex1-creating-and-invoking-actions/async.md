@@ -25,7 +25,7 @@ JavaScript functions that run asynchronously may need to return the activation r
 
 1. Save the following content in a file called `asyncAction.js`.
 
-```text
+```javascript
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
@@ -47,15 +47,15 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
 
 1. Run the following commands to create the action and invoke it:
 
-   ```text
-   $ ibmcloud wsk action create asyncAction asyncAction.js
+   ```bash
+   ibmcloud wsk action create asyncAction asyncAction.js
    ```
 
-   ```text
-   $ ibmcloud wsk action invoke --result asyncAction
+   ```bash
+   ibmcloud fn action invoke --result asyncAction
    ```
 
-   ```text
+   ```json
    {
        "done": true
    }
@@ -66,10 +66,10 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
 2. Fetch the last activation log to see how long the async activation took to complete:
 
    ```text
-   $ ibmcloud wsk activation get --last
+   ibmcloud fn activation get --last
    ```
 
-   ```text
+   ```json
    {
         "duration": 2026,
         ...
@@ -78,14 +78,16 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
 
    Checking the `duration` field in the activation record, you can see that this activation took slightly over two seconds to complete.
 
+{% hint style="info" %}
 **Actions have a** `timeout` **parameter that enforces the maximum duration for an invocation.** This value defaults to 60 seconds and can be changed to a maximum of 5 minutes.
+{% endhint %}
 
 Let's look at what happens when an action invocation takes longer than the `timeout`.
 
 1. Update the `asyncAction` timeout to 1000ms.
 
-   ```text
-   $ ibmcloud wsk action update asyncAction --timeout 1000
+   ```bash
+   ibmcloud fn action update asyncAction --timeout 1000
    ```
 
    ```text
@@ -94,11 +96,11 @@ Let's look at what happens when an action invocation takes longer than the `time
 
 2. Invoke the action and block on the result.
 
-   ```text
-   $ ibmcloud wsk action invoke asyncAction --result
+   ```bash
+   ibmcloud wsk action invoke asyncAction --result
    ```
 
-   ```text
+   ```json
    {
        "error": "The action exceeded its time limits of 1000 milliseconds."
    }
@@ -106,10 +108,10 @@ Let's look at what happens when an action invocation takes longer than the `time
 
    The error message returned by the platform indicates the action didn't return a response within the user-specified timeout. If we change the `timeout` back to a value higher than the artificial delay in the function, it should work again.
 
-3. Update the `asyncAction` timeout to 10000ms.
+3. Update the `asyncAction` timeout to `10000 ms`.
 
-   ```text
-   $ ibmcloud wsk action update asyncAction --timeout 10000
+   ```bash
+   ibmcloud fn action update asyncAction --timeout 10000
    ```
 
    ```text
@@ -118,15 +120,14 @@ Let's look at what happens when an action invocation takes longer than the `time
 
 4. Invoke the action and block on the result.
 
-   ```text
-   $ ibmcloud wsk action invoke asyncAction --result
+   ```bash
+   ibmcloud fn action invoke asyncAction --result
    ```
 
-   ```text
+   ```json
    {
        "done": true
    }
    ```
 
-🎉🎉🎉 **Asynchronous actions are necessary for calling other APIs or cloud services. Don't forget about that timeout though! Let's have a look at using an asynchronous action to invoke another API…** 🎉🎉🎉
-
+🎉 **Asynchronous actions are necessary for calling other APIs or cloud services. Don't forget about that timeout though!** Let's have a look at using an asynchronous action to invoke another API… 🎉
