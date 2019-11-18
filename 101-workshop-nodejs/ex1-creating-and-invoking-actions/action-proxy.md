@@ -48,13 +48,9 @@ Let's look an example of creating a "proxy" action which invokes another action 
     ibmcloud fn action create proxy proxy.js
     ```
 
-    {% hint style="success" %}
-    **Note** The function above utilizes the **[NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk)** which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
-    {% endhint %}
-
-    {% hint style="info" %}
-    **Note** The function uses the [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
-    {% endhint %}
+{% hint style="info" %}
+**Note** The function uses the [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
+{% endhint %}
 
 1. Invoke the proxy with an incorrect password.
 
@@ -96,8 +92,6 @@ Let's look an example of creating a "proxy" action which invokes another action 
    e0c603c242c646978603c242c6c6977f proxy
    ```
 
-_These libraries can also be used to invoke triggers to fire events from actions._
-
-{% hint style="success" %}
-🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+{% hint style="tip" %}
+_The [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used to do other things like invoking **triggers** to fire events from actions._
 {% endhint %}
