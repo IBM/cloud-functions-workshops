@@ -19,5 +19,5 @@ For example, what if you have serverless functions to implement an external API 
 Unfortunately, this approach does incur additional charges. The application will be charged twice when the authentication function is called, as the calling action has to sit idle waiting for the response from the authentication function.
 
 {% hint style="success" %}
-⭐️⭐️⭐️ IBM Cloud Functions has a special type of action which resolves this problem! ... ⭐️⭐️⭐️
+⭐️⭐️⭐️ Fortunately, IBM Cloud Functions has a special type of action which resolves this problem! **Action Sequences...
 {% endhint %}
