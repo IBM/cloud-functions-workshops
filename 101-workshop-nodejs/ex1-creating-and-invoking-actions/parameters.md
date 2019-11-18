@@ -43,7 +43,7 @@ Event parameters can be passed to the action when it is invoked. Let's look at a
 
 When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, the shorter `-p` flag or using an input file containing raw JSON.
 
-1. Invoke the `hello` action using explicit command-line parameters using `--param` flag:
+1. Invoke the `hello` action using explicit command-line parameters using the `--param` flag.
 
     ```bash
     ibmcloud fn action invoke --result hello --param name Elrond --param place Rivendell
@@ -65,7 +65,7 @@ When invoking actions through the command-line, parameter values can be passed a
     **Note** We used the `--result` option above. It implies a `blocking` invocation where the CLI waits for the activation to complete and then displays only the function's output as the `payload` value..
     {% endhint %}
 
-2. Create a file \(`parameters.json`\) containing the following JSON.
+2. Create a file named `parameters.json` containing the following JSON.
 
     ```json
     {
@@ -126,13 +126,13 @@ Rather than pass all the parameters to an action every time, you can bind defaul
 
 Let's use the `hello` action from our previous example and bind a default value for the `place` parameter.
 
-Update the action by using the `—param` option to bind default parameter values.
+Update the action by using the `--param` option to bind default parameter values.
 
 ```text
-$ ibmcloud fn action update hello --param place Rivendell
+ibmcloud fn action update hello --param place Rivendell
 ```
 
-Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `-param-file` flag:
+Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `--param-file` flag:
 
 Example parameter file called parameters.json:
 
@@ -172,4 +172,6 @@ ibmcloud fn action invoke --result hello --param name Elrond --param place "Wash
 }
 ```
 
-🎉🎉🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs. Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, huh?** 🎉🎉🎉
+{% hint style="success" %}
+🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs. Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, huh?** 🎉
+{% endhint %}
