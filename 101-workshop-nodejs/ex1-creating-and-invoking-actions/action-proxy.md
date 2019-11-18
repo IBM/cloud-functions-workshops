@@ -48,7 +48,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
     ibmcloud fn action create proxy proxy.js
     ```
 
-    {% hint style="info" %}
+    {% hint style="success" %}
     **Note** The function above utilizes the **[NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk)** which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
     {% endhint %}
 
@@ -64,7 +64,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
     }
     ```
 
-    {% hint style="tip" %}
+    {% hint style="success" %}
     **Note** On the invoke call above, we used the short form for the `--result` flag which is `-r`.
     {% endhint %}
 
