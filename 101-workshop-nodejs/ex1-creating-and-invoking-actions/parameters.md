@@ -46,21 +46,25 @@ When invoking actions through the command-line, parameter values can be passed a
 1. Invoke the `hello` action using explicit command-line parameters.
 
     ```bash
-    ibmcloud fn action invoke --result hello --param name Bernie --param place Vermont
+    ibmcloud fn action invoke --result hello --param name Elrond --param place Rivendell
     ```
 
     ```json
     {
-        "payload": "Hello, Bernie from Vermont"
+        "payload": "Hello, Elrond from Rivendell"
     }
     ```
+
+    {% hint style="info" %}
+    **Note** We used the `--result` option above. It implies a `blocking` invocation where the CLI waits for the activation to complete and then displays only the function's output as the `payload` value..
+    {% endhint %}
 
 2. Create a file \(`parameters.json`\) containing the following JSON.
 
     ```json
     {
-        "name": "Bernie",
-        "place": "Vermont"
+        "name": "Frodo",
+        "place": "the Shire"
     }
     ```
 
@@ -72,13 +76,9 @@ When invoking actions through the command-line, parameter values can be passed a
 
     ```json
     {
-        "payload": "Hello, Bernie from Vermont"
+        "payload": "Hello, Frodo from the Shire"
     }
     ```
-
-    {% hint style="info" %}
-    _Notice the use of the_ `--result` _option: it implies a blocking invocation where the CLI waits for the activation to complete and then displays only the result. For convenience, this option may be used without_ `--blocking` _which is automatically inferred._
-    {% endhint %}
 
 ### Nested parameters
 
@@ -97,14 +97,14 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 2. Invoke the action with a single `person` parameter that is valid JSON.
 
    ```bash
-   ibmcloud fn action invoke --result hello-person -p person '{"name": "Bernie", "place": "Vermont"}'
+   ibmcloud fn action invoke --result hello-person -p person '{"name": "Elrond", "place": "Rivendell"}'
    ```
 
    The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the action now expects:
 
    ```json
    {
-       "payload": "Hello, Bernie from Vermont"
+       "payload": "Hello, Elrond from Rivendell"
    }
    ```
 
@@ -123,7 +123,7 @@ Let's use the `hello` action from our previous example and bind a default value 
 Update the action by using the `—param` option to bind default parameter values.
 
 ```text
-$ ibmcloud fn action update hello --param place Vermont
+$ ibmcloud fn action update hello --param place Rivendell
 ```
 
 Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `-param-file` flag:
@@ -132,7 +132,7 @@ Example parameter file called parameters.json:
 
 ```json
 {
-    "place": "Vermont"
+    "place": "Rivendell"
 }
 ```
 
@@ -143,12 +143,12 @@ ibmcloud fn action update hello --param-file parameters.json
 Invoke the action, passing only the `name` parameter this time.
 
 ```bash
-ibmcloud fn action invoke --result hello --param name Bernie
+ibmcloud fn action invoke --result hello --param name Elrond
 ```
 
 ```json
 {
-    "payload": "Hello, Bernie from Vermont"
+    "payload": "Hello, Elrond from Rivendell"
 }
 ```
 
@@ -157,12 +157,12 @@ Notice that you did not need to specify the place parameter when you invoked the
 Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
 ```bash
-ibmcloud fn action invoke --result hello --param name Bernie --param place "Washington, DC"
+ibmcloud fn action invoke --result hello --param name Elrond --param place "Washington, DC"
 ```
 
 ```json
 {
-    "payload": "Hello, Bernie from Washington, DC"
+    "payload": "Hello, Elrond from Washington, DC"
 }
 ```
 
