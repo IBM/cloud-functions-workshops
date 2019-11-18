@@ -19,7 +19,7 @@
 
 # Calling an external API from an Async action
 
-In this exercise, we will create a new action  that takes a price and currency and returns a message contains the equivalent amount of Bitcoin by calling an external API asynchronously.
+This exercise challenges you to create a new action that takes a price and currency and returns a message that contains the equivalent amount of Bitcoin.  The actual conversion will be done by calling an external API asynchronously from your function.
 
 ## Input
 
@@ -40,7 +40,7 @@ If either the `amount` or `currency` parameters are missing, return an error wit
 
 ## Resources
 
-This [Coindesk API](https://api.coindesk.com/v1/bpi/currentprice.json) returns real-time bitcoin prices. This includes rates for the `USD`, `GBP` and `EUR` currencies.
+This [Coindesk Version 1 API](https://api.coindesk.com/v1/bpi/currentprice.json) returns real-time bitcoin prices. This includes rates for the `USD`, `GBP` and `EUR` currencies.
 
 This [Currency Converter API](https://free.currencyconverterapi.com/) returns exchanges rates between traditional currencies.
 
@@ -48,7 +48,7 @@ Use the `request-promise` [module](https://www.npmjs.com/package/request-promise
 
 ## Tests
 
-### Test with currencies in the Coindeck API response.
+### Test with currencies in the Coindesk API response
 
 ```bash
 ibmcloud fn action invoke bitcoin -r -p amount 1000 -p currency USD
@@ -83,7 +83,7 @@ ibmcloud fn action invoke bitcoin -r -p amount 1000 -p currency GBP
 }
 ```
 
-### Test with currencies not in the Coindeck API response.
+### Test with currencies not in the Coindesk API response.
 
 ```bash
 ibmcloud fn action invoke bitcoin -r -p amount 1000 -p currency AUD
@@ -96,7 +96,7 @@ ibmcloud fn action invoke bitcoin -r -p amount 1000 -p currency AUD
 }
 ```
 
-### Test with missing parameters.
+### Test with missing parameters
 
 ```bash
 ibmcloud fn action invoke bitcoin -r -p amount 1000
