@@ -52,6 +52,10 @@ Let's look an example of creating a "proxy" action which invokes another action 
     **Note** The function above utilizes the **[NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk)** which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
     {% endhint %}
 
+{% hint style="info" %}
+**Note** The _**`Entity`**_ column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
+{% endhint %}
+
 1. Invoke the proxy with an incorrect password.
 
     ```bash
