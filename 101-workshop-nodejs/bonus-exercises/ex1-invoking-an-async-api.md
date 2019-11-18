@@ -23,7 +23,7 @@ In this exercise, we will create a new action  that takes a price and currency a
 
 ## Input
 
-The action should take two parameters, `amount` and `currency`. `amount` is a number, `currency` is a three letter [currency code](https://www.iban.com/currency-codes.html).
+The action should take two parameters, `amount` and `currency`. The `amount` parameter is a number and `currency` is a three letter [currency code](https://www.iban.com/currency-codes.html).
 
 ## Output
 
