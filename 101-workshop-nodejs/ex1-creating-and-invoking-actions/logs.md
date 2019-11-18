@@ -1,3 +1,22 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Retrieving Action Logs
 
 Application logs are essential to debugging production issues. In IBM Cloud Functions, all output written to `stdout` and `stderr` by actions is available in the activation records.
@@ -6,49 +25,49 @@ Application logs are essential to debugging production issues. In IBM Cloud Func
 
 1. Create a new action \(`logs`\) from the following source files.
 
-   ```text
-   function main(params) {
-       console.log("function called with params", params)
-       console.error("this is an error message")
-       return { result: true }
-   }
-   ```
+    ```javascript
+    function main(params) {
+        console.log("function called with params", params)
+        console.error("this is an error message")
+        return { result: true }
+    }
+    ```
 
-   ```text
-   $ ibmcloud wsk action create logs logs.js
-   ```
+    ```bash
+    ibmcloud fn action create logs logs.js
+    ```
 
-   ```text
-   ok: created action logs
-   ```
+    ```bash
+    ok: created action logs
+    ```
 
 2. Invoke the `logs` action to generate some logs.
 
-   ```text
-   $ ibmcloud wsk action invoke -r logs -p hello world
-   ```
+    ```bash
+    ibmcloud fn action invoke -r logs -p hello world
+    ```
 
-   ```text
-   {
-       "result": true
-   }
-   ```
+    ```json
+    {
+        "result": true
+    }
+    ```
 
 ## Accessing activation logs
 
 Retrieve activation record to verify logs have been recorded.
 
 ```text
-$ ibmcloud wsk activation get --last
+ibmcloud fn activation get --last
 ```
 
-```text
+```json
 ok: got activation 9fc044881705479580448817053795bd
-{    
-    ...   
+{
+    ...
     "logs": [
-        "2018-03-02T09:49:03.021Z stdout: function called with params { hello: 'world' }",
-        "2018-03-02T09:49:03.021Z stderr: this is an error message"
+        "20xx-11-14T09:49:03.021Z stdout: function called with params { hello: 'world' }",
+        "20xx-11-14T09:49:03.021Z stderr: this is an error message"
     ],
     ...
 }
@@ -56,23 +75,23 @@ ok: got activation 9fc044881705479580448817053795bd
 
 Logs can also be retrieved without showing the whole activation record, using the `activation logs` command.
 
-```text
-$ ibmcloud wsk activation logs --last
+```bash
+ibmcloud fn activation logs --last
 ```
 
 ```text
-2018-03-02T09:49:03.021404683Z stdout: function called with params { hello: 'world' }
-2018-03-02T09:49:03.021816473Z stderr: this is an error message
+20x-11-14T09:49:03.021404683Z stdout: function called with params { hello: 'world' }
+20xx-11-14T09:49:03.021816473Z stderr: this is an error message
 ```
 
 ## Polling activation logs
 
 Activation logs can be monitored in real-time, rather than manually retrieving individual activation records.
 
-1. Run the following command to monitor logs from the `logs` actions.
+1. In another terminal, run the following command to monitor logs from the `logs` actions.
 
-   ```text
-   $ ibmcloud wsk activation poll
+   ```bash
+   ibmcloud fn activation poll
    ```
 
    ```text
@@ -80,10 +99,10 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
    Polling for activation logs
    ```
 
-2. In another terminal, run the following command multiple times.
+2. In your original terminal, run the following command multiple times.
 
-   ```text
-   $ ibmcloud wsk action invoke logs -p hello world
+   ```bash
+   ibmcloud fn action invoke logs -p hello world
    ```
 
    ```text
@@ -92,7 +111,7 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
 
 3. Check the output from the `poll` command to see the activation logs.
 
-   ```text
+   ```bash
    Activation: 'logs' (ae57d06630554ccb97d06630555ccb8b)
    [
        "2018-03-02T09:56:17.8322445Z stdout: function called with params { hello: 'world' }",
@@ -111,4 +130,3 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
        "2018-03-02T09:56:44.6964147Z stdout: function called with params { hello: 'world' }"
    ]
    ```
-
