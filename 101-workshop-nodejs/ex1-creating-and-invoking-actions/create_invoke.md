@@ -189,7 +189,7 @@ y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0
 ```
 
 {% hint style="info" %}
-**Note** The _**`Entity`**_ column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
+**Note** The **`Entity`** column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
 {% endhint %}
 
 {% hint style="success" %}
