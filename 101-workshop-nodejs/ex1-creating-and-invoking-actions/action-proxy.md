@@ -93,7 +93,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
     ```
 
 {% hint style="tip" %}
-**Note** On the invoke call above, we used the short form for the `--last` flag which is `-l`.
+**Note** On the invoke call above, we used the short form for the `--last` flag which is `-l` with a parameter `2` to only show the last 2 activations.
 {% endhint %}
 
 {% hint style="success" %}
