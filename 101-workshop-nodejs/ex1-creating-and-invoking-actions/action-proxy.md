@@ -44,7 +44,9 @@ Let's look an example of creating a "proxy" action which invokes another action 
    }
    ```
 
-   _The JavaScript library for Apache OpenWhisk is here:_ [_https://github.com/apache/incubator-openwhisk-client-js/_](https://github.com/apache/incubator-openwhisk-client-js/)_._ _This library is pre-installed in the IBM Cloud Functions runtime and does not need to be manually included._
+{% hint style="info" %}
+   **Note** The function above utilizes the [NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) which is pre-installed in the IBM Cloud Functions runtime so you do not need to package it. Its source code can be found here:_ [_https://github.com/apache/openwhisk-client-js/_](https://github.com/apache/openwhisk-client-js/)_.
+{% endhint %}
 
 ```bash
    ibmcloud fn action create proxy proxy.js
