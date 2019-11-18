@@ -27,7 +27,7 @@ These libraries make it simple to invoke other actions, fire triggers and access
 
 ## Proxy example
 
-Let's look an example of creating a "proxy" action which invokes another action if a "password" is present in the input parameters.
+Let's look an example of creating a "proxy" action which invokes another action _(i.e, our `hello` action)_ if a "password" is present in the input parameters.
 
 1. Create the following new action named `proxy` from the following source files.
 
