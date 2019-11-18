@@ -1,15 +1,34 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Creating Packages
 
 ## Creating new packages
 
 Custom packages can be used to group your own actions, manage default parameters and share entities with other users.
 
-Let's demonstrate how to do this now using the `ibmcloud wsk` CLI tool…
+Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
 1. Create a package called "custom".
 
-   ```text
-   $ ibmcloud wsk package create custom
+   ```bash
+   ibmcloud fn package create custom
    ```
 
    ```text
@@ -18,8 +37,8 @@ Let's demonstrate how to do this now using the `ibmcloud wsk` CLI tool…
 
 2. Get a summary of the package.
 
-   ```text
-   $ ibmcloud wsk package get --summary custom
+   ```bash
+   ibmcloud fn package get --summary custom
    ```
 
    ```text
@@ -37,8 +56,8 @@ Let's demonstrate how to do this now using the `ibmcloud wsk` CLI tool…
 
 4. Create an `identity` action in the `custom` package.
 
-   ```text
-   $ ibmcloud wsk action create custom/identity identity.js
+   ```bash
+   ibmcloud fn action create custom/identity identity.js
    ```
 
    ```text
@@ -49,8 +68,8 @@ Let's demonstrate how to do this now using the `ibmcloud wsk` CLI tool…
 
 5. Get a summary of the package again.
 
-   ```text
-   $ ibmcloud wsk package get --summary custom
+   ```bash
+   ibmcloud fn package get --summary custom
    ```
 
    ```text
@@ -64,8 +83,8 @@ Let's demonstrate how to do this now using the `ibmcloud wsk` CLI tool…
 
 6. Invoke the action in the package.
 
-   ```text
-   $ ibmcloud wsk action invoke --result custom/identity
+   ```bash
+   ibmcloud fn action invoke --result custom/identity
    ```
 
    ```text
@@ -76,8 +95,8 @@ _You can set default parameters for all the entities in a package. You do this b
 
 1. Update the `custom` package with two parameters: `city` and `country`.
 
-   ```text
-   $ ibmcloud wsk package update custom --param city Austin --param country USA
+   ```bash
+   ibmcloud fn package update custom --param city Austin --param country USA
    ```
 
    ```text
@@ -86,11 +105,11 @@ _You can set default parameters for all the entities in a package. You do this b
 
 2. Display the parameters in the package and action, and see how the `identity` action in the package inherits parameters from the package.
 
-   ```text
-   $ ibmcloud wsk package get custom
+   ```bash
+   ibmcloud fn package get custom
    ```
 
-   ```text
+   ```json
    ok: got package custom
    ...
    "parameters": [
@@ -106,11 +125,11 @@ _You can set default parameters for all the entities in a package. You do this b
    ...
    ```
 
-   ```text
-   $ ibmcloud wsk action get custom/identity
+   ```bash
+   ibmcloud fn action get custom/identity
    ```
 
-   ```text
+   ```json
    ok: got action custom/identity
    ...
    "parameters": [
@@ -128,11 +147,11 @@ _You can set default parameters for all the entities in a package. You do this b
 
 3. Invoke the identity action without any parameters to verify that the action indeed inherits the parameters.
 
-   ```text
-   $ ibmcloud wsk action invoke --result custom/identity
+   ```bash
+   ibmcloud fn action invoke --result custom/identity
    ```
 
-   ```text
+   ```json
    {
       "city": "Austin",
       "country": "USA"
@@ -141,11 +160,11 @@ _You can set default parameters for all the entities in a package. You do this b
 
 4. Invoke the identity action with some parameters. Invocation parameters are merged with the package parameters; the invocation parameters override the package parameters.
 
-   ```text
-   $ ibmcloud wsk action invoke --result custom/identity --param city Dallas --param state Texas
+   ```bash
+   ibmcloud fn action invoke --result custom/identity --param city Dallas --param state Texas
    ```
 
-   ```text
+   ```json
    {
       "city": "Dallas",
       "country": "USA",
@@ -159,8 +178,8 @@ After the actions and feeds that comprise a package are debugged and tested, the
 
 1. Share the package with all users:
 
-   ```text
-   $ ibmcloud wsk package update custom --shared yes
+   ```bash
+   ibmcloud fn package update custom --shared yes
    ```
 
    ```text
@@ -169,8 +188,8 @@ After the actions and feeds that comprise a package are debugged and tested, the
 
 2. Display the `publish` property of the package to verify that it is now true.
 
-   ```text
-   $ ibmcloud wsk package get custom
+   ```bash
+   ibmcloud fn package get custom
    ```
 
    ```text
@@ -184,8 +203,8 @@ After the actions and feeds that comprise a package are debugged and tested, the
 
 3. Get a description of the package to show the fully qualified names of the package and action.
 
-   ```text
-   $ ibmcloud wsk package get --summary custom
+   ```bash
+   ibmcloud fn package get --summary custom
    ```
 
    ```text
@@ -196,4 +215,3 @@ After the actions and feeds that comprise a package are debugged and tested, the
    ```
 
    In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name.
-

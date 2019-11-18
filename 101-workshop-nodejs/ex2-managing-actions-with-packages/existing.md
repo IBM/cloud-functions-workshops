@@ -6,12 +6,12 @@ IBM Cloud Functions comes pre-installed with a number of public packages, which 
 
 Actions in public packages can be used by anyone, the caller pays the invocation cost.
 
-Using `ibmcloud wsk` CLI you can get a list of packages in a namespace, list the entities in a package and get a description of the entities within a package.
+Using `ibmcloud fn` CLI you can get a list of packages in a namespace, list the entities in a package and get a description of the entities within a package.
 
 Get a list of packages in the `/whisk.system` namespace.
 
 ```text
-$ ibmcloud wsk package list /whisk.system
+ibmcloud fn package list /whisk.system
 ```
 
 ```text
@@ -35,7 +35,7 @@ packages
 Get a list of entities in the `/whisk.system/cloudant` package.
 
 ```text
-$ ibmcloud wsk package get --summary /whisk.system/cloudant
+ibmcloud fn package get --summary /whisk.system/cloudant
 ```
 
 ```text
@@ -59,7 +59,7 @@ The Cloudant package also defines the parameters `username`, `password`, `host`,
 Get a description of the `/whisk.system/cloudant/read` action.
 
 ```text
-$ ibmcloud wsk action get --summary /whisk.system/cloudant/read
+ibmcloud fn action get --summary /whisk.system/cloudant/read
 ```
 
 ```text
@@ -76,7 +76,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 1. Get a description of the `/whisk.system/samples/greeting` action.
 
    ```text
-   $ ibmcloud wsk action get --summary /whisk.system/samples/greeting
+   ibmcloud fn action get --summary /whisk.system/samples/greeting
    ```
 
    ```text
@@ -89,7 +89,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 2. Invoke the action without any parameters.
 
    ```text
-   $ ibmcloud wsk action invoke --result /whisk.system/samples/greeting
+   ibmcloud fn action invoke --result /whisk.system/samples/greeting
    ```
 
    ```text
@@ -103,7 +103,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 3. Invoke the action with parameters.
 
    ```text
-   $ ibmcloud wsk action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont
+   ibmcloud fn action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont
    ```
 
    ```text
@@ -125,7 +125,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 1. Bind to the `/whisk.system/samples` package and set a default `place` parameter value.
 
    ```text
-   $ ibmcloud wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
+   ibmcloud fn package bind /whisk.system/samples valhallaSamples --param place Valhalla
    ```
 
    ```text
@@ -135,7 +135,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 2. Get a description of the package binding.
 
    ```text
-   $ ibmcloud wsk package get --summary valhallaSamples
+   ibmcloud fn package get --summary valhallaSamples
    ```
 
    ```text
@@ -156,7 +156,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 3. Invoke an action in the package binding
 
    ```text
-   $ ibmcloud wsk action invoke --result valhallaSamples/greeting --param name Odin
+   ibmcloud fn action invoke --result valhallaSamples/greeting --param name Odin
    ```
 
    ```text
@@ -170,7 +170,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 4. Invoke an action and overwrite the default parameter value.
 
    ```text
-   $ ibmcloud wsk action invoke --result valhallaSamples/greeting --param name Odin --param place Asgard
+   ibmcloud fn action invoke --result valhallaSamples/greeting --param name Odin --param place Asgard
    ```
 
    ```text
