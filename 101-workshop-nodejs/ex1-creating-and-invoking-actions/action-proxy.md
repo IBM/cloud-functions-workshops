@@ -31,50 +31,50 @@ Let's look an example of creating a "proxy" action which invokes another action 
 
 1. Create the following new action named `proxy` from the following source files.
 
-   ```javascript
-   var openwhisk = require('openwhisk');
+    ```javascript
+    var openwhisk = require('openwhisk');
 
-   function main(params) {
-     if (params.password !== 'secret') {
-       throw new Error("Password incorrect!")
-     }
+    function main(params) {
+        if (params.password !== 'secret') {
+        throw new Error("Password incorrect!")
+        }
 
-     var ow = openwhisk();
-     return ow.actions.invoke({name: "hello", blocking: true, result: true, params: params})
-   }
-   ```
+        var ow = openwhisk();
+        return ow.actions.invoke({name: "hello", blocking: true, result: true, params: params})
+    }
+    ```
 
-{% hint style="info" %}
-   **Note** The function above utilizes the **[NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk)** which is pre-installed in the IBM Cloud Functions runtime so you do not need to package it. _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
-{% endhint %}
+    ```bash
+    ibmcloud fn action create proxy proxy.js
+    ```
 
-```bash
-   ibmcloud fn action create proxy proxy.js
-```
+    {% hint style="info" %}
+    **Note** The function above utilizes the **[NPM JavaScript library for Apache OpenWhisk](https://www.npmjs.com/package/openwhisk)** which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
+    {% endhint %}
 
 1. Invoke the proxy with an incorrect password.
 
-   ```bash
-   ibmcloud fn action invoke proxy -p password wrong -r
-   ```
+    ```bash
+    ibmcloud fn action invoke proxy -p password wrong -r
+    ```
 
-   ```json
-   {
-       "error": "Password is incorrect!"
-   }
-   ```
+    ```json
+    {
+        "error": "An error has occurred: Error: Password incorrect!"
+    }
+    ```
 
 2. Invoke the proxy with the correct password.
 
-   ```bash
-   ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
-   ```
+    ```bash
+    ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
+    ```
 
-   ```json
-   {
-       "greeting": "Hello Bernie from Vermont"
-   }
-   ```
+    ```json
+    {
+        "greeting": "Hello Bernie from Vermont"
+    }
+    ```
 
 3. Review the activations list to show both actions were invoked.
 
