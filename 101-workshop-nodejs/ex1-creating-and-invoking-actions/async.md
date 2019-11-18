@@ -130,4 +130,10 @@ Let's look at what happens when an action invocation takes longer than the `time
    }
    ```
 
-🎉 **Asynchronous actions are necessary for calling other APIs or cloud services. Don't forget about that timeout though!** Let's have a look at using an asynchronous action to invoke another API… 🎉
+{% hint style="tip" %}
+**Asynchronous actions are necessary for calling other APIs or cloud services**. Don't forget about that timeout though!
+{% endhint %}
+
+{% hint style="success" %}
+🎉**Bonus Exercise** Try out this exercise [Calling an external API from an Async action](101-workshop-nodejs/bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge! 🎉
+{% endhint %}
