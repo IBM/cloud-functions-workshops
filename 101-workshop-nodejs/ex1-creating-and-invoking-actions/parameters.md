@@ -41,7 +41,7 @@ Event parameters can be passed to the action when it is invoked. Let's look at a
 
 ## Invoking action with parameters
 
-When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param/-p` or using an input file containing raw JSON.
+When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, theshorter `-p` flag or using an input file containing raw JSON.
 
 1. Invoke the `hello` action using explicit command-line parameters.
 
