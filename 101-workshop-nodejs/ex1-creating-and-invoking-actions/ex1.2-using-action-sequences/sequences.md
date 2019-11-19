@@ -22,7 +22,7 @@
 IBM Cloud Functions supports a kind of action called a "sequence". Sequence actions are created using a list of existing actions. When the sequence action is invoked, each action in executed in order of the action parameter list. Input parameters are passed to the first action in the sequence. Output from each function in the sequence is passed as the input to the next function and so on. The output from the last action in the sequence is returned as the response result.
 
 {% hint style="info" %}
-**Sequences behave like normal actions**, you create, invoke and manage them as normal through the CLI.
+**Sequences behave like normal actions**, you create, invoke and manage them as actions through the CLI.
 {% endhint %}
 
 Here's an example of defining an action \(`my_sequence`\) from a sequence of three actions \(`a`, `b`, and `c`\):
@@ -79,6 +79,8 @@ Let's look at an example of using sequences.
 
 1. Test each action to verify it is working.
 
+  The function `split` takes the single string `hello world` and splits it into a JSON map of the individual `strings` using space as the delimiter.
+
   ```bash
   ibmcloud fn action invoke split --result --param text "Hello world"
   ```
@@ -92,6 +94,8 @@ Let's look at an example of using sequences.
   }
   ```
 
+  The function `reverse` takes the JSON map of the `strings` and reverses the characters in each.
+
   ```bash
   ibmcloud fn action invoke reverse --result --param words '["hello", "world"]'
   ```
@@ -104,6 +108,8 @@ Let's look at an example of using sequences.
       ]
   }
   ```
+
+  The function `join` takes the JSON map of the `strings` and concatenates them back into a space delimited string.
 
   ```bash
   ibmcloud fn action invoke join --result --param words '["hello", "world"]'
