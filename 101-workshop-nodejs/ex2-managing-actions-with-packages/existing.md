@@ -46,16 +46,20 @@ package /whisk.system/cloudant: Cloudant database service
    (parameters: dbname, id, params)
   action /whisk.system/cloudant/write: Write document in database
    (parameters: dbname, doc)
- feed   /whisk.system/cloudant/changes: Database change feed
+   ...
+  feed /whisk.system/cloudant/changes: Database change feed
    (parameters: dbname, filter, query_params)
-   ....
 ```
 
-This output shows that the Cloudant package provides many actions including `read` and `write`, and the trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
+This output shows that the Cloudant package provides many actions including `read` and `write`, and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
 
 The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
 
-**Note:** Parameters listed under the package with a prefix `*` are predefined, bound parameters. Parameters without a `*` are those listed under the annotations for each entity. Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user. Any entity listed under a package inherits specific bound parameters from the package. To view the list of known parameters of an entity belonging to a package, you will need to run a `get —summary` of the individual entity.
+**Note:** Parameters listed under the package with a prefix `*` are predefined, bound parameters. Parameters without a `*` are those listed under the annotations for each entity.
+
+Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user.
+
+Any entity listed under a package inherits specific bound parameters from the package. To view the list of known parameters of an entity belonging to a package, you will need to run a `get --summary` of the individual entity.
 
 Let's look more closely at the `read` action in the Cloudant package:
 
