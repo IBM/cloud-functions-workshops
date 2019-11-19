@@ -107,7 +107,7 @@ To see how this works, try the following example:
    ok: updated package custom
    ```
 
-2. Display the parameters in the package and action, and see how the `identity` action in the package inherits parameters from the package.
+1. Display the parameters in the package and action, and see how the `identity` action in the package inherits parameters from the package.
 
    ```bash
    ibmcloud fn package get custom
@@ -149,7 +149,7 @@ To see how this works, try the following example:
    ...
    ```
 
-3. Invoke the identity action without any parameters to verify that the action indeed inherits the parameters.
+1. Invoke the identity action without any parameters to verify that the action indeed inherits the parameters.
 
    ```bash
    ibmcloud fn action invoke --result custom/identity
@@ -162,7 +162,7 @@ To see how this works, try the following example:
    }
    ```
 
-4. Invoke the identity action with some parameters. Invocation parameters are merged with the package parameters; the invocation parameters override the package parameters.
+1. Invoke the identity action with some parameters. Invocation parameters are merged with the package parameters; the invocation parameters override the package parameters.
 
    ```bash
    ibmcloud fn action invoke --result custom/identity --param city Dallas --param state Texas
@@ -190,7 +190,7 @@ After the actions and feeds that comprise a package are debugged and tested, the
    ok: updated package custom
    ```
 
-2. Display the `publish` property of the package to verify that it is now true.
+1. Display the `publish` property of the package to verify that it is now true.
 
    ```bash
    ibmcloud fn package get custom
@@ -205,7 +205,7 @@ After the actions and feeds that comprise a package are debugged and tested, the
 
    Others can now use your `custom` package, including binding to the package or directly invoking an action in it. Other users must know the fully qualified names of the package to bind it or invoke actions in it. Actions and feeds within a shared package are _public_. If the package is private, then all of its contents are also private.
 
-3. Get a description of the package to show the fully qualified names of the package and action.
+1. Get a description of the package to show the fully qualified names of the package and action.
 
    ```bash
    ibmcloud fn package get --summary custom
