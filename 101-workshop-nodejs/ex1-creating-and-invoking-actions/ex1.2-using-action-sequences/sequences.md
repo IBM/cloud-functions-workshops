@@ -183,7 +183,7 @@ Let's look at how this work...
   ibmcloud fn action create example --sequence fail,end
   ```
 
-1. Test out the action sequence without `fail` parameter:
+1. Test out the action sequence without the `fail` parameter:
 
   ```bash
   ibmcloud fn action invoke example -r
@@ -195,7 +195,7 @@ Let's look at how this work...
   }
   ```
 
-1. Test out the action sequence with `fail` parameter:
+1. Test out the action sequence with the `fail` parameter set to `true`:
 
    ```text
    ibmcloud fn action invoke example -r -p fail true
