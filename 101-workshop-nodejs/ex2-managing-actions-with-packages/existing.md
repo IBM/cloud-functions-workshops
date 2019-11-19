@@ -57,9 +57,9 @@ The Cloudant package also defines the parameters `username`, `password`, `host`,
 
 {% hint style="info" %}
 **Note:**
-* Parameters listed under the package with a prefix `*` are predefined, bound parameters.
-* Parameters without a `*` are those listed under the annotations for each entity.
-* Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user.
+* Parameters listed under the package with a prefix `'*'` are **predefined, bound parameters**.
+* Parameters without a `'*'` are those listed under the annotations for each entity.
+* Furthermore, any parameters with the prefix `'**'` are **finalized bound parameters**. This means that they are immutable, and cannot be changed by the user.
 {% endhint %}
 
 ## Viewing parameters
