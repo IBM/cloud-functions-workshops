@@ -153,7 +153,7 @@ If any action within the sequences returns an error, the platform returns immedi
 
 Let's look at how this work...
 
-1. Create the file \(`funcs.js`\) with the following contents:
+1. Add the following functions to the file `funcs.js`:
 
   ```javascript
   function fail (params) {
