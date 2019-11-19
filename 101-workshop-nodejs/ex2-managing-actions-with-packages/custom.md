@@ -175,6 +175,7 @@ To see how this works, try the following example:
       "state": "Texas"
    }
    ```
+
 {% hint style="info" %}
 Invocation parameters are merged with the package parameters with the **invocation parameters overriding the package parameters**.
 {% endhint %}
@@ -201,9 +202,15 @@ After the actions and feeds that comprise a package are debugged and tested, the
 
    ```text
    ok: got package custom
-   ...
-   "publish": true,
-   ...
+   ```
+
+   ```json
+   {
+      ...
+      "name": "custom",
+      "publish": true,
+      ...
+   }
    ```
 
    Others can now use your `custom` package, including binding to the package or directly invoking an action in it. Other users must know the fully qualified names of the package to bind it or invoke actions in it. Actions and feeds within a shared package are _public_. If the package is private, then all of its contents are also private.
@@ -222,3 +229,7 @@ After the actions and feeds that comprise a package are debugged and tested, the
    ```
 
    In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name.
+
+{% hint style="success" %}
+🎉 **Congratulations on sharing your first public Package!** 🎉
+{% endhint %}
