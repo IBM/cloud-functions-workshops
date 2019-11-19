@@ -79,7 +79,7 @@ Let's look at an example of using sequences.
 
 1. Test each action to verify it is working.
 
-  The function `split` takes the single string `hello world` and splits it into a JSON map of the individual `strings` using space as the delimiter.
+  The function `split` takes the single string `hello world` and splits it into a JSON map of the individual `strings` using the space character as the delimiter.
 
   ```bash
   ibmcloud fn action invoke split --result --param text "Hello world"
@@ -94,7 +94,7 @@ Let's look at an example of using sequences.
   }
   ```
 
-  The function `reverse` takes the JSON map of the `strings` and reverses the characters in each.
+  The function `reverse` takes a JSON array of `strings` and reverses the characters in each.
 
   ```bash
   ibmcloud fn action invoke reverse --result --param words '["hello", "world"]'
@@ -109,7 +109,7 @@ Let's look at an example of using sequences.
   }
   ```
 
-  The function `join` takes the JSON map of the `strings` and concatenates them back into a space delimited string.
+  The function `join` takes the JSON array of `strings` and concatenates them back into a space-delimited string.
 
   ```bash
   ibmcloud fn action invoke join --result --param words '["hello", "world"]'
@@ -120,6 +120,8 @@ Let's look at an example of using sequences.
       "text": "hello world"
   }
   ```
+
+  Now, let's see them all work together as an action sequence...
 
   1. Create the following action sequence.
 
@@ -139,7 +141,9 @@ Let's look at an example of using sequences.
   }
   ```
 
-Using sequences is a great way to develop re-usable action components that can be joined together into "high-order" actions to create serverless applications.
+{% hint style="success" %}
+🎉As you can see, using sequences is a great way to develop re-usable action components that can be joined together into "high-order" actions to create serverless applications. 🎉
+{% endhint %}
 
 ## Handling errors
 
