@@ -56,9 +56,10 @@ This output shows that the Cloudant package provides many actions including `rea
 The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
 
 {% hint style="info" %}
-**Note:** Parameters listed under the package with a prefix `*` are predefined, bound parameters. Parameters without a `*` are those listed under the annotations for each entity.
-
-Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user.
+**Note:**
+* Parameters listed under the package with a prefix `*` are predefined, bound parameters.
+* Parameters without a `*` are those listed under the annotations for each entity.
+* Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user.
 {% endhint %}
 
 ## Viewing parameters
