@@ -10,7 +10,7 @@ Using `ibmcloud fn` CLI you can get a list of packages in a namespace, list the 
 
 Get a list of packages in the `/whisk.system` namespace.
 
-```text
+```bash
 ibmcloud fn package list /whisk.system
 ```
 
@@ -55,9 +55,13 @@ This output shows that the Cloudant package provides many actions including `rea
 
 The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
 
+{% hint style="info" %}
 **Note:** Parameters listed under the package with a prefix `*` are predefined, bound parameters. Parameters without a `*` are those listed under the annotations for each entity.
 
 Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user.
+{% endhint %}
+
+## Viewing parameters
 
 Any entity listed under a package inherits specific bound parameters from the package. To view the list of known parameters of an entity belonging to a package, you will need to run a `get --summary` of the individual entity.
 
