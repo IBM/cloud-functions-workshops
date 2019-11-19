@@ -79,7 +79,7 @@ Let's look more closely at the `read` action in the Cloudant package:
       (parameters: *apihost, *bluemixServiceName, *dbname, *host, *id, params, *password, *username)
    ```
 
-   This output shows that the Cloudant `read` action lists eight parameters, seven of which are predefined. These include the database and document ID to retrieve.
+   This output shows that the Cloudant `read` action lists eight parameters, seven of which are predefined. These include the database and document ID (`id`) to retrieve.
 
 ## Invoking actions in a package
 
@@ -87,7 +87,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 
 1. Get a description of the `/whisk.system/samples/greeting` action.
 
-   ```text
+   ```bash
    ibmcloud fn action get --summary /whisk.system/samples/greeting
    ```
 
@@ -100,7 +100,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 
 2. Invoke the action without any parameters.
 
-   ```text
+   ```bash
    ibmcloud fn action invoke --result /whisk.system/samples/greeting
    ```
 
@@ -114,13 +114,13 @@ You can invoke actions in a package, just as with other actions. The next few st
 
 3. Invoke the action with parameters.
 
-   ```text
-   ibmcloud fn action invoke --result /whisk.system/samples/greeting --param name Bernie --param place Vermont
+   ```bash
+   ibmcloud fn action invoke --result /whisk.system/samples/greeting --param name Arya --param place Winterfell
    ```
 
    ```text
    {
-       "payload": "Hello, Bernie from Vermont!"
+       "payload": "Hello, Arya from Winterfell!"
    }
    ```
 
