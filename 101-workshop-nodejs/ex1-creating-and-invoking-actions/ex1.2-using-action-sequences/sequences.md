@@ -212,7 +212,7 @@ We can even find out more about the failed action.
 1. List the last few activations
 
   ```bash
-  ic fn activation list -l 2
+  ibmcloud fn activation list -l 2
   ```
 
   ```bash
@@ -223,24 +223,24 @@ We can even find out more about the failed action.
 
 1. get the details of the failed action (i.e., `fail`)
 
-```bash
-ibmcloud fn activation get 1b8144afde1244738144afde12c4732a
-```
+  ```bash
+  ibmcloud fn activation get 1b8144afde1244738144afde12c4732a
+  ```
 
-```json
-ok: got activation 1b8144afde1244738144afde12c4732a
-{
-  ...
-    "logs": [
-        "20xx-11-19T16:11:46.132237Z    stderr: Error: stopping sequence and returning.",
-        "20xx-11-19T16:11:46.132244Z    stderr: at NodeActionRunner.fail [as userScriptMain] (eval at initializeActionHandler (/nodejsAction/runner.js:57:23), <anonymous>:21:13)",
-        "20xx-11-19T16:11:46.132248Z    stderr: at Promise (/nodejsAction/runner.js:73:35)",
-        ...
-    ],
+  ```json
+  ok: got activation 1b8144afde1244738144afde12c4732a
+  {
     ...
-```
+      "logs": [
+          "20xx-11-19T16:11:46.132237Z    stderr: Error: stopping sequence and returning.",
+          "20xx-11-19T16:11:46.132244Z    stderr: at NodeActionRunner.fail [as userScriptMain] (eval at initializeActionHandler (/nodejsAction/runner.js:57:23), <anonymous>:21:13)",
+          "20xx-11-19T16:11:46.132248Z    stderr: at Promise (/nodejsAction/runner.js:73:35)",
+          ...
+      ],
+      ...
+  ```
 
-As you can, the sequence was stopped at the failed action `fail`.
+  As you can, the sequence was stopped at the failed action `fail`.
 
 {% hint style="success" %}
 🎉 **Sequences are an "advanced" OpenWhisk technique. Congratulations for getting this far! Now let's move on to something all together different, connecting functions to external event sources…** 🎉🎉🎉
