@@ -35,7 +35,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
    ok: created package custom
    ```
 
-2. Get a summary of the package.
+1. Get a summary of the package.
 
    ```bash
    ibmcloud fn package get --summary custom
@@ -48,13 +48,13 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    Notice that the package is empty.
 
-3. Create a file called `identity.js` that contains the following action code. This action returns all input parameters.
+1. Create a file called `identity.js` that contains the following action code. This action returns all input parameters.
 
    ```javascript
    function main(args) { return args; }
    ```
 
-4. Create an `identity` action in the `custom` package.
+1. Create an `identity` action in the `custom` package.
 
    ```bash
    ibmcloud fn action create custom/identity identity.js
@@ -66,7 +66,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    Creating an action in a package requires that you prefix the action name with a package name.
 
-5. Get a summary of the package again.
+1. Get a summary of the package again.
 
    ```bash
    ibmcloud fn package get --summary custom
@@ -81,7 +81,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    You can see the `custom/identity` action in your namespace now.
 
-6. Invoke the action in the package.
+1. Invoke the action in the package.
 
    ```bash
    ibmcloud fn action invoke --result custom/identity
@@ -90,8 +90,11 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
    ```text
    {}
    ```
+### Setting default package parameters
 
-_You can set default parameters for all the entities in a package. You do this by setting package-level parameters that are inherited by all actions in the package. To see how this works, try the following example:_
+You can set default parameters for all the entities in a package. You do this by setting package-level parameters that are inherited by all actions in the package.
+
+To see how this works, try the following example:
 
 1. Update the `custom` package with two parameters: `city` and `country`.
 
