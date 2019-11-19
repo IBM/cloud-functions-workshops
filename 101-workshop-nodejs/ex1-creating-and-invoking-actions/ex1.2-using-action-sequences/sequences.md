@@ -25,7 +25,7 @@ IBM Cloud Functions supports a kind of action called a "sequence". Sequence acti
 **Sequences behave like normal actions**, you create, invoke and manage them as actions through the CLI.
 {% endhint %}
 
-Here's an example of defining an action \(`my_sequence`\) from a sequence of three actions \(`a`, `b`, and `c`\):
+Here's an example of defining an action `my_sequence` from a sequence of three actions \(`a`, `b`, and `c`\):
 
 ```bash
 ibmcloud fn action create my_sequence --sequence a,b,c
@@ -206,6 +206,41 @@ Let's look at how this work...
        "error": "An error has occurred: Error: stopping sequence and returning."
    }
    ```
+
+We can even find out more about the failed action.
+
+1. List the last few activations
+
+  ```bash
+  ic fn activation list -l 2
+  ```
+
+  ```bash
+  Activation ID                    Kind      Start Duration   Status          Entity
+  1b8144afde1244738144afde12c4732a nodejs:10 cold  46ms       developer error fail:0.0.1
+  eab8ed35f2fc4236b8ed35f2fc423657 sequence  warm  96ms       developer error example:0.0.1
+  ```
+
+1. get the details of the failed action (i.e., `fail`)
+
+```bash
+ibmcloud fn activation get 1b8144afde1244738144afde12c4732a
+```
+
+```json
+ok: got activation 1b8144afde1244738144afde12c4732a
+{
+  ...
+    "logs": [
+        "20xx-11-19T16:11:46.132237Z    stderr: Error: stopping sequence and returning.",
+        "20xx-11-19T16:11:46.132244Z    stderr: at NodeActionRunner.fail [as userScriptMain] (eval at initializeActionHandler (/nodejsAction/runner.js:57:23), <anonymous>:21:13)",
+        "20xx-11-19T16:11:46.132248Z    stderr: at Promise (/nodejsAction/runner.js:73:35)",
+        ...
+    ],
+    ...
+```
+
+As you can, the sequence was stopped at the failed action `fail`.
 
 {% hint style="success" %}
 🎉 **Sequences are an "advanced" OpenWhisk technique. Congratulations for getting this far! Now let's move on to something all together different, connecting functions to external event sources…** 🎉🎉🎉
