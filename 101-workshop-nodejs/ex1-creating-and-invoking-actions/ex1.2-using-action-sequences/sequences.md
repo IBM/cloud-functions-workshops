@@ -125,21 +125,21 @@ Let's look at an example of using sequences.
 
   1. Create the following action sequence.
 
-  ```bash
-  ibmcloud fn action create reverse_words --sequence split,reverse,join
-  ```
+    ```bash
+    ibmcloud fn action create reverse_words --sequence split,reverse,join
+    ```
 
   1. Test out the action sequence.
 
-  ```bash
-  ibmcloud fn action invoke reverse_words --result --param text "hello world"
-  ```
+    ```bash
+    ibmcloud fn action invoke reverse_words --result --param text "hello world"
+    ```
 
-  ```json
-  {
-      "text": "olleh dlrow"
-  }
-  ```
+    ```json
+    {
+        "text": "olleh dlrow"
+    }
+    ```
 
 {% hint style="success" %}
 🎉As you can see, using sequences is a great way to develop re-usable action components that can be joined together into "high-order" actions to create serverless applications. 🎉
