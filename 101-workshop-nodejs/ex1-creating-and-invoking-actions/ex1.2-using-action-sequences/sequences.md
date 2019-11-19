@@ -243,5 +243,5 @@ We can even find out more about the failed action.
   As you can, the sequence was stopped at the failed action `fail`.
 
 {% hint style="success" %}
-🎉 **Congratulations for getting this far! Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions as Packages further enabling composition and reuse…** 🎉
+🎉 **Congratulations for getting this far!** Use of Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions within Packages further enabling composition and reuse…** 🎉
 {% endhint %}
