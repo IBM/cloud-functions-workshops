@@ -71,8 +71,11 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
 
    ```json
    {
-        "duration": 2026,
-        ...
+      ...
+      "start": 1574133220119,
+      "end": 1574133222155,
+      "duration": 2036,
+      ...
    }
    ```
 
@@ -97,7 +100,7 @@ Let's look at what happens when an action invocation takes longer than the `time
 2. Invoke the action and block on the result.
 
    ```bash
-   ibmcloud wsk action invoke asyncAction --result
+   ibmcloud fn action invoke asyncAction --result
    ```
 
    ```json
