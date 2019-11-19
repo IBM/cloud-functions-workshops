@@ -162,7 +162,7 @@ To see how this works, try the following example:
    }
    ```
 
-1. Invoke the identity action with some parameters. Invocation parameters are merged with the package parameters; the invocation parameters override the package parameters.
+1. Invoke the identity action with some parameters.
 
    ```bash
    ibmcloud fn action invoke --result custom/identity --param city Dallas --param state Texas
@@ -175,6 +175,9 @@ To see how this works, try the following example:
       "state": "Texas"
    }
    ```
+{% hint style="info" %}
+Invocation parameters are merged with the package parameters with the **invocation parameters overriding the package parameters**.
+{% endhint %}
 
 ## Sharing packages
 
