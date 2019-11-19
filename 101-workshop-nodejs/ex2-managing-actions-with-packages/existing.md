@@ -16,32 +16,33 @@ ibmcloud fn package list /whisk.system
 
 ```text
 packages
-/whisk.system/combinators                                              shared
-/whisk.system/websocket                                                shared
-/whisk.system/watson-translator                                        shared
-/whisk.system/watson-textToSpeech                                      shared
-/whisk.system/github                                                   shared
-/whisk.system/utils                                                    shared
-/whisk.system/watson-speechToText                                      shared
-/whisk.system/slack                                                    shared
-/whisk.system/samples                                                  shared
-/whisk.system/weather                                                  shared
-/whisk.system/pushnotifications                                        shared
-/whisk.system/alarms                                                   shared
-/whisk.system/cloudant                                                 shared
-/whisk.system/messaging                                                shared
+/whisk.system/cos                         shared
+/whisk.system/alarms                      shared
+/whisk.system/messaging                   shared
+/whisk.system/cloudant                    shared
+/whisk.system/slack                       shared
+/whisk.system/utils                       shared
+/whisk.system/samples                     shared
+/whisk.system/weather                     shared
+/whisk.system/websocket                   shared
+/whisk.system/pushnotifications           shared
+/whisk.system/watson-textToSpeech         shared
+/whisk.system/github                      shared
+/whisk.system/combinators                 shared
+/whisk.system/watson-speechToText         shared
+/whisk.system/watson-translator           shared
 ```
 
 Get a list of entities in the `/whisk.system/cloudant` package.
 
-```text
+```bash
 ibmcloud fn package get --summary /whisk.system/cloudant
 ```
 
-```text
+```bash
 package /whisk.system/cloudant: Cloudant database service
    (parameters: *apihost, *bluemixServiceName, *dbname, *host, overwrite, *password, *username)
- action /whisk.system/cloudant/read: Read document from database
+  action /whisk.system/cloudant/read: Read document from database
    (parameters: dbname, id, params)
   action /whisk.system/cloudant/write: Write document in database
    (parameters: dbname, doc)
@@ -50,24 +51,26 @@ package /whisk.system/cloudant: Cloudant database service
    ....
 ```
 
+This output shows that the Cloudant package provides many actions including `read` and `write`, and the trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
+
+The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
+
 **Note:** Parameters listed under the package with a prefix `*` are predefined, bound parameters. Parameters without a `*` are those listed under the annotations for each entity. Furthermore, any parameters with the prefix `**` are finalized bound parameters. This means that they are immutable, and cannot be changed by the user. Any entity listed under a package inherits specific bound parameters from the package. To view the list of known parameters of an entity belonging to a package, you will need to run a `get —summary` of the individual entity.
 
-This output shows that the Cloudant package provides the actions `read` and `write`, and the trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
+Let's look more closely at the `read` action in the Cloudant package:
 
-The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account, for example.
+1. Get a description of the `/whisk.system/cloudant/read` action.
 
-Get a description of the `/whisk.system/cloudant/read` action.
+   ```bash
+   ibmcloud fn action get --summary /whisk.system/cloudant/read
+   ```
 
-```text
-ibmcloud fn action get --summary /whisk.system/cloudant/read
-```
+   ```bash
+   action /whisk.system/cloudant/read: Read document from database
+      (parameters: *apihost, *bluemixServiceName, *dbname, *host, *id, params, *password, *username)
+   ```
 
-```text
-action /whisk.system/cloudant/read: Read document from database
-   (parameters: *apihost, *bluemixServiceName, *dbname, *host, *id, params, *password, *username)
-```
-
-This output shows that the Cloudant `read` action lists eight parameters, seven of which are predefined. These include the database and document ID to retrieve.
+   This output shows that the Cloudant `read` action lists eight parameters, seven of which are predefined. These include the database and document ID to retrieve.
 
 ## Invoking actions in a package
 
