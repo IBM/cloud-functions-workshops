@@ -74,7 +74,7 @@ Let's look more closely at the `read` action in the Cloudant package:
    ibmcloud fn action get --summary /whisk.system/cloudant/read
    ```
 
-   ```bash
+   ```text
    action /whisk.system/cloudant/read: Read document from database
       (parameters: *apihost, *bluemixServiceName, *dbname, *host, *id, params, *password, *username)
    ```
