@@ -90,7 +90,8 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
    ```text
    {}
    ```
-### Setting default package parameters
+
+## Setting default package parameters
 
 You can set default parameters for all the entities in a package. You do this by setting package-level parameters that are inherited by all actions in the package.
 
