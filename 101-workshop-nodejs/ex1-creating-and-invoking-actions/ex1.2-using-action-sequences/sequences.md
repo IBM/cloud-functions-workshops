@@ -243,5 +243,5 @@ We can even find out more about the failed action.
   As you can, the sequence was stopped at the failed action `fail`.
 
 {% hint style="success" %}
-🎉 **Sequences are an "advanced" OpenWhisk technique. Congratulations for getting this far! Now let's move on to something all together different, connecting functions to external event sources…** 🎉🎉🎉
+🎉 **Congratulations for getting this far! Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions as Packages further enabling composition and reuse…** 🎉
 {% endhint %}
