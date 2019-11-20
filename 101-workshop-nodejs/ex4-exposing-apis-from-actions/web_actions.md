@@ -1,60 +1,80 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Web Actions
 
 Let's turn the `hello` action into a web action. Once it has been converted, we can call this action using a normal HTTP request.
 
 1. Update the action to set the `—web` flag to `true`.
 
-   ```text
-   $ ibmcloud wsk action update hello --web true
+   ```bash
+   ibmcloud fn action update hello --web true
    ```
 
-   ```text
+   ```bash
    ok: updated action hello
    ```
 
 2. Retrieve the web action URL exposed by the platform for this action.
 
-   ```text
-   $ ibmcloud wsk action get hello --url
+   ```bash
+   ibmcloud fn action get hello --url
    ```
 
-   ```text
+   ```bash
    ok: got action hello
-   https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/hello
+   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
+
    ```
 
 3. Invoke the web action URL with the JSON extension, passing in query parameters for `name` and `place`.
 
-```text
-   $ curl "https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/hello.json?name=Bernie"
+```bash
+   curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
 ```
 
-```text
+```json
    {
-     "message": "Hello Bernie from Vermont!"
+     "message": "Hello Josephine from Austin!"
    }
 ```
 
 1. Disable web action support.
 
-   ```text
-   $ ibmcloud wsk action update hello --web false
+   ```bash
+   ibmcloud fn action update hello --web false
    ```
 
-   ```text
+   ```bash
    ok: updated action hello
    ```
 
 2. Verify the action is not externally accessible.
 
-   ```text
-   $ curl "https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/hello.json?name=Bernie"
+   ```bash
+   curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
    ```
 
-   ```text
+   ```json
    {
      "error": "The requested resource does not exist.",
-     "code": 4452991
+     "code": "1dfc1f7cb457ed4bb1f2978fc75bd31f"
    }
    ```
 
@@ -75,7 +95,7 @@ All web actions, when invoked, receives additional HTTP request details as param
 5. `__ow_body` \(type: string\): the request body entity, as a base64 encoded string when content is binary or JSON object/array, or plain string otherwise
 6. `__ow_query` \(type: string\): the query parameters from the request as an unparsed string
 
-The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/incubator-openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy. The `__ow_query` is available only when a web action elects to handle the ["raw" HTTP request](https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\). The `__ow_body` property is present either when handling "raw" HTTP requests, or when the HTTP request entity is not a JSON object or form data. Web actions otherwise receive query and body parameters as first class properties in the action arguments with body parameters taking precedence over query parameters, which in turn take precedence over action and package parameters.
+The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy. The `__ow_query` is available only when a web action elects to handle the ["raw" HTTP request](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\). The `__ow_body` property is present either when handling "raw" HTTP requests, or when the HTTP request entity is not a JSON object or form data. Web actions otherwise receive query and body parameters as first class properties in the action arguments with body parameters taking precedence over query parameters, which in turn take precedence over action and package parameters.
 
 ## Controlling HTTP responses
 
@@ -91,13 +111,13 @@ If a `content-type header` is not declared in the action result’s `headers`, t
 
 ## Additional features
 
-Web actions have a [lot more features](https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md), see the documentation for full details on all these capabilities.
+Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/master/docs/webactions.md), see the documentation for full details on all thepse capabilities.
 
 ## Example - HTTP redirect
 
-1. Create a new web action from the following source code.
+1. Create a new web action from the following source code in `redirect.js`.
 
-   ```text
+   ```javascript
    function main() {
        return {
            headers: { location: "http://openwhisk.org" },
@@ -106,32 +126,33 @@ Web actions have a [lot more features](https://github.com/apache/incubator-openw
    }
    ```
 
-   ```text
-   $ ibmcloud wsk action create redirect action.js --web true
+   ```bash
+   ibmcloud fn action create redirect redirect.js --web true
    ```
 
-   ```text
+   ```bash
    ok: created action redirect
    ```
 
 2. Retrieve URL for new web action
 
-   ```text
-   $ ibmcloud wsk action get redirect --url
+   ```bash
+   ibmcloud fn action get redirect --url
    ```
 
-   ```text
+   ```bash
    ok: got action redirect
-   https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/redirect
+   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
    ```
 
 3. Check HTTP response is HTTP redirect.
 
-   ```text
-   $ curl -v https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/redirect
+   ```bash
+   curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
    ```
 
-   ```text
+   ```bash
+   ...
    < HTTP/1.1 302 Found
    < X-Backside-Transport: OK OK
    < Connection: Keep-Alive
@@ -142,13 +163,14 @@ Web actions have a [lot more features](https://github.com/apache/incubator-openw
    < Access-Control-Allow-Methods: OPTIONS, GET, DELETE, POST, PUT, HEAD, PATCH
    < Access-Control-Allow-Headers: Authorization, Content-Type
    < location: http://openwhisk.org
+   ...
    ```
 
 ## Example - HTML response
 
-1. Create a new web action from the following source code.
+1. Create a new web action from the following source code in html.js.
 
-   ```text
+   ```javascript
    function main() {
        let html = "<html><body>Hello World!</body></html>"
        return { headers: { "Content-Type": "text/html" },
@@ -157,38 +179,38 @@ Web actions have a [lot more features](https://github.com/apache/incubator-openw
    }
    ```
 
-   ```text
-   $ ibmcloud wsk action create html action.js --web true
+   ```bash
+   ibmcloud fn action create html html.js --web true
    ```
 
-   ```text
+   ```bash
    ok: created action html
    ```
 
-   ```text
-   $ ibmcloud wsk action get html --url
+   ```bash
+   ibmcloud fn action get html --url
    ```
 
-   ```text
+   ```bash
    ok: got action html
-   https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/html
+   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
    ```
 
 2. Check HTTP response is HTML.
 
-   ```text
-   $ curl https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/html
+   ```bash
+   curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
    ```
 
-   ```text
+   ```html
    <html><body>Hello World!</body></html>
    ```
 
 ## Example - Manual JSON response
 
-1. Create a new web action from the following source code.
+1. Create a new web action from the following source code in manual.js.
 
-   ```text
+   ```javascript
    function main(params) { 
        return {
            statusCode: 200,
@@ -198,32 +220,32 @@ Web actions have a [lot more features](https://github.com/apache/incubator-openw
    }
    ```
 
-   ```text
-   $ ibmcloud wsk action create manual action.js --web true
+   ```bash
+   ibmcloud fn action create manual manual.js --web true
    ```
 
-   ```text
+   ```bash
    ok: created action manual
    ```
 
 2. Retrieve URL for new web action
 
-   ```text
-   $ ibmcloud wsk action get manual --url
+   ```bash
+   ibmcloud fn action get manual --url
    ```
 
-   ```text
+   ```bash
    ok: got action manual
-   https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/manual
+   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual
    ```
 
 3. Check HTTP response is JSON.
 
-   ```text
-   $ curl "https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/manual?hello=world"
+   ```bash
+   curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world
    ```
 
-   ```text
+   ```json
    {
      "__ow_method": "get",
      "__ow_headers": {
@@ -243,11 +265,11 @@ Web actions have a [lot more features](https://github.com/apache/incubator-openw
 
 4. Use other HTTP methods or URI paths to show the parameters change.
 
-   ```text
-   $ curl -XPOST "https://openwhisk.ng.bluemix.net/api/v1/web/user%40host.com_dev/default/manual/subpath"
+   ```bash
+   curl -XPOST https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world
    ```
 
-   ```text
+   ```json
    {
      "__ow_method": "post",
      "__ow_headers": {
