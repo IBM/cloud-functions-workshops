@@ -34,9 +34,7 @@ Triggers can be explicitly fired by a user or by an external event source. A _fe
 * CouchDB data change feed that fires a trigger event each time a document in a database is added or modified.
 * A Git feed that fires a trigger event for every commit to a Git repository.
 
-{% hint style="info" %}
-🎉 **Triggers are an implementation of the Observer pattern.** Instances of triggers can be fired with parameters. Next we need to find out how to register observers. 🎉
-{% endhint %}
+Instances of Triggers can also be _fired_ with parameters that can be passed on to one or more actions they can be connected to using Rules.
 
 ## Rules
 
@@ -63,5 +61,9 @@ You can set up rules so that a single trigger event invokes multiple actions, an
 The three rules establish the following behavior: images in both tweets and uploaded images are classified, uploaded images are classified, and a thumbnail version is generated.
 
 {% hint style="info" %}
-🎉 **Just remember rules allow you to register an observer on a trigger. That's all we need to know for now, let's look at using these new concepts…** 🎉
+**Triggers and Rules enable the implementation of the [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern)**. Triggers relate state changes (Events) from the _Subject_ (Event source) to a list of _Observers_ (Actions) when connected by a Rule.
+{% endhint %}
+
+{% hint style="success" %}
+**Just remember Rules allow you to connect a Trigger to an Action. That's all we need to know for now, let's look at using these new concepts…**
 {% endhint %}
