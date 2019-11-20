@@ -1,3 +1,22 @@
+<!--
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+-->
+
 # Connecting Trigger Feeds
 
 Trigger feeds allow you to connect triggers to external event sources. Event sources will fire registered triggers each time an event occurs. Here's a list of the event sources currently supported on IBM Cloud Functions: [https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md](https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md)
@@ -6,8 +25,8 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
 
 1. Get a description of the feeds in the `/whisk.system/alarms` package.
 
-   ```text
-   $ ibmcloud wsk package get --summary /whisk.system/alarms
+   ```bash
+   ibmcloud fn package get --summary /whisk.system/alarms
    ```
 
    ```text
@@ -21,10 +40,10 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
       (parameters: cron, startDate, stopDate)
    ```
 
-2. Retrieve the details for the `alarms/interval` feed.
+1. Retrieve the details for the `alarms/interval` feed.
 
    ```text
-   $ ibmcloud wsk action get --summary /whisk.system/alarms/interval
+   ibmcloud fn action get --summary /whisk.system/alarms/interval
    ```
 
    ```text
@@ -35,11 +54,11 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
    The `/whisk.system/alarms/interval` feed has the following parameters we need to pass in:
 
    1. `minutes`:  An integer representing the length of the interval \(in minutes\) between trigger fires.
-   2. `trigger_payload`: The payload parameter value to set in each trigger event.
-   3. Create a trigger that fires every minute using this feed. 
+   1. `trigger_payload`: The payload parameter value to set in each trigger event.
+   1. Create a trigger that fires every minute using this feed.
 
-   ```text
-   $ ibmcloud wsk trigger create everyMinute --feed /whisk.system/alarms/interval -p minutes 1 -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
+   ```bash
+   ibmcloud wsk trigger create everyMinute --feed /whisk.system/alarms/interval -p minutes 1 -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
    ```
 
    ```text
@@ -48,20 +67,20 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
    ok: created trigger everyMinute
    ```
 
-3. Connect this trigger to the `hello` action with a new rule.
+1. Connect this trigger to the `hello` action with a new rule.
 
-   ```text
-   $ ibmcloud wsk rule create everyMinuteRule everyMinute hello
+   ```bash
+   ibmcloud fn rule create everyMinuteRule everyMinute hello
    ```
 
    ```text
    ok: created rule everyMinuteRule
    ```
 
-4. Check that the action is being invoked every minute by polling for activation logs.
+1. Check that the action is being invoked every minute by polling for activation logs.
 
-   ```text
-   $ ibmcloud wsk activation poll
+   ```bash
+   ibmcloud fn activation poll
    ```
 
    ```text
@@ -75,15 +94,18 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
 
    You should see activations every minute the trigger and the action. The action receives the parameters `{"name":"Mork", "place":"Ork"}` on every invocation.
 
-**IMPORTANT: Let's delete the trigger and rule or this event will be running forever!**
+{% hint style="warning" %}
+**IMPORTANT: Be sure to delete the trigger and rule or this event will be running forever!**
+{% endhint %}
 
-```text
-$ ibmcloud wsk trigger delete everyMinute
+```bash
+ibmcloud fn trigger delete everyMinute
 ```
 
-```text
-$ ibmcloud wsk rule delete everyMinuteRule
+```bash
+ibmcloud fn rule delete everyMinuteRule
 ```
 
-🎉🎉🎉 **Understanding triggers and rules allows you to build event-driven applications on OpenWhisk. Create some actions, hook up events and let the platform take care of everything else, what could be easier?** 🎉🎉🎉
-
+{% hint style="success" %}
+🎉 **Understanding triggers and rules allows you to build event-driven applications using IBM Cloud Functions.** Create some actions, hook up events and let the platform take care of everything else, what could be easier? 🎉
+{% endhint %}

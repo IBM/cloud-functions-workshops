@@ -9,7 +9,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 1. Check the `hello` action exists and responds to the correct event parameters.
 
    ```text
-   $ ibmcloud wsk action invoke --result hello --param name Bernie --param place Vermont
+   ibmcloud fn action invoke --result hello --param name Bernie --param place Vermont
    ```
 
    ```text
@@ -21,7 +21,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 2. Check the trigger exists.
 
    ```text
-   $ ibmcloud wsk trigger get locationUpdate
+   ibmcloud fn trigger get locationUpdate
    ```
 
    ```text
@@ -38,7 +38,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 3. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
 
    ```text
-   $ ibmcloud wsk rule create myRule locationUpdate hello
+   ibmcloud fn rule create myRule locationUpdate hello
    ```
 
    ```text
@@ -48,7 +48,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 4. Retrieve rule details to show the trigger and action bound by this rule.
 
    ```text
-   $ ibmcloud wsk rule get myRule
+   ibmcloud fn rule get myRule
    ```
 
    ```text
@@ -72,10 +72,10 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 ## Testing rules
 
-1. Fire the `locationUpdate` trigger. Each time that you fire the trigger with an event, the `hello` action is called with the event parameters.  
+1. Fire the `locationUpdate` trigger. Each time that you fire the trigger with an event, the `hello` action is called with the event parameters.
 
 ```text
-   $ ibmcloud wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
+   ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
 ```
 
 ```text
@@ -85,7 +85,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 1. Verify that the action was invoked by checking the activations list.
 
    ```text
-   $ ibmcloud wsk activation list --limit 2
+   ibmcloud fn activation list --limit 2
    ```
 
    ```text
@@ -99,12 +99,12 @@ As an example, create a rule that calls the `hello` action whenever a location u
 2. Retrieving the trigger activation record will show the actions and rules invoked from this activation.
 
    ```text
-   $ ibmcloud wsk activation result 5ee74025c2384f30a74025c2382f30c1
+   ibmcloud fn activation result 5ee74025c2384f30a74025c2382f30c1
    ```
 
    ```text
    {
-      "payload": "Hello, Donald from Washington, D.C."
+      "payload": "Hello, Kara from Krypton"
    }
    ```
 
@@ -113,18 +113,18 @@ As an example, create a rule that calls the `hello` action whenever a location u
 Activation records for triggers store the rules and actions fired for an event and the event parameters.
 
 ```text
-$ ibmcloud wsk activation result 5c153c01d76d49dc953c01d76d99dc34
+ibmcloud fn activation result 5c153c01d76d49dc953c01d76d99dc34
 ```
 
 ```text
 {
-    "name": "Donald",
-    "place": "Washington, D.C."
+    "name": "Kara",
+    "place": "Krypton"
 }
 ```
 
 ```text
-$ ibmcloud wsk activation logs 5c153c01d76d49dc953c01d76d99dc34
+ibmcloud fn activation logs 5c153c01d76d49dc953c01d76d99dc34
 ```
 
 ```text
@@ -138,11 +138,11 @@ You can create multiple rules that associate the same trigger with different act
 You can also use rules with sequences. For example, one can create an action sequence `recordLocationAndHello`that is activated by the rule `anotherRule`.
 
 ```text
-$ ibmcloud wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+ibmcloud fn action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
 ```
 
 ```text
-$ ibmcloud wsk rule create anotherRule locationUpdate recordLocationAndHello
+ibmcloud fn rule create anotherRule locationUpdate recordLocationAndHello
 ```
 
 ## Disabling rules
@@ -152,13 +152,13 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 1. Disable the rule connecting the `locationUpdate` trigger and `hello` action.
 
    ```text
-   $ ibmcloud wsk rule disable myRule
+   ibmcloud fn rule disable myRule
    ```
 
 2. Fire the trigger again.
 
    ```text
-   $ ibmcloud wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
+   ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
    ```
 
    ```text
@@ -168,7 +168,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 3. Check the activation list there are no new activation records.
 
    ```text
-   $ ibmcloud wsk activation list --limit 2
+   ibmcloud fn activation list --limit 2
    ```
 
    ```text
