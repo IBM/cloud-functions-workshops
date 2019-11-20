@@ -167,12 +167,12 @@ Notice that you did not need to specify the place parameter when you invoked the
 Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
 ```bash
-ibmcloud fn action invoke --result hello --param name Elrond --param place "Washington, DC"
+ibmcloud fn action invoke --result hello --param name Elrond --param place Rivendell
 ```
 
 ```json
 {
-    "payload": "Hello, Elrond from Washington, DC"
+    "payload": "Hello, Elrond from Rivendell"
 }
 ```
 
