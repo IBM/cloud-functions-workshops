@@ -32,7 +32,7 @@
     * [Monitoring and APIs](101-workshop-nodejs/ex5-ibm-cloud-functions-web-ui/monitoring_and_apis.md)
   * [Using Event Providers]()
     * [Alarms](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
-    * [Cloudant]()
+    * [Cloudant](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
     * [Cloud Object Storage (COS)]()
     * [Push Notifications]()
     * [GitHub]()
