@@ -16,21 +16,21 @@ ibmcloud fn package list /whisk.system
 
 ```text
 packages
-/whisk.system/cos                         shared
 /whisk.system/alarms                      shared
-/whisk.system/messaging                   shared
 /whisk.system/cloudant                    shared
+/whisk.system/combinators                 shared
+/whisk.system/cos                         shared
+/whisk.system/github                      shared
+/whisk.system/messaging                   shared
+/whisk.system/pushnotifications           shared
+/whisk.system/samples                     shared
 /whisk.system/slack                       shared
 /whisk.system/utils                       shared
-/whisk.system/samples                     shared
+/whisk.system/watson-speechToText         shared
+/whisk.system/watson-textToSpeech         shared
+/whisk.system/watson-translator           shared
 /whisk.system/weather                     shared
 /whisk.system/websocket                   shared
-/whisk.system/pushnotifications           shared
-/whisk.system/watson-textToSpeech         shared
-/whisk.system/github                      shared
-/whisk.system/combinators                 shared
-/whisk.system/watson-speechToText         shared
-/whisk.system/watson-translator           shared
 ```
 
 Get a list of entities in the `/whisk.system/cloudant` package.
