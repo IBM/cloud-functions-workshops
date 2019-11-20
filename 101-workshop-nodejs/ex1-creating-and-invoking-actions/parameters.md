@@ -167,15 +167,15 @@ Notice that you did not need to specify the place parameter when you invoked the
 Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
 ```bash
-ibmcloud fn action invoke --result hello --param name Elrond --param place Rivendell
+ibmcloud fn action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
 ```
 
 ```json
 {
-    "payload": "Hello, Elrond from Rivendell"
+    "payload": "Hello, Elrond from the Lonely Mountain"
 }
 ```
 
 {% hint style="success" %}
-🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs. Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, huh?** 🎉
+🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs. Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, right?** 🎉
 {% endhint %}
