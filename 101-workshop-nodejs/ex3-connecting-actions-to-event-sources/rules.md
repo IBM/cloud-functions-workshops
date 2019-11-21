@@ -209,7 +209,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉
+🎉 **Excellent work! Now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉
 {% endhint %}
 
 ---
