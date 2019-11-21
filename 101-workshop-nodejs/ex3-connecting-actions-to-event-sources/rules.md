@@ -73,6 +73,10 @@ As an example, create a rule that calls the `hello` action whenever a location u
    }
    ```
 
+{% hint style="success" %}
+**Success! The `locationUpdate` Trigger is now connected to the `hello` action via the `myRule` Rule!**.
+{% endhint %}
+
 ## Testing rules
 
 1. Fire the `locationUpdate` trigger. Each time that you fire the trigger with an event, the `hello` action is called with the event parameters.
@@ -91,11 +95,11 @@ As an example, create a rule that calls the `hello` action whenever a location u
    ibmcloud fn activation list --limit 2
    ```
 
-   ```text
-   activations
-   5ee74025c2384f30a74025c2382f30c1 hello
-   5c153c01d76d49dc953c01d76d99dc34 locationUpdate
-   ```
+    ```text
+    Activation ID                    Kind      Start Duration Status  Entity
+    5ee74025c2384f30a74025c2382f30c1 nodejs:10 warm  2ms      success hello:0.0.2
+    5c153c01d76d49dc953c01d76d99dc34 unknown   warm  0s       success locationUpdate:0.0.2
+    ```
 
    We can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
 
