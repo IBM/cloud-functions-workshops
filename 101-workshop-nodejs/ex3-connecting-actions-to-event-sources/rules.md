@@ -96,9 +96,9 @@ As an example, create a rule that calls the `hello` action whenever a location u
    ```
 
     ```text
-    Activation ID                    Kind      Start Duration Status  Entity
-    5ee74025c2384f30a74025c2382f30c1 nodejs:10 warm  2ms      success hello:0.0.2
-    5c153c01d76d49dc953c01d76d99dc34 unknown   warm  0s       success locationUpdate:0.0.2
+    Activation ID                    Kind    Start Duration Status  Entity
+    5ee74025c2384f30a74025c2382f30c1 nodejs  warm  2ms      success hello:0.0.2
+    5c153c01d76d49dc953c01d76d99dc34 unknown warm  0s       success locationUpdate:0.0.2
     ```
 
    We can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
