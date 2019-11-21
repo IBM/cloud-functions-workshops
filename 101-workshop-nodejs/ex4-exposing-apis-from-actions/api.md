@@ -114,7 +114,7 @@ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1
 ...
 ```
 
-3. Create the endpoint form the html action
+3. Create the endpoint for the html action
 ```bash
 ibmcloud fn api create /myapi /html get html --response-type http
 ```
@@ -128,22 +128,36 @@ https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b
 curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
 ```
 ```html
-<html><body>Hello World!</body></html>
+<html><body><h3><span style="color:red">Hello World!</span></h3></body></html>
 ```
 
-5. Finally we create a PUT endpoint for the manual JSON action.
+5. Create the endpoint for the atom svg action
+```bash
+ibmcloud fn api create /myapi /atom get atom --response-type http
+```
+
+```bash
+ok: created API /myapi/atom GET for action /_/atom
+https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
+```
+
+6. Test out the action by copy/pasting the endpoint into our browser of choice.
+
+7. Finally we create a PUT endpoint for the manual JSON action.
 ```bash
 ibmcloud fn api create /myapi /manual put manual --response-type json
 ```
+
 ```bash
 ok: created API /myapi/manual PUT for action /_/manual
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
 ```
 
-6. Test the output of the PUT action
+8. Test the output of the PUT action
 ```bash
 curl -XPUT https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual\?hello\=world
 ```
+
 ```json
 { 
     body: {
@@ -158,7 +172,7 @@ curl -XPUT https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f4
 }
 ```
 
-7. Test that a GET request does not work since we have not set up a GET endpoint
+9. Test that a GET request does not work since we have not set up a GET endpoint
 ```bash
 curl -XGET https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual\?hello\=world
 ```
@@ -179,6 +193,7 @@ Action                                     Verb  API Name  URL
 /josephine.watson@gmail.com_ns/html         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
 /josephine.watson@gmail.com_ns/manual       put    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
 /josephine.watson@gmail.com_ns/redirect     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
+/josephine.watson@gmail.com_ns/atom         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
 ```
 ## Using OpenAPI Specification
 
@@ -238,6 +253,8 @@ ok: created API /myapi/html get for action /josephine.watson@gmail.com_ns/html
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
 ok: created API /myapi/manual put for action /josephine.watson@gmail.com_ns/manual
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
+ok: created API /myapi/atom get for action /josephine.watson@gmail.com_ns/atom
+https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
 ```
 4. We can now see that endpoints are restored:
 ```bash
@@ -246,6 +263,7 @@ ibmcloud fn api list
 ```bash
 ok: APIs
 Action                                     Verb  API Name  URL
+/josephine.watson@gmail.com_ns/atom         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
 /josephine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
 /josephine.watson@gmail.com_ns/html         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
 /josephine.watson@gmail.com_ns/manual       put    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
