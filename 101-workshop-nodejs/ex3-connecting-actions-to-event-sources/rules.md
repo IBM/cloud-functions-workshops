@@ -97,8 +97,8 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
     ```text
     Activation ID                    Kind    Start Duration Status  Entity
-    5ee74025c2384f30a74025c2382f30c1 nodejs  warm  2ms      success hello:0.0.2
-    5c153c01d76d49dc953c01d76d99dc34 unknown warm  0s       success locationUpdate:0.0.2
+    5ee74025c2384f30a74025c2382f30c1 nodejs  warm  2ms      success hello
+    5c153c01d76d49dc953c01d76d99dc34 unknown warm  0s       success locationUpdate
     ```
 
    We can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
@@ -194,15 +194,15 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 1. Check the activation list there are no new activation records.
 
-   ```bash
-   ibmcloud fn activation list --limit 2
-   ```
+    ```bash
+    ibmcloud fn activation list --limit 2
+    ```
 
-   ```text
-   activations
-   5ee74025c2384f30a74025c2382f30c1 hello
-   5c153c01d76d49dc953c01d76d99dc34 locationUpdate
-   ```
+    ```text
+    Activation ID                    Kind   Start Duration Status  Entity
+    5ee74025c2384f30a74025c2382f30c1 nodejs warm  2ms      success hello
+    5c153c01d76d49dc953c01d76d99dc34 nodejs warm  2ms      success echo
+    ```
 
    The latest activation records were from the previous example.
 
