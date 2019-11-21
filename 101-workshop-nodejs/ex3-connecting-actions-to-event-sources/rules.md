@@ -178,10 +178,14 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
    ibmcloud fn rule disable myRule
    ```
 
+   ```text
+   ok: disabled rule myRule
+   ```
+
 1. Fire the trigger again.
 
    ```bash
-   ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
+   ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
    ```
 
    ```text
