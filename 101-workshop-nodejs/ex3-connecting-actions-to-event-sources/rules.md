@@ -14,7 +14,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 1. Check the trigger exists.
 
-   ```text
+   ```bash
    ibmcloud fn trigger get locationUpdate
    ```
 
@@ -40,7 +40,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 1. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
 
-   ```text
+   ```bash
    ibmcloud fn rule create myRule locationUpdate hello
    ```
 
@@ -50,7 +50,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 1. Retrieve rule details to show the trigger and action bound by this rule.
 
-   ```text
+   ```bash
    ibmcloud fn rule get myRule
    ```
 
@@ -81,7 +81,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 1. Fire the `locationUpdate` trigger. Each time that you fire the trigger with an event, the `hello` action is called with the event parameters.
 
-```text
+```bash
    ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
 ```
 
@@ -91,7 +91,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 1. Verify that the action was invoked by checking the activations list.
 
-   ```text
+   ```bash
    ibmcloud fn activation list --limit 2
    ```
 
@@ -142,15 +142,31 @@ You can create multiple rules that associate the same trigger with different act
 
 **Can you create another trigger and rule that calls the** `hello` **action? 🤔**
 
-You can also use rules with sequences. For example, one can create an action sequence `recordLocationAndHello`that is activated by the rule `anotherRule`.
+* You can also use rules with sequences. For example, one can create an action sequence `recordLocationAndHello`that is activated by the rule `anotherRule`.
 
-```text
-ibmcloud fn action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
-```
+    1. create a simple sequence:
 
-```text
-ibmcloud fn rule create anotherRule locationUpdate recordLocationAndHello
-```
+        ```text
+        ibmcloud fn action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+        ```
+
+    1. connect the `locationUpdate` trigger to the sequence with another rule:
+
+    ```text
+    ibmcloud fn rule create anotherRule locationUpdate recordLocationAndHello
+    ```
+
+    1. Fire the trigger:
+
+    ```bash
+    ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
+    ```
+
+    1. what do you see if you check the activation logs now?
+
+    ```bash
+    ibmcloud fn activation list --limit 5
+    ```
 
 ## Disabling rules
 
@@ -158,13 +174,13 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 1. Disable the rule connecting the `locationUpdate` trigger and `hello` action.
 
-   ```text
+   ```bash
    ibmcloud fn rule disable myRule
    ```
 
 1. Fire the trigger again.
 
-   ```text
+   ```bash
    ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
    ```
 
@@ -174,7 +190,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 1. Check the activation list there are no new activation records.
 
-   ```text
+   ```bash
    ibmcloud fn activation list --limit 2
    ```
 
@@ -206,7 +222,7 @@ error: Unable to invoke action 'hello': Request defines parameters that are not 
 
 1. Delete the old `hello` action and create it again...
 
-```bashh
+```bash
 ibmcloud fn action delete hello
 ibmcloud fn action create hello ~hello.js
 ```
