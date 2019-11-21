@@ -9,12 +9,12 @@ As an example, create a rule that calls the `hello` action whenever a location u
 1. Check the `hello` action exists and responds to the correct event parameters.
 
    ```text
-   ibmcloud fn action invoke --result hello --param name Bernie --param place Vermont
+   ibmcloud fn action invoke --result hello --param name Oliver --param place "Starling City"
    ```
 
    ```text
    {
-       "payload": "Hello, Bernie from Vermont"
+       "payload": "Hello, Oliver from Starling City"
    }
    ```
 
