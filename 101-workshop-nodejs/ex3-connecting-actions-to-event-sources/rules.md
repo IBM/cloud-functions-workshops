@@ -188,7 +188,7 @@ _Activation records for triggers are only recorded when they are bound to an act
 🎉 **Now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉
 {% endhint %}
 
-## Troublshooting
+## Troubleshooting
 
 If you see this error attempting to invoke the `hello` action with a `place` parameter:
 
@@ -197,7 +197,7 @@ error: Unable to invoke action 'hello': Request defines parameters that are not 
 ```
 
 {% hint style="warning" %}
-**You may see this error if you have previously "bound" the `place` parameter to a fixed value of `Rivendell`**.
+**You may see this error if you have previously "bound" the `place` parameter to a fixed value.**.
 {% endhint %}
 
 1. Delete the old `hello` action and create it again...
