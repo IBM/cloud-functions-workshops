@@ -51,7 +51,7 @@ ibmcloud fn trigger fire locationUpdate -p name "Barry" -p place "Central City"
 ```
 
 ```text
-ok: triggered locationUpdate
+ok: triggered /_/locationUpdate with id
 ```
 
 Triggers also support default parameters. Firing this trigger without any parameters will pass in the default values.
@@ -65,15 +65,17 @@ ok: updated trigger locationUpdate
 ```
 
 ```bash
-ibmcloud fn trigger fire locationUpdate
+ok: triggered /_/locationUpdate with id
 ```
 
 ```text
 ok: triggered locationUpdate
 ```
 
-Events you fire to the `locationUpdate` trigger currently do not do anything. To be useful, we need to create a rule that associates the trigger with an action.
+{% hint style="warning" %}
+**Events you fire to the `locationUpdate` trigger currently do not do anything.** To be useful, we need to create a rule that associates the trigger with an action.
+{% endhint %}
 
 {% hint style="success" %}
-🎉 **That was easy? Let's keep going by connecting actions to triggers…** 🎉
+🎉 **Let's keep going by connecting actions to triggers…** 🎉
 {% endhint %}
