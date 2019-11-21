@@ -21,11 +21,9 @@ As an example, create a rule that calls the `hello` action whenever a location u
    ```text
    ok: got trigger a
    {
-       "namespace": "user@host.com_dev",
-       "name": "locationUpdate",
-       "version": "0.0.1",
-       "limits": {},
-       "publish": false
+        "namespace": "user@host.com_dev",
+        "name": "locationUpdate",
+        "version": "0.0.1",
         "parameters": [
             {
                 "key": "name",
@@ -35,22 +33,12 @@ As an example, create a rule that calls the `hello` action whenever a location u
                 "key": "place",
                 "value": "Central City"
             }
-    ],
-   }
-
-       "parameters": [
-        {
-            "key": "name",
-            "value": "Barry"
-        },
-        {
-            "key": "place",
-            "value": "Central City"
-        }
+        "limits": {},
+        "publish": false
     ],
    ```
 
-3. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
+1. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
 
    ```text
    ibmcloud fn rule create myRule locationUpdate hello
@@ -60,7 +48,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
    ok: created rule myRule
    ```
 
-4. Retrieve rule details to show the trigger and action bound by this rule.
+1. Retrieve rule details to show the trigger and action bound by this rule.
 
    ```text
    ibmcloud fn rule get myRule
@@ -111,7 +99,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
    We can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
 
-2. Retrieving the trigger activation record will show the actions and rules invoked from this activation.
+1. Retrieving the trigger activation record will show the actions and rules invoked from this activation.
 
    ```text
    ibmcloud fn activation result 5ee74025c2384f30a74025c2382f30c1
@@ -170,7 +158,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
    ibmcloud fn rule disable myRule
    ```
 
-2. Fire the trigger again.
+1. Fire the trigger again.
 
    ```text
    ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
@@ -180,7 +168,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
    ok: triggered /_/locationUpdate with id 53f85c39087d4c15b85c39087dac1571
    ```
 
-3. Check the activation list there are no new activation records.
+1. Check the activation list there are no new activation records.
 
    ```text
    ibmcloud fn activation list --limit 2
