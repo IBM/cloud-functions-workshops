@@ -22,5 +22,4 @@ In this exercise, we'll show you the different features of the IBM Cloud Web UIâ
 2. Click the hamburger menu icon in the top left corner to show the menu.
 3. Click "Functions" in the list to open the [IBM Cloud Functions homepage](https://console.bluemix.net/openwhisk/).
 
-   ![](images/homepage.png)
-
+![IBM Cloud Functions homepage](images/homepage.png)
