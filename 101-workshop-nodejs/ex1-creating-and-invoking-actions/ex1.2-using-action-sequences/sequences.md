@@ -145,6 +145,10 @@ Let's look at an example of using sequences.
 🎉As you can see, using sequences is a great way to develop re-usable action components that can be joined together into "high-order" actions to create serverless applications. 🎉
 {% endhint %}
 
+{% hint style="info" %}
+Using IBM Cloud Functions, **you can actually create Sequences from actions written in different programming languages!**  For example you could create a sequence from actions written in JavaScript with Python or Java!
+{% endhint %}
+
 ## Handling errors
 
 What if you want to stop processing functions in a sequence? This might be due to an application error or because the pre-conditions to continue processing have not been met. In the authentication example above, we only want to proceed if the authentication check passes.
