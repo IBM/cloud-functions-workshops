@@ -8,17 +8,11 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
 1. Check the `hello` action exists and responds to the correct event parameters.
 
-   ```text
-   ibmcloud fn action invoke --result hello --param name Oliver --param place "Starling City"
-   ```
+    ```bash
+    ibmcloud fn action invoke --result hello --param name Oliver --param place "Starling City"
+    ```
 
-   ```text
-   {
-       "payload": "Hello, Oliver from Starling City"
-   }
-   ```
-
-2. Check the trigger exists.
+1. Check the trigger exists.
 
    ```text
    ibmcloud fn trigger get locationUpdate
@@ -32,7 +26,28 @@ As an example, create a rule that calls the `hello` action whenever a location u
        "version": "0.0.1",
        "limits": {},
        "publish": false
+        "parameters": [
+            {
+                "key": "name",
+                "value": "Barry"
+            },
+            {
+                "key": "place",
+                "value": "Central City"
+            }
+    ],
    }
+
+       "parameters": [
+        {
+            "key": "name",
+            "value": "Barry"
+        },
+        {
+            "key": "place",
+            "value": "Central City"
+        }
+    ],
    ```
 
 3. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
@@ -181,5 +196,25 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 _Activation records for triggers are only recorded when they are bound to an active rule._
 
-🎉🎉🎉 **Right, now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉🎉🎉
+{% hint style="success" %}
+🎉 **Now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉
+{% endhint %}
 
+## Troublshooting
+
+If you see this error attempting to invoke the `hello` action with a `place` parameter:
+
+```text
+error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
+```
+
+{% hint style="warning" %}
+**You may see this error if you have previously "bound" the `place` parameter to a fixed value of `Rivendell`**.
+{% endhint %}
+
+1. Delete the old `hello` action and create it again...
+
+```bashh
+ibmcloud fn action delete hello
+ibmcloud fn action create hello ~hello.js
+```

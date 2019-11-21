@@ -190,5 +190,6 @@ In the following simple example, you bind to the `/whisk.system/samples` package
        "payload": "Hello, Odin from Asgard!"
    }
    ```
-
+{% hint style="info" %}
    Notice that the `place` parameter value that is specified with the action invocation overwrites the default value set in the `valhallaSamples` package binding.
+{% endhint %}
