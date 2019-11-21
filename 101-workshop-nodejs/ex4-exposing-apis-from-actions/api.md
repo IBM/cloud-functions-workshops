@@ -268,7 +268,6 @@ Action                                     Verb  API Name  URL
 /josephine.watson@gmail.com_ns/html         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
 /josephine.watson@gmail.com_ns/manual       put    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
 /josephine.watson@gmail.com_ns/redirect     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
-
 ```
 
 This OpenAPI Specification can now be stored in your code repository, and used to update endpoints, documentation, or event generate stub code! 
