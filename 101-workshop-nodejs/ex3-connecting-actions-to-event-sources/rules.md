@@ -204,13 +204,15 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
     5c153c01d76d49dc953c01d76d99dc34 nodejs warm  2ms      success echo
     ```
 
-   The latest activation records were from the previous example.
-
-_Activation records for triggers are only recorded when they are bound to an active rule._
+{% hint style="warning" %}
+**The latest activation records were from the previous example!**. _Activation records for triggers are only recorded when they are bound to an active rule._
+{% endhint %}
 
 {% hint style="success" %}
 🎉 **Now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉
 {% endhint %}
+
+---
 
 ## Troubleshooting
 
