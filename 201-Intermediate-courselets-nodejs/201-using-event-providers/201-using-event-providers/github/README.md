@@ -59,6 +59,8 @@ package /whisk.system/github: Package which contains actions and feeds to intera
 
   * **Warning** _Make sure that you don't have any webhooks already defined for your repository or they may be overwritten._
 
+1. Verify your personal access token was created successfully with the proper scopes: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
 1. Create a package binding to the `/whisk.system/github` package.
 
  The parameters are as follows:
@@ -98,6 +100,8 @@ The following is an example of creating a trigger that will be fired each time t
 
 # References
 
-* Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github)
+* Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) documentation.
+* Read more on [Implementing feeds](https://github.com/apache/openwhisk/blob/master/docs/feeds.md) in Apache OpenWhisk.
 * [Github Project automation with Cloud Functions](https://github.com/IBM/github-project-automation-with-cloud-functions)
-* []()
+* [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52)
+

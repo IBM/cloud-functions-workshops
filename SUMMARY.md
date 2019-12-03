@@ -32,6 +32,7 @@
     * [Monitoring and APIs](101-workshop-nodejs/ex5-ibm-cloud-functions-web-ui/monitoring_and_apis.md)
   * [Using Event Providers]()
     * [Alarms](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
+      * [Alarms]()https://github.com/IBM/ibm-cloud-functions-action-trigger-rule
     * [Cloudant](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
     * [Cloud Object Storage (COS)](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_obstorage)
     * [Push Notifications](https://developer.ibm.com/patterns/serverless-functions-push-notifications/)
