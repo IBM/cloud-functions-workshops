@@ -36,7 +36,7 @@
     * [Cloudant](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
     * [Cloud Object Storage (COS)](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_obstorage)
     * [Push Notifications](https://developer.ibm.com/patterns/serverless-functions-push-notifications/)
-    * [GitHub](https://developer.ibm.com/tutorials/github-task-automation-with-serverless-actions/)
+    * [GitHub](201-intermediate-courselets-nodejs/201-using-event-providers/github/README.md)
     * [Slack](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-slack-chatbot-database-watson&pos=2)
   * [Bonus Exercises](101-workshop-nodejs/bonus-exercises/README.md)
     * [Calling an external API from an Async action](101-workshop-nodejs/bonus-exercises/ex1-invoking-an-async-api.md)
