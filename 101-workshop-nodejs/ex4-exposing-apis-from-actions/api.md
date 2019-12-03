@@ -48,7 +48,7 @@ ok: created API /myapi/foo GET for action /_/hello
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
 ```
 
-2. Check to see the api was create
+1. Check to see the api was create
 
 ```bash
 ibmcloud fn api list
@@ -60,7 +60,7 @@ Action                                     Verb  API Name  URL
 /joesphine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
 ```
 
-3. Now lets invoke that API via curl
+1. Now lets invoke that API via curl
 
 ```bash
 curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
@@ -78,9 +78,9 @@ We will now be creating endpoints for the other web actions created in the previ
 
 Now we must be mindful that by default the IBM Cloud Functions expects that return type will be JSON. Since for the remaining functions this is not the case, we must be mindful to set the appropriate response types with the `--response-type TYPE` flag. Valid types include http, json, text, svg.
 
-1. Create the endpoint for the http endpoint 
+1. Create the endpoint for the http endpoint
 ```bash
-ibmcloud fn api create /myapi /redirect get redirect --response-type http 
+ibmcloud fn api create /myapi /redirect get redirect --response-type http
 ```
 ```bash
 ok: created API /myapi/redirect GET for action /_/redirect
@@ -159,7 +159,7 @@ curl -XPUT https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f4
 ```
 
 ```json
-{ 
+{
     body: {
         "__ow_method": "put",
         "__ow_path": "",
@@ -270,4 +270,4 @@ Action                                     Verb  API Name  URL
 /josephine.watson@gmail.com_ns/redirect     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
 ```
 
-This OpenAPI Specification can now be stored in your code repository, and used to update endpoints, documentation, or event generate stub code! 
+This OpenAPI Specification can now be stored in your code repository, and used to update endpoints, documentation, or event generate stub code!
