@@ -102,6 +102,7 @@ The following is an example of creating a trigger that will be fired each time t
 
 * Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) documentation.
 * Read more on [Implementing feeds](https://github.com/apache/openwhisk/blob/master/docs/feeds.md) in Apache OpenWhisk.
-* [Github Project automation with Cloud Functions](https://github.com/IBM/github-project-automation-with-cloud-functions)
+* IBM Developer's [Github Project automation with Cloud Functions](https://developer.ibm.com/tutorials/github-task-automation-with-serverless-actions/)
+  * [GitHub source](https://github.com/IBM/github-project-automation-with-cloud-functions)
 * [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52)
 
