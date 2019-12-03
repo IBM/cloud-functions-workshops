@@ -81,22 +81,21 @@ package /whisk.system/github: Package which contains actions and feeds to intera
     --param accessToken aabbb1111c1d1e1a1a111111aaaaaa1111aa1a1a
   ```
 
-    The `/whisk.system/github/webhook` feed configures a service to fire a trigger when there is activity in a specified GitHub repository.
-
-_**Note** With binding, you don't need to specify the values each time that you use the feed action (i.e., `webhook`) in the package._
+_**Note** by binding your github information to the package, you don't need to specify the values each time that you use the feed action (i.e., `webhook`)._
 
 ## Firing a trigger event with GitHub activity
-
 
 The following is an example of creating a trigger that will be fired each time that there is a new commit to a GitHub repository.
 
 3. Create a trigger for the GitHub `push` event type by using your `myGit/webhook` feed.
 
-  ```
-  wsk trigger create myGitTrigger --feed myGit/webhook --param events push
+  ```bash
+  ibmcloud fn trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
 
-  A commit to the GitHub repository by using a `git push` causes the trigger to be fired by the webhook. If there is a rule that matches the trigger, then the associated action will be invoked.
+  The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
+
+  Any commit to the repository using a `git push` CLI call will causes the trigger to be fired by the webhook. If you create a Rule that associates `myGitTrigger` to an action it will be invoked.
 
   The action receives the GitHub webhook payload as an input parameter. Each GitHub webhook event has a similar JSON schema, but is a unique payload object that is determined by its event type.
 
