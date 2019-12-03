@@ -57,6 +57,8 @@ package /whisk.system/github: Package which contains actions and feeds to intera
 
     ![](images/github-access-scope-repo-hook.png)
 
+  * **Important** Make sure to copy your new personal access token now as GitHub will not let you see it again!  If you forgot your token, you can find it here: [https://github.com/settings/tokens](https://github.com/settings/tokens) then click on its name press the **"Regenerate token"** button.
+
   * **Warning** _Make sure that you don't have any webhooks already defined for your repository or they may be overwritten._
 
 1. Verify your personal access token was created successfully with the proper scopes: [https://github.com/settings/tokens](https://github.com/settings/tokens)
@@ -69,6 +71,8 @@ package /whisk.system/github: Package which contains actions and feeds to intera
   * `repository`: The GitHub repository.
   * `accessToken`: Your GitHub personal access token created in Step 1.
   * `events`: The [GitHub event type](https://developer.github.com/v3/activity/events/types/) of interest.
+
+  * **Warning** _Make sure that you don't have any webhooks already defined for your repository or they may be overwritten when running the next command._
 
   ```bash
   ibmcloud package bind /whisk.system/github myGit \
