@@ -101,7 +101,28 @@ The following is an example of creating a trigger that will be fired each time t
 
 ### Connecting an Action to the Trigger
 
-1.
+1. Create a function `print-github-commits.js` that can display the commits from a `push` event from GitHub:
+
+  ```javascript
+  function main(params) {
+
+      console.log("Display GitHub Commit Details for GitHub repo: ", params.repository.url);
+      for (var commit of params.commits) {
+          console.log(params.head_commit.author.name + " added code changes with commit message: " + commit.message);
+      }
+
+      console.log("Commit logs are: ")
+      console.log(params.commits)
+
+      return { message: params };
+  }
+  ```
+
+1. Create it as an action
+
+```bash
+
+```
 
   The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
 
