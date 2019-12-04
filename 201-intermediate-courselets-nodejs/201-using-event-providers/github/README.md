@@ -27,6 +27,7 @@ In this example, we will show how to automatically trigger an IBM Cloud Function
   * See [Signing up for GitHub](https://help.github.com/en/github/getting-started-with-github/signing-up-for-github)
 * **GitHub Repository**
   * See [Creating a new repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) if you do not have a repository created that you want to use for this example.
+  * This example will use a repository named `myGitRep`, but you can use any repo. that is for experimentation.
 
 ## Using the GitHub package
 
