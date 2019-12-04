@@ -31,9 +31,9 @@ In this example, we will show how to automatically trigger an IBM Cloud Function
 
 ## Using the GitHub package
 
-The "built-in" [`/whisk.system/github`](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) package offers a convenient way to use the [GitHub APIs](https://developer.github.com/) in order to create a webhook that can generate events that can fire Cloud Functions triggers.
+In this exercise, we use the "built-in" [`/whisk.system/github`](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) package offers a convenient way to use the [GitHub APIs](https://developer.github.com/) in order to create a webhook that can generate events that can fire Cloud Functions triggers.
 
-you can get a summary of the package, its parameters and its single feed action called `webhook`:
+You can get a summary of the package, its single feed action called `webhook`and their parameters:
 
 ```bash
 ibmcloud fn package get --summary /whisk.system/github
@@ -48,6 +48,8 @@ package /whisk.system/github: Package which contains actions and feeds to intera
 ```
 
 ## Setting up GitHub
+
+We will need to generate a token that the `/whisk.system/github` package will need to have permission be able to create a webhook that can fire a trigger.
 
 1. Generate a GitHub [personal access token](https://github.com/settings/tokens).
 
@@ -89,11 +91,13 @@ package /whisk.system/github: Package which contains actions and feeds to intera
 
 The following is an example of creating a trigger that will be fired each time that there is a new commit to a GitHub repository.
 
-1. Create a trigger for the GitHub `push` event type by using your `myGit/webhook` feed.
+1. Create a trigger for the GitHub `push` event type by using your `myGit/webhook` feed
 
   ```bash
   ibmcloud fn trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
+
+  The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
 
   **Note** we are supplying the `events` parameter with only the `push` event type for our purposes.  Please read [GitHub event types](https://developer.github.com/v3/activity/events/types/) to see what other event types are available. You can provide additional values to `events` using a comma separated list of values (no spaces).
 
@@ -101,7 +105,7 @@ The following is an example of creating a trigger that will be fired each time t
 
 ### Connecting an Action to the Trigger
 
-1. Create a function `print-github-commits.js` that can display the commits from a `push` event from GitHub:
+1. Create a function `print-github-commits.js` that can display the commits from a `push` event from GitHub
 
   ```javascript
   function main(params) {
@@ -118,17 +122,24 @@ The following is an example of creating a trigger that will be fired each time t
   }
   ```
 
-1. Create it as an action
+1. Create the Action named `print-github-commit`
 
-```bash
+  ```bash
+  ibmcloud fn action create print-github-commits print-github-commits.js
+  ```
 
-```
-
-  The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
-
-  The action receives the GitHub webhook payload as an input parameter. Each GitHub webhook event has a similar JSON schema, but is a unique payload object that is determined by its event type.
+  This action receives the GitHub webhook payload as an input parameter. Each GitHub webhook event has a similar JSON schema, but is a unique payload object that is determined by its event type.
 
   For more information about the payload content, see the [GitHub events and payload](https://developer.github.com/v3/activity/events/types/) API documentation.
+
+1. Connect the `myGitTrigger` Trigger to the `print-github-commits` Action with a Rule named `myGitTriggerRule`
+
+  ```bash
+  ibmcloud fn rule create myGitTriggerRule myGitTrigger print-github-commits
+  ```
+
+## Test the event hook
+
 
 # References
 
