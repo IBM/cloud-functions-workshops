@@ -149,7 +149,12 @@ The following is an example of creating a trigger that will be fired each time t
 
 1. Navigate to `myGitRepo` in your browser and create new file named `create.md`
 
-    In a few seconds, you should see an activation appear that looks  something like:
+    ![Create new github markdown file](images/github-create-new-markdown-file.png)
+
+    and commit it:
+    ![Commit new github file](images/github-commit-new-file.png)
+
+    In a few seconds, you should see an activation appear in your pollinbg window that looks  something like:
 
     ```bash
     Activation: 'print-github-commits' (63c2a8ac688544a382a8ac6885c4a304)
