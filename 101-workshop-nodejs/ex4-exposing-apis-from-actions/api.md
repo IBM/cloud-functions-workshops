@@ -94,7 +94,7 @@ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1
 ```bash
 ...
 < HTTP/1.1 302 Found
-< Date: Wed, 20 Nov 2019 16:04:09 GMT
+< Date: Wed, 20 Nov 20xx 16:04:09 GMT
 < Content-Type: text/plain
 < Content-Length: 0
 < Connection: keep-alive

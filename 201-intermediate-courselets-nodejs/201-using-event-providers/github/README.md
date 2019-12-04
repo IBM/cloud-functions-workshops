@@ -139,7 +139,7 @@ The following is an example of creating a trigger that will be fired each time t
 
 ## Test the GitHub event hook
 
-1. In a separate bash terminal window, start polling for activastions
+1. In a separate bash terminal window, start polling for activations
 
     ```bash
     ibmcloud fn activation poll
@@ -147,9 +147,42 @@ The following is an example of creating a trigger that will be fired each time t
 
     where we will watch for activations from our `print-github-commits` action.
 
-1. Navigate to `myGitRepo` in your browser and edit the `README.md` file
+1. Navigate to `myGitRepo` in your browser and create new file named `create.md`
 
-    * _For example, https://github.com/myGitUser/myGitRepo where`myGitUser` is your user name and `myGitRepo` is your repository name._
+    In a few seconds, you should see an activation appear that looks  something like:
+
+    ```bash
+    Activation: 'print-github-commits' (63c2a8ac688544a382a8ac6885c4a304)
+    [
+      "20xx-12-04T19:35:48.261759Z    stdout: Display GitHub Commit Details for GitHub repo:  https://github.com/mrutkows/myGitRepo",
+      "20xx-12-04T19:35:48.261800Z    stdout: Josephine Watson added code changes with commit message: Create create.md",
+      "20xx-12-04T19:35:48.261804Z    stdout: Commit logs are:",
+      "20xx-12-04T19:35:48.263836Z    stdout: [ { added: [ 'create.md' ],",
+      "20xx-12-04T19:35:48.263852Z    stdout: author:",
+      "20xx-12-04T19:35:48.263857Z    stdout: { email: 'jwatson@gmail.com',",
+      "20xx-12-04T19:35:48.263860Z    stdout: name: 'Josephine Watson',",
+      "20xx-12-04T19:35:48.263863Z    stdout: username: 'jwatson' },",
+      "20xx-12-04T19:35:48.263866Z    stdout: committer:",
+      "20xx-12-04T19:35:48.263869Z    stdout: { email: 'noreply@github.com',",
+      "20xx-12-04T19:35:48.263872Z    stdout: name: 'GitHub',",
+      "20xx-12-04T19:35:48.263875Z    stdout: username: 'web-flow' },",
+      "20xx-12-04T19:35:48.263877Z    stdout: distinct: true,",
+      "20xx-12-04T19:35:48.263880Z    stdout: id: 'a1a3e5b0e7322eef63789fe48b7ffa308969d245',",
+      "20xx-12-04T19:35:48.263883Z    stdout: message: 'Create create.md',",
+      "20xx-12-04T19:35:48.263885Z    stdout: modified: [],",
+      "20xx-12-04T19:35:48.263888Z    stdout: removed: [],",
+      "20xx-12-04T19:35:48.263890Z    stdout: timestamp: '20xx-12-04T13:35:46-06:00',",
+      "20xx-12-04T19:35:48.263893Z    stdout: tree_id: '4ab7bb3c44951a3f0847697f116c0f286eb2b2dd',",
+      "20xx-12-04T19:35:48.263896Z    stdout: url:",
+      "20xx-12-04T19:35:48.263899Z    stdout: 'https://github.com/jwatson/myGitRepo/commit/a1a3e5b0e7322eef63789fe48b7ffa308969d245' } ]"
+    ]
+
+    Activation: 'myGitTrigger2' (1e63bcc078d8430fa3bcc078d8e30fdc)
+    [
+        "{\"statusCode\":0,\"success\":true,\"activationId\":\"63c2a8ac688544a382a8ac6885c4a304\",\"rule\":\"jwatson@gmail.com_dev/myGitTriggerRule\",\"action\":\"jwatson@gmail.com_dev/print-github-commits\"}"
+    ]
+
+    ```
 
 # References
 
