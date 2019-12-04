@@ -66,7 +66,7 @@ We will need to generate a token that the `/whisk.system/github` package will ne
 
 1. Verify your personal access token was created successfully with the proper scopes: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
-## Binding the GitHub package with your information
+## Binding the GitHub package with your GitHub account information
 
 **Warning!** _Before issuing the following command, make sure that you don't have any webhooks already defined for your repository or they may be overwritten when running the next command._
 
