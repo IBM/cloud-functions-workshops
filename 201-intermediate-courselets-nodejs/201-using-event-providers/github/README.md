@@ -53,17 +53,16 @@ We will need to generate a token that the `/whisk.system/github` package will ne
 
 1. Generate a GitHub [personal access token](https://github.com/settings/tokens).
 
-  Please pay attention to these 2 things when _[creating your personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)._
+    **Important!**  _Please pay attention to these 2 things when [creating your personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)._
 
-  * **Important!** Select the following **scopes**:
-    * **repo**: **repo:status** to allow access to commit status.
+    * Select the following **scopes**:
+      * **repo**: **repo:status** to allow access to commit status.
     ![Token Repo. Access Scope](images/github-access-scope-repo.png)
 
-    * **admin:repo_hook**: **write:repo_hook** to allow the feed action to create your webhook.
+      * **admin:repo_hook**: **write:repo_hook** to allow the feed action to create your webhook.
     ![Token WenHook Access Scope](images/github-access-scope-repo-hook.png)
-
-  * **Important!** Make sure to copy your new personal access token when shown. GitHub will not let you see it again once you leave the page!
-    * If you forgot your token, you can find it here: [https://github.com/settings/tokens](https://github.com/settings/tokens) then click on its name press the **"Regenerate token"** button.
+    * Make sure to copy your new personal access token when shown. GitHub will not let you see it again once you leave the page!
+      * If you forgot your token, you can find it by name: [https://github.com/settings/tokens](https://github.com/settings/tokens) and press the **"Regenerate token"** button to create a new one.
 
 1. Verify your personal access token was created successfully with the proper scopes: [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
@@ -73,19 +72,19 @@ We will need to generate a token that the `/whisk.system/github` package will ne
 
 1. Create a package binding named `myGit` to the `/whisk.system/github` package with your user name, repository name and personal access token.
 
-  ```bash
-  ibmcloud package bind /whisk.system/github myGit \
-    --param username myGitUser \
-    --param repository myGitRepo \
-    --param accessToken 2277c115d5c143b499ac31ff65b0aec8
-  ```
+    ```bash
+    ibmcloud package bind /whisk.system/github myGit \
+      --param username myGitUser \
+      --param repository myGitRepo \
+      --param accessToken 2277c115d5c143b499ac31ff65b0aec8
+    ```
 
-  Replace:
-  * `myGitUser` with your user GitHub user name
-  * `myGitRepo` with the directory you want to receive events for in this exercise.
-  * `2277c115d5c143b499ac31ff65b0aec8` with the GitHub personal access token you generated above
+    Replace:
+    * `myGitUser` with your user GitHub user name
+    * `myGitRepo` with the directory you want to receive events for in this exercise.
+    * `2277c115d5c143b499ac31ff65b0aec8` with the GitHub personal access token you generated above
 
-  _**Note** by binding your github information to the package, you don't need to specify the values each time that you call the feed action (i.e., `webhook`)._
+    _**Note** by binding your github information to the package, you don't need to specify the values each time that you call the feed action (i.e., `webhook`)._
 
 ## Firing a trigger event with GitHub activity
 
@@ -93,13 +92,13 @@ The following is an example of creating a trigger that will be fired each time t
 
 1. Create a trigger for the GitHub `push` event type by using your `myGit/webhook` feed
 
-  ```bash
-  ibmcloud fn trigger create myGitTrigger --feed myGit/webhook --param events push
-  ```
+    ```bash
+    ibmcloud fn trigger create myGitTrigger --feed myGit/webhook --param events push
+    ```
 
-  The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
+    The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
 
-  **Note** we are supplying the `events` parameter with only the `push` event type for our purposes.  Please read [GitHub event types](https://developer.github.com/v3/activity/events/types/) to see what other event types are available. You can provide additional values to `events` using a comma separated list of values (no spaces).
+    **Note** we are supplying the `events` parameter with only the `push` event type for our purposes.  Please read [GitHub event types](https://developer.github.com/v3/activity/events/types/) to see what other event types are available. You can provide additional values to `events` using a comma separated list of values (no spaces).
 
   **Congratulations!** _ Now any commit to the repository using a `git push` CLI call will causes the trigger to be fired by the webhook. Let's continue and create a Rule that associates `myGitTrigger` to an actual Action to be invoked._
 
@@ -107,39 +106,50 @@ The following is an example of creating a trigger that will be fired each time t
 
 1. Create a function `print-github-commits.js` that can display the commits from a `push` event from GitHub
 
-  ```javascript
-  function main(params) {
+    ```javascript
+    function main(params) {
 
-      console.log("Display GitHub Commit Details for GitHub repo: ", params.repository.url);
-      for (var commit of params.commits) {
-          console.log(params.head_commit.author.name + " added code changes with commit message: " + commit.message);
-      }
+        console.log("Display GitHub Commit Details for GitHub repo: ", params.repository.url);
+        for (var commit of params.commits) {
+            console.log(params.head_commit.author.name + " added code changes with commit message: " + commit.message);
+        }
 
-      console.log("Commit logs are: ")
-      console.log(params.commits)
+        console.log("Commit logs are: ")
+        console.log(params.commits)
 
-      return { message: params };
-  }
-  ```
+        return { message: params };
+    }
+    ```
 
 1. Create the Action named `print-github-commit`
 
-  ```bash
-  ibmcloud fn action create print-github-commits print-github-commits.js
-  ```
+    ```bash
+    ibmcloud fn action create print-github-commits print-github-commits.js
+    ```
 
-  This action receives the GitHub webhook payload as an input parameter. Each GitHub webhook event has a similar JSON schema, but is a unique payload object that is determined by its event type.
+    This action receives the GitHub webhook payload as an input parameter. Each GitHub webhook event has a similar JSON schema, but is a unique payload object that is determined by its event type.
 
-  For more information about the payload content, see the [GitHub events and payload](https://developer.github.com/v3/activity/events/types/) API documentation.
+    For more information about the payload content, see the [GitHub events and payload](https://developer.github.com/v3/activity/events/types/) API documentation.
 
 1. Connect the `myGitTrigger` Trigger to the `print-github-commits` Action with a Rule named `myGitTriggerRule`
 
-  ```bash
-  ibmcloud fn rule create myGitTriggerRule myGitTrigger print-github-commits
-  ```
+    ```bash
+    ibmcloud fn rule create myGitTriggerRule myGitTrigger print-github-commits
+    ```
 
-## Test the event hook
+## Test the GitHub event hook
 
+1. In a separate bash terminal window, start polling for activastions
+
+    ```bash
+    ibmcloud fn activation poll
+    ```
+
+    where we will watch for activations from our `print-github-commits` action.
+
+1. Navigate to `myGitRepo` in your browser and edit the `README.md` file
+
+    * _For example, https://github.com/myGitUser/myGitRepo where`myGitUser` is your user name and `myGitRepo` is your repository name._
 
 # References
 
