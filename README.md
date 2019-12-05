@@ -36,5 +36,6 @@ Here are some links that you may find helpful in understanding what IBM Cloud Fu
 * [Getting Started on Cloud Functions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-getting-started)
 * [Cloud Functions CLI Reference](https://cloud.ibm.com/docs/cloud-functions-cli-plugin/cloud-functions-cli-plugin-functions-cli?topic=cloud-functions-cli-plugin-functions-cli) for the IBM Cloud Functions plug-in to the IBM Cloud CLI
 * [Cloud Functions API Documentation](https://cloud.ibm.com/apidocs/functions)
+* Learn how Cloud Functions supports advanced [IAM access control through the use if Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces#targeting-namespaces).
 
 *Note* All workshop materials are provided under the [Apache 2 license](LICENSE).
