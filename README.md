@@ -18,7 +18,9 @@
 -->
 # IBM Cloud Functions Workshops
 
-This repository contains various workshops for developers wishing to learn how to use the IBM Cloud Functions Serverless platform using both client tooling such as the IBM Cloud Command Line Interface (CLI) as well as the IBM Cloud Web User Interface (UI).
+_Welcome to the homepage for workshops that are designed to teach you how to develop **serverless applications**, composed of loosely coupled microservice-like functions, using the [IBM Cloud Functions](https://cloud.ibm.com/functions) service. IBM Cloud Functions is based upon the [Apache OpenWhisk](https://openwhisk.apache.org/) open-source serverless platform whose initial codebase came out of IBM Research and was donated to the Apache Software Foundation (ASF).
+
+Specifically, this repository contains various workshops for developers wishing to learn, in a step-by-step manner, how to use the IBM Cloud Functions Serverless platform using both client tooling such as the IBM Cloud Command Line Interface (CLI) as well as the IBM Cloud Web User Interface (UI).
 
 The workshops are organized incrementally, by developer experience level from beginner to expert, as well as providing independent exercises showing how to provide specific Function integrations with IBM Cloud services such as Cloudant (NoSQL), Cloud Object Storage (COS), Mobile Push Notifications and others.
 
