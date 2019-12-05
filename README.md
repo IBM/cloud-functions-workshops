@@ -26,7 +26,14 @@ The workshops are organized incrementally, by developer experience level from be
 
 The workshops are organized as follows:
 
-- [**Prequisites**](prereqs/README.md) - Provides instructions on how to sign up for IBM Cloud and the IBM Cloud Functions service, as well as the installation of the Command Line Interface (CLI) and other tooling needed for the workshops.
-- [**NodeJS Introductory Workshop**](101-workshop-nodejs/README.md) -
+* [**Prequisites**](prereqs/README.md) - Provides instructions on how to sign up for IBM Cloud and the IBM Cloud Functions service, as well as the installation of the Command Line Interface (CLI) and other tooling needed for the workshops.
+* [**NodeJS Introductory Workshop**](101-workshop-nodejs/README.md) -
+
+## Learn more about IBM Cloud Functions before you begin
+
+Here are some links that you may find helpful in understanding what IBM Cloud Functions can do for you:
+
+* [Getting Started on Cloud Functions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-getting-started)
+* [Cloud Functions API Documentation](https://cloud.ibm.com/apidocs/functions)
 
 *Note* All workshop materials are provided under the [Apache 2 license](LICENSE).
