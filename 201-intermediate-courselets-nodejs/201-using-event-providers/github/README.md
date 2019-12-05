@@ -100,7 +100,7 @@ The following is an example of creating a trigger that will be fired each time t
 
     **Note** we are supplying the `events` parameter with only the `push` event type for our purposes.  Please read [GitHub event types](https://developer.github.com/v3/activity/events/types/) to see what other event types are available. You can provide additional values to `events` using a comma separated list of values (no spaces).
 
-  **Congratulations!** _ Now any commit to the repository using a `git push` CLI call will causes the trigger to be fired by the webhook. Let's continue and create a Rule that associates `myGitTrigger` to an actual Action to be invoked._
+  **Congratulations!** _Now any commit to the repository using a `git push` CLI call will causes the trigger to be fired by the webhook. Let's continue and create a Rule that associates `myGitTrigger` to an actual Action to be invoked._
 
 ### Connecting an Action to the Trigger
 
@@ -186,8 +186,9 @@ The following is an example of creating a trigger that will be fired each time t
     [
         "{\"statusCode\":0,\"success\":true,\"activationId\":\"63c2a8ac688544a382a8ac6885c4a304\",\"rule\":\"jwatson@gmail.com_dev/myGitTriggerRule\",\"action\":\"jwatson@gmail.com_dev/print-github-commits\"}"
     ]
-
     ```
+
+  **Congratulations!** _You are now automatically triggering an action from GitHub `push` events on your repository!!!_
 
 # References
 
