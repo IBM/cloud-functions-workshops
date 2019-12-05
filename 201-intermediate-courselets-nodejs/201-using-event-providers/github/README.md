@@ -154,7 +154,7 @@ The following is an example of creating a trigger that will be fired each time t
     and commit it:
     ![Commit new github file](images/github-commit-new-file.png)
 
-    In a few seconds, you should see an activation appear in your pollinbg window that looks  something like:
+    In a few seconds, you should see an activation appear in your polling window that looks  something like:
 
     ```bash
     Activation: 'print-github-commits' (63c2a8ac688544a382a8ac6885c4a304)
@@ -195,4 +195,4 @@ The following is an example of creating a trigger that will be fired each time t
 * Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) documentation has a more terse (yet canonical) description of the `/whisk.system/github` package.
 * IBM Developer's [Github Project automation with Cloud Functions](https://developer.ibm.com/tutorials/github-task-automation-with-serverless-actions/) shows you additional automation things to try on top of this exercise.
   * [GitHub source](https://github.com/IBM/github-project-automation-with-cloud-functions) contains the code described in the article.
-* [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52) shows you how to do the entire trigger/rule/action setup with only one CLI call using the `deploy` command and a `manifest.yaml` file.
+* [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52) shows you how to do the entire trigger/rule/action setup **with only one CLI call** using the `deploy` command and a `manifest.yaml` file.
