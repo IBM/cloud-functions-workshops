@@ -39,4 +39,4 @@ Here are some links that you may find helpful in understanding what IBM Cloud Fu
 * [Cloud Functions API Documentation](https://cloud.ibm.com/apidocs/functions)
 * Learn how Cloud Functions supports advanced [IAM access control through the use if Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces#targeting-namespaces).
 
-*Note* All workshop materials are provided under the [Apache 2 license](LICENSE).
+**Note** _All workshop materials are provided under the [Apache 2 license](LICENSE)._
