@@ -16,6 +16,7 @@
 # limitations under the License.
 #
 -->
+
 # IBM Cloud Functions Workshops
 
 _Welcome to the homepage for workshops that are designed to teach you how to develop **serverless applications**, composed of loosely coupled microservice-like functions, using the [IBM Cloud Functions](https://cloud.ibm.com/functions) service. IBM Cloud Functions is based upon the [Apache OpenWhisk](https://openwhisk.apache.org/) open-source serverless platform whose initial codebase came out of IBM Research and was donated to the Apache Software Foundation (ASF).
@@ -26,7 +27,7 @@ The workshops are organized incrementally, by developer experience level from be
 
 The workshops are organized as follows:
 
-* [**Prequisites**](prereqs/README.md) - Provides instructions on how to sign up for IBM Cloud and the IBM Cloud Functions service, as well as the installation of the Command Line Interface (CLI) and other tooling needed for the workshops.
+* [**Prerequisites**](prereqs/README.md) - Provides instructions on how to sign up for IBM Cloud and the IBM Cloud Functions service, as well as the installation of the Command Line Interface (CLI) and other tooling needed for the workshops.
 * [**NodeJS Introductory Workshop**](101-workshop-nodejs/README.md) -
 
 ## Learn more about IBM Cloud Functions before you begin
