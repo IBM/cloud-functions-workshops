@@ -33,7 +33,7 @@
 * [Intermediate Mini-workshops for NodeJS](201-intermediate-courselets-nodejs/README.md)
   * [Using Event Providers](201-intermediate-courselets-nodejs/201-using-event-providers/README.md)
     * [Alarms](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
-      * [Alarms]()https://github.com/IBM/ibm-cloud-functions-action-trigger-rule
+      * [Alarms](https://github.com/IBM/ibm-cloud-functions-action-trigger-rule)
     * [Cloudant](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)
     * [Cloud Object Storage (COS)](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_obstorage)
     * [Push Notifications](https://developer.ibm.com/patterns/serverless-functions-push-notifications/)
