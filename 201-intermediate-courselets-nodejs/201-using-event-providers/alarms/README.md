@@ -17,55 +17,17 @@
 #
 -->
 
-# Connecting GitHub events to actions
+# Connecting Alarm events to actions
 
-In this example, we will show how to automatically trigger an IBM Cloud Functions action whenever a "push" of a "commit" is made to a GitHub repository using the built-in GitHub event provider.
+In this example, we will show how to automatically trigger an IBM Cloud Functions action whenever an alarm is configured using the built-in Alarms event provider.
 
 ## Prerequisites
 
-* **GitHub Account**
-  * See [Signing up for GitHub](https://help.github.com/en/github/getting-started-with-github/signing-up-for-github)
-* **GitHub Repository**
-  * See [Creating a new repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) if you do not have a repository created that you want to use for this example.
-  * This example will use a repository named `myGitRep`, but you can use any repo. that is safe for experimentation purposes.
+* _None_
 
-### Verify you are using a Cloud Foundry (CF) Namespace
+## Using the Alarms package
 
-GitHub event hooks only work with Basic Auth. tokens (and not OAuth Bearer tokens); therefore, you must use a CF Namespace which supports Basic Auth Tokens.
-
-If you have not explicitely setup an IAM namespace as a default namespace your default namespace is CF-based and is named `dev`.  When you perfom a `namespace list` command from the CLI, you should see this namespace lsited with `type` set to `CF-based`:
-
-```bash
-ibmcloud fn namespace list
-```
-
-```bash
-name                   type       id
-jwatson@gmail.com_dev  CF-based   jwatson@gmail.com_dev
-Namespace-IAM          IAM-based  a85d74c3-9be4-461c-9aa1-fd95eaea77f8
-```
-
-then you can confirm that it setup as your default by checking your current property settings:
-
-```bash
-ibmcloud fn property get
-```
-
-```bash
-...
-whisk namespace   jwastons@gmail.com_dev
-...
-```
-
-if it is not the default you can target a CF-based one using the `target` command:
-
-```bash
-ibmcloud target --cf
-```
-
-## Using the GitHub package
-
-In this exercise, we use the "built-in" [`/whisk.system/github`](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) package offers a convenient way to use the [GitHub APIs](https://developer.github.com/) in order to create a webhook that can generate events that can fire Cloud Functions triggers.
+In this exercise, we use the "built-in" [`/whisk.system/alarms`](https://github.com/apache/openwhisk-catalog/tree/master/packages/alarms) package offers a convenient way to use the [GitHub APIs](https://developer.github.com/) in order to create a webhook that can generate events that can fire Cloud Functions triggers.
 
 You can get a summary of the package, its single feed action called `webhook`and their parameters:
 
@@ -102,9 +64,7 @@ We will need to generate a token that the `/whisk.system/github` package will ne
 
 ## Binding the GitHub package with your GitHub account information
 
-{% hint style="warning" %}
 **Warning!** _Before issuing the following command, make sure that you don't have any webhooks already defined for your repository or they may be overwritten when running the next command._
-{% endhint %}
 
 1. Create a package binding named `myGit` to the `/whisk.system/github` package with your user name, repository name and personal access token.
 
