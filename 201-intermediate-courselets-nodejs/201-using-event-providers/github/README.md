@@ -31,7 +31,9 @@ In this example, we will show how to automatically trigger an IBM Cloud Function
 
 ### Verify you are using a Cloud Foundry (CF) Namespace
 
+{% hint style="warning" %}
 GitHub event hooks only work with Basic Auth. tokens (and not OAuth Bearer tokens); therefore, you must use a CF Namespace which supports Basic Auth Tokens.
+{% endhint %}
 
 If you have not explicitly setup an IAM namespace as a default namespace your default namespace is CF-based and is named `dev`.  When you perform a `namespace list` command from the CLI, you should see this namespace listed with `type` set to `CF-based`:
 
