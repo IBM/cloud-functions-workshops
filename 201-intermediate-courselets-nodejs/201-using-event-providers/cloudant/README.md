@@ -65,7 +65,7 @@ package /whisk.system/cloudant: Cloudant database service
     ibmcloud package bind /whisk.system/cloudant myCloudant \
       --param username myCloudantUsername \
       --param password myCloudantPassword
-      --param host myCloudantHost \
+      --param host myCloudantHost
     ```
 
     Replace:
