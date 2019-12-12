@@ -38,7 +38,7 @@ In this example, we will show how to automatically trigger an IBM Cloud Function
 
 In this exercise, we use the "built-in" [`/whisk.system/cloudant`](https://github.com/apache/openwhisk-catalog/tree/master/packages/cloudant) package that fire a trigger events that can activate a Cloud Functions action whenever a change is made to the Cloudant database.
 
-You can get a summary of the package, its single feed action called `webhook`and their parameters:
+You can get a summary of the package and parameters:
 
 ```bash
 ibmcloud fn package get --summary /whisk.system/cloudant
@@ -57,9 +57,7 @@ package /whisk.system/cloudant: Cloudant database service
 
 ```
 
-## Binding the GitHub package with your GitHub account information
-
-**Warning!** _Before issuing the following command, make sure that you don't have any webhooks already defined for your repository or they may be overwritten when running the next command._
+## Binding the Cloudant package with your Cloudant login credentials
 
 1. Create a package binding named `myCloudant` to the `/whisk.system/cloudant` package with your username, password, and host.
 
@@ -75,7 +73,7 @@ package /whisk.system/cloudant: Cloudant database service
     * `myCloudantPassword` with the password from the credentials.
     * `myCloudantHost` with the Cloudant host from the credentials
 
-    _**Note** by binding your Cloudant information to the package, you don't need to specify the values each time that you call the feed action (i.e., `webhook`)._
+    _**Note** by binding your Cloudant information to the package, you don't need to specify the values each time that you call the feed action ._
 
 ## Firing a trigger event with Cloudant Database activity
 
@@ -191,4 +189,4 @@ The following is an example of creating a trigger that will be fired each time t
 * IBM Developer's [Use cloud functions to send your data to your blockchain](https://developer.ibm.com/tutorials/use-cloud-functions-to-send-your-data-to-your-blockchain/) shows you how to use IBM Cloud Functions with Cloudant, Kubernetes, and Blockchain technologies.
   * [GitHub source](https://github.com/IBM/ibm-cloud-functions-serverless-blockchain) contains the code described in the article.
 * [Additional Cloudant Trigger Documentation](https://github.com/ibm-functions/trigger-cloudant)
-* [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52) shows you how to do the entire trigger/rule/action setup **with only one CLI call** using the `deploy` command and a `manifest.yaml` file.
+
