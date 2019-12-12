@@ -19,7 +19,7 @@
 
 # Connecting GitHub events to actions
 
-In this example, we will show how to automatically trigger an IBM Cloud Functions action whenever a "push" of a "commit" is made to a GitHub repository using the built-in GitHub event provider.
+In this example, we will show how to automatically trigger an IBM Cloud Functions action whenever a "push" of a "commit" is made to a GitHub repository using the built-in [GitHub event provider](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) package.
 
 ## Prerequisites
 

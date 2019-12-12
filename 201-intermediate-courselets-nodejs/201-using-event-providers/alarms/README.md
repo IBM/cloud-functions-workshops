@@ -19,7 +19,9 @@
 
 # Connecting Alarm events to actions
 
-In this example, we will show how to automatically trigger an IBM Cloud Functions action whenever an alarm is configured using the built-in Alarms event provider.
+![Cloud Functions Alarm Trigger](images/cloud-functions-alarm-trigger.png)
+
+In this example, we will show how to automatically trigger an IBM Cloud Functions action whenever an alarm is configured using the built-in [Alarms event provider](https://github.com/apache/openwhisk-catalog/tree/master/packages/alarms) package.
 
 ## Prerequisites
 
