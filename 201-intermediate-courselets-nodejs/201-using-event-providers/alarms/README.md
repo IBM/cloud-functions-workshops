@@ -32,14 +32,18 @@ In this exercise, we use the "built-in" [`/whisk.system/alarms`](https://github.
 You can get a summary of the package, its single feed action called `webhook`and their parameters:
 
 ```bash
-ibmcloud fn package get --summary /whisk.system/github
+ibmcloud fn package get --summary /whisk.system/alarms
 ```
 
 ```bash
-package /whisk.system/github: Package which contains actions and feeds to interact with Github
-   (parameters: *endpoint)
- feed   /whisk.system/github/webhook: Creates a webhook on GitHub to be notified on selected changes
-   (parameters: accessToken, events, repository, username)
+package /whisk.system/alarms: Alarms and periodic utility
+   (parameters: *apihost, *trigger_payload)
+ feed   /whisk.system/alarms/interval: Fire trigger at specified interval
+   (parameters: minutes, startDate, stopDate)
+ feed   /whisk.system/alarms/once: Fire trigger once when alarm occurs
+   (parameters: date, deleteAfterFire)
+ feed   /whisk.system/alarms/alarm: Fire trigger when alarm occurs
+   (parameters: cron, startDate, stopDate, timezone)
 
 ```
 
