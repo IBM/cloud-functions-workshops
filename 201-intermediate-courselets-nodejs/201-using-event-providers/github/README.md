@@ -33,7 +33,7 @@ In this example, we will show how to automatically trigger an IBM Cloud Function
 
 GitHub event hooks only work with Basic Auth. tokens (and not OAuth Bearer tokens); therefore, you must use a CF Namespace which supports Basic Auth Tokens.
 
-If you have not explicitely setup an IAM namespace as a default namespace your default namespace is CF-based and is named `dev`.  When you perfom a `namespace list` command from the CLI, you should see this namespace lsited with `type` set to `CF-based`:
+If you have not explicitly setup an IAM namespace as a default namespace your default namespace is CF-based and is named `dev`.  When you perform a `namespace list` command from the CLI, you should see this namespace listed with `type` set to `CF-based`:
 
 ```bash
 ibmcloud fn namespace list
@@ -232,8 +232,9 @@ The following is an example of creating a trigger that will be fired each time t
 
 # References
 
+* For a better general understanding of how Triggers work see _[IBM Cloud Functions - Your first Action, Trigger, and Rule](https://github.com/IBM/ibm-cloud-functions-action-trigger-rule)_ in IBM open source.
 * As the `/whisk.system/github/webhook` is an implementation of a feed, you may want to read more on [Implementing feeds](https://github.com/apache/openwhisk/blob/master/docs/feeds.md) in Apache OpenWhisk.
-* Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) documentation has a more terse (yet canonical) description of the `/whisk.system/github` package.
 * IBM Developer's [Github Project automation with Cloud Functions](https://developer.ibm.com/tutorials/github-task-automation-with-serverless-actions/) shows you additional automation things to try on top of this exercise.
   * [GitHub source](https://github.com/IBM/github-project-automation-with-cloud-functions) contains the code described in the article.
 * [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52) shows you how to do the entire trigger/rule/action setup **with only one CLI call** using the `deploy` command and a `manifest.yaml` file.
+* Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) documentation has a more terse (yet canonical) description of the `/whisk.system/github` package.

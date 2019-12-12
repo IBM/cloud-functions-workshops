@@ -82,118 +82,13 @@ We will need to generate a token that the `/whisk.system/github` package will ne
 
     _**Note** by binding your github information to the package, you don't need to specify the values each time that you call the feed action (i.e., `webhook`)._
 
-## Firing a trigger event with GitHub activity
-
-The following is an example of creating a trigger that will be fired each time that there is a new commit to a GitHub repository.
-
-1. Create a trigger for the GitHub `push` event type by using your `myGit/webhook` feed
-
-    ```bash
-    ibmcloud fn trigger create myGitTrigger --feed myGit/webhook --param events push
-    ```
-
-    The `/whisk.system/github/webhook` feed action creates a webhook in GitHub (using your personal access token) that fires a `myGitTrigger` when there is activity in the `myGitRepo` repository.
-
-    **Note** we are supplying the `events` parameter with only the `push` event type for our purposes.  Please read [GitHub event types](https://developer.github.com/v3/activity/events/types/) to see what other event types are available. You can provide additional values to `events` using a comma separated list of values (no spaces).
 
 {% hint style="success" %}
- **Congratulations!** _Now any commit to the repository using a `git push` CLI call will causes the trigger to be fired by the webhook. Let's continue and create a Rule that associates `myGitTrigger` to an actual Action to be invoked._
-{% endhint %}
-
-### Connecting an Action to the Trigger
-
-1. Create a function `print-github-commits.js` that can display the commits from a `push` event from GitHub
-
-    ```javascript
-    function main(params) {
-
-        console.log("Display GitHub Commit Details for GitHub repo: ", params.repository.url);
-        for (var commit of params.commits) {
-            console.log(params.head_commit.author.name + " added code changes with commit message: " + commit.message);
-        }
-
-        console.log("Commit logs are: ")
-        console.log(params.commits)
-
-        return { message: params };
-    }
-    ```
-
-1. Create the Action named `print-github-commit`
-
-    ```bash
-    ibmcloud fn action create print-github-commits print-github-commits.js
-    ```
-
-    This action receives the GitHub webhook payload as an input parameter. Each GitHub webhook event has a similar JSON schema, but is a unique payload object that is determined by its event type.
-
-    For more information about the payload content, see the [GitHub events and payload](https://developer.github.com/v3/activity/events/types/) API documentation.
-
-1. Connect the `myGitTrigger` Trigger to the `print-github-commits` Action with a Rule named `myGitTriggerRule`
-
-    ```bash
-    ibmcloud fn rule create myGitTriggerRule myGitTrigger print-github-commits
-    ```
-
-## Test the GitHub event hook
-
-1. In a separate bash terminal window, start polling for activations
-
-    ```bash
-    ibmcloud fn activation poll
-    ```
-
-    where we will watch for activations from our `print-github-commits` action.
-
-1. Navigate to `myGitRepo` in your browser and create new file named `create.md`
-
-    ![Create new github markdown file](images/github-create-new-markdown-file.png)
-
-    and commit it:
-    ![Commit new github file](images/github-commit-new-file.png)
-
-    In a few seconds, you should see an activation appear in your polling window that looks  something like:
-
-    ```bash
-    Activation: 'print-github-commits' (63c2a8ac688544a382a8ac6885c4a304)
-    [
-      "20xx-12-04T19:35:48.261759Z    stdout: Display GitHub Commit Details for GitHub repo:  https://github.com/mrutkows/myGitRepo",
-      "20xx-12-04T19:35:48.261800Z    stdout: Josephine Watson added code changes with commit message: Create create.md",
-      "20xx-12-04T19:35:48.261804Z    stdout: Commit logs are:",
-      "20xx-12-04T19:35:48.263836Z    stdout: [ { added: [ 'create.md' ],",
-      "20xx-12-04T19:35:48.263852Z    stdout: author:",
-      "20xx-12-04T19:35:48.263857Z    stdout: { email: 'jwatson@gmail.com',",
-      "20xx-12-04T19:35:48.263860Z    stdout: name: 'Josephine Watson',",
-      "20xx-12-04T19:35:48.263863Z    stdout: username: 'jwatson' },",
-      "20xx-12-04T19:35:48.263866Z    stdout: committer:",
-      "20xx-12-04T19:35:48.263869Z    stdout: { email: 'noreply@github.com',",
-      "20xx-12-04T19:35:48.263872Z    stdout: name: 'GitHub',",
-      "20xx-12-04T19:35:48.263875Z    stdout: username: 'web-flow' },",
-      "20xx-12-04T19:35:48.263877Z    stdout: distinct: true,",
-      "20xx-12-04T19:35:48.263880Z    stdout: id: 'a1a3e5b0e7322eef63789fe48b7ffa308969d245',",
-      "20xx-12-04T19:35:48.263883Z    stdout: message: 'Create create.md',",
-      "20xx-12-04T19:35:48.263885Z    stdout: modified: [],",
-      "20xx-12-04T19:35:48.263888Z    stdout: removed: [],",
-      "20xx-12-04T19:35:48.263890Z    stdout: timestamp: '20xx-12-04T13:35:46-06:00',",
-      "20xx-12-04T19:35:48.263893Z    stdout: tree_id: '4ab7bb3c44951a3f0847697f116c0f286eb2b2dd',",
-      "20xx-12-04T19:35:48.263896Z    stdout: url:",
-      "20xx-12-04T19:35:48.263899Z    stdout: 'https://github.com/jwatson/myGitRepo/commit/a1a3e5b0e7322eef63789fe48b7ffa308969d245' } ]"
-    ]
-
-    Activation: 'myGitTrigger2' (1e63bcc078d8430fa3bcc078d8e30fdc)
-    [
-        "{\"statusCode\":0,\"success\":true,\"activationId\":\"63c2a8ac688544a382a8ac6885c4a304\",\"rule\":\"jwatson@gmail.com_dev/myGitTriggerRule\",\"action\":\"jwatson@gmail.com_dev/print-github-commits\"}"
-    ]
-    ```
-
-{% hint style="success" %}
- 🎉**Congratulations!** _You are now automatically triggering an action from GitHub `push` events on your repository!!!_🎉
+ 🎉**Congratulations!** _TBD_🎉
 {% endhint %}
 
 # References
 
-* As the `/whisk.system/github/webhook` is an implementation of a feed, you may want to read more on [Implementing feeds](https://github.com/apache/openwhisk/blob/master/docs/feeds.md) in Apache OpenWhisk.
-* Apache OpenWhisk's [GitHub package](https://github.com/apache/openwhisk-catalog/tree/master/packages/github) documentation has a more terse (yet canonical) description of the `/whisk.system/github` package.
-* IBM Developer's [Github Project automation with Cloud Functions](https://developer.ibm.com/tutorials/github-task-automation-with-serverless-actions/) shows you additional automation things to try on top of this exercise.
-  * [GitHub source](https://github.com/IBM/github-project-automation-with-cloud-functions) contains the code described in the article.
-* [Whisk Deploy — GitHub Webhook Trigger](https://medium.com/openwhisk/whisk-deploy-github-webhook-trigger-304a2f47ee52) shows you how to do the entire trigger/rule/action setup **with only one CLI call** using the `deploy` command and a `manifest.yaml` file.
+* For a better general understanding of how Triggers work see _[IBM Cloud Functions - Your first Action, Trigger, and Rule](https://github.com/IBM/ibm-cloud-functions-action-trigger-rule)_ in IBM open source.
+* To see the code pattern this course is based upon see _[Triggering IBM Cloud Functions with scheduled tasks](https://github.com/IBM/ibm-cloud-functions-scheduled-tasks)_ in IBM open source.
+* Apache OpenWhisk's [Alarms package](https://github.com/apache/openwhisk-catalog/tree/master/packages/alarms) documentation has a more terse (yet canonical) description of the `/whisk.system/alarms` package.
