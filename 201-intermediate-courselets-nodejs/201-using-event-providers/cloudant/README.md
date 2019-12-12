@@ -125,7 +125,7 @@ The following is an example of creating a trigger that will be fired each time t
     ibmcloud fn rule create respond-to-input new-input-number add-five-sequence
     ```
 
-## Test the GitHub event hook
+## Test the Cloudant change feed
 
 1. In a separate bash terminal window, start polling for activations
 
