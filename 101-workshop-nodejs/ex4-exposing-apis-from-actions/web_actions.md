@@ -80,7 +80,7 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
 
 ## Content extensions
 
-Web actions invoked through the platform API need a content extension to tell the platform how to interpret the content returned from the action. In the example above, we were using the `.json` extension. This tells the platform to serialise the return value out to a JSON response.
+Web actions invoked through the platform API need a content extension to tell the platform how to interpret the content returned from the action. In the example above, we were using the `.json` extension. This tells the platform to serialize the return value out to a JSON response.
 
 The platform supports the following content-types: `.json`, `.html`, `.http`, `.svg` or `.text`. If no content extension is provided, it defaults to `.http` which gives the action full control of the HTTP response.
 
@@ -205,7 +205,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
    ```html
    <html><body>Hello World!</body></html>
    ```
-   
+
 ## An SVG Response
 
 1. Create a new function that has the SVG base64 encoded as the body
@@ -240,7 +240,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
     ok: updated action atom
     ```
 
-2. Get the URL for the new atom web action 
+2. Get the URL for the new atom web action
    ```bash
    ibmcloud fn action get atom --url
    ```
@@ -256,7 +256,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 1. Create a new web action from the following source code in manual.js.
 
    ```javascript
-   function main(params) { 
+   function main(params) {
        return {
            statusCode: 200,
            headers: { 'Content-Type': 'application/json' },
