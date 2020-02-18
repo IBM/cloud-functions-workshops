@@ -62,7 +62,7 @@ We will need to generate a token that the `/whisk.system/github` package will ne
     ![Token Repo. Access Scope](images/github-access-scope-repo.png)
 
       * **admin:repo_hook**: **write:repo_hook** to allow the feed action to create your webhook.
-    ![Token WenHook Access Scope](images/github-access-scope-repo-hook.png)
+    ![Token WebHook Access Scope](images/github-access-scope-repo-hook.png)
     * Make sure to copy your new personal access token when shown. GitHub will not let you see it again once you leave the page!
       * If you forgot your token, you can find it by name: [https://github.com/settings/tokens](https://github.com/settings/tokens) and press the **"Regenerate token"** button to create a new one.
 
