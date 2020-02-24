@@ -9,3 +9,6 @@ node_modules
 # VSCode
 .vscode/
 settings.json
+
+# MD to HTML tooling
+.html

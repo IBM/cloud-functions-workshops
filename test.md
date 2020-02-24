@@ -76,11 +76,11 @@ This is a link to an image anchor '[logo](https://github.com/adam-p/markdown-her
 
 ### image size (height, width) included
 
-This image file uses '\| width=x': ![](https://www.ibm.com/design/language/9c48fd6dd58b66177ff460644f59e572/core-blue100.svg | width=200) that we want to pass through.
+This image file uses `\| width=x` and SHOULD NOT WORK: ![](https://www.ibm.com/design/language/9c48fd6dd58b66177ff460644f59e572/core-blue100.svg | width=200) that we want to pass through.
 
-This image file uses '=widthxheight': ![](https://www.ibm.com/design/language/9c48fd6dd58b66177ff460644f59e572/core-blue100.svg =200x200) that we want to pass through.
+This image file uses `=widthxheight` and SHOULD convert: ![](https://www.ibm.com/design/language/9c48fd6dd58b66177ff460644f59e572/core-blue100.svg =200x200) that we want to pass through.
 
-This image file uses HTML:
+This image file uses HTML which should be preserved:
 <img src="https://www.ibm.com/design/language/9c48fd6dd58b66177ff460644f59e572/core-blue100.svg" width="200" height="200"></img>
 that we want to pass through.
 
