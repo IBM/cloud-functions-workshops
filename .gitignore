@@ -10,5 +10,8 @@ node_modules
 .vscode/
 settings.json
 
+# GitBook
+assets/
+
 # MD to HTML tooling
 .html
