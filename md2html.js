@@ -285,10 +285,7 @@ function convertMarkdownToHtml(mdFilename,htmlRoot){
 
 console.group('GROUP: main()')
 var glob = require('glob')
-var HTML_OUTPUT_DIR = '.html';
-
-// slice(2) skips first 2 args (which are `node` command and the `.js` file being interpreted
-var myArgs = process.argv.slice(2);
+var DEFAULT_HTML_OUTPUT_DIR = '.html';
 
 // either file or directory-based conversion, but not both
 if( (argv.f && argv.s) || !(argv.f || argv.s)) {
@@ -318,7 +315,7 @@ converter.setOption('emoji', 'true');  // TODO: make global?
 if (!argv.t) {
   // TODO: handle "-t" target_dir argument
   // TODO: validate ability to create target directory (as recursive root path)
-  argv.t = HTML_OUTPUT_DIR
+  argv.t = DEFAULT_HTML_OUTPUT_DIR
 }
 
 // single file conversion
@@ -331,7 +328,7 @@ if (argv.f) {
     }
     console.info(">> Target directory: '" + argv.t + "'")
     console.info(">> converting: '" + inputFile + "'...")
-    convertMarkdownToHtml(inputFile, HTML_OUTPUT_DIR)
+    convertMarkdownToHtml(inputFile, argv.t)
   } catch(err){
     displayUsageAndExit("ERROR: Invalid input file: '"+inputFile+"': " + err)
   }
