@@ -16,8 +16,8 @@
 # limitations under the License.
 #
 -->
-
-# <img src="ibm-cloud-functions-logo-transparent.png" width="100" height="100"></img> IBM Cloud Functions Workshops
+<img src="ibm-cloud-functions-logo-transparent.png" width="100" height="100"></img>
+# IBM Cloud Functions Workshops
 
 *Welcome to the homepage for workshops that are designed to teach you how to develop **serverless applications**, composed of loosely coupled microservice-like functions, using the [IBM Cloud Functions](https://cloud.ibm.com/functions) service. IBM Cloud Functions is based upon the [Apache OpenWhisk](https://openwhisk.apache.org/) open-source serverless platform whose initial codebase came out of IBM Research and was donated to the Apache Software Foundation (ASF).*
 
