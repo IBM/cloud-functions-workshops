@@ -171,7 +171,7 @@ To access the most recent activation result use the `--last` or `-l` flag.
   ```
 
   {% hint style="info" %}
-  **Tip** The `--last` flag can also be used to get the last activation record (`activation get --last), activation activation logs,
+  **Tip** The `--last` flag can also be used to get the last activation record (`activation get --last`), from the activation logs.
   {% endhint %}
 
 ## Retrieve activation list
