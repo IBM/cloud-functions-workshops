@@ -105,7 +105,7 @@ body {
 img {
   display:block;
   max-width:90vw;
-  max-height:95vh%;
+  max-height:95vh;
   object-fit: contain;
   border:1px solid gainsboro;
   background-color: gainsboro;
