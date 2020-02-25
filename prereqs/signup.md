@@ -79,9 +79,9 @@ You should be directed to verify your account email address:
 
 ![IBM Cloud Confirmation Email](images/ibm-cloud-registration-email.png)
 
-    and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
+and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
 
-    ![Registration confirmed message](images/ibm-cloud-registration-4.png)
+![Registration confirmed message](images/ibm-cloud-registration-4.png)
 
 &#54;. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
