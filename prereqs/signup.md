@@ -37,7 +37,7 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
 &#51;. Fill in the registration page:
 
-<div><img src="images/ibm-cloud-registration-1.png" width="80%" height="80%"/></div>
+<img src="images/ibm-cloud-registration-1.png" width="80%" height="80%"/>
 
 <!-- 4. four
 
