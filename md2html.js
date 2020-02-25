@@ -52,10 +52,18 @@ var argv = require('yargs')
 // Set flavor globally for all converter instances created
 showdown.setFlavor('github');
 
+const CURRENT_DIR = '.'
 const SHOWDOWN_HTML_EXT_FILTER = "htmlExtFilter"
+
 const EXT_MD = '.md';
 const EXT_HTML = '.html';
-//const LEN_EXT_MD = EXT_MD.length * -1; // we want the length expressed as negative for slices
+
+// path matching options for Glob
+// TODO: allow additional ".ignore" path options
+var GLOB_OPTIONS= { ignore: ["**/node_modules/**", "./node_modules/**"] }
+// TODO: allow for other file extensions to included in "copy" operation
+const GLOB_FILE_PATTERN_IMAGES = "/**/*.?(png|jpg|svg|gif)"
+const GLOB_FILE_PATTERN_MARKDOWN = "/**/*.md"
 
 // NOTE: The HTML_EXT regex selects the "outer" group defined by '{% ... %} and
 // the inner group which has the content we want to (re)format
@@ -193,7 +201,6 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
                 return match;
             } else if (content.endsWith(EXT_MD)) {
                 console.group("REPLACE URL: content (ORIGINAL)=("+content+")")
-                //var htmlURL = content.slice(0, LEN_EXT_MD) + EXT_HTML
                 var htmlURL = content.replace(EXT_MD, EXT_HTML)
                 // replace the hyperlink's URL with markdown ext. to have an HTML ext.
                 var match = match.replace(REGEX_MD_ANCHOR_HYPERLINK, "("+htmlURL+")")
@@ -223,10 +230,10 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
 /*
  * Conversion utils
  */
-function replaceFileExtension(file, ext) {
-    console.group('BEGIN: replaceFileExtension( ' + file + "," + ext + ")")
-    var pos = file.lastIndexOf(".");
-    file2 = file.substr(0, pos < 0 ? file.length : pos) + '.' + ext;
+function replaceFileExtension(filename, targetExtension) {
+    console.group('BEGIN: replaceFileExtension( ' + filename + "," + targetExtension + ")")
+    var pos = filename.lastIndexOf(".");
+    file2 = filename.substr(0, pos < 0 ? filename.length : pos) + targetExtension;
     console.groupEnd();
     return file2
 }
@@ -266,28 +273,32 @@ function createTargetDirectory(targetDir) {
     console.groupEnd()
 }
 
-function convertMarkdownToHtml(mdFilename,htmlRoot){
-    console.group("BEGIN: convertMarkdownToHtml( " + mdFilename +", " + htmlRoot + " )")
+function createAbsoluteTargetFilename(relativeFilename, targetPath, targetFileExt){
+  var absTargetFilename = path.join(__dirname, relativeFilename);
 
-    var filePath = path.join(__dirname);
-    var mdFullFilename = path.join(__dirname,mdFilename);
+  if (targetPath) {
+    absTargetFilename = path.join(__dirname, targetPath, relativeFilename);
+  }
 
-    if (!htmlRoot) {
-    } else {
-        filePath = path.join(__dirname, htmlRoot);
-    }
+  if(targetFileExt){
+    absTargetFilename = replaceFileExtension(absTargetFilename, targetFileExt)
+  }
 
-    var htmlFilename = path.join(filePath, mdFilename)
-    htmlFilename = replaceFileExtension(htmlFilename, 'html')
+  return absTargetFilename
+}
 
-    var targetDir = path.dirname(htmlFilename)
-    createTargetDirectory(targetDir)
+function convertMarkdownToHtml(mdFilename, targetPath){
+    console.group("BEGIN: convertMarkdownToHtml( " + mdFilename + ", " + targetPath + " )")
+    var mdFullFilename = path.join(__dirname, mdFilename);
+
+    var htmlFilename = createAbsoluteTargetFilename(mdFilename, targetPath, EXT_HTML)
+    createTargetDirectory(path.dirname(htmlFilename))
 
     fs.readFile(mdFullFilename, {encoding: 'utf-8'}, function anonConvertToHtml(err, rawMarkdown) {
         console.group('GROUP: anonConvertToHtml')
         console.log("SOURCE (.md): " + mdFullFilename + " (" + mdFilename + ")")
         console.log("TARGET (.html): " + htmlFilename)
-        convertToHtml(err, rawMarkdown, htmlFilename, htmlRoot)
+        convertToHtml(err, rawMarkdown, htmlFilename, targetPath)
         console.groupEnd();
     });
     console.groupEnd()
@@ -359,10 +370,8 @@ if (argv.f) {
   console.info(">> Target directory: '" + argv.t + "'")
   try {
       // directory (recursive) conversion ignoring 'node_modules' directory
-      // TODO: allow additional ".ignore" path options
-      var GLOB_OPTIONS= { ignore: ["**/node_modules/**", "./node_modules/**"] }
       var startDir = argv.s
-      var startPath = startDir + "/**/*.md"
+      var startPath = startDir + GLOB_FILE_PATTERN_MARKDOWN
       glob(startPath, GLOB_OPTIONS, function (err, files) {
         if (err) {
           displayUsageAndExit("ERROR: " + err)
@@ -373,6 +382,36 @@ if (argv.f) {
             }
         }
       });
+  } catch (error) {
+    displayUsageAndExit("ERROR: " + error)
+  }
+}
+
+/*
+ * Copy Files (only if a target path was specified)
+ */
+if (argv.c && argv.t != CURRENT_DIR) {
+  try {
+    // directory (recursive) conversion ignoring 'node_modules' directory
+    // TODO: allow additional ".ignore" path options
+    var startDir = argv.s
+    var startPath = startDir + GLOB_FILE_PATTERN_IMAGES
+    glob(startPath, GLOB_OPTIONS, function (err, files) {
+      if (err) {
+        displayUsageAndExit("ERROR: " + err)
+      } else {
+          console.info(">> Processing images")
+          for(let imageFilename of files) {
+            console.info(">> copying: '" + imageFilename + "'...")
+            targetImageFile = createAbsoluteTargetFilename(imageFilename, argv.t)
+            createTargetDirectory(path.dirname(targetImageFile))
+            fs.copyFile(imageFilename, targetImageFile, (err) => {
+            if (err) throw err;
+              console.log(">>      to: '" + path.relative(__dirname,targetImageFile) + "'...")
+            });
+          }
+      }
+    });
   } catch (error) {
     displayUsageAndExit("ERROR: " + error)
   }
