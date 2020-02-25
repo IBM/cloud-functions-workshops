@@ -99,6 +99,7 @@ We know it looks boring but trust us! People often skim this part and then compl
 Follow these instructions to check which default region your lite account has been assigned.
 
 &#49;. Open the [Cloud Foundry Organizations](https://cloud.ibm.com/account/cloud-foundry) page
+
 &#50;. Click the organization `name` listed in the table.
 *Note that your organization is usually the email address you signed up with*
 
