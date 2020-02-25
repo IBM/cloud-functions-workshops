@@ -52,13 +52,26 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
    ![](images/ibm-cloud-registration-1-800.png)
 
-7. Seven
+&#58;. Seven
 
    ![](images/ibm-cloud-registration-1-800.png){:height="700px" width="400px"}
 
 &#55;. Seven
 
    ![](images/ibm-cloud-registration-1-800.png){:height="700px" width="400px"}
+
+&#55;. Seven
+
+   ![](https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/prereqs/images/ibm-cloud-registration-1.png)
+
+&#55;. Seven
+
+   ![](https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/prereqs/images/ibm-cloud-registration-1.png?s=)
+
+<figure>
+    <img src="images/ibm-cloud-registration-1-800.png" alt="IBM Cloud Sign-up page">
+    <figcaption>Image - Phra Nakhon Khiri, Phetchaburi</figcaption>
+</figure>
 
 1. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
