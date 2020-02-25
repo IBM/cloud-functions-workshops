@@ -36,10 +36,10 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 &#50;. Navigate to [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
 
 &#51;. Fill in the registration page:
-    <!-- ![IBM Cloud Registration Form](images/ibm-cloud-registration-1.png) -->
-    <img src="images/ibm-cloud-registration-1.png" width="80%" height="80%"/>
 
-4. four
+<div><img src="images/ibm-cloud-registration-1.png" width="80%" height="80%"/></div>
+
+<!-- 4. four
 
     <img src="images/ibm-cloud-registration-1-800.png"/>
 
@@ -65,34 +65,29 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
 &#55;. Ten
 
-   ![](https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/prereqs/images/ibm-cloud-registration-1.png?s=)
+   ![](https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/prereqs/images/ibm-cloud-registration-1.png?s=) -->
 
-<figure>
-    <img src="images/ibm-cloud-registration-1-800.png" alt="IBM Cloud Sign-up page">
-    <figcaption>Image - Phra Nakhon Khiri, Phetchaburi</figcaption>
-</figure>
+&#52;. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
-1. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
+![IBM Cloud Contact, Privacy and T&C](images/ibm-cloud-registration-2.png)
 
-    ![IBM Cloud Contact, Privacy and T&C](images/ibm-cloud-registration-2.png)
+You should be directed to verify your account email address:
 
-    You should be directed to verify your account email address:
+![Check your email message](images/ibm-cloud-registration-3.png)
 
-    ![Check your email message](images/ibm-cloud-registration-3.png)
+&#53;. Look for the account confirmation email in your inbox:
 
-1. Look for the account confirmation email in your inbox:
-
-    ![IBM Cloud Confirmation Email](images/ibm-cloud-registration-email.png)
+![IBM Cloud Confirmation Email](images/ibm-cloud-registration-email.png)
 
     and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
 
     ![Registration confirmed message](images/ibm-cloud-registration-4.png)
 
-1. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
+&#54;. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
-    {% hint style="tip" %}
-    You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)
-    {% endhint %}
+{% hint style="tip" %}
+You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)
+{% endhint %}
 
 ### Verify Default Region
 
