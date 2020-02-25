@@ -89,12 +89,26 @@ var SVG_SUCCESS = `
 <svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="color: rgb(38, 203, 124);"><g><path d="M22 11.07V12a10 10 0 1 1-5.93-9.14"></path><polyline points="23 3 12 14 9 11"></polyline></g></svg>
 `
 
+// TODO: externalize CSS file, import once on load
+// TODO: allow command line option to point to alternative CSS files
+// 1) to override
+// 2) to add after our default (additive)to import (perhaps additive,
+// that is, we load after pgr)
 var CSS_BLOCKQUOTE = `
 <style>
 body {
   font-family: Roboto, sans-serif;;
   font-weight: 400;
   line-height: 1.625;
+}
+
+img {
+  display:block;
+  max-width:90vw;
+  max-height:95vh%;
+  object-fit: contain;
+  border:1px solid gainsboro;
+  background-color: gainsboro;
 }
 
 code {
