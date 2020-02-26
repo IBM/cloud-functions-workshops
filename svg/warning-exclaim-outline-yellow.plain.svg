@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.0" height="1cm" width="1cm" viewBox="0 0 43 37.6" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(.64711 0 0 .63482 1.5677 -3.4121)">
+<ellipse cx="30.756" cy="50.614" rx="2.8766" ry="2.9017" fill="#fc0" stroke-width="0" style="paint-order:stroke markers fill"/>
+<path d="m25.824 11.296-24.428 41.279a5.7681 5.8386 0 0 0 4.9317 8.7579h48.855a5.7681 5.8386 0 0 0 4.9317-8.7579l-24.428-41.279a5.7681 5.8386 0 0 0-9.8634 0z" stroke="#fc0" stroke-opacity=".94118" stroke-width="5.4608"/>
+<line x1="30.756" x2="30.756" y1="25.778" y2="42.204" stroke="#fc0" stroke-opacity=".94118" stroke-width="5.4608"/>
+</g>
+</svg>
+<!-- <svg
+   xmlns="http://www.w3.org/2000/svg"
+   style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   height="37.6"
+   width="43"
+   id="svg-sign-warning-yellow-outline-1"
+   version="1.0"
+   class=""
+   viewBox="0 0 43 37.6">
+  <g
+     style="stroke-width:5.46075821;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(0.64711254,0,0,0.63481962,1.5676504,-3.4121261)"
+     id="g1502">
+    <ellipse
+       style="display:inline;opacity:1;fill:#ffcc00;fill-opacity:1;fill-rule:nonzero;stroke:#ffcc00;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.94117647;paint-order:stroke markers fill"
+       id="path1493"
+       cx="30.755585"
+       cy="50.613979"
+       rx="2.8766146"
+       ry="2.9016595" />
+    <path
+       d="M 25.823894,11.295614 1.3961552,52.574752 A 5.768061,5.8386333 0 0 0 6.3278479,61.3327 H 55.183324 a 5.768061,5.8386333 0 0 0 4.931692,-8.757948 L 35.687278,11.295614 a 5.768061,5.8386333 0 0 0 -9.863384,0 z"
+       id="path916"
+       style="stroke:#ffcc00;stroke-width:5.46075821;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647" />
+    <line
+       x1="30.755583"
+       y1="25.778053"
+       x2="30.755583"
+       y2="42.203533"
+       id="line918"
+       style="stroke:#ffcc00;stroke-width:5.46075821;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.94117647" />
+  </g>
+</svg> -->

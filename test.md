@@ -36,6 +36,14 @@ This is freeform text
 🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
 {% endhint %}
 
+{% hint style="warning" %}
+🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+{% endhint %}
+
+{% hint style="tip" %}
+🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+{% endhint %}
+
 ### HTML Extension Test Indented
 
   {% hint style="warning" %}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg8"
+   version="1.1"
+   style="color:#26cb7c;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+   viewBox="0 0 42 42"
+   width="42"
+   height="42"
+   preserveAspectRatio="xMidYMid meet"
+   sodipodi:docname="info-i-outline-blue.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1441"
+     inkscape:window-height="781"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="5.6190476"
+     inkscape:cx="-2.1355932"
+     inkscape:cy="21"
+     inkscape:window-x="170"
+     inkscape:window-y="56"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1525" />
+  <defs
+     id="defs12">
+    <clipPath
+       id="clipPath1504"
+       clipPathUnits="userSpaceOnUse">
+      <g
+         id="use1506" />
+    </clipPath>
+  </defs>
+  <g
+     id="g1525"
+     style="stroke-width:1.10521626;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(1.8101708,0,0,1.8094825,-1.5812105,-0.60253369)"
+     inkscape:label="Info Symbol">
+    <ellipse
+       ry="10.362263"
+       rx="10.357955"
+       cy="11.962315"
+       cx="12.464576"
+       id="path825"
+       style="display:inline;opacity:0.89200003;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#0066ff;stroke-width:1.93388689;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       inkscape:label="Circle blue" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path822"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.68125153px;line-height:1.25;font-family:Utopia;-inkscape-font-specification:'Utopia Bold';letter-spacing:0px;word-spacing:0px;display:inline;fill:#0066ff;fill-opacity:1;stroke:none;stroke-width:0.6106751"
+       d="m 11.264997,16.881604 c 0,0.756814 -0.138796,0.828891 -1.127716,0.882949 v 0.684736 h 4.875202 v -0.684736 c -0.988919,-0.05405 -1.127716,-0.126135 -1.127716,-0.882949 V 9.5116797 L 13.763321,9.4035635 10.241378,9.9261253 v 0.6486977 l 0.607231,0.0901 c 0.277592,0.03604 0.416388,0.198213 0.416388,0.918988 z M 12.47946,8.6287303 c 0.954221,0 1.596151,-0.7207748 1.596151,-1.5857048 0,-0.8469105 -0.607231,-1.5676855 -1.596151,-1.5676855 -0.971571,0 -1.578802,0.720775 -1.578802,1.5676855 0,0.86493 0.607231,1.5857048 1.578802,1.5857048 z"
+       inkscape:label="Stylish i" />
+  </g>
+</svg>

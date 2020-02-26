@@ -89,12 +89,56 @@ Usage: https://highlightjs.org/usage/
 
 `;
 
+// var SVG_INFO = `
+// <svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="none" style="color: rgb(56, 132, 255);"><g><path d="M12.2 8.98c.06-.01.12-.03.18-.06.06-.02.12-.05.18-.09l.15-.12c.18-.19.29-.45.29-.71 0-.06-.01-.13-.02-.19a.603.603 0 0 0-.06-.19.757.757 0 0 0-.09-.18c-.03-.05-.08-.1-.12-.15-.28-.27-.72-.37-1.09-.21-.13.05-.23.12-.33.21-.04.05-.09.1-.12.15-.04.06-.07.12-.09.18-.03.06-.05.12-.06.19-.01.06-.02.13-.02.19 0 .26.11.52.29.71.1.09.2.16.33.21.12.05.25.08.38.08.06 0 .13-.01.2-.02M13 16v-4a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0M12 3c-4.962 0-9 4.038-9 9 0 4.963 4.038 9 9 9 4.963 0 9-4.037 9-9 0-4.962-4.037-9-9-9m0 20C5.935 23 1 18.065 1 12S5.935 1 12 1c6.066 0 11 4.935 11 11s-4.934 11-11 11" fill-rule="evenodd"></path></g></svg>
+// `
+// var SVG_SUCCESS = `
+// <svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="color: rgb(38, 203, 124);"><g><path d="M22 11.07V12a10 10 0 1 1-5.93-9.14"></path><polyline points="23 3 12 14 9 11"></polyline></g></svg>
+// `
+
 var SVG_INFO = `
-<svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="none" style="color: rgb(56, 132, 255);"><g><path d="M12.2 8.98c.06-.01.12-.03.18-.06.06-.02.12-.05.18-.09l.15-.12c.18-.19.29-.45.29-.71 0-.06-.01-.13-.02-.19a.603.603 0 0 0-.06-.19.757.757 0 0 0-.09-.18c-.03-.05-.08-.1-.12-.15-.28-.27-.72-.37-1.09-.21-.13.05-.23.12-.33.21-.04.05-.09.1-.12.15-.04.06-.07.12-.09.18-.03.06-.05.12-.06.19-.01.06-.02.13-.02.19 0 .26.11.52.29.71.1.09.2.16.33.21.12.05.25.08.38.08.06 0 .13-.01.2-.02M13 16v-4a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0M12 3c-4.962 0-9 4.038-9 9 0 4.963 4.038 9 9 9 4.963 0 9-4.037 9-9 0-4.962-4.037-9-9-9m0 20C5.935 23 1 18.065 1 12S5.935 1 12 1c6.066 0 11 4.935 11 11s-4.934 11-11 11" fill-rule="evenodd"></path></g></svg>
-`
+<svg height="1cm" width="1cm"  color="#26cb7c" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(1.8102 0 0 1.8095 -1.5812 -.60253)" stroke-width="1.1052">
+<ellipse cx="12.465" cy="11.962" rx="10.358" ry="10.362" fill="none" opacity=".892" stroke="#06f" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="0" stroke-width="1.9339" style="paint-order:stroke markers fill"/>
+<path d="m11.265 16.882c0 0.75681-0.1388 0.82889-1.1277 0.88295v0.68474h4.8752v-0.68474c-0.98892-0.05405-1.1277-0.12614-1.1277-0.88295v-7.3699l-0.12145-0.10812-3.5219 0.52256v0.6487l0.60723 0.0901c0.27759 0.03604 0.41639 0.19821 0.41639 0.91899zm1.2145-8.2529c0.95422 0 1.5962-0.72077 1.5962-1.5857 0-0.84691-0.60723-1.5677-1.5962-1.5677-0.97157 0-1.5788 0.72078-1.5788 1.5677 0 0.86493 0.60723 1.5857 1.5788 1.5857z" fill="#06f" stroke="none"/>
+</g>
+</svg>`
 
 var SVG_SUCCESS = `
-<svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="color: rgb(38, 203, 124);"><g><path d="M22 11.07V12a10 10 0 1 1-5.93-9.14"></path><polyline points="23 3 12 14 9 11"></polyline></g></svg>
+<svg height="1cm" width="1cm" color="#26cb7c" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(1.8102 0 0 1.8095 -1.5812 -.60253)" stroke-width="1.1052">
+<path d="m12.465 0.63306c-6.243 0-11.325 5.0836-11.325 11.329 7e-7 6.2456 5.0819 11.329 11.325 11.329 6.243 0 11.325-5.0836 11.325-11.329 0-1.9701-0.38314-3.9389-1.588-5.6824l-1.3536 1.4808c0.6792 1.3536 1.0407 2.6657 1.0407 4.2995 0 5.2003-4.226 9.297-9.424 9.297-5.198 0-9.3914-4.1947-9.3914-9.395 1e-7 -5.2003 4.1933-9.395 9.3914-9.395 2.1313 0 4.1983 0.72492 5.8631 2.0562l1.2074-1.5111c-2.0073-1.6052-4.5007-2.4793-7.0705-2.4793z" color="#26cb7c" color-rendering="auto" dominant-baseline="auto" fill="#090" image-rendering="auto" opacity=".892" shape-rendering="auto" solid-color="#000000" stroke="none" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;paint-order:stroke markers fill;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<polyline transform="matrix(.85209 0 0 1 2.2285 .48689)" points="23 3 12 14 9 11" stroke="#090" stroke-width="2.095"/>
+</g>
+</svg>`
+
+var SVG_TIP = `
+<svg height="1cm" width="1cm" color="#26cb7c" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(1.8102 0 0 1.8095 -.75525 -.76773)" stroke-width="1.1052">
+<path transform="matrix(.55243 0 0 .55264 .87351 .33299)" d="m20.668 5.7422c-6.4792-2e-7 -11.666 5.564-11.666 12.262 0.29095 4.6426 2.8434 7.1112 5.0477 10.296 0.99699 1.3818 1.148 2.2767 1.1769 3.2l0.21875 7c0.04255 1.3585 0.985 2.6191 2.3438 2.6191h6.459c1.3587 0 2.0527-1.3225 2.0527-2.6816v-6.877c0.11153-1.1855 0.42666-2.2445 1.1357-3.2605 2.3172-2.7818 4.8994-6.79 4.8994-10.296-2e-6 -6.6978-5.1887-12.262-11.668-12.262zm0 3.5c4.4741-2e-7 8.168 3.8484 8.168 8.7617 0.02808 4.9694-3.1344 7.726-4.7193 9.9907-0.5458 1.0068-0.6999 2.7386-0.6811 3.9859l0.09375 6.2188h-5.2402l-0.0625-6.2188c-0.01751-1.7387-0.2051-3.023-0.81893-4.0038-2.2348-2.7667-4.5889-6.4134-4.9057-9.9727 0-4.9134 3.6919-8.7617 8.166-8.7617z" color="#26cb7c" color-rendering="auto" dominant-baseline="auto" fill="#fc0" fill-opacity=".94118" image-rendering="auto" opacity=".892" shape-rendering="auto" solid-color="#000000" stroke="none" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;paint-order:stroke markers fill;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<g fill="none" stroke="#fc0" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity=".84314" stroke-width=".55254px">
+<path d="m10.273 19.162 3.9697 2e-6"/>
+<path d="m10.319 20.349 3.9697 2e-6"/>
+</g>
+<g fill="none" stroke="#fc0" stroke-linecap="butt" stroke-linejoin="miter" stroke-opacity=".84314">
+<path d="m6.6936 2.7895 1.4352 1.4206" stroke-width=".52483px"/>
+<path d="m17.762 2.7861-1.4145 1.5976" stroke-width=".55254px"/>
+<path d="m14.259 1.2171-0.53453 2.0661" stroke-width=".55254px"/>
+<path d="m10.159 1.2171 0.53453 2.0661" stroke-width=".55254px"/>
+<path d="m4.595 5.2492 1.822 1.1102" stroke-width=".55254px"/>
+<path d="m19.905 5.2492-1.822 1.1102" stroke-width=".55254px"/>
+</g>
+</g>
+</svg>`
+
+var SVG_WARNING = `
+<svg height="1cm" width="1cm" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.0" viewBox="0 0 43 37.6" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(.64711 0 0 .63482 1.5677 -3.4121)">
+<ellipse cx="30.756" cy="50.614" rx="2.8766" ry="2.9017" fill="#fc0" stroke-width="0" style="paint-order:stroke markers fill"/>
+<path d="m25.824 11.296-24.428 41.279a5.7681 5.8386 0 0 0 4.9317 8.7579h48.855a5.7681 5.8386 0 0 0 4.9317-8.7579l-24.428-41.279a5.7681 5.8386 0 0 0-9.8634 0z" stroke="#fc0" stroke-opacity=".94118" stroke-width="5.4608"/>
+<line x1="30.756" x2="30.756" y1="25.778" y2="42.204" stroke="#fc0" stroke-opacity=".94118" stroke-width="5.4608"/>
+</g>
+</svg>
 `
 
 // TODO: externalize CSS file, import once on load
