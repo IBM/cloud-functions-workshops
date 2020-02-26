@@ -229,7 +229,11 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
           var htmlText = retrieveHTMLExtInnerText(converter,capture)
           var svg = SVG_INFO
           if(capture.indexOf("\"success\"") > -1) {
-             svg = SVG_SUCCESS
+            svg = SVG_SUCCESS
+          } else if(capture.indexOf("\"tip\"") > -1) {
+            svg = SVG_TIP
+          } else if(capture.indexOf("\"warning\"") > -1) {
+            svg = SVG_WARNING
           }
           return HTML_BLOCKQUOTE_ELEMENT_BEGIN + svg + HTML_BLOCKQUOTE_ELEMENT_MIDDLE + htmlText + HTML_BLOCKQUOTE_ELEMENT_END;
         });
