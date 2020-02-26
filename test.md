@@ -37,11 +37,11 @@ This is freeform text
 {% endhint %}
 
 {% hint style="warning" %}
-🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+**Warning** Be careful not to overuse warnings in your instructions for courses.
 {% endhint %}
 
 {% hint style="tip" %}
-🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+**Tip** Be sure to keep your IBM CLI and its plugins up to date.
 {% endhint %}
 
 ### HTML Extension Test Indented
