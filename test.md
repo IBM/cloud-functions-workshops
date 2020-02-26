@@ -52,7 +52,7 @@ This is freeform text
 
 ### Hyperlinks
 
-- Try **[This is a hyperkink in a list](201-using-event-providers/README.md)** and it is at the beginning and bolded.
+- Try **[This is a hyperlink in a list](201-using-event-providers/README.md)** and it is at the beginning and bolded.
 
 The following link [Is in th3 m&ddle w!th s@me f^nky {har~cters?=:droplet:](../README.md) with a relative link backwards.
 
