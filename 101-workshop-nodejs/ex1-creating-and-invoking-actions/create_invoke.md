@@ -19,7 +19,7 @@
 
 # Creating And Invoking Actions
 
-## Creating Node.js actions
+## Creating Node.js Actions
 
 Review the following steps and examples to create your first JavaScript action.
 
