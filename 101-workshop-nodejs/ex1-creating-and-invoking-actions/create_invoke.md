@@ -102,7 +102,7 @@ The wait period is the lesser of 60 seconds or the action's configured [time lim
 
 A non-blocking invocation will invoke the action immediately, but _not wait_ for a response.
 
-If you don't need the action result right away, you can omit the `—blocking` flag to make a non-blocking invocation. You can get the result later by using the **Activation ID**.
+If you don't need the action result right away, you can omit the `--blocking` flag to make a non-blocking invocation. You can get the result later by using the **Activation ID**.
 
 1. Invoke the `hello` Action using the command-line as a non-blocking activation.
 
@@ -114,7 +114,7 @@ If you don't need the action result right away, you can omit the `—blocking` f
    ok: invoked /_/hello with id 6bf1f670ee614a7eb5af3c9fde813043
    ```
 
-1. Retrieve the activation result
+2. Retrieve the activation result
 
    ```bash
    ibmcloud fn activation result 6bf1f670ee614a7eb5af3c9fde81304
@@ -193,5 +193,5 @@ y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Great work, you have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more…** 🎉
+🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more...
 {% endhint %}

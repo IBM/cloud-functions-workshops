@@ -38,6 +38,7 @@ Options:
     -t : Target directory for converted HTML files (path structure recreated).
          Note:
          - Defaults to current directory ('.html').
+    -c : Copy all image files (e.g., .png, .jpg, .svg) to target directory (if different from source).
     -d': Debug trace enabled to console.
 `
 
@@ -86,15 +87,7 @@ Hosted Library: https://cdnjs.com/libraries/highlight.js/
 Usage: https://highlightjs.org/usage/
 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/androidstudio.min.css">
-
 `;
-
-// var SVG_INFO = `
-// <svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="none" style="color: rgb(56, 132, 255);"><g><path d="M12.2 8.98c.06-.01.12-.03.18-.06.06-.02.12-.05.18-.09l.15-.12c.18-.19.29-.45.29-.71 0-.06-.01-.13-.02-.19a.603.603 0 0 0-.06-.19.757.757 0 0 0-.09-.18c-.03-.05-.08-.1-.12-.15-.28-.27-.72-.37-1.09-.21-.13.05-.23.12-.33.21-.04.05-.09.1-.12.15-.04.06-.07.12-.09.18-.03.06-.05.12-.06.19-.01.06-.02.13-.02.19 0 .26.11.52.29.71.1.09.2.16.33.21.12.05.25.08.38.08.06 0 .13-.01.2-.02M13 16v-4a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0M12 3c-4.962 0-9 4.038-9 9 0 4.963 4.038 9 9 9 4.963 0 9-4.037 9-9 0-4.962-4.037-9-9-9m0 20C5.935 23 1 18.065 1 12S5.935 1 12 1c6.066 0 11 4.935 11 11s-4.934 11-11 11" fill-rule="evenodd"></path></g></svg>
-// `
-// var SVG_SUCCESS = `
-// <svg preserveAspectRatio="xMidYMid meet" height="1cm" width="1cm" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" style="color: rgb(38, 203, 124);"><g><path d="M22 11.07V12a10 10 0 1 1-5.93-9.14"></path><polyline points="23 3 12 14 9 11"></polyline></g></svg>
-// `
 
 var SVG_INFO = `
 <svg height="1cm" width="1cm"  color="#26cb7c" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" version="1.1" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg">
@@ -157,9 +150,11 @@ var SVG_WARNING = `
 // that is, we load after pgr)
 var CSS_BLOCKQUOTE = `
 <style>
+
 body {
-  font-family: Roboto, sans-serif;;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.625;
 }
 
@@ -173,27 +168,35 @@ img {
 }
 
 code {
-  font-family: monospace;
-  font-size: 16px;
-  background-color: gainsboro;
+  font-family: consolas, monospace, courier !important;
+  font-size: 1.1em !important;
+  padding: 0.2em !important;
+  background-color: gainsboro !important;
+}
+
+code.hljs {
+  padding: 0.5em !important;
+  color: #a9b7c6 !important;
+  background-color: #282b2e !important;
 }
 
 blockquote
 {
-  border-left: 5px solid rgba(0,0,0,0.2);
-  margin-left: 0;
-  padding-left: 2em;
+  border-left: 5px solid rgba(0,0,0,0.2) !important;
+  margin: 16px 0em 16px 0px !important;
+  padding-left: 2em !important;
 }
 
 .callout {
-  background-color: whitesmoke;
-  padding: 18px;
-  display: flex;
+  background-color: whitesmoke !important;
+  padding: 18px !important;
+  display: flex !important;
 }
 
 .callouttext{
-    background-color: transparent;
-    margin-left: 8px;
+    background-color: transparent !important;
+    margin-left: 1em !important;
+    font-size: 1.0em;
 }
 </style>
 `;
