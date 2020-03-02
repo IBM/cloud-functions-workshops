@@ -218,7 +218,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 ## Troubleshooting
 
-### Unable to invoke action X: Request defines parameters that are not allowed
+### Unable to invoke action 'hello': Request defines parameters that are not allowed
 
 {% hint style="tip" %}
 **You may see this error if you have previously "bound" the `place` parameter to a fixed value.**.
@@ -236,3 +236,7 @@ error: Unable to invoke action 'hello': Request defines parameters that are not 
     ibmcloud fn action delete hello
     ibmcloud fn action create hello ~hello.js
     ```
+
+{% hint style="warning" %}
+**Once you bind a parameter, there is no current way to unbind it; you will have to delete it and start over.**.
+{% endhint %}
