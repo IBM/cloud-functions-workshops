@@ -21,56 +21,80 @@
 
 _Triggers_ represent a named "channel" for a stream of events.
 
-Let's create a trigger to send _location updates_:
+1. Let's create a trigger to send _location updates_:
 
-```bash
-ibmcloud fn trigger create locationUpdate
-```
+    ```bash
+    ibmcloud fn trigger create locationUpdate
+    ```
 
-```text
-ok: created trigger locationUpdate
-```
+    ```text
+    ok: created trigger locationUpdate
+    ```
 
-You can check that the trigger has been created like this:
+2. You can check that the trigger has been created like this:
 
-```bash
-ibmcloud fn trigger list
-```
+    ```bash
+    ibmcloud fn trigger list
+    ```
 
-```text
-triggers
-locationUpdate                  private
-```
+    ```text
+    triggers
+    locationUpdate                  private
+    ```
 
 So far we have only created a named channel to which events can be fired.
 
-Let's now fire the trigger by specifying its name and parameters:
+3. Let's now fire the trigger by specifying its name and parameters:
+
+    ```bash
+    ibmcloud fn trigger fire locationUpdate -p name "Barry" -p place "Central City"
+    ```
+
+    ```text
+    ok: triggered /_/locationUpdate with id
+    ```
+
+    the trigger was "fired".
+
+3. Triggers also support default parameters. Firing this trigger without any parameters will pass in the default values.
+
+    ```bash
+    ibmcloud fn trigger update locationUpdate -p name "Barry" -p place "Central City"
+    ```
+
+    ```text
+    ok: updated trigger locationUpdate
+    ```
+
+4. Look at the details of the `locationUpdate` trigger:
 
 ```bash
-ibmcloud fn trigger fire locationUpdate -p name "Barry" -p place "Central City"
-```
-
-```text
-ok: triggered /_/locationUpdate with id
-```
-
-Triggers also support default parameters. Firing this trigger without any parameters will pass in the default values.
-
-```bash
-ibmcloud fn trigger update locationUpdate -p name "Barry" -p place "Central City"
-```
-
-```text
-ok: updated trigger locationUpdate
+ibmcloud fn trigger get locationUpdate
 ```
 
 ```bash
-ok: triggered /_/locationUpdate with id
+ok: got trigger locationUpdate
+{
+    "namespace": "myNamespace",
+    "name": "locationUpdate",
+    "version": "0.0.2",
+    "parameters": [
+        {
+            "key": "name",
+            "value": "Barry"
+        },
+        {
+            "key": "place",
+            "value": "Central City"
+        }
+    ],
+    "limits": {},
+    "publish": false
+    ...
+}
 ```
 
-```text
-ok: triggered locationUpdate
-```
+and again the trigger was "fired", but nothing apparent happens (besides seeing the confirmation message).
 
 {% hint style="warning" %}
 **Events you fire to the `locationUpdate` trigger currently do not do anything.** To be useful, we need to create a rule that associates the trigger with an action.

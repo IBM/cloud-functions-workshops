@@ -1,6 +1,6 @@
 # Welcome to the IBM Cloud Functions Introductory Workshop
 
-Hello future Serverless developers! 👋
+Hello future Serverless Developers! 👋
 
 _Welcome to the Introductory Workshop that is designed to teach you how to develop **serverless applications**, composed of loosely coupled microservice-like functions, using the [IBM Cloud Functions](https://cloud.ibm.com/functions) service which is based upon the [Apache OpenWhisk](https://openwhisk.apache.org/) open-source serverless platform._
 
