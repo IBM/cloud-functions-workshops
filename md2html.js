@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+ // TODO: explore use of prism: https://prismjs.com/#plugins
+ // as it hsa plugins that support line numbers and other niceties.
 var fs = require('fs'),
     path = require('path'),
     showdown  = require('showdown'),
