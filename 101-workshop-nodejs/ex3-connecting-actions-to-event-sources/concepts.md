@@ -17,7 +17,7 @@
 #
 -->
 
-# Concepts
+# Programming Model Concepts
 
 ## Triggers
 
@@ -27,7 +27,7 @@ Triggers are a named channel for a class of events. The following are examples o
 * A trigger of document uploads to a website.
 * A trigger of incoming emails.
 
-Triggers can be _fired_ \(activated\) by using a dictionary of key-value pairs. Sometimes this dictionary is referred to as the _event_. As with actions, each firing of a trigger results in an activation ID.
+Triggers can be _**fired**_ \(activated\) by using a dictionary of key-value pairs. Sometimes this dictionary is referred to as the (normalized, internal) _event_. However, these normalized events are often a representation of raw data coming from external _events_ generated outside the Serverless platform.  As with actions, each firing of a trigger results in an activation ID.
 
 Triggers can be explicitly fired by a user or by an external event source. A _feed_ is a convenient way to configure an external event source to fire trigger events that can be consumed by IBM Cloud Functions. Examples of feeds include the following:
 
