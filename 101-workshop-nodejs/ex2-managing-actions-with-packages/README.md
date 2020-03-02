@@ -27,7 +27,7 @@ _Once you have completed this exercise, you will have…_
 * **Understood how to use public package actions and bindings.**
 * **Created and shared custom packages.**
 
-Once this exercise is finished, we will be able to create and share actions using packages using IBM Cloud Functions!
+Once this exercise is finished, we will be able to create and share actions using packages within IBM Cloud Functions!
 
 ## Background
 
