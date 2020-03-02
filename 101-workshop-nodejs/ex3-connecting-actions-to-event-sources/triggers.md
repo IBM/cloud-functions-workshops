@@ -100,7 +100,7 @@ So far we have only created a named channel to which events can be fired.
     The `locationUpdate` Trigger will now include these parameters using the default values supplied whenever fired.
 
 {% hint style="warning" %}
-**Events you fire to the `locationUpdate` trigger currently do not do anything.** To be useful, we need to create a rule that associates the trigger with an action.
+**Events you fire to the `locationUpdate` trigger currently do not do anything.** To be useful, we need to create a **rule** that associates the trigger with an action.
 {% endhint %}
 
 {% hint style="success" %}
