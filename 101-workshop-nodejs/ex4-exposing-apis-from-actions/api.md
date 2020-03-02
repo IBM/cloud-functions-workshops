@@ -17,11 +17,11 @@
 #
 -->
 
-# API
+# API Management
 
 Let's now show how these web actions can be turned into an API using the [API Gateway](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-apigateway). First we will choose `/myapi` as the base path. This is the part of the path before the actual endpoint. For example: `example.com/basepath/endpoint`. This is useful for grouping enpoints together in a logical way and is how IBM Cloud Functions organizes your endpoints into a single API.
 
-## Managing APIs
+## Creating an API
 
 To create an API we will run the following command
 
@@ -48,7 +48,7 @@ ok: created API /myapi/foo GET for action /_/hello
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
 ```
 
-1. Check to see the api was create
+2. Check to see the api was create
 
 ```bash
 ibmcloud fn api list
@@ -60,7 +60,7 @@ Action                                     Verb  API Name  URL
 /joesphine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
 ```
 
-1. Now lets invoke that API via curl
+3. Now lets invoke that API via curl
 
 ```bash
 curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
