@@ -121,7 +121,7 @@ Let's look at an example of using sequences.
     }
     ```
 
-#### Now, let's see them all work together as an action sequence...
+### Now, let's see them all work together as an action sequence...
 
 1. Create the following action sequence.
 
@@ -211,7 +211,7 @@ Let's look at how this work...
    }
    ```
 
-#### We can even find out more about the failed action.
+### We can even find out more about the failed action.
 
 1. List the last few activations
 
@@ -247,5 +247,5 @@ Let's look at how this work...
   As you can, the sequence was stopped at the failed action `fail`.
 
 {% hint style="success" %}
-🎉 **Congratulations for getting this far!** The use of Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions within Packages further enabling composition and reuse...**
+🎉 **Congratulations for completing this last topic!** The use of Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions within Packages further enabling composition and reuse...
 {% endhint %}
