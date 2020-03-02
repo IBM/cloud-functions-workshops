@@ -244,7 +244,7 @@ Let's look at how this work...
       ...
   ```
 
-  As you can, the sequence was stopped at the failed action `fail`.
+  As you can, the sequence was stopped at the failed action that we named `fail`.
 
 {% hint style="info" %}
 The use of **Sequences is an "advanced" technique** that can bring Serverless applications to life, but even more-advanced Compositions are possible using Conditional logic constructs that are not covered in this introductory course.
