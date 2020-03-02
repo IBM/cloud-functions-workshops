@@ -1,6 +1,6 @@
-# Exposing APIs from Actions
+# Exposing Actions as APIs
 
-This exercise shows you how to create public HTTP endpoints from actions. You will learn how to create web actions and use the integrated API gateway.
+This exercise shows you how to create public HTTP endpoints from IBM Cloud Functions Actions. You will learn how to create web actions and use the integrated API gateway.
 
 _Once you have completed this exercise, you will have…_
 
