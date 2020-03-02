@@ -107,7 +107,8 @@ To see how this works, try the following example:
    ok: updated package custom
    ```
 
-2. Display the parameters in the package and action, and see how the `identity` action in the package inherits parameters from the package.
+2. Display the parameters in the package.
+
 
    ```bash
    ibmcloud fn package get custom
@@ -129,7 +130,7 @@ To see how this works, try the following example:
    ...
    ```
 
-   you can see these parameters are inherired by  the `identity` action:
+3. Observe how the `identity` action in the package inherits these parameters from the package.
 
    ```bash
    ibmcloud fn action get custom/identity
