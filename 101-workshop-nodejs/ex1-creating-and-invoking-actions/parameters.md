@@ -61,9 +61,9 @@ When invoking actions through the command-line, parameter values can be passed a
     }
     ```
 
-    {% hint style="info" %}
-    **Note** We used the `--result` option above. It implies a `blocking` invocation where the CLI waits for the activation to complete and then displays only the function's output as the `payload` value..
-    {% endhint %}
+{% hint style="info" %}
+**Note** We used the `--result` option above. It implies a `blocking` invocation where the CLI waits for the activation to complete and then displays only the function's output as the `payload` value.
+{% endhint %}
 
 2. Create a file named `parameters.json` containing the following JSON.
 
@@ -132,7 +132,7 @@ Let's use the `hello` action from our previous example and bind a default value 
 
 Update the action by using the `--param` option to bind default parameter values.
 
-```text
+```bash
 ibmcloud fn action update hello --param place Rivendell
 ```
 

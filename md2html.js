@@ -176,7 +176,7 @@ img {
 
 code {
   font-family: consolas, monospace, courier !important;
-  font-size: 1.1em !important;
+  font-size: 1em !important;
   padding: 0.2em !important;
   background-color: gainsboro !important;
 }
