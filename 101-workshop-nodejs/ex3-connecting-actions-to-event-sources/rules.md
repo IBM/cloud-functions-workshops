@@ -226,9 +226,9 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 If you see this error attempting to invoke the `hello` action with a `place` parameter:
 
-```text
-error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
-```
+    ```text
+    error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
+    ```
 
 1. Delete the old `hello` action and create it again...
 
