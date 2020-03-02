@@ -21,7 +21,7 @@
 
 Let's turn the `hello` action into a web action. Once it has been converted, we can call this action using a normal HTTP request.
 
-1. Update the action to set the `—web` flag to `true`.
+1. Update the action to set the `--web` flag to `true`.
 
    ```bash
    ibmcloud fn action update hello --web true
