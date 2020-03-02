@@ -119,7 +119,7 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
    ```
 
 {% hint style="success" %}
-🎉 **That was pretty easy, huh? We can now pass parameters and access these values in our serverless functions. What about parameters that we need but don't want to manually pass in every time? Guess what, we have a trick for that…** 🎉
+🎉 **That was pretty easy, huh?** We can now pass parameters and access these values in our serverless functions. What about parameters that we need but don't want to manually pass in every time? Guess what, we have a trick for that...
 {% endhint %}
 
 ## Setting default parameters
@@ -177,5 +177,5 @@ ibmcloud fn action invoke --result hello --param name Elrond --param place "the 
 ```
 
 {% hint style="success" %}
-🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs. Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, right?** 🎉
+🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs.** Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, right?
 {% endhint %}
