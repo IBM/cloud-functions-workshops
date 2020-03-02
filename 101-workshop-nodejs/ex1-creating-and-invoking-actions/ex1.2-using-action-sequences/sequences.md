@@ -41,85 +41,85 @@ Let's look at an example of using sequences.
 
 1. Create the file \(`funcs.js`\) with the following contents:
 
-  ```javascript
-  function split(params) {
-    var text = params.text || ""
-    var words = text.split(' ')
-    return { words: words }
-  }
+    ```javascript
+    function split(params) {
+      var text = params.text || ""
+      var words = text.split(' ')
+      return { words: words }
+    }
 
-  function reverse(params) {
-    var words = params.words || []
-    var reversed = words.map(word => word.split("").reverse().join(""))
-    return { words: reversed }
-  }
+    function reverse(params) {
+      var words = params.words || []
+      var reversed = words.map(word => word.split("").reverse().join(""))
+      return { words: reversed }
+    }
 
-  function join(params) {
-    var words = params.words || []
-    var text = words.join(' ')
-    return { text: text }
-  }
-  ```
+    function join(params) {
+      var words = params.words || []
+      var text = words.join(' ')
+      return { text: text }
+    }
+    ```
 
 2. Create the following three actions:
 
-  ```bash
-  ibmcloud fn action create split funcs.js --main split
-  ```
+    ```bash
+    ibmcloud fn action create split funcs.js --main split
+    ```
 
-  ```bash
-  ibmcloud fn action create reverse funcs.js --main reverse
-  ```
+    ```bash
+    ibmcloud fn action create reverse funcs.js --main reverse
+    ```
 
-  ```bash
-  ibmcloud fn action create join funcs.js --main join
-  ```
+    ```bash
+    ibmcloud fn action create join funcs.js --main join
+    ```
 
 ## Creating sequence actions
 
 1. Test each action to verify it is working.
 
-  The function `split` takes the single string `hello world` and splits it into a JSON map of the individual `strings` using the space character as the delimiter.
+    The function `split` takes the single string `hello world` and splits it into a JSON map of the individual `strings` using the space character as the delimiter.
 
-  ```bash
-  ibmcloud fn action invoke split --result --param text "Hello world"
-  ```
+    ```bash
+    ibmcloud fn action invoke split --result --param text "Hello world"
+    ```
 
-  ```json
-  {
-      "words": [
-          "Hello",
-          "world"
-      ]
-  }
-  ```
+    ```json
+    {
+        "words": [
+            "Hello",
+            "world"
+        ]
+    }
+    ```
 
-  The function `reverse` takes a JSON array of `strings` and reverses the characters in each.
+    The function `reverse` takes a JSON array of `strings` and reverses the characters in each.
 
-  ```bash
-  ibmcloud fn action invoke reverse --result --param words '["hello", "world"]'
-  ```
+    ```bash
+    ibmcloud fn action invoke reverse --result --param words '["hello", "world"]'
+    ```
 
-  ```json
-  {
-      "words": [
-          "olleh",
-          "dlrow"
-      ]
-  }
-  ```
+    ```json
+    {
+        "words": [
+            "olleh",
+            "dlrow"
+        ]
+    }
+    ```
 
-  The function `join` takes the JSON array of `strings` and concatenates them back into a space-delimited string.
+    The function `join` takes the JSON array of `strings` and concatenates them back into a space-delimited string.
 
-  ```bash
-  ibmcloud fn action invoke join --result --param words '["hello", "world"]'
-  ```
+    ```bash
+    ibmcloud fn action invoke join --result --param words '["hello", "world"]'
+    ```
 
-  ```json
-  {
-      "text": "hello world"
-  }
-  ```
+    ```json
+    {
+        "text": "hello world"
+    }
+    ```
 
 ### Now, let's see them all work together as an action sequence...
 
