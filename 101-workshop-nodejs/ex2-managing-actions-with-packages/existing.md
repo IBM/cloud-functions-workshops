@@ -1,6 +1,6 @@
-# Using Packages
+# Using Existing Packages
 
-## Browsing packages
+## Browsing public packages
 
 IBM Cloud Functions comes pre-installed with a number of public packages, which include trigger feeds used to register triggers with event sources.
 
@@ -98,7 +98,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 
    Notice that the `greeting` action takes two parameters: `name` and `place`.
 
-1. Invoke the action without any parameters.
+2. Invoke the action without any parameters.
 
    ```bash
    ibmcloud fn action invoke --result /whisk.system/samples/greeting
@@ -112,7 +112,7 @@ You can invoke actions in a package, just as with other actions. The next few st
 
    The output is a generic message because no parameters were specified.
 
-1. Invoke the action with parameters.
+3. Invoke the action with parameters.
 
    ```bash
    ibmcloud fn action invoke --result /whisk.system/samples/greeting --param name Arya --param place Winterfell
@@ -144,7 +144,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
    ok: created binding valhallaSamples
    ```
 
-1. Get a description of the package binding.
+2. Get a description of the package binding.
 
    ```text
    ibmcloud fn package get --summary valhallaSamples
@@ -165,7 +165,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 
    Notice that all the actions in the `/whisk.system/samples` package are available in the `valhallaSamples` package binding.
 
-1. Invoke an action in the package binding
+3. Invoke an action in the package binding
 
    ```text
    ibmcloud fn action invoke --result valhallaSamples/greeting --param name Odin
@@ -179,7 +179,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
 
    Notice from the result that the action inherits the `place` parameter you set when you created the `valhallaSamples` package binding.
 
-1. Invoke an action and overwrite the default parameter value.
+4. Invoke an action and overwrite the default parameter value.
 
    ```text
    ibmcloud fn action invoke --result valhallaSamples/greeting --param name Odin --param place Asgard
@@ -190,6 +190,7 @@ In the following simple example, you bind to the `/whisk.system/samples` package
        "payload": "Hello, Odin from Asgard!"
    }
    ```
+
 {% hint style="info" %}
    Notice that the `place` parameter value that is specified with the action invocation overwrites the default value set in the `valhallaSamples` package binding.
 {% endhint %}
