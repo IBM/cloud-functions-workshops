@@ -8,52 +8,52 @@ Actions in public packages can be used by anyone, the caller pays the invocation
 
 Using `ibmcloud fn` CLI you can get a list of packages in a namespace, list the entities in a package and get a description of the entities within a package.
 
-Get a list of packages in the `/whisk.system` namespace.
+1. Get a list of packages in the `/whisk.system` namespace.
 
-```bash
-ibmcloud fn package list /whisk.system
-```
+   ```bash
+   ibmcloud fn package list /whisk.system
+   ```
 
-```text
-packages
-/whisk.system/alarms                      shared
-/whisk.system/cloudant                    shared
-/whisk.system/combinators                 shared
-/whisk.system/cos                         shared
-/whisk.system/github                      shared
-/whisk.system/messaging                   shared
-/whisk.system/pushnotifications           shared
-/whisk.system/samples                     shared
-/whisk.system/slack                       shared
-/whisk.system/utils                       shared
-/whisk.system/watson-speechToText         shared
-/whisk.system/watson-textToSpeech         shared
-/whisk.system/watson-translator           shared
-/whisk.system/weather                     shared
-/whisk.system/websocket                   shared
-```
+   ```text
+   packages
+   /whisk.system/alarms                      shared
+   /whisk.system/cloudant                    shared
+   /whisk.system/combinators                 shared
+   /whisk.system/cos                         shared
+   /whisk.system/github                      shared
+   /whisk.system/messaging                   shared
+   /whisk.system/pushnotifications           shared
+   /whisk.system/samples                     shared
+   /whisk.system/slack                       shared
+   /whisk.system/utils                       shared
+   /whisk.system/watson-speechToText         shared
+   /whisk.system/watson-textToSpeech         shared
+   /whisk.system/watson-translator           shared
+   /whisk.system/weather                     shared
+   /whisk.system/websocket                   shared
+   ```
 
-Get a list of entities in the `/whisk.system/cloudant` package.
+2. Get a list of entities in the `/whisk.system/cloudant` package.
 
-```bash
-ibmcloud fn package get --summary /whisk.system/cloudant
-```
+   ```bash
+   ibmcloud fn package get --summary /whisk.system/cloudant
+   ```
 
-```bash
-package /whisk.system/cloudant: Cloudant database service
-   (parameters: *apihost, *bluemixServiceName, *dbname, *host, overwrite, *password, *username)
-  action /whisk.system/cloudant/read: Read document from database
-   (parameters: dbname, id, params)
-  action /whisk.system/cloudant/write: Write document in database
-   (parameters: dbname, doc)
-   ...
-  feed /whisk.system/cloudant/changes: Database change feed
-   (parameters: dbname, filter, query_params)
-```
+   ```bash
+   package /whisk.system/cloudant: Cloudant database service
+      (parameters: *apihost, *bluemixServiceName, *dbname, *host, overwrite, *password, *username)
+   action /whisk.system/cloudant/read: Read document from database
+      (parameters: dbname, id, params)
+   action /whisk.system/cloudant/write: Write document in database
+      (parameters: dbname, doc)
+      ...
+   feed /whisk.system/cloudant/changes: Database change feed
+      (parameters: dbname, filter, query_params)
+   ```
 
-This output shows that the Cloudant package provides many actions including `read` and `write`, and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
+   This output shows that the Cloudant package provides many actions including `read` and `write`, and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
 
-The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
+   The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
 
 {% hint style="info" %}
 **Note:**

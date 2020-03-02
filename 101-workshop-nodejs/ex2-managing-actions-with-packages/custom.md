@@ -43,7 +43,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    ```text
    package /myNamespace/custom
-     (parameters: none defined)
+      (parameters: none defined)
    ```
 
    Notice that the package is empty.
@@ -74,9 +74,9 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    ```text
    package /myNamespace/custom
-    (parameters: none defined)
+      (parameters: none defined)
    action /myNamespace/custom/identity
-    (parameters: none defined)
+      (parameters: none defined)
    ```
 
    You can see the `custom/identity` action in your namespace now.
@@ -128,6 +128,8 @@ To see how this works, try the following example:
    ]
    ...
    ```
+
+   you can see these parameters are inherired by  the `identity` action:
 
    ```bash
    ibmcloud fn action get custom/identity
