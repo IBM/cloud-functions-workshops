@@ -332,5 +332,5 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
    ```
 
 {% hint style="success" %}
-🎉 **Web Actions are cool!** As you can see, Web Actions are an awesome feature allowing you make your ACtions accessible on the web while controlling Content Types!
+🎉 **Web Actions are cool!** Web Actions are an awesome feature allowing you make your Actions accessible on the web while controlling Content Types.  You can even generate HTML and other website content "on-the-fly" without hosting a content server!
 {% endhint %}
