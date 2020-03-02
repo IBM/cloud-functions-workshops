@@ -32,7 +32,7 @@ ibmcloud fn action create my_sequence --sequence a,b,c
 ```
 
 {% hint style="warning" %}
-**The example above is merely an example of the syntax used to create an action sequence and should not be run.**
+**The instruction above is merely an example of the syntax used to create an action sequence and should not be run.**
 {% endhint %}
 
 Using a sequence can remove the need to manually invoke actions and sit idle waiting for a response. In the example above, a sequence would be created for each serverless function in the application, combing the action doing the authentication followed by the actual request processing action.
@@ -61,7 +61,7 @@ Let's look at an example of using sequences.
   }
   ```
 
-1. Create the following three actions:
+2. Create the following three actions:
 
   ```bash
   ibmcloud fn action create split funcs.js --main split
@@ -129,7 +129,7 @@ Let's look at an example of using sequences.
   ibmcloud fn action create reverse_words --sequence split,reverse,join
   ```
 
-1. Test out the action sequence.
+2. Test out the action sequence.
 
   ```bash
   ibmcloud fn action invoke reverse_words --result --param text "hello world"
@@ -173,7 +173,7 @@ Let's look at how this work...
   }
   ```
 
-1. Create the following three actions:
+2. Create the following three actions:
 
   ```bash
   ibmcloud fn action create fail funcs.js --main fail
@@ -187,7 +187,7 @@ Let's look at how this work...
   ibmcloud fn action create example --sequence fail,end
   ```
 
-1. Test out the action sequence without the `fail` parameter:
+3. Test out the action sequence without the `fail` parameter:
 
   ```bash
   ibmcloud fn action invoke example -r
@@ -199,7 +199,7 @@ Let's look at how this work...
   }
   ```
 
-1. Test out the action sequence with the `fail` parameter set to `true`:
+4. Test out the action sequence with the `fail` parameter set to `true`:
 
    ```text
    ibmcloud fn action invoke example -r -p fail true
@@ -213,7 +213,7 @@ Let's look at how this work...
 
 We can even find out more about the failed action.
 
-1. List the last few activations
+5. List the last few activations
 
   ```bash
   ibmcloud fn activation list -l 2
@@ -225,7 +225,7 @@ We can even find out more about the failed action.
   eab8ed35f2fc4236b8ed35f2fc423657 sequence  warm  96ms       developer error example:0.0.1
   ```
 
-1. get the details of the failed action (i.e., `fail`)
+6. get the details of the failed action (i.e., `fail`)
 
   ```bash
   ibmcloud fn activation get 1b8144afde1244738144afde12c4732a
@@ -247,5 +247,5 @@ We can even find out more about the failed action.
   As you can, the sequence was stopped at the failed action `fail`.
 
 {% hint style="success" %}
-🎉 **Congratulations for getting this far!** The use of Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions within Packages further enabling composition and reuse…** 🎉
+🎉 **Congratulations for getting this far!** The use of Sequences is an "advanced" technique that can bring Serverless applications to life. Now let's explore how we might manage groups of like Actions within Packages further enabling composition and reuse...**
 {% endhint %}
