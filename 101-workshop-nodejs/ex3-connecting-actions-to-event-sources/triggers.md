@@ -104,5 +104,5 @@ So far we have only created a named channel to which events can be fired.
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Let's keep going by connecting actions to triggers…** 🎉
+🎉 **Let's keep going by connecting actions to triggers...**
 {% endhint %}
