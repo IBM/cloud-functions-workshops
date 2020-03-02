@@ -234,5 +234,5 @@ After the actions and feeds that comprise a package are debugged and tested, the
    In the previous example, you're working with the `myNamespace` namespace, and this namespace appears in the fully qualified name.
 
 {% hint style="success" %}
-🎉 **Congratulations on sharing your first public Package!** 🎉
+🎉 **Congratulations on sharing your first public IBM Cloud Functions Package!** 🎉
 {% endhint %}
