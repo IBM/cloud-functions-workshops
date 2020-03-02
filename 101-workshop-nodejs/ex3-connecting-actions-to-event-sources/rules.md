@@ -12,7 +12,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
     ibmcloud fn action invoke --result hello --param name Oliver --param place "Starling City"
     ```
 
-1. Check the trigger exists.
+2. Check the trigger exists.
 
    ```bash
    ibmcloud fn trigger get locationUpdate
@@ -38,7 +38,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
     ],
    ```
 
-1. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
+3. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
 
    ```bash
    ibmcloud fn rule create myRule locationUpdate hello
@@ -48,7 +48,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
    ok: created rule myRule
    ```
 
-1. Retrieve rule details to show the trigger and action bound by this rule.
+4. Retrieve rule details to show the trigger and action bound by this rule.
 
    ```bash
    ibmcloud fn rule get myRule
@@ -89,7 +89,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
    ok: triggered /_/locationUpdate with id 5c153c01d76d49dc953c01d76d99dc34
 ```
 
-1. Verify that the action was invoked by checking the activations list.
+2. Verify that the action was invoked by checking the activations list.
 
    ```bash
    ibmcloud fn activation list --limit 2
@@ -103,7 +103,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
 
    We can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
 
-1. Retrieving the trigger activation record will show the actions and rules invoked from this activation.
+3. Retrieving the trigger activation record will show the actions and rules invoked from this activation.
 
    ```text
    ibmcloud fn activation result 5ee74025c2384f30a74025c2382f30c1
@@ -118,6 +118,8 @@ As an example, create a rule that calls the `hello` action whenever a location u
    You can see that the hello action received the event payload and returned the expected string.
 
 Activation records for triggers store the rules and actions fired for an event and the event parameters.
+
+4. Explore the results of the activation.
 
 ```text
 ibmcloud fn activation result 5c153c01d76d49dc953c01d76d99dc34
@@ -150,19 +152,19 @@ You can create multiple rules that associate the same trigger with different act
         ibmcloud fn action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
         ```
 
-    1. connect the `locationUpdate` trigger to the sequence with another rule:
+    2. connect the `locationUpdate` trigger to the sequence with another rule:
 
     ```text
     ibmcloud fn rule create anotherRule locationUpdate recordLocationAndHello
     ```
 
-    1. Fire the trigger:
+    3. Fire the trigger:
 
     ```bash
     ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
     ```
 
-    1. what do you see if you check the activation logs now?
+    4. what do you see if you check the activation logs now?
 
     ```bash
     ibmcloud fn activation list --limit 5
@@ -182,7 +184,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
    ok: disabled rule myRule
    ```
 
-1. Fire the trigger again.
+2. Fire the trigger again.
 
    ```bash
    ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
@@ -192,7 +194,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
    ok: triggered /_/locationUpdate with id 53f85c39087d4c15b85c39087dac1571
    ```
 
-1. Check the activation list there are no new activation records.
+3. Check the activation list there are no new activation records.
 
     ```bash
     ibmcloud fn activation list --limit 2

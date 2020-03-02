@@ -68,7 +68,6 @@ So far we have only created a named channel to which events can be fired.
 
     and again the trigger was "fired", but nothing apparent happens (besides seeing the confirmation message).
 
-
 4. Look at the details of the `locationUpdate` trigger:
 
     ```bash
