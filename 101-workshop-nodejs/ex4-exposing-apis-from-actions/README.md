@@ -19,4 +19,3 @@ OpenWhisk has a comprehensive RESTful API for the platform that allows you to in
 OpenWhisk has a solution for creating public APIs to invoke your actions without exposing credentials. 😎
 
 Let's review some concepts which explain how this feature works in Apache OpenWhisk.
-

@@ -331,5 +331,6 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
      "hello": "world"
    ```
 
-🎉🎉🎉 **OpenWhisk Web Actions are an awesome feature. Exposing public APIs from actions is minimal effort.** 🎉🎉🎉
-
+{% hint style="success" %}
+🎉 **Web Actions are cool!** As you can see, Web Actions are an awesome feature allowing you make your ACtions accessible on the web while controlling Content Types!
+{% endhint %}
