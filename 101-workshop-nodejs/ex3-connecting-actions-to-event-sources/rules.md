@@ -218,15 +218,17 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
 
 ## Troubleshooting
 
+### Unable to invoke action X: Request defines parameters that are not allowed
+
+{% hint style="tip" %}
+**You may see this error if you have previously "bound" the `place` parameter to a fixed value.**.
+{% endhint %}
+
 If you see this error attempting to invoke the `hello` action with a `place` parameter:
 
 ```text
 error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
 ```
-
-{% hint style="warning" %}
-**You may see this error if you have previously "bound" the `place` parameter to a fixed value.**.
-{% endhint %}
 
 1. Delete the old `hello` action and create it again...
 
