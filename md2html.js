@@ -76,6 +76,13 @@ const REGEX_MD_ANCHOR_TEXT      = /\[(.*?)\]/;
 const REGEX_MD_ANCHOR_HYPERLINK = /\((.*?)\)/;
 const REGEX_HTML_PROTOCOL_PREFIX = /^https?:\/\//i;
 
+// TODO: pre-pend lin numbers by adding another filter...
+const REGEX_CODE_CONTENTS = '<pre><code class="' + // start of a code block with a class
+  '(.*?)'              + // extract class name (result[1])
+  '">'                 + // end of code tag
+  '([\\s\\S]*?)'       + // extract code (result[2])
+  '</code></pre>'        // end of code block
+
 const HTML_BLOCKQUOTE_ELEMENT_BEGIN  = '\n<blockquote class="callout"><div>'
 const HTML_BLOCKQUOTE_ELEMENT_MIDDLE = '</div><div class=\"callouttext\">'
 const HTML_BLOCKQUOTE_ELEMENT_END    = '</div>' + '</blockquote>\n'
@@ -84,9 +91,7 @@ const HTML_BLOCKQUOTE_ELEMENT_END    = '</div>' + '</blockquote>\n'
 const CSS_HLJS = `
 <!--
 Highlight.js CSS
-Demo: https://highlightjs.org/static/demo/
 Hosted Library: https://cdnjs.com/libraries/highlight.js/
-Usage: https://highlightjs.org/usage/
 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/androidstudio.min.css">
 `;
