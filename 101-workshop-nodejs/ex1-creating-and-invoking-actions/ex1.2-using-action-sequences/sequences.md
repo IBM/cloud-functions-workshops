@@ -121,7 +121,7 @@ Let's look at an example of using sequences.
     }
     ```
 
-### Now, let's see them all work together as an action sequence...
+#### Now, let's see them all work together as an action sequence...
 
 1. Create the following action sequence.
 
@@ -211,9 +211,9 @@ Let's look at how this work...
    }
    ```
 
-We can even find out more about the failed action.
+#### We can even find out more about the failed action.
 
-5. List the last few activations
+1. List the last few activations
 
   ```bash
   ibmcloud fn activation list -l 2
@@ -225,7 +225,7 @@ We can even find out more about the failed action.
   eab8ed35f2fc4236b8ed35f2fc423657 sequence  warm  96ms       developer error example:0.0.1
   ```
 
-6. get the details of the failed action (i.e., `fail`)
+2. get the details of the failed action (i.e., `fail`)
 
   ```bash
   ibmcloud fn activation get 1b8144afde1244738144afde12c4732a
