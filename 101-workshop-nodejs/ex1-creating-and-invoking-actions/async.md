@@ -133,10 +133,14 @@ Let's look at what happens when an action invocation takes longer than the `time
    }
    ```
 
+{% hint style="info" %}
+🎉**Bonus Exercise** Try out this exercise [Calling an external API from an Async action](../bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge!
+{% endhint %}
+
 {% hint style="tip" %}
 **Asynchronous actions are necessary for calling other APIs or cloud services**. Don't forget about that timeout though!
 {% endhint %}
 
 {% hint style="success" %}
-🎉**Bonus Exercise** Try out this exercise [Calling an external API from an Async action](../bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge! 🎉
+**The power of asynchronous actions is now yours!** There is no need to wait for those longer-running functions as IBM Cloud Functions does that for you! Next, let's look at how we might compose simple chains of actions using sequences...
 {% endhint %}

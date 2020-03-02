@@ -52,7 +52,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
 **Note** The function uses the [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
 {% endhint %}
 
-1. Invoke the proxy with an incorrect password.
+2. Invoke the proxy with an incorrect password.
 
     ```bash
     ibmcloud fn action invoke proxy -p password wrong -r
@@ -68,7 +68,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
 **Note** On the invoke call above, we used the short form for the `--result` flag which is `-r`.
 {% endhint %}
 
-1. Invoke the proxy with the correct password.
+3. Invoke the proxy with the correct password.
 
     ```bash
     ibmcloud fn action invoke proxy -p password secret -p name Bernie -p place Vermont -r
@@ -80,7 +80,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
     }
     ```
 
-1. Review the activations list to show both actions were invoked.
+4. Review the activations list to show both actions were invoked.
 
    ```bash
    ibmcloud fn activation list -l 2
@@ -97,5 +97,5 @@ Let's look an example of creating a "proxy" action which invokes another action 
 {% endhint %}
 
 {% hint style="success" %}
-🎉Congrats on proxying an action! Be sure to _**[check out all the cool things](https://github.com/apache/openwhisk-client-js/#examples)**_ the [NPM OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used for such _"invoking triggers"_ to fire events and _"chaining action calls"_ within actions.🎉
+🎉**Congrats on proxying an action!** Be sure to _**[check out all the cool things](https://github.com/apache/openwhisk-client-js/#examples)**_ the [NPM OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used for such _"invoking triggers"_ to fire events and _"chaining action calls"_ within actions.
 {% endhint %}

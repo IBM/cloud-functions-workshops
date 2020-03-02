@@ -130,3 +130,7 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
        "20xx-11-14T09:56:44.6964147Z stdout: function called with params { hello: 'world' }"
    ]
    ```
+
+{% hint style="success" %}
+As you can see, activation logs provide critical insight into your functions when running within the IBM Cloud Functions service. Next let's explore how we can call other actions from an action allowing for function reuse.
+{% endhint %}
