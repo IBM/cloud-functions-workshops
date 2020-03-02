@@ -66,35 +66,38 @@ So far we have only created a named channel to which events can be fired.
     ok: updated trigger locationUpdate
     ```
 
+    and again the trigger was "fired", but nothing apparent happens (besides seeing the confirmation message).
+
+
 4. Look at the details of the `locationUpdate` trigger:
 
-```bash
-ibmcloud fn trigger get locationUpdate
-```
+    ```bash
+    ibmcloud fn trigger get locationUpdate
+    ```
 
-```bash
-ok: got trigger locationUpdate
-{
-    "namespace": "myNamespace",
-    "name": "locationUpdate",
-    "version": "0.0.2",
-    "parameters": [
-        {
-            "key": "name",
-            "value": "Barry"
-        },
-        {
-            "key": "place",
-            "value": "Central City"
-        }
-    ],
-    "limits": {},
-    "publish": false
-    ...
-}
-```
+    ```bash
+    ok: got trigger locationUpdate
+    {
+        "namespace": "myNamespace",
+        "name": "locationUpdate",
+        "version": "0.0.2",
+        "parameters": [
+            {
+                "key": "name",
+                "value": "Barry"
+            },
+            {
+                "key": "place",
+                "value": "Central City"
+            }
+        ],
+        "limits": {},
+        "publish": false
+        ...
+    }
+    ```
 
-and again the trigger was "fired", but nothing apparent happens (besides seeing the confirmation message).
+    The `locationUpdate` Trigger will now include these parameters using the default values supplied whenever fired.
 
 {% hint style="warning" %}
 **Events you fire to the `locationUpdate` trigger currently do not do anything.** To be useful, we need to create a rule that associates the trigger with an action.
