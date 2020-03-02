@@ -54,7 +54,7 @@ So far we have only created a named channel to which events can be fired.
     ok: triggered /_/locationUpdate with id
     ```
 
-    the trigger was "fired".
+    the trigger was "fired", but that is all we see for now.
 
 3. Triggers also support default parameters. Firing this trigger without any parameters will pass in the default values.
 
