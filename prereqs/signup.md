@@ -41,19 +41,19 @@ _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.
 
 &#52;. Select email preferences, read the Terms and Conditions  and the click the **"Create Account"** button:
 
-![IBM Cloud Contact, Privacy and T&C](images/ibm-cloud-registration-2.png)
+![IBM Cloud Contact, Privacy and T&C](/images/prereq-ibm-cloud-registration-2.png)
 
 You should be directed to verify your account email address:
 
-![Check your email message](images/ibm-cloud-registration-3.png)
+![Check your email message](/images/prereq-ibm-cloud-registration-3.png)
 
 &#53;. Look for the account confirmation email in your inbox:
 
-![IBM Cloud Confirmation Email](images/ibm-cloud-registration-email.png)
+![IBM Cloud Confirmation Email](/images/prereq-ibm-cloud-registration-email.png)
 
 and click `Confirm account` in the email body which should take you back to IBM Cloud and display a confirmation message:
 
-![Registration confirmed message](images/ibm-cloud-registration-4.png)
+![Registration confirmed message](/images/prereq-ibm-cloud-registration-4.png)
 
 &#54;. [Login into IBM Cloud](https://cloud.ibm.com/) using the account credentials you have registered.
 
@@ -75,11 +75,11 @@ Follow these instructions to check which default region your lite account has be
 &#50;. Click the organization `name` listed in the table.
 *Note that your organization is usually the email address you signed up with*
 
-![Cloud Foundry Orgs.](images/ibm-cloud-cloud-foundry-orgs-1.png)
+![Cloud Foundry Orgs.](/images/prereq-ibm-cloud-cloud-foundry-orgs-1.png)
 
 &#51;. Locate the default organization named `dev` and check the associated "_Region_" value listed in the table.
 
-![Cloud Foundry Org. Spaces](images/ibm-cloud-cloud-foundry-orgs-2.png)
+![Cloud Foundry Org. Spaces](/images/prereq-ibm-cloud-cloud-foundry-orgs-2.png)
 
 {% hint style="info" %}
 The value should be either `UK South` or `US South`. **Remember this as the default region value for the next step** (Installing the IBM Cloud CLI).
