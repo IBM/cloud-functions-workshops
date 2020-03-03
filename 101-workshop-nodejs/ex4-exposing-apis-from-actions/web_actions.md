@@ -117,94 +117,96 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 1. Create a new web action from the following source code in `redirect.js`.
 
-   ```javascript
-   function main() {
-       return {
-           headers: { location: "http://openwhisk.org" },
-           statusCode: 302
-     };
-   }
+    ```javascript
+      function main() {
+         return {
+            headers: { location: "http://openwhisk.org" },
+            statusCode: 302
+         };
+      }
    ```
 
-   ```bash
-   ibmcloud fn action create redirect redirect.js --web true
-   ```
+      ```bash
+      ibmcloud fn action create redirect redirect.js --web true
+      ```
 
-   ```bash
-   ok: created action redirect
-   ```
+      ```bash
+      ok: created action redirect
+      ```
 
 2. Retrieve URL for new web action
 
-   ```bash
-   ibmcloud fn action get redirect --url
-   ```
+      ```bash
+      ibmcloud fn action get redirect --url
+      ```
 
-   ```bash
-   ok: got action redirect
-   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
-   ```
+      ```bash
+      ok: got action redirect
+      https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
+      ```
 
 3. Check HTTP response is HTTP redirect.
 
-   ```bash
-   curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
-   ```
+      ```bash
+      curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
+      ```
 
-   ```bash
-   ...
-   < HTTP/1.1 302 Found
-   < X-Backside-Transport: OK OK
-   < Connection: Keep-Alive
-   < Transfer-Encoding: chunked
-   < Server: nginx/1.11.13
-   < Date: Fri, 23 Feb 2018 11:23:24 GMT
-   < Access-Control-Allow-Origin: *
-   < Access-Control-Allow-Methods: OPTIONS, GET, DELETE, POST, PUT, HEAD, PATCH
-   < Access-Control-Allow-Headers: Authorization, Content-Type
-   < location: http://openwhisk.org
-   ...
-   ```
+      ```bash
+      ...
+      < HTTP/1.1 302 Found
+      < X-Backside-Transport: OK OK
+      < Connection: Keep-Alive
+      < Transfer-Encoding: chunked
+      < Server: nginx/1.11.13
+      < Date: Fri, 23 Feb 2018 11:23:24 GMT
+      < Access-Control-Allow-Origin: *
+      < Access-Control-Allow-Methods: OPTIONS, GET, DELETE, POST, PUT, HEAD, PATCH
+      < Access-Control-Allow-Headers: Authorization, Content-Type
+      < location: http://openwhisk.org
+      ...
+      ```
 
 ## Example - HTML response
 
 1. Create a new web action from the following source code in html.js.
 
-   ```javascript
-   function main() {
-       let html = "<html><body><h3><span style="color:red;">Hello World!</span></h3></body></html>"
-       return { headers: { "Content-Type": "text/html" },
-                statusCode: 200,
-                body: html };
-   }
-   ```
+      ```javascript
+      function main() {
+         let html = "<html><body><h3><span style="color:red;">Hello World!</span></h3></body></html>"
+         return { headers: { "Content-Type": "text/html" },
+                  statusCode: 200,
+                  body: html };
+      }
+      ```
 
-   ```bash
-   ibmcloud fn action create html html.js --web true
-   ```
+      ```bash
+      ibmcloud fn action create html html.js --web true
+      ```
 
-   ```bash
-   ok: created action html
-   ```
+      ```bash
+      ok: created action html
+      ```
 
-   ```bash
-   ibmcloud fn action get html --url
-   ```
+2. Retrieve the URL for the web action
 
-   ```bash
-   ok: got action html
-   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
-   ```
+      ```bash
+      ibmcloud fn action get html --url
+      ```
 
-2. Check HTTP response is HTML and we should copy/paste that into our browser.
+      ```bash
+      ok: got action html
+      https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
+      ```
 
-   ```bash
-   curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
-   ```
+3. Check HTTP response is HTML and we should copy/paste that into our browser.
 
-   ```html
-   <html><body>Hello World!</body></html>
-   ```
+      ```bash
+      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
+      ```
+
+      ```html
+      <html><body>Hello World!</body></html>
+      ```
 
 ## An SVG Response
 
@@ -233,17 +235,21 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
         };
     }
     ```
+
     ```bash
     ibmcloud fn action create atom atom.js --web true
     ```
+
     ```bash
     ok: updated action atom
     ```
 
 2. Get the URL for the new atom web action
+
    ```bash
    ibmcloud fn action get atom --url
    ```
+
    ```bash
    ok: got action atom
    https://us-south.functions.cloud.ibm.com/api/v1/web/josephine.watson%40us.ibm.com_ns/default/atom
@@ -255,81 +261,82 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 1. Create a new web action from the following source code in manual.js.
 
-   ```javascript
-   function main(params) {
-       return {
-           statusCode: 200,
-           headers: { 'Content-Type': 'application/json' },
-           body: params
-       };
-   }
-   ```
+      ```javascript
+      function main(params) {
+            return {
+               statusCode: 200,
+               headers: { 'Content-Type': 'application/json' },
+               body: params
+            };
+      }
+      ```
 
-   ```bash
-   ibmcloud fn action create manual manual.js --web true
-   ```
+      ```bash
+      ibmcloud fn action create manual manual.js --web true
+      ```
 
-   ```bash
-   ok: created action manual
-   ```
+      ```bash
+      ok: created action manual
+      ```
 
 2. Retrieve URL for new web action
 
-   ```bash
-   ibmcloud fn action get manual --url
-   ```
+      ```bash
+      ibmcloud fn action get manual --url
+      ```
 
-   ```bash
-   ok: got action manual
-   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual
-   ```
+      ```bash
+      ok: got action manual
+      https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual
+      ```
 
 3. Check HTTP response is JSON.
 
-   ```bash
-   curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world
-   ```
+      ```bash
+      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world
+      ```
 
-   ```json
-   {
-     "__ow_method": "get",
-     "__ow_headers": {
-       "accept": "*/*",
-       "user-agent": "curl/7.54.0",
-       "x-client-ip": "92.11.100.114",
-       "x-forwarded-proto": "https",
-       "host": "openwhisk.ng.bluemix.net:443",
-       "cache-control": "no-transform",
-       "via": "1.1 DwAAAD0oDAI-",
-       "x-global-transaction-id": "2654586489",
-       "x-forwarded-for": "92.11.100.114"
-     },
-     "__ow_path": "",
-     "hello": "world"
-   ```
+      ```json
+      {
+      "__ow_method": "get",
+      "__ow_headers": {
+         "accept": "*/*",
+         "user-agent": "curl/7.54.0",
+         "x-client-ip": "92.11.100.114",
+         "x-forwarded-proto": "https",
+         "host": "openwhisk.ng.bluemix.net:443",
+         "cache-control": "no-transform",
+         "via": "1.1 DwAAAD0oDAI-",
+         "x-global-transaction-id": "2654586489",
+         "x-forwarded-for": "92.11.100.114"
+      },
+      "__ow_path": "",
+      "hello": "world"
+      ```
 
 4. Use other HTTP methods or URI paths to show the parameters change.
 
-   ```bash
-   curl -XPOST https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world
-   ```
+      ```bash
+      curl -XPOST https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world
+      ```
 
-   ```json
-   {
-     "__ow_method": "post",
-     "__ow_headers": {
-       "accept": "*/*",
-       "user-agent": "curl/7.54.0",
-       "x-client-ip": "92.11.100.114",
-       "x-forwarded-proto": "https",
-       "host": "openwhisk.ng.bluemix.net:443",
-       "via": "1.1 AgAAAB+7NgA-",
-       "x-global-transaction-id": "2897764571",
-       "x-forwarded-for": "92.11.100.114"
-     },
-     "__ow_path": "/subpath",
-     "hello": "world"
-   ```
+      ```json
+      {
+         "__ow_method": "post",
+         "__ow_headers": {
+            "accept": "*/*",
+            "user-agent": "curl/7.54.0",
+            "x-client-ip": "92.11.100.114",
+            "x-forwarded-proto": "https",
+            "host": "openwhisk.ng.bluemix.net:443",
+            "via": "1.1 AgAAAB+7NgA-",
+            "x-global-transaction-id": "2897764571",
+            "x-forwarded-for": "92.11.100.114"
+         },
+         "__ow_path": "/subpath",
+         "hello": "world"
+      }
+      ```
 
 {% hint style="success" %}
 🎉 **Web Actions are cool!** Web Actions are an awesome feature allowing you make your Actions accessible on the web while controlling Content Types.  You can even generate HTML and other website content "on-the-fly" without hosting a content server!
