@@ -19,6 +19,8 @@
 
 # Concepts
 
+In this section we will explore using two components of the IBM Cloud Functions programming model called `Triggers` and `Rules` which are used to associate  event data with your `Actions`.
+
 ## Triggers
 
 Triggers are a named channel for a class of events. The following are examples of triggers:
