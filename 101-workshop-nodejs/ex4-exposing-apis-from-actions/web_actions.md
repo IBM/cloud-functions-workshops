@@ -23,25 +23,25 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
 
 1. Update the action to set the `--web` flag to `true`.
 
-   ```bash
-   ibmcloud fn action update hello --web true
-   ```
+    ```bash
+    ibmcloud fn action update hello --web true
+    ```
 
-   ```bash
-   ok: updated action hello
-   ```
+    ```bash
+    ok: updated action hello
+    ```
 
 2. Retrieve the web action URL exposed by the platform for this action.
 
-   ```bash
-   ibmcloud fn action get hello --url
-   ```
+    ```bash
+    ibmcloud fn action get hello --url
+    ```
 
-   ```bash
-   ok: got action hello
-   https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
+    ```bash
+    ok: got action hello
+    https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
 
-   ```
+    ```
 
 3. Invoke the web action URL with the JSON extension, passing in query parameters for `name` and `place`.
 
@@ -50,12 +50,12 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
     ```
 
     ```json
-   {
-     "message": "Hello Josephine from Austin!"
-   }
-   ```
+    {
+       "message": "Hello Josephine from Austin!"
+    }
+    ```
 
-1. Disable web action support.
+4. Disable web action support.
 
    ```bash
    ibmcloud fn action update hello --web false

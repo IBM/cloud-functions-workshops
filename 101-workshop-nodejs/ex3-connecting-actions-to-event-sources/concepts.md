@@ -17,7 +17,7 @@
 #
 -->
 
-# Programming Model Concepts
+# Concepts
 
 ## Triggers
 
