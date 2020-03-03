@@ -57,26 +57,26 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
 
 4. Disable web action support.
 
-   ```bash
-   ibmcloud fn action update hello --web false
-   ```
+    ```bash
+    ibmcloud fn action update hello --web false
+    ```
 
-   ```bash
-   ok: updated action hello
-   ```
+    ```bash
+    ok: updated action hello
+    ```
 
-2. Verify the action is not externally accessible.
+5. Verify the action is not externally accessible.
 
-   ```bash
-   curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
-   ```
+    ```bash
+    curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
+    ```
 
-   ```json
-   {
-     "error": "The requested resource does not exist.",
-     "code": "1dfc1f7cb457ed4bb1f2978fc75bd31f"
-   }
-   ```
+    ```json
+    {
+      "error": "The requested resource does not exist.",
+      "code": "1dfc1f7cb457ed4bb1f2978fc75bd31f"
+    }
+    ```
 
 ## Content extensions
 
