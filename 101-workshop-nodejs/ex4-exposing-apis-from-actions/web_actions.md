@@ -117,14 +117,14 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 1. Create a new web action from the following source code in `redirect.js`.
 
-    ```javascript
+      ```javascript
       function main() {
          return {
             headers: { location: "http://openwhisk.org" },
             statusCode: 302
          };
       }
-   ```
+      ```
 
       ```bash
       ibmcloud fn action create redirect redirect.js --web true
