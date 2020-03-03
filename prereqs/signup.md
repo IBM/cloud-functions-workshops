@@ -86,5 +86,5 @@ The value should be either `UK South` or `US South`. **Remember this as the defa
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Congratulations, you've successfully registered an IBM Cloud account**
+🎉 **Congratulations, you've successfully registered an IBM Cloud account!**
 {% endhint %}
