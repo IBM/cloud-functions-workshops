@@ -88,12 +88,7 @@ const HTML_BLOCKQUOTE_ELEMENT_MIDDLE = '</div><div class=\"callouttext\">'
 const HTML_BLOCKQUOTE_ELEMENT_END    = '</div>' + '</blockquote>\n'
 
 // Canned CSS to simulate gb-style experience
-const CSS_HLJS = `
-<!--
-Highlight.js CSS
-Hosted Library: https://cdnjs.com/libraries/highlight.js/
--->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/androidstudio.min.css">
+const CSS_HLJS = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/androidstudio.min.css">
 `;
 
 var SVG_INFO = `
