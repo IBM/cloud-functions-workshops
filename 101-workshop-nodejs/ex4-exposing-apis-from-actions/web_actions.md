@@ -111,7 +111,7 @@ If a `content-type header` is not declared in the action result’s `headers`, t
 
 ## Additional features
 
-Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/master/docs/webactions.md), see the documentation for full details on all thepse capabilities.
+Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/master/docs/webactions.md), see the documentation for full details on all these capabilities.
 
 ## Example - HTTP redirect
 
