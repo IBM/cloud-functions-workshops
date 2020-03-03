@@ -1,6 +1,6 @@
 # IBM Cloud Functions Web UI
 
-This exercise will introduce the [IBM Cloud Functions Web UI](https://console.bluemix.net/openwhisk/). This application helps to manage your IBM Cloud Functions applications from a web browser, rather than using the command-line.
+This exercise will introduce the [IBM Cloud Functions Web UI](https://cloud.ibm.com/functions/). This application helps to manage your IBM Cloud Functions applications from a web browser, rather than using the command-line.
 
 _Once you have completed this exercise, you will haveâ€¦_
 
@@ -18,8 +18,8 @@ In this exercise, we'll show you the different features of the IBM Cloud Web UIâ
 
 ## Navigating To The IBM Cloud Functions Homepage
 
-1. Open the [IBM Cloud homepage](https://console.bluemix.net).
+1. Open the [IBM Cloud homepage](https://cloud.ibm.com/).
 2. Click the hamburger menu icon in the top left corner to show the menu.
-3. Click "Functions" in the list to open the [IBM Cloud Functions homepage](https://console.bluemix.net/openwhisk/).
+3. Click "Functions" in the list to open the [IBM Cloud Functions homepage](https://cloud.ibm.com/functions/).
 
-![IBM Cloud Functions homepage](images/homepage.png)
+![IBM Cloud Functions homepage](images/101-ex5-homepage.png)

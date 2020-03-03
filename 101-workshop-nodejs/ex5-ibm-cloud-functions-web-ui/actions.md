@@ -2,7 +2,7 @@
 
 Select "Actions" from the left-hand menu panel on the homepage.[This page](https://cloud.ibm.com/functions/actions) is the management page for actions. It shows actions within the chosen region, org and space.
 
-![action details page](images/action-overview.png)
+![action details page](images/101-ex5-action-overview.png)
 
 Select an action from the page to move to the action details page.
 
@@ -12,7 +12,7 @@ The action details page will show properties for the chosen action.
 
 For supported runtimes, action source code is shown in an editor which allows users to make changes live.
 
-![action details page](images/action-editor.png)
+![action details page](images/101-ex5-action-editor.png)
 
 Using the menu on the left-hand side, different properties for the action can be accessed and modified.
 
@@ -29,20 +29,17 @@ Click the "Invoke" button to invoke an action and display the resulting activati
 
 _Input parameters to invocations can be modified using the "Change Input" button._
 
-![Invoking an action](images/invoking-action.png)
+![Invoking an action](images/101-ex5-invoking-action.png)
 
 ## Creating actions
 
 From the [action overview page](https://cloud.ibm.com/functions/actions), new actions can be created by providing the source code through the browser-based editor.
 
 1. Select the "Create" button from the page.
-![Creating an action](images/creating-action-hp.png)
+![Creating an action](images/101-ex5-creating-action-hp.png)
 2. Choose "Create Action" from the list.
-![Creating an action](images/creating-action-list.png)
+![Creating an action](images/101-ex5-creating-action-list.png)
 3. Fill in the "Action name" and choose the "Runtime".
 4. Click "Create"
-![Creating an action](images/creating-action-modal.png)
+![Creating an action](images/101-ex5-creating-action-modal.png)
 5. Fill in the editor with your action source code.
-
-
-
