@@ -257,10 +257,8 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 3. Copy and paste that URL into your browser to see the image!
 
-      ![atom.svg](images/atom.svg)
-      <!--
-      <img src="https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/101-workshop-nodejs/ex4-exposing-apis-from-actions/images/atom.svg?sanitize=true" alt="atom.svg" height="100px">
-      -->
+      <!-- ![atom.svg](images/atom.svg) -->
+      <img style="background-color:white; border:1px solid gray;" src="https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/101-workshop-nodejs/ex4-exposing-apis-from-actions/images/atom.svg?sanitize=true" alt="atom.svg" height="100px">
 
 ## Example - Manual JSON response
 
