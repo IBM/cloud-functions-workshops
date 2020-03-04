@@ -2,7 +2,7 @@
 
 This exercise will introduce the [IBM Cloud Functions Web UI](https://cloud.ibm.com/functions/). This application helps to manage your IBM Cloud Functions applications from a web browser, rather than using the command-line.
 
-_Once you have completed this exercise, you will have…_
+_Once you have completed this exercise, you will have..._
 
 * **Understood how to find and use the IBM Cloud Functions Web UI.**
 

@@ -92,6 +92,13 @@ This image file uses HTML which should be preserved:
 <img src="https://www.ibm.com/design/language/9c48fd6dd58b66177ff460644f59e572/core-blue100.svg" width="200" height="200"></img>
 that we want to pass through.
 
+### replace image paths
+
+1. Select the "Create" button from the page.
+![alt 1](images/101-ex5-create-trigger-hp.png)
+2. Choose "Create Trigger" from the list.
+![alt 2](images/101/ex5/101-ex5-create-trigger-select-trigger.png)
+
 ### API / endpoint link
 
 1. Generate a GitHub [personal access token](https://github.com/settings/tokens).

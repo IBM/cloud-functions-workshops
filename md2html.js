@@ -74,7 +74,11 @@ const REGEX_HTML_EXT = /([ \t]*{% hint(.+\n)*[ \t]*{% endhint %})+/;
 const REGEX_MD_ANCHOR = /\[.*?\]\((.*?)\)+/;
 const REGEX_MD_ANCHOR_TEXT      = /\[(.*?)\]/;
 const REGEX_MD_ANCHOR_HYPERLINK = /\((.*?)\)/;
-const REGEX_HTML_PROTOCOL_PREFIX = /^https?:\/\//i;
+const REGEX_HTTP_PROTOCOL_PREFIX = /^https?:\/\//i;
+
+// Post-process HTML with regex
+const REGEX_HTML_IMG_SRC = /<img.*?src="(.*?)".*?\/>/i;
+const REGEX_HTML_IMG_SRC_BASENAME = /<img.*?src="(.*\/)?(.*?)".*?\/>/i;
 
 // TODO: pre-pend lin numbers by adding another filter...
 const REGEX_CODE_CONTENTS = '<pre><code class="' + // start of a code block with a class
@@ -258,7 +262,7 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
           //console.log(">> MATCH=[" + match + "]");
           //console.log(">> CONTENT=[" + content +"]");
 
-            if( REGEX_HTML_PROTOCOL_PREFIX.test(content)) {
+            if( REGEX_HTTP_PROTOCOL_PREFIX.test(content)) {
                 // Do nothing, allow normal markdown to html conversion to occur
                 return match;
             } else if (content.endsWith(EXT_MD)) {
@@ -300,12 +304,23 @@ function replaceFileExtension(filename, targetExtension) {
     return file2
 }
 
+function postProcessHtml(rawHtml){
+  //console.log(rawHtml)
+  var regexp = new RegExp(REGEX_HTML_IMG_SRC_BASENAME)
+  var result = regexp.exec(rawHtml);
+  if (result) {
+    console.info(result[0]);
+    console.info(result[1]);
+    console.info(result[2]);
+  }
+}
+
 function convertToHtml(err, rawMarkdown, outFilename, outputRoot) {
     console.group('BEGIN: convertToHtml')
     if (!err) {
         rawHtml = converter.makeHtml(rawMarkdown);
         enhancedHTML = CSS_HLJS + CSS_BLOCKQUOTE + rawHtml
-
+        postProcessHtml(rawHtml)
         fs.writeFile(outFilename, enhancedHTML, 'utf-8', function (err) {
                 console.group('writeFile(): ' + outFilename)
                 if (err) {
