@@ -79,6 +79,7 @@ const REGEX_HTTP_PROTOCOL_PREFIX = /^https?:\/\//i;
 // Post-process HTML with regex
 const REGEX_HTML_IMG_SRC = /<img.*?src="(.*?)".*?\/>/i;
 const REGEX_HTML_IMG_SRC_BASENAME = /<img.*?src="(.*\/)?(.*?)".*?\/>/i;
+const REGEX_HTML_IMG_SRC_BASENAME_GROUPED = /(<img.*?src=")(.*\/)?(.*?)(".*?\/>)/ig;
 
 // TODO: pre-pend lin numbers by adding another filter...
 const REGEX_CODE_CONTENTS = '<pre><code class="' + // start of a code block with a class
@@ -306,13 +307,28 @@ function replaceFileExtension(filename, targetExtension) {
 
 function postProcessHtml(rawHtml){
   //console.log(rawHtml)
-  var regexp = new RegExp(REGEX_HTML_IMG_SRC_BASENAME)
-  var result = regexp.exec(rawHtml);
-  if (result) {
-    console.info(result[0]);
-    console.info(result[1]);
-    console.info(result[2]);
+  var regexp = new RegExp(REGEX_HTML_IMG_SRC_BASENAME_GROUPED)
+  var match;
+  while ((match = regexp.exec(rawHtml)) != null) {
+    //console.info(match);
+    console.info(match[0]);
+    console.info(match[1]);
+    console.info(match[2]);
+    console.info(match[3]);
+    console.info(match[4]);
   }
+  // var result = regexp.exec(rawHtml);
+  // if (result) {
+  //   console.info(result[0]);
+  //   console.info(result[1]);
+  //   console.info(result[2]);
+  //   console.info(result[3]);
+  //   console.info(result[4]);
+  // }
+    // var html1 = rawHtml.replace(REGEX_HTML_IMG_SRC_BASENAME_GROUPED, ">>$1|$2|$3|$4<<")
+    // console.info("======================================")
+    // console.info(html1)
+    // console.info("======================================")
 }
 
 function convertToHtml(err, rawMarkdown, outFilename, outputRoot) {
