@@ -170,7 +170,7 @@ img {
   max-height:95vh;
   object-fit: contain;
   border:1px solid gainsboro;
-  background-color: gainsboro;
+  background-color: transparent;
 }
 
 code {
