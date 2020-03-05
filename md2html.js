@@ -23,7 +23,7 @@ var fs = require('fs'),
     showdownHighlight = require("showdown-highlight")
 
 const MSG_DESCRIPTION = "Convert markdown file(s) to HTML in specified target directory."
-const MSG_USAGE = "Usage: md2html.js ([-f <filename>] | [-s <source>]) [-t <target>] [-d]"
+const MSG_USAGE = "Usage: md2html.js ([-f <filename>] | [-s <source>]) [-t <target>] [-c <static target>] [-d]"
 const MSG_EXAMPLE = `Example: Convert README.md to README.html in same directory:
     $ node md2html.js -f README.md
 `
@@ -41,6 +41,7 @@ Options:
          Note:
          - Defaults to current directory ('.html').
     -c : Copy all image files (e.g., .png, .jpg, .svg) to target directory (if different from source).
+    -c <static target>: Optionally provide a static path to copy image files to and rewrite HTML <img> source attribute values
     -d': Debug trace enabled to console.
 `
 
@@ -77,16 +78,14 @@ const REGEX_MD_ANCHOR_HYPERLINK = /\((.*?)\)/;
 const REGEX_HTTP_PROTOCOL_PREFIX = /^https?:\/\//i;
 
 // Post-process HTML with regex
-const REGEX_HTML_IMG_SRC = /<img.*?src="(.*?)".*?\/>/i;
-const REGEX_HTML_IMG_SRC_BASENAME = /<img.*?src="(.*\/)?(.*?)".*?\/>/i;
-const REGEX_HTML_IMG_SRC_BASENAME_GROUPED = /(<img.*?src=")(.*\/)?(.*?)(".*?\/>)/ig;
+const REGEX_HTML_IMG_SRC_BASENAME_GROUPED = /(<img.*?src=")(.*\/)?(.*?)(".*?\/?>)/ig;
 
-// TODO: pre-pend lin numbers by adding another filter...
-const REGEX_CODE_CONTENTS = '<pre><code class="' + // start of a code block with a class
-  '(.*?)'              + // extract class name (result[1])
-  '">'                 + // end of code tag
-  '([\\s\\S]*?)'       + // extract code (result[2])
-  '</code></pre>'        // end of code block
+// TODO: pre-pend line numbers in <code> elements by adding another filter...
+// const REGEX_CODE_CONTENTS = '<pre><code class="' + // start of a code block with a class
+//   '(.*?)'              + // extract class name (result[1])
+//   '">'                 + // end of code tag
+//   '([\\s\\S]*?)'       + // extract code (result[2])
+//   '</code></pre>'        // end of code block
 
 const HTML_BLOCKQUOTE_ELEMENT_BEGIN  = '\n<blockquote class="callout"><div>'
 const HTML_BLOCKQUOTE_ELEMENT_MIDDLE = '</div><div class=\"callouttext\">'
@@ -298,45 +297,30 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
  * Conversion utils
  */
 function replaceFileExtension(filename, targetExtension) {
-    console.group('BEGIN: replaceFileExtension( ' + filename + "," + targetExtension + ")")
+    console.group('BEGIN: replaceFileExtension(' + filename + ", " + targetExtension + ")")
     var pos = filename.lastIndexOf(".");
     file2 = filename.substr(0, pos < 0 ? filename.length : pos) + targetExtension;
     console.groupEnd();
     return file2
 }
 
-function postProcessHtml(rawHtml){
-  //console.log(rawHtml)
-  var regexp = new RegExp(REGEX_HTML_IMG_SRC_BASENAME_GROUPED)
-  var match;
-  while ((match = regexp.exec(rawHtml)) != null) {
-    //console.info(match);
-    console.info(match[0]);
-    console.info(match[1]);
-    console.info(match[2]);
-    console.info(match[3]);
-    console.info(match[4]);
-  }
-  // var result = regexp.exec(rawHtml);
-  // if (result) {
-  //   console.info(result[0]);
-  //   console.info(result[1]);
-  //   console.info(result[2]);
-  //   console.info(result[3]);
-  //   console.info(result[4]);
-  // }
-    // var html1 = rawHtml.replace(REGEX_HTML_IMG_SRC_BASENAME_GROUPED, ">>$1|$2|$3|$4<<")
-    // console.info("======================================")
-    // console.info(html1)
-    // console.info("======================================")
+function postProcessHtml(rawHtml, targetPath, staticPath){
+    console.group('BEGIN: postProcessHtml(' + targetPath + ", " + staticPath + ")")
+    var newPath = path.join('/',staticPath,'/')
+    //console.info("Rewriting <img src=''> relative path to static path: '" + newPath + "'")
+    var htmlPost = rawHtml.replace(REGEX_HTML_IMG_SRC_BASENAME_GROUPED, "$1" + newPath +"$3$4")
+    console.groupEnd();
+    return htmlPost
 }
 
-function convertToHtml(err, rawMarkdown, outFilename, outputRoot) {
-    console.group('BEGIN: convertToHtml')
+function convertToHtml(err, rawMarkdown, outFilename, outputRoot, staticImgPath) {
+    console.group('BEGIN: convertToHtml' + outFilename + ", " + outputRoot + ", " + staticImgPath + ")")
     if (!err) {
         rawHtml = converter.makeHtml(rawMarkdown);
+        if(staticImgPath && typeof staticImgPath === "string"){
+          rawHtml = postProcessHtml(rawHtml, outputRoot, "static")
+        }
         enhancedHTML = CSS_HLJS + CSS_BLOCKQUOTE + rawHtml
-        postProcessHtml(rawHtml)
         fs.writeFile(outFilename, enhancedHTML, 'utf-8', function (err) {
                 console.group('writeFile(): ' + outFilename)
                 if (err) {
@@ -351,7 +335,7 @@ function convertToHtml(err, rawMarkdown, outFilename, outputRoot) {
 }
 
 function createTargetDirectory(targetDir) {
-    console.group("BEGIN: createTargetDirectory( " + targetDir + " )")
+    console.group("BEGIN: createTargetDirectory(" + targetDir + " )")
 
     if (!fs.existsSync(targetDir)) {
         console.info("Creating Directory: " + targetDir + "...")
@@ -367,6 +351,7 @@ function createTargetDirectory(targetDir) {
 }
 
 function createAbsoluteTargetFilename(relativeFilename, targetPath, targetFileExt){
+  console.group("BEGIN: createAbsoluteTargetFilename(" + relativeFilename + ", " + targetPath + ", " + targetFileExt + " )")
   var absTargetFilename = path.join(__dirname, relativeFilename);
 
   if (targetPath) {
@@ -376,12 +361,12 @@ function createAbsoluteTargetFilename(relativeFilename, targetPath, targetFileEx
   if(targetFileExt){
     absTargetFilename = replaceFileExtension(absTargetFilename, targetFileExt)
   }
-
+  console.groupEnd()
   return absTargetFilename
 }
 
-function convertMarkdownToHtml(mdFilename, targetPath){
-    console.group("BEGIN: convertMarkdownToHtml( " + mdFilename + ", " + targetPath + " )")
+function convertMarkdownToHtml(mdFilename, targetPath, staticImgPath){
+    console.group("BEGIN: convertMarkdownToHtml(" + mdFilename + ", " + targetPath + ", " + staticImgPath + " )")
     var mdFullFilename = path.join(__dirname, mdFilename);
 
     var htmlFilename = createAbsoluteTargetFilename(mdFilename, targetPath, EXT_HTML)
@@ -391,7 +376,7 @@ function convertMarkdownToHtml(mdFilename, targetPath){
         console.group('GROUP: anonConvertToHtml')
         console.log("SOURCE (.md): " + mdFullFilename + " (" + mdFilename + ")")
         console.log("TARGET (.html): " + htmlFilename)
-        convertToHtml(err, rawMarkdown, htmlFilename, targetPath)
+        convertToHtml(err, rawMarkdown, htmlFilename, targetPath, staticImgPath)
         console.groupEnd();
     });
     console.groupEnd()
@@ -404,6 +389,7 @@ function convertMarkdownToHtml(mdFilename, targetPath){
 console.group('GROUP: main()')
 var glob = require('glob')
 var DEFAULT_HTML_OUTPUT_DIR = '.html';
+console.info(argv)
 
 // either file or directory-based conversion, but not both
 if( (argv.f && argv.s) || !(argv.f || argv.s)) {
@@ -446,7 +432,7 @@ if (argv.f) {
     }
     console.info(">> Target directory: '" + argv.t + "'")
     console.info(">> converting: '" + inputFile + "'...")
-    convertMarkdownToHtml(inputFile, argv.t)
+    convertMarkdownToHtml(inputFile, argv.t, argv.c)
   } catch(err){
     displayUsageAndExit("ERROR: Invalid input file: '"+inputFile+"': " + err)
   }
@@ -471,7 +457,7 @@ if (argv.f) {
         } else {
             for(let mdFilename of files) {
               console.info(">> converting: '" + mdFilename + "'...")
-              convertMarkdownToHtml(mdFilename, argv.t)
+              convertMarkdownToHtml(mdFilename, argv.t, argv.c)
             }
         }
       });
