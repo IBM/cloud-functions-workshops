@@ -15,7 +15,6 @@ In this lesson you will learn about:
   * and allows Compositions of functions to create Serverless applications
 
 Upon completion you should be able to:
-<div style="background-color=blue;">
+
 * Summarize Serverless computing in simple terms and be able to concisely describe  why, as a technology, it is an essential part of low-cost, rapid Cloud application development.
 * Identify and describe typical patterns of real-world problems that Serverless computing is ideal in solving.
-</div>
