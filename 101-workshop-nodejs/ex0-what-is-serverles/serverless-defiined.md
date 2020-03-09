@@ -21,4 +21,4 @@ _adjective_ (of computing)
 
 ### Serverless "is a" misnomer
 
-The be clear... _Servers exist, but are **<u>not</u>** the Developer’s concern._
+To be clear... _<u>Servers exist</u>, but are **<u>not</u>** the Developer’s concern._
