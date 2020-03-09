@@ -244,7 +244,7 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
           var htmlText = retrieveHTMLExtInnerText(converter,capture)
           var svg = ""
           if(capture.indexOf("\"info\"") > -1) {
-            svg = SVG_SUCCESS
+            svg = SVG_INFO
           } else if(capture.indexOf("\"success\"") > -1) {
             svg = SVG_SUCCESS
           } else if(capture.indexOf("\"tip\"") > -1) {
