@@ -44,6 +44,11 @@ This is freeform text
 **Tip** Be sure to keep your IBM CLI and its plugins up to date.
 {% endhint %}
 
+{% hint style="none" %}
+The ideal of Serverless “in-a-nutshell” is...&NewLine;
+_Event-driven programming using stand-alone functions with no deployment or operational considerations_
+{% endhint %}
+
 ### HTML Extension Test Indented
 
   {% hint style="warning" %}

@@ -223,7 +223,7 @@ function retrieveHTMLExtInnerText(converter, content){
   // Trim leading and trailing whitespace from HTML Extension regex as it can be indented
   var trimmed = content.trim();
   // Remove the actual HTML Extension elements defined by '{% .. %}' and remove multiline whitespace
-  var strippedText = trimmed.replace(/({([^}]+)})/gim,"").replace(/\r?\n|\r/gim,"");
+  var strippedText = trimmed.replace(/({([^}]+)})/gim,"") //.replace(/\r?\n|\r/gim,"");
   // Use converter to format the inner text and remove any paragraph tags <p> added by converter
   var innerText = converter.makeHtml(strippedText).replace("<p>","").replace("</p>","");
   return innerText
@@ -278,8 +278,8 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
               console.error("TEXT="+anchorText)
               return anchorText[1]
             }
-            // return original match
             //console.warn("WARN: Unexpected anchor '"+match+"' found! " + "Returning unmodified.")
+            // return original match
             return match
         });
         return text;
