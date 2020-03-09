@@ -23,10 +23,18 @@ with the following goals:
     - Pay-As-You-GO (PAYGO) cost model
 
 - **Guarantees all the "Ops"**
-    - Performance, Scaling, Multi-region,
+    - Scaling,
+    - Low latency,
     - High Availability (HA),
-    - Security, Monitoring, Logging, etc.
+    - Multi-region,
+    - Monitoring,
+    - Logging,
+    - Security
 
 {% hint style="warning" %}
-_Your Serverlesss operational savings varies by provider and their Service License Agreements (SLAs)._
+_Your Serverlesss operational features savings varies by provider and their Service License Agreements (SLAs)._
+{% endhint %}
+
+{% hint style="success" %}
+The IBM Cloud Functions (ICF) Serverless platform bnot only delivers on all these features, but also exceeds what most providers offer!
 {% endhint %}
