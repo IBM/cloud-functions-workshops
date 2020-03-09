@@ -1,21 +1,18 @@
-# Characteristics of Serverless for Developers
+# Characteristics of Serverless
+
+## Taking the "Ops" out of "DevOps"
 
 In today's agile-focused world, Developers are now (more than ever) expected to understand the operational considerations of deploying, hosting and maintaining their applications "on the Cloud"; hence the term "DevOps".
 
-However, this often means less time actually coding business logic and much more time worrying about these operational aspects.
+However, this often means less time actually coding the application and much more time worrying about the operational aspects.
 
 ![The "DevOps" blues](images/101-ex0-serverless-devops-blues.png)
 
-#  Taking the "Ops" out of "DevOps"
+## “→ NoOps” for the Developer
 
-In "Developer speak", Serverless...
+Providers of Serverless computing strive to **approach** zero operational considerations, often referred to as "NoOps", for the Developer.
 
-### “→ NoOps” for the Developer is #1 goal
-
-Providers of Serverless computing strive to **approach** zero operational considerations for the Developer.
-
-### Provider “implements” Ops
-
+### Provider “implements” Operations
 
 with the following goals:
 
