@@ -10,16 +10,23 @@ However, this often means less time actually coding the application and much mor
 
 ## “→ NoOps” for the Developer
 
-Providers of Serverless computing strive to **approach** zero operational considerations, often referred to as "NoOps", for the Developer.
+Providers of Serverless computing strive to **approach zero operational considerations**, often referred to as "NoOps", for the Developer.
 
 ### Provider “implements” Operations
 
 with the following goals:
 
-- Maximizing Utilization
+- **Maximizing Utilization**
     - Compute / Memory / Networking
-- Minimizing Compute Costs
+
+- **Minimizing Compute Costs**
     - Pay-As-You-GO (PAYGO) cost model
-- Guarantees all the "Ops"
-    - Performance, Scaling, Multi-region, High Availability (HA), Security, Monitoring, Logging, etc.
-    - _Varies by Service License Agreements (SLAs)_
+
+- **Guarantees all the "Ops"**
+    - Performance, Scaling, Multi-region,
+    - High Availability (HA),
+    - Security, Monitoring, Logging, etc.
+
+{% hint style="warning" %}
+_Your Serverlesss operational savings varies by provider and their Service License Agreements (SLAs)._
+{% endhint %}
