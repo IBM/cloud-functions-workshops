@@ -35,6 +35,8 @@ with the following goals:
 _Your Serverlesss operational features savings varies by provider and their Service License Agreements (SLAs)._
 {% endhint %}
 
+As you will find by taking this course
+
 {% hint style="success" %}
-The IBM Cloud Functions (ICF) Serverless platform bnot only delivers on all these features, but also exceeds what most providers offer!
+The IBM Cloud Functions (ICF) Serverless platform not only delivers on all these features, but also exceeds what most providers offer!
 {% endhint %}
