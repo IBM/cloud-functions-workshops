@@ -235,18 +235,17 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
     {
       type: 'lang',
       filter: function(text, converter, options) {
-        //console.log("**BEFORE** filter:" + text);
 
         /* Filter and replace contents of HTML Extensions */
         var regexForHtmlExt = new RegExp(REGEX_HTML_EXT, "gm");
         text = text.replace(regexForHtmlExt, function replaceHtmlExtension(match, capture) {
-          //console.log(">> MATCH=[" + match + "] ("+ typeof match+")");
-          //console.log(">> CONTENT=[" + content +"] ("+ typeof content+")");
 
           // WARNING: Not stripping the regex matching content here will result in infinite recursion...
           var htmlText = retrieveHTMLExtInnerText(converter,capture)
-          var svg = SVG_INFO
-          if(capture.indexOf("\"success\"") > -1) {
+          var svg = ""
+          if(capture.indexOf("\"info\"") > -1) {
+            svg = SVG_SUCCESS
+          } else if(capture.indexOf("\"success\"") > -1) {
             svg = SVG_SUCCESS
           } else if(capture.indexOf("\"tip\"") > -1) {
             svg = SVG_TIP
@@ -259,8 +258,6 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
         /* Filter and replace relative markdown hyperlinks */
         var regexForHyperlinks = new RegExp(REGEX_MD_ANCHOR, "gm");
         text = text.replace(regexForHyperlinks, function replaceHyperlinks(match, content) {
-          //console.log(">> MATCH=[" + match + "]");
-          //console.log(">> CONTENT=[" + content +"]");
 
             if( REGEX_HTTP_PROTOCOL_PREFIX.test(content)) {
                 // Do nothing, allow normal markdown to html conversion to occur
@@ -285,8 +282,6 @@ showdown.extension(SHOWDOWN_HTML_EXT_FILTER, function() {
             //console.warn("WARN: Unexpected anchor '"+match+"' found! " + "Returning unmodified.")
             return match
         });
-
-        //console.log("**AFTER** filter:" + text);
         return text;
       }
     }
@@ -304,7 +299,7 @@ function replaceFileExtension(filename, targetExtension) {
     return file2
 }
 
-function postProcessHtml(rawHtml, targetPath, staticPath){
+function rewriteImagesSourceFromRelativeToStatic(rawHtml, targetPath, staticPath){
     console.group('BEGIN: postProcessHtml(' + targetPath + ", " + staticPath + ")")
     var newPath = path.join('/',staticPath,'/')
     //console.info("Rewriting <img src=''> relative path to static path: '" + newPath + "'")
@@ -318,7 +313,7 @@ function convertToHtml(err, rawMarkdown, outFilename, outputRoot, staticImgPath)
     if (!err) {
         rawHtml = converter.makeHtml(rawMarkdown);
         if(staticImgPath && typeof staticImgPath === "string"){
-          rawHtml = postProcessHtml(rawHtml, outputRoot, "static")
+          rawHtml = rewriteImagesSourceFromRelativeToStatic(rawHtml, outputRoot, "static")
         }
         enhancedHTML = CSS_HLJS + CSS_BLOCKQUOTE + rawHtml
         fs.writeFile(outFilename, enhancedHTML, 'utf-8', function (err) {
