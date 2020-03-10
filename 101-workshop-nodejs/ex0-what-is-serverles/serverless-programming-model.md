@@ -52,7 +52,7 @@ A feed uses a "webhook" facility or "callback" mechanism exposed by an external 
 
 A service that polls an external service endpoint periodically to fetch new data and generate its own "events".
 
-## Connections
+### Connections
 
 A dedicated service running somewhere that maintains a persistent connection to an event source (e.g., implements a client of a message queue service or database) creates events. These types of feed implementations are called event **Provider Services**.
 
