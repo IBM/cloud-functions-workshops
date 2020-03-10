@@ -83,6 +83,15 @@ Within the ICF programming model, the _Action_ represents more than just the act
 
 As we proceed through the course using IBM Cloud Functions, we will use the term _Action_ more often then the word function. Just know that we are still primarily referencing the function which is central to the _Action_.
 
+## The last piece of the model is the **Rule**
+
+In order for a successful design of the Observer pattern described above, we need to introduce one last logical component to the programming model not yet shown called the **Rule**.
+
+Rules are used to associate one trigger with one action. After this kind of association is created, each time a trigger event is fired, the action is invoked.
+They can be viewed as an on/off switch that enables or disables Trigger events reaching an Action.
+
+With the appropriate set of rules, a single Trigger event can invoke multiple Actions, or events from multiple Triggers can invoke the same action.
+
 {% hint style="success" %}
 As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless as you will see!
 {% endhint %}
