@@ -18,12 +18,12 @@ Events that can be associated with functions always come from "real world" or or
 
 Event sources can represent or adapt data from manual or automated originating sources, for example these may include:
 
-### Manual examples
+### Manual sources
 
 - _Directly_ - from a user calling a front-end API (public or private) with data.
 - _Indirectly_ - from a user interacting with a website that uses Serverless to generated web content.
 
-### Automated examples
+### Automated sources
 
 - Periodic "alarm" events to process data on a schedule (e.g., batch jobs)
 - Changes data storage devices (e.g., SQL databases, S3 Cloud Object Storage)
@@ -65,7 +65,7 @@ Triggers are not part of every Serverless programming model, but are a powerful 
 In IBM Cloud Functions, the _Trigger_ is a programmatic construct that represents a "class of" or "stream of" events that is suitable for one or more associated functions to process.  In this pattern the functions themselves are the _Observers_ or "sinks" (for the event data).  This loose association allows both the functions and the _Event Sources_to remain independent from and agnostic to any specific underlying event processing implementations.
 
 {% hint style="info" %}
-The name _Trigger_ in our model is intended to draw upon the analogy of _"triggering"_ or _"firing"_ a weapon; therefore, you will encounter these terms instead of _"invoking"_ or _"calling"_ a function.
+The name _Trigger_ in our model is intended to draw upon the analogy of _"triggering"_ or _"firing"_ a weapon; therefore, you may encounter these terms instead of _"invoking"_ or _"calling"_ a function.
 {% endhint %}
 
 ## Why call a function an **Action**?
@@ -75,12 +75,12 @@ Within the ICF programming model, the _Action_ represents more than just the act
 - Logical **Name** used to reference it within a namespace
 - **Description** (optional) of function purpose and usage
 - **Versioning** (as the code changes over time)
-    - _Optional hashing based upon code and signature_
+  - _Optional hashing based upon code and signature_
 - **Parameter** (input and output) type data and descriptions
 - **Parameter defaults** applied when missing from the event data
 - **Usage statistics**
 - _and more_
 
 {% hint style="success" %}
-As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless!
+As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless as you will see!
 {% endhint %}
