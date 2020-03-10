@@ -40,3 +40,9 @@ As you will find by taking this course
 {% hint style="success" %}
 The IBM Cloud Functions (ICF) Serverless platform not only delivers on all these features, but also exceeds what most providers offer!
 {% endhint %}
+
+## Getting back to coding business logic
+
+Thanks to Serverless, once the "Ops" is taken out of "DevOps", Developers can return their focus in writing truly amazing applications that focus in the application and business logic. The end result is not only returning focus back to the customer, but also serves to maximize Developer joy in doing their daily work.
+
+![Serverless increases Developer joy!](images/101-ex0-serverless-developer-joy.png)
