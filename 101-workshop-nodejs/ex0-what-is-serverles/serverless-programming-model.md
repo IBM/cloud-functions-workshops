@@ -1,4 +1,4 @@
-# Serverless Programming Model
+# IBM Cloud Functions Programming Model explained
 
 ## The Least Common Denominator (LCD) view
 
@@ -7,8 +7,6 @@ There is no open standard for Serverless, its programming model, its deployment 
 Shown below is a basic view of how Serverless works using the most common semantics from the Serverless domain and applicable to IBM Cloud Functions.
 
 ![Serverless LCD View](images/101-ex0-serverless-lcd-model.png)
-
-# Events and Event Sources
 
 ## It all starts with an **Event**
 
@@ -44,7 +42,7 @@ In the case of ICF's model, the Event Source is more conceptual and the **Feed**
 
 Feeds follow one of three patterns:
 
-### Hooks
+### Hook
 
 A feed uses a "webhook" facility or "callback" mechanism exposed by an external  service that generates events (i.e., an event source).
 
@@ -52,7 +50,7 @@ A feed uses a "webhook" facility or "callback" mechanism exposed by an external 
 
 A service that polls an external service endpoint periodically to fetch new data and generate its own "events".
 
-### Connections
+### Connection
 
 A dedicated service running somewhere that maintains a persistent connection to an event source (e.g., implements a client of a message queue service or database) creates events. These types of feed implementations are called event **Provider Services**.
 
@@ -67,7 +65,7 @@ Triggers are not part of every Serverless programming model, but are a powerful 
 In IBM Cloud Functions, the _Trigger_ is a programmatic construct that represents a "class of" or "stream of" events that is suitable for one or more associated functions to process.  In this pattern the functions themselves are the _Observers_ or "sinks" (for the event data).  This loose association allows both the functions and the _Event Sources_to remain independent from and agnostic to any specific underlying event processing implementations.
 
 {% hint style="info" %}
-The name _Trigger_ in our model, since it ultimately invoke a function, is intended to draw upon the analogy of "firing" a weapon.  Therefore, you will often hear or see the terms _"triggering"_ or _"firing"_ a function used instead of _"invoke"_.
+The name _Trigger_ in our model is intended to draw upon the analogy of _"triggering"_ or _"firing"_ a weapon; therefore, you will encounter these terms instead of _"invoking"_ or _"calling"_ a function.
 {% endhint %}
 
 ## Why call a function an **Action**?
@@ -84,5 +82,5 @@ Within the ICF programming model, the _Action_ represents more than just the act
 - _and more_
 
 {% hint style="success" %}
-As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and lead to a world-c!
+As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless!
 {% endhint %}
