@@ -38,7 +38,7 @@ The conceptual list of automated sources that can be processed by Serverless fun
 
 ## The **Feed** is the event adapter
 
-In the case of ICF's model, the Event Source is more conceptual and the **Feed** actually represents an "adapter" service in the system that understands how to connect to or receive data an Event Source, adapt it to a normalized form that can be "fed" to a function by invoking its _Trigger_.
+In the case of ICF's model, the Event Source is more conceptual and the **Feed** actually represents an "adapter" service in the system that understands how to connect to and/or receive data from an Event Source, adapt it to a normalized form that can be "fed" to a function by invoking its _Trigger_.
 
 Feeds follow one of three patterns:
 
