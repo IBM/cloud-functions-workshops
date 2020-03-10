@@ -2,7 +2,7 @@
 
 ## The Least Common Denominator (LCD) view
 
-There is no open standard for Serverless, its programming model, its deployment model or as a consequence its APIs.  Different providers may use different, but similar, semantics to describe the component parts that play a role in taking an event and causing a Serverless function to execute.
+There is no singular open standard for Serverless, its programming model, its deployment model or as a consequence its APIs.  Different providers may use different, but similar, semantics to describe the component parts that play a role in taking an event and causing a Serverless function to execute.
 
 Shown below is a basic view of how Serverless works using the most common semantics from the Serverless domain and applicable to IBM Cloud Functions.
 
@@ -16,14 +16,14 @@ Regardless of implementation or who you discuss Serverless with, it is all about
 
 Events that can be associated with functions always come from "real world" or originating sources. In a Serverless programming model, the _Event Source_ can just be conceptual or represent an actual "adapter" service that understands how to receive "raw" event data from the "originator" and turn it into data that a function can process.
 
-Event sources can represent or adapt data from manual or automated originating sources, for example these may include:
+Event Sources can represent entities that produce event data from manual or automated originating events. These may include:
 
-### Manual sources
+#### Manual sources
 
 - _Directly_ - from a user calling a front-end API (public or private) with data.
 - _Indirectly_ - from a user interacting with a website that uses Serverless to generated web content.
 
-### Automated sources
+#### Automated sources
 
 - Periodic "alarm" events to process data on a schedule (e.g., batch jobs)
 - Changes data storage devices (e.g., SQL databases, S3 Cloud Object Storage)
@@ -58,7 +58,7 @@ A dedicated service running somewhere that maintains a persistent connection to 
 Later in the course, we will show how to actually implement a **Polling Feed Service** using a Serverless function that is periodically triggered from an  Alarm!
 {% endhint %}
 
-## Why does ICF use **Triggers**
+## Why does ICF use **Triggers**?
 
 Triggers are not part of every Serverless programming model, but are a powerful concept within IBM Cloud Functions that supports the [Observer design pattern](https://en.wikipedia.org/wiki/Observer_pattern) effectively.
 
