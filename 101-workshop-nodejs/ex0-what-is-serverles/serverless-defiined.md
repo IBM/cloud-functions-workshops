@@ -5,7 +5,7 @@
 Likely, thanks to some _marketing person_, the term _"Serverless"_ was coined to attract the attention of people wishing reduce the server costs of running their applications.
 
 {% hint style="warning" %}
-The name implies that code can be run **without the need for classic servers** at all _**which is absolutely not true**_!
+The name implies that code can be run without the need for classic servers **_which is absolutely not true**_!
 {% endhint %}
 
 ## The ideal of Serverless
@@ -24,5 +24,5 @@ _adjective_ (of computing)
 To be clear...
 
 {% hint style="success" %}
-_**<u>Servers exist</u>**, but are **<u>not</u>** the Developer’s concern._
+_**<u>Servers exist</u>**, but are <u>not</u> the Developer’s concern._
 {% endhint %}
