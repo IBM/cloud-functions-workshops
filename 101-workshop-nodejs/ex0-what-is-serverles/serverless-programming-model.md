@@ -81,6 +81,8 @@ Within the ICF programming model, the _Action_ represents more than just the act
 - **Usage statistics**
 - _and more_
 
+As we proceed through the course using IBM Cloud Functions, we will use the term _Action_ more often then the word function. Just know that we are still primarily referencing the function which is central to the _Action_.
+
 {% hint style="success" %}
 As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless as you will see!
 {% endhint %}
