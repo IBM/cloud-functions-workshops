@@ -38,6 +38,28 @@ Event sources can represent or adapt data from manual or automated originating s
 The conceptual list of automated sources that can be processed by Serverless functions is of course endless!
 {% endhint %}
 
+## The **Feed** is the event adapter
+
+In the case of ICF's model, the Event Source is more conceptual and the **Feed** actually represents an "adapter" service in the system that understands how to connect to or receive data an Event Source, adapt it to a normalized form that can be "fed" to a function by invoking its _Trigger_.
+
+Feeds follow one of three patterns:
+
+### Hooks
+
+A feed uses a "webhook" facility or "callback" mechanism exposed by an external  service that generates events (i.e., an event source).
+
+### Polling
+
+A service that polls an external service endpoint periodically to fetch new data and generate its own "events".
+
+## Connections
+
+A dedicated service running somewhere that maintains a persistent connection to an event source (e.g., implements a client of a message queue service or database) creates events. These types of feed implementations are called event **Provider Services**.
+
+{% hint style="tip" %}
+Later in the course, we will show how to actually implement a **Polling Feed Service** using a Serverless function that is periodically triggered from an  Alarm!
+{% endhint %}
+
 ## Why does ICF use **Triggers**
 
 Triggers are not part of every Serverless programming model, but are a powerful concept within IBM Cloud Functions that supports the [Observer design pattern](https://en.wikipedia.org/wiki/Observer_pattern) effectively.
@@ -48,6 +70,19 @@ In IBM Cloud Functions, the _Trigger_ is a programmatic construct that represent
 The name _Trigger_ in our model, since it ultimately invoke a function, is intended to draw upon the analogy of "firing" a weapon.  Therefore, you will often hear or see the terms _"triggering"_ or _"firing"_ a function used instead of _"invoke"_.
 {% endhint %}
 
-# Why call a function an **Action**?
+## Why call a function an **Action**?
 
-Within the ICF programming model, the _Action_ represents more than just the actual functional code that gets executed
+Within the ICF programming model, the _Action_ represents more than just the actual functional code that gets executed.  It also represents the metadata associated with the function itself which includes:
+
+- Logical **Name** used to reference it within a namespace
+- **Description** (optional) of function purpose and usage
+- **Versioning** (as the code changes over time)
+    - _Optional hashing based upon code and signature_
+- **Parameter** (input and output) type data and descriptions
+- **Parameter defaults** applied when missing from the event data
+- **Usage statistics**
+- _and more_
+
+{% hint style="success" %}
+As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and lead to a world-c!
+{% endhint %}
