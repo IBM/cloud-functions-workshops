@@ -12,7 +12,7 @@ However, this often means less time actually coding the application and much mor
 
 Providers of Serverless computing strive to **approach zero operational considerations**, often referred to as "NoOps", for the Developer.
 
-### Provider “implements” Operations
+## Provider “implements” Operations
 
 with the following goals:
 
@@ -43,6 +43,6 @@ The IBM Cloud Functions (ICF) Serverless platform not only delivers on all these
 
 ## Getting back to coding business logic
 
-Thanks to Serverless, once the "Ops" is taken out of "DevOps", Developers can return their focus in writing truly amazing applications that focus in the application and business logic. The end result is not only returning focus back to the customer, but also serves to maximize Developer joy in doing their daily work.
+Thanks to Serverless, once the "Ops" is taken out of "DevOps", Developers can return their attention to writing truly amazing applications that focus on just the business logic. The end result is not only increased agility delivering software based on actual customer needs, but also serves to maximize Developer joy in doing their daily work.
 
 ![Serverless increases Developer joy!](images/101-ex0-serverless-developer-joy.png)
