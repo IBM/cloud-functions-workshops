@@ -40,17 +40,17 @@ The conceptual list of automated sources that can be processed by Serverless fun
 
 In the case of ICF's model, the _Event Source_ is more conceptual and the **Feed** actually represents an "adapter" service in the system that understands how to connect to and/or receive data from an _Event Source_, adapt it to a normalized form and then "feed" it to one or more functions by invoking _Triggers_.
 
-Feeds follow one of three patterns:
+### Feeds follow one of three patterns:
 
-### Hook
+#### _Hook_
 
 A feed uses a "webhook" facility or "callback" mechanism exposed by an external  service that generates events (i.e., an event source).
 
-### Polling
+#### _Polling_
 
 A service that polls an external service endpoint periodically to fetch new data and generate its own "events".
 
-### Connection
+#### _Connection_
 
 A dedicated service running somewhere that maintains a persistent connection to an event source (e.g., implements a client of a message queue service or database) creates events. These types of feed implementations are called event **Provider Services**.
 
