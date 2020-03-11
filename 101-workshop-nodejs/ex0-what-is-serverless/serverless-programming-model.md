@@ -72,14 +72,16 @@ The name _Trigger_ in our model is intended to draw upon the analogy of _"trigge
 
 Within the ICF programming model, the _Action_ represents more than just the actual functional code that gets executed.  It also represents the metadata associated with the function itself which includes:
 
-- Logical **Name** used to reference it within a namespace
+- **Name & Namespace** logical names used to uniquely reference the Action within ICF and apply access control
 - **Description** (optional) of function purpose and usage
-- **Versioning** (as the code changes over time)
-  - _Optional hashing based upon code and signature_
-- **Parameter** (input and output) type data and descriptions
-- **Parameter defaults** applied when missing from the event data
-- **Usage statistics**
-- _and more_
+- **Runtime** language runtime type and version
+- **Versioning** internal version tracked as the code changes over time
+- **Parameter declarations** (input and output) type data and descriptions
+- **Parameter defaults** default values applied when missing from the event data
+- **Limits** (optional) limits for Action timeout, memory and log size (constrained by ICF maximums)
+- **Annotations** associated system and user appended metadata
+  - _Advanced features allow auto-managing Action updates through hashing the Action, its function, signature and metadata_
+- _**and more ...**_
 
 As we proceed through the course using IBM Cloud Functions, we will use the term _Action_ more often then the word function. Just know that we are still primarily referencing the function which is central to the _Action_.
 
