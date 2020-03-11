@@ -95,5 +95,5 @@ They can be viewed as an on/off switch that enables or disables Trigger events r
 With an appropriate set of rules, a single Trigger event can invoke multiple Actions, or events from multiple Triggers can invoke the same action.
 
 {% hint style="success" %}
-As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless as you will see!
+As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless that you will soon experience first-hand!
 {% endhint %}
