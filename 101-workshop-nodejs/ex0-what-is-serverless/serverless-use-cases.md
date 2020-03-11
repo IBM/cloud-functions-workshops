@@ -21,7 +21,7 @@
 
 ## Serverless as the ultimate Microservice framework
 
-If you have already have moved towards deconstructing your monolithic applications to embrace microservices and reactive programming concepts, then Serverless should be viewed as the ultimate programming evolution towards  realizing these concepts in a framework and language-agnostic way.
+If you have already moved towards deconstructing your monolithic applications to embrace microservices and reactive programming concepts, then Serverless should be viewed as the ultimate programming evolution towards realizing and optimizing these concepts as a computing service in a language-agnostic way.
 
 ### General patterns for Serverless
 
