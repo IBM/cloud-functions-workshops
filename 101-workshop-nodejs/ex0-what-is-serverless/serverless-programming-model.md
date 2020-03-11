@@ -6,7 +6,7 @@ There is no singular open standard for Serverless, its programming model, its de
 
 Shown below is a basic view of how Serverless works using the most common semantics from the Serverless domain and applicable to IBM Cloud Functions.
 
-![Serverless LCD View](images/101-ex0-serverless-lcd-model.png)
+![Serverless Programming Model - Least Common Denominator (LCD) View](images/101-ex0-serverless-lcd-model.png)
 
 ## It all starts with an **Event**
 
