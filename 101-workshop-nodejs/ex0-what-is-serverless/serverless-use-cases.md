@@ -27,9 +27,11 @@ If you have already have moved towards deconstructing your monolithic applicatio
 
 #### **Unpredictable / Aperiodic load**
 
-That is, the number of requests to (or usage of) the functional service may varies widely and unpredictable over time.
+That is, the number of requests to (or usage of) the functional service may varies widely and unpredictable over time. Hosting these cases as Serverless functions can be extremely cost-effective for both its PAYGO cost model, as well as its ability to automatically scale on-demand.
 
-Hosting Serverless functions can be extremely cost-effective for both its PAYGO cost model, as well as its ability to automatically scale on-demand.
+{% hint style="tip" %}
+Most user-driven use cases, including data driven by workflows with human interactions, fall into this category.  Almost any functional services not under constant load qualify as Serverless candidates.
+{% endhint %}
 
 ### Serverless Anti-patterns
 
@@ -53,22 +55,22 @@ Your PAYGO costs will go up if functions are waiting on (external) services to r
 Please note that there are ways to recognize, code around and mitigate against these anti-patterns which we will cover in more advanced courses.
 {% endhint %}
 
-## Top 4 use cases
+## "Top 4" Serverless use cases
 
 Although you can use Serverless to solve most problems, here are four general use cases Developers looking adopting Serverless should consider.
 
-### Alarm driven (periodic)
+### 1. Alarm driven (periodic)
 
 ![Alarm (periodic) Use Case ](images/101-ex0-use-case-periodic.png)
 
-### Hosting Serverless APIs
+### 2. Serverless APIs
 
 ![Serverless APIs Use Case ](images/101-ex0-use-case-apis.png)
 
-### Serverless ETL Pipelines
+### 3. ETL Pipelines
 
 ![ETL Pipeline Use Case ](images/101-ex0-use-case-etl-pipeline.png)
 
-### "Divide & Conquer" Workloads
+### 4. "Divide & Conquer" Workloads
 
 !["Embarrassingly Parallel" Use Case ](images/101-ex0-use-case-divide-conquer.png)
