@@ -17,9 +17,9 @@
 #
 -->
 
-# IBM Cloud Functions Programming Model explained
+# The Serverless Programming Model
 
-## The Least Common Denominator (LCD) view
+## A Least Common Denominator (LCD) view
 
 There is no singular open standard for Serverless, its programming model, its deployment model or as a consequence its APIs.  Different providers may use different, but similar, semantics to describe the component parts that play a role in taking an event and causing a Serverless function to execute.
 
