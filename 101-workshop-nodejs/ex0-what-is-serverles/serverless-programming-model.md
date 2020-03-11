@@ -87,7 +87,7 @@ As we proceed through the course using IBM Cloud Functions, we will use the term
 
 In order for a successful design of the Observer pattern described above, we need to introduce one last logical component to the programming model we have not shown yet called the **Rule**.
 
-Rules are used to associate one trigger with one action. After this kind of association is created, each time a trigger event is fired, the action is invoked.
+Rules are used to _associate one Trigger with one Action_. After this kind of association is created, each time a trigger event is fired, the action is invoked.
 They can be viewed as an on/off switch that enables or disables Trigger events reaching an Action.
 
 ![Trigger-Rule-Action Relationship](101-ex0-serverless-trigger-rule-action.png)
