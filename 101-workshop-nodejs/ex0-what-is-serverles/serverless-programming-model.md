@@ -90,6 +90,8 @@ In order for a successful design of the Observer pattern described above, we nee
 Rules are used to associate one trigger with one action. After this kind of association is created, each time a trigger event is fired, the action is invoked.
 They can be viewed as an on/off switch that enables or disables Trigger events reaching an Action.
 
+![Trigger-Rule-Action Relationship](101-ex0-serverless-trigger-rule-action.png)
+
 With the appropriate set of rules, a single Trigger event can invoke multiple Actions, or events from multiple Triggers can invoke the same action.
 
 {% hint style="success" %}
