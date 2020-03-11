@@ -10,6 +10,7 @@
     * [Definition](101-workshop-nodejs/ex0-what-is-serverless/serverless-defined.md)
     * [Characteristics](101-workshop-nodejs/ex0-what-is-serverless/serverless-characteristics.md)
     * [Programming model](101-workshop-nodejs/ex0-what-is-serverless/serverless-programming-model.md)
+    * [Use cases](101-workshop-nodejs/ex0-what-is-serverless/serverless-use-cases.md)
   * [Creating and Invoking Actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/README.md)
     * [Creating And Invoking Actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/create_invoke.md)
     * [Using Action Parameters](101-workshop-nodejs/ex1-creating-and-invoking-actions/parameters.md)
