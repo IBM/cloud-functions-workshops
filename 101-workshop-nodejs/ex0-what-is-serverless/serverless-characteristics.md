@@ -36,10 +36,10 @@ Providers of Serverless computing strive to **approach zero operational consider
 All the labor-intensive operational tasks are offloaded to the Serverless provider which include:
 
 - **Maximizing Utilization**
-    - Compute / Memory / Networking
+  - Compute / Memory / Networking
 
 - **Minimizing Compute Costs**
-    - using a _[Pay-As-You-GO (PAYGO)](https://en.wikipedia.org/wiki/PAYGO)_ cost model
+  - using a _[Pay-As-You-GO (PAYGO)](https://en.wikipedia.org/wiki/PAYGO)_ cost model
 
 - **Guarantees all the "Ops"**
   - Scaling,
