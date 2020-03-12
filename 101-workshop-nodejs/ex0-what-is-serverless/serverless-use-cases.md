@@ -110,7 +110,7 @@ Serverless frameworks such as IBM Cloud Functions, typically have ready-made fee
 Configure a feed to receive events whenever data changes occur in the database.
 
 - **Structured**:
-  - [SQL / Relational](https://www.ibm.com/cloud/learn/relational-databases)** _(e.g., DB2, MySQL, Postgres, etc.)_
+  - [SQL / Relational](https://www.ibm.com/cloud/learn/relational-databases) _(e.g., DB2, MySQL, Postgres, etc.)_
 - **Unstructured**:
   - [NoSQL](https://www.ibm.com/cloud/learn/nosql-databases) _(e.g., [Cloudant](https://www.ibm.com/cloud/cloudant), CouchDB, Redis)_
 
@@ -155,7 +155,7 @@ In fact, IBM Cloud Functions includes API Gateway integration that allows you to
 Serverless opens tha door to performing high-end analytics and problem solving that was previously only for available using expensive services using  pre-allocated server clusters.
 
 {% hint style="tip" %}
-Analytic workloads is one of the fastest growing use cases for Serverless.  IBM Cloud Functions has a dedicated [Python AI]() Serverless environment, ready made with the most popular analytic libraries for you to get started quickly!
+Analytic workloads are one of the fastest growing use cases for Serverless.  IBM Cloud Functions has a dedicated [Python AI]() Serverless environment, ready made with the most popular analytic libraries for you to get started quickly!
 {% endhint %}
 
 If you want to see a tutorial that uses ICF for Deep learning, you may read [Leverage deep learning in IBM Cloud Functions](https://developer.ibm.com/technologies/artificial-intelligence/tutorials/leverage-deep-learning-in-apache-openwhisk-ibm-cloud-functions/).
