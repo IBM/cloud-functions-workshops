@@ -25,12 +25,20 @@ If you have already moved towards deconstructing your monolithic applications to
 
 ### General patterns for Serverless
 
-#### **Unpredictable / Aperiodic load**
+#### **Unpredictable load**
 
-That is, the number of requests to (or usage of) the functional service may varies widely and unpredictable over time. Hosting these cases as Serverless functions can be extremely cost-effective for both its PAYGO cost model, as well as its ability to automatically scale on-demand.
+This means loads that are _aperiodic in nature_, that is, the number of requests to (or usage of) the functional service varies widely and unpredictably over time.
+
+#### **Infrequent load**
+
+Some functional service usage may well be more _periodic or predictable in nature_, yet be called only at certain scheduled times or when enough data has been accumulated.
+
+{% hint style="info" %}
+Most user-driven use cases, including data driven by workflows with human interactions, fall under these patterns.  Almost any functional services not under constant load could qualify as Serverless candidates.
+{% endhint %}
 
 {% hint style="tip" %}
-Most user-driven use cases, including data driven by workflows with human interactions, fall into this category.  Almost any functional services not under constant load qualify as Serverless candidates.
+Hosting these cases as Serverless functions on IBM Cloud Functions can be extremely cost-effective for both its [PAYGO](https://en.wikipedia.org/wiki/PAYGO) cost model and its ability to automatically scale on-demand.
 {% endhint %}
 
 ### Serverless Anti-patterns
@@ -66,6 +74,25 @@ Although you can use Serverless to solve most problems, here are four general us
 ### 1. Alarm driven (periodic)
 
 ![Alarm (periodic) Use Case ](images/101-ex0-use-case-periodic.png)
+
+One if the best patterns to look for when adopting Serverless is that "Alarm" pattern, that is IBM Cloud Functions provides a built-in service that can trigger your Actions on a schedule you configure.
+
+This kind of use case is often referred to as a "batch job", as you accumulate data in some data storage service and process it in a "batch".
+
+Alternatively, it can also be called a "`cron job`" as for the popular Linux utility used as a job scheduler.  In fact, the ICF Alarm supports a standardized cron format which supports:
+
+- **Periodic Intervals** - every X secs/mins
+  - _Batch process orders every 24 hours at 12 PM_
+- **Time Windows** - Start / Stop by Date-Time
+  - _Accept lunch orders Mon-Fri at 11AM Stop accepting at 2PM_
+- **Specific date/time** - “fire once”, or recurring
+  - _Launch a new website on Jan. 1st 2021_
+
+Again, the pattern typically relies upon functional access to external data storage (e.g., Cloud Object Storage (COS) or Cloudant) where the data is "batched up".
+
+{% hint style="success" %}
+In this course, we will actually show you how to setup the Alarm feed provider in ICF to schedule the triggering of your functions!
+{% endhint %}
 
 ### 2. Serverless APIs
 

@@ -39,19 +39,23 @@ All the labor-intensive operational tasks are offloaded to the Serverless provid
     - Compute / Memory / Networking
 
 - **Minimizing Compute Costs**
-    - using a _Pay-As-You-GO (PAYGO)_ cost model
+    - using a _[Pay-As-You-GO (PAYGO)](https://en.wikipedia.org/wiki/PAYGO)_ cost model
 
 - **Guarantees all the "Ops"**
-    - Scaling,
-    - Low latency,
-    - High Availability (HA),
-    - Multi-region,
-    - Monitoring,
-    - Logging,
-    - Security
+  - Scaling,
+  - Low latency,
+  - High Availability (HA),
+  - Multi-region,
+  - Monitoring,
+  - Logging,
+  - Security
 
 {% hint style="warning" %}
 _Your Serverlesss operational features savings varies by provider and their Service License Agreements (SLAs)._
+{% endhint %}
+
+{% hint style="success" %}
+Across-the-board, IBM Cloud Functions and its SLA offers all these Operational services at the highest level of quality and service for every price plan.
 {% endhint %}
 
 As you will find by taking this course
