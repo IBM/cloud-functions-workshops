@@ -105,12 +105,14 @@ Anytime you have data that may be raw, unstructured or needs to be prepared or e
 
 Serverless frameworks such as IBM Cloud Functions, typically have ready-made feeds to allow you to access data, regardless if its "state", to perform your needed transformations and enhancements on including:
 
-#### _Data-at-Rest (SQL, NoSQL)_
+#### _Data-at-Rest_
 
-- **Structured**
-  - [SQL / Relational](https://www.ibm.com/cloud/learn/relational-databases) _(e.g., DB2, MySQL, Postgres, etc.)_
-- **Unstructured**
-  - [NoSQL]() _(e.g, [Cloudant](https://www.ibm.com/cloud/cloudant), CouchDB, Redis)_
+Configure a feed to receive events whenever data changes occur in the database.
+
+- **Structured**:
+  - [SQL / Relational](https://www.ibm.com/cloud/learn/relational-databases)** _(e.g., DB2, MySQL, Postgres, etc.)_
+- **Unstructured**:
+  - [NoSQL](https://www.ibm.com/cloud/learn/nosql-databases) _(e.g., [Cloudant](https://www.ibm.com/cloud/cloudant), CouchDB, Redis)_
 
 <!--
 {% hint style="tip" %}
@@ -120,9 +122,13 @@ Check our [IBM Cloud databases](https://www.ibm.com/cloud/databases) for more so
 
 #### _Data-in-Motion_
 
+Configure a client feed to "pull" messages off a queue and trigger an action with the message data.
+
 - Message Queues _(e.g., Kafka, RabbitMQ)_
 
 #### _Streaming Data (Analytics)_
+
+Yes, you can absolutely use Serverless functions to transform/enhance data "in stream"!
 
 - Live Log data
 - IoT sensor data
