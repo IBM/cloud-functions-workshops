@@ -97,22 +97,42 @@ In this course, we will actually show you how to setup the Alarm feed provider i
 If you want to read more about ICF Alarms check out this blog:
 - _[New Alarm based trigger events for IBM Cloud Functions](https://www.ibm.com/cloud/blog/new-alarm-based-trigger-events-for-ibm-cloud-functions)_
 
-### 2. ETL Pipelines
+### 2. Extract-Transform-Load (ETL) Pipelines
 
 ![ETL Pipeline Use Case ](images/101-ex0-use-case-etl-pipeline.png)
 
+Anytime you have data that may be raw, unstructured or needs to be prepared or enhanced in some way for downstream applications and workflows to consume, Serverless is for you.
+
+Serverless frameworks such as IBM Cloud Functions, typically have ready-made feeds to allow you to access data, regardless if its "state", to perform your needed transformations and enhancements on including:
+
+#### _Data-at-Rest (SQL, NoSQL)_
+
+- **Structured**
+  - [SQL / Relational](https://www.ibm.com/cloud/learn/relational-databases) _(e.g., DB2, MySQL, Postgres, etc.)_
+- **Unstructured**
+  - [NoSQL]() _(e.g, [Cloudant](https://www.ibm.com/cloud/cloudant), CouchDB, Redis)_
+
+<!--
 {% hint style="tip" %}
-Consider using the Alarm pattern along with ETL pipelines especially when working with "data-at-rest".
+Check our [IBM Cloud databases](https://www.ibm.com/cloud/databases) for more sources.
 {% endhint %}
+-->
 
+#### _Data-in-Motion_
 
-Streaming Data
+- Message Queues _(e.g., Kafka, RabbitMQ)_
+
+#### _Streaming Data (Analytics)_
+
 - Live Log data
 - IoT sensor data
 - Financial (market) data
-- In-Stream Analytics
-  - e.g., _[TensorFlow](https://www.tensorflow.org/)_
+- In-Stream Analytics (e.g., _[TensorFlow](https://www.tensorflow.org/))_
+  - ![TensorFlow](images/tensorflow-logo-2d-trans-small.png)
 
+{% hint style="tip" %}
+Consider using the `Alarm` pattern along with ETL pipelines when working with "data-at-rest".
+{% endhint %}
 
 ### 3. Serverless APIs
 
