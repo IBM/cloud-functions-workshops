@@ -75,11 +75,11 @@ Although you can use Serverless to solve most problems, here are four general us
 
 ![Alarm (periodic) Use Case ](images/101-ex0-use-case-periodic.png)
 
-One if the best patterns to look for when adopting Serverless is that "Alarm" pattern, that is IBM Cloud Functions provides a built-in service that can trigger your Actions on a schedule you configure.
+One if the best patterns to look for when adopting Serverless is that `"Alarm"` pattern, that is IBM Cloud Functions provides a built-in service that can trigger your Actions on a schedule you configure.
 
-This kind of use case is often referred to as a "batch job", as you accumulate data in some data storage service and process it in a "batch".
+This kind of use case is often referred to as a `"batch job"`, as you accumulate data in some data storage service and process it in a "batch".
 
-Alternatively, it can also be called a "`cron job`" as for the popular Linux utility used as a job scheduler.  In fact, the ICF Alarm supports a standardized cron format which supports:
+Alternatively, it can also be called a `"cron job"` as for the popular Linux utility used as a job scheduler.  In fact, the ICF Alarm supports a standardized cron format which supports:
 
 - **Periodic Intervals** - every X secs/mins
   - _Batch process orders every 24 hours at 12 PM_
@@ -88,7 +88,7 @@ Alternatively, it can also be called a "`cron job`" as for the popular Linux uti
 - **Specific date/time** - “fire once”, or recurring
   - _Launch a new website on Jan. 1st 2021_
 
-Again, the pattern typically relies upon functional access to external data storage (e.g., Cloud Object Storage (COS) or Cloudant) where the data is "batched up".
+As you can infer, the pattern typically relies upon functional access to external data storage (e.g., Cloud Object Storage (COS) or Cloudant) where the data is "batched up".
 
 {% hint style="success" %}
 In this course, we will actually show you how to setup the Alarm feed provider in ICF to schedule the triggering of your functions!
