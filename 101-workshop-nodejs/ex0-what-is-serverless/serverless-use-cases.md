@@ -94,14 +94,22 @@ As you can infer, the pattern typically relies upon functional access to externa
 In this course, we will actually show you how to setup the Alarm feed provider in ICF to schedule the triggering of your functions!
 {% endhint %}
 
-### 2. Serverless APIs
-
-![Serverless APIs Use Case ](images/101-ex0-use-case-apis.png)
-
-### 3. ETL Pipelines
+### 2. ETL Pipelines
 
 ![ETL Pipeline Use Case ](images/101-ex0-use-case-etl-pipeline.png)
+
+{% hint style="tip" %}
+Consider using the Alarm pattern along with ETL pipelines especially when working with "data-at-rest".
+{% endhint %}
+
+### 3. Serverless APIs
+
+![Serverless APIs Use Case ](images/101-ex0-use-case-apis.png)
 
 ### 4. "Divide & Conquer" Workloads
 
 !["Embarrassingly Parallel" Use Case ](images/101-ex0-use-case-divide-conquer.png)
+
+{% hint style="success" %}
+Hopefully, you are getting excited about applying some of these use cases to your favorite applications!
+{% endhint %}
