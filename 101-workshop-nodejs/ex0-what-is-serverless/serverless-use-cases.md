@@ -41,18 +41,22 @@ Although IBM Cloud Functions can scale and keep up with large demands on Serverl
 
 Cold start time includes starting a language runtime compatible with your function, as well as loading your function and starting it.
 
-#### **Large functions**
+#### Long-running or non-separable tasks
 
-If you are thinking of Serverless, then hopefully you are not trying to bring over large, monolithic application "chunks" and treat them as "functions".
+For example:
 
-However, if you do have large functional services "cold start" times, as described above, are a primary consideration.  That is, some functions may have dependencies on frameworks, runtime libraries and other dependencies all of which must load on each request negating Serverless benefits.
+- **Functions with lots of dependencies**
 
-#### **Network intensive functions**
+    If you are thinking of Serverless, then hopefully you are not trying to bring over large, monolithic application "chunks" and treat them as "functions".
 
-Your PAYGO costs will go up if functions are waiting on (external) services to respond since you are paying for that idle time. Network timeouts are also a consideration when evaluating potential wait costs.
+    However, if you do have large functional services "cold start" times, as described above, are a primary consideration.  That is, some functions may have dependencies on frameworks, runtime libraries and other dependencies all of which must load on each request negating Serverless benefits.
 
-{% hint style="info" %}
-Please note that there are ways to recognize, code around and mitigate against these anti-patterns which we will cover in more advanced courses.
+- **Network intensive functions**
+
+    Your PAYGO costs will go up if functions are waiting on (external) services to respond since you are paying for that idle time. Network timeouts are also a consideration when evaluating potential wait costs.
+
+{% hint style="tip" %}
+Please note that there are ways to recognize and mitigate against these anti-patterns, primarily using the same strategies used for event-driven microservices, which we will cover in more advanced courses.
 {% endhint %}
 
 ## "Top 4" Serverless use cases

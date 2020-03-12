@@ -27,6 +27,6 @@ We will start by getting discussing what Serverless is, what it is good for and 
 
 Once you are comfortable creating serverless functions, the next step is to connect functions to events, like message queues, allowing microservices to fire automatically. Finally, we'll demonstrate how to expose serverless functions as public API endpoints, allowing to build serverless web applications.
 
-Welcome to the future of cloud development, you'll never want to manage another server again 😎.
+Welcome to the future of cloud development; you'll never want to manage another server again 😎.
 
 **Are you ready? Let's go!** 🚗
