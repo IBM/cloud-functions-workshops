@@ -94,6 +94,9 @@ As you can infer, the pattern typically relies upon functional access to externa
 In this course, we will actually show you how to setup the Alarm feed provider in ICF to schedule the triggering of your functions!
 {% endhint %}
 
+If you want to read more about ICF Alarms check out this blog:
+- _[New Alarm based trigger events for IBM Cloud Functions](https://www.ibm.com/cloud/blog/new-alarm-based-trigger-events-for-ibm-cloud-functions)_
+
 ### 2. ETL Pipelines
 
 ![ETL Pipeline Use Case ](images/101-ex0-use-case-etl-pipeline.png)
@@ -101,6 +104,15 @@ In this course, we will actually show you how to setup the Alarm feed provider i
 {% hint style="tip" %}
 Consider using the Alarm pattern along with ETL pipelines especially when working with "data-at-rest".
 {% endhint %}
+
+
+Streaming Data
+- Live Log data
+- IoT sensor data
+- Financial (market) data
+- In-Stream Analytics
+  - e.g., _[TensorFlow](https://www.tensorflow.org/)_
+
 
 ### 3. Serverless APIs
 
