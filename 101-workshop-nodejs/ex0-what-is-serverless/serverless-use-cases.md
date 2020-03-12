@@ -144,9 +144,21 @@ Consider using the `Alarm` pattern along with ETL pipelines when working with "d
 
 ![Serverless APIs Use Case ](images/101-ex0-use-case-apis.png)
 
+If you provide customer or internal facing API,  especially those that are not under a high, constant load, creating an API endpoint that is backed by a Serverless function should be your choice 100% of the time.
+
+In fact, IBM Cloud Functions includes API Gateway integration that allows you to create sure APIs and even publish them using the OpenAPI or "Swagger" specification.
+
 ### 4. "Divide & Conquer" Workloads
 
 !["Embarrassingly Parallel" Use Case ](images/101-ex0-use-case-divide-conquer.png)
+
+Serverless opens tha door to performing high-end analytics and problem solving that was previously only for available using expensive services using  pre-allocated server clusters.
+
+{% hint style="tip" %}
+Analytic workloads is one of the fastest growing use cases for Serverless.  IBM Cloud Functions has a dedicated [Python AI]() Serverless environment, ready made with the most popular analytic libraries for you to get started quickly!
+{% endhint %}
+
+If you want to see a tutorial that uses ICF for Deep learning, you may read [Leverage deep learning in IBM Cloud Functions](https://developer.ibm.com/technologies/artificial-intelligence/tutorials/leverage-deep-learning-in-apache-openwhisk-ibm-cloud-functions/).
 
 {% hint style="success" %}
 Hopefully, you are getting excited about applying some of these use cases to your favorite applications!

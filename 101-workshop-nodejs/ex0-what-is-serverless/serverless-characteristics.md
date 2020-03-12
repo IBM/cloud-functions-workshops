@@ -69,3 +69,9 @@ The IBM Cloud Functions (ICF) Serverless platform not only delivers on all these
 Thanks to Serverless, once the "Ops" is taken out of "DevOps", Developers can return their attention to writing truly amazing applications that focus on just the business logic. The end result is not only increased agility delivering software based on actual customer needs, but also serves to maximize Developer joy in doing their daily work.
 
 ![Serverless increases Developer joy!](images/101-ex0-serverless-developer-joy.png)
+
+As you will find by taking this course...
+
+{% hint style="success" %}
+The IBM Cloud Functions (ICF) Serverless platform not only delivers on all the Operational features, but also exceeds what most providers offer while always keeping the focus on the Developer!
+{% endhint %}
