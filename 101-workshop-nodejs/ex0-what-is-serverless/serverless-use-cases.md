@@ -79,7 +79,7 @@ One if the best patterns to look for when adopting Serverless is that `"Alarm"` 
 
 This kind of use case is often referred to as a `"batch job"`, as you accumulate data in some data storage service and process it in a "batch".
 
-Alternatively, it can also be called a `"cron job"` as for the popular Linux utility used as a job scheduler.  In fact, the ICF Alarm supports a standardized cron format which supports:
+Alternatively, it can also be called a `"cron job"` as for the [popular Linux utility](https://en.wikipedia.org/wiki/Cron) used as a job scheduler.  In fact, the ICF Alarm supports a standardized cron format just like that utility which supports:
 
 - **Periodic Intervals** - every X secs/mins
   - _Batch process orders every 24 hours at 12 PM_
