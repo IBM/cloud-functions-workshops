@@ -44,6 +44,10 @@ In these cases the Serverless provider usually has "ready made" containers that 
 
 ## Packaging for Serverless CaaS
 
+With a Serverless platform that is designed for containers, the developer must select a base container and build their own microservice "stack" to host and run their function. This typically involves selecting a base "runtime" container for their language and version, selecting and installing a service framework that can support accepting network connects, and install their function and dependent application libraries into that service framework.
+
+This means that many operational responsibilities now become the problem of the developer. The developer must now be responsible for container security, and maintaining the versions of not only the base container, but of the framework itself and numerous more supporting libraries.  In addition, additional plans will have to be made if logging and monitoring are needed on the function which would likely be transparent with a FaaS.
+
 {% hint style="success" %}
 Now you understand the general methods Serverless providers use to manage and scale your functions with FaaS or CaaS!
 {% endhint %}
