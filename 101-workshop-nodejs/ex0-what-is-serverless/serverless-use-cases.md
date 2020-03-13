@@ -67,11 +67,13 @@ For example:
 Please note that there are ways to recognize and mitigate against these anti-patterns, primarily using the same strategies used for event-driven microservices, which we will cover in more advanced courses.
 {% endhint %}
 
-## "Top 4" Serverless use cases
+---
+
+# "Top 4" Serverless use cases
 
 Although you can use Serverless to solve most problems, here are four general use cases Developers looking adopting Serverless should consider.
 
-### 1. Alarm driven (periodic)
+## 1. **Alarm driven** (periodic)
 
 ![Alarm (periodic) Use Case ](images/101-ex0-use-case-periodic.png)
 
@@ -97,7 +99,7 @@ In this course, we will actually show you how to setup the Alarm feed provider i
 If you want to read more about ICF Alarms check out this blog:
 - _[New Alarm based trigger events for IBM Cloud Functions](https://www.ibm.com/cloud/blog/new-alarm-based-trigger-events-for-ibm-cloud-functions)_
 
-### 2. Extract-Transform-Load (ETL) Pipelines
+## 2. **Extract-Transform-Load (ETL) Pipelines**
 
 ![ETL Pipeline Use Case ](images/101-ex0-use-case-etl-pipeline.png)
 
@@ -134,13 +136,12 @@ Yes, you can absolutely use Serverless functions to transform/enhance data "in s
 - IoT sensor data
 - Financial (market) data
 - In-Stream Analytics (e.g., _[TensorFlow](https://www.tensorflow.org/))_
-  <!-- - ![TensorFlow](images/tensorflow-logo-2d-trans-small.png) -->
 
 {% hint style="tip" %}
 Consider using the `Alarm` pattern along with ETL pipelines when working with "data-at-rest".
 {% endhint %}
 
-### 3. Serverless APIs
+## 3. **Serverless APIs**
 
 ![Serverless APIs Use Case ](images/101-ex0-use-case-apis.png)
 
@@ -148,7 +149,7 @@ If you provide customer or internal facing API,  especially those that are not u
 
 In fact, IBM Cloud Functions includes API Gateway integration that allows you to create secure APIs and even publish them using the [OpenAPI Specification](https://www.openapis.org/) also known as _"Swagger"_.
 
-### 4. "Divide & Conquer" / Map Reduce
+## 4. **"Divide & Conquer" / Map Reduce**
 
 !["Embarrassingly Parallel" Use Case ](images/101-ex0-use-case-divide-conquer.png)
 
