@@ -163,7 +163,7 @@ Serverless offers a low cost alternative to run what are often called _**Embarra
 - **Hyperparameter tuning**
 - **Web scraping**
 
-Serverless Providers are constantly competing to give each function large amounts of concurrent execution with guaranteed memory and execution time in order to perform such tasks.
+Serverless Providers are constantly competing to give each function large amounts of concurrent execution with guaranteed memory and execution time in order to perform such tasks.  In fact, some researchers are using Serverless in conjunction with technologies such as [Apache Spark](https://spark.apache.org/) which requires more dedicated compute resources for performing these tasks.
 
 {% hint style="tip" %}
 Analytic workloads are one of the fastest growing use cases for Serverless especially using the Python language.  IBM has created the [PyWren project](https://github.com/pywren/pywren-ibm-cloud) to provide libraries and examples that help you quickly build analytic application by integrating data from open source projects like [Jupyter](https://jupyter.org/) and [TensorFlow](https://www.tensorflow.org/).
