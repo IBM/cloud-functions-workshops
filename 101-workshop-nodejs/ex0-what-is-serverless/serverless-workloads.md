@@ -32,6 +32,18 @@ Serverless platforms typically support the management and deployment of Serverle
 
 ![Serverless Workloads can be Functions or Functions packaged in Containers](images/101-ex0-serverless-workloads.png)
 
+{% hint style="tip" %}
+IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also supports a "bring your own container" approach using a Docker SDK.  This allows you to create containers optimized for any language with just the libraries and versions you need!
+{% endhint %}
+
+## Packaging for Serverless FaaS
+
+In general, with a FaaS Serverless implementation, the Developer needs only submit a single function and any dependencies (i.e., packages or libraries) that are not already "built in" to the language runtime the Serverless provider prepares.  This packaging step usually involves creating an archive format like ZIP or JAR (Java).
+
+In these cases the Serverless provider usually has "ready made" containers that not only contain system and language libraries for languages such as JavaScript (NodeJS), Python, Java and others, but also libraries support data transformation, network access and connections to databases and message queues.
+
+## Packaging for Serverless CaaS
+
 {% hint style="success" %}
 Now you understand the general methods Serverless providers use to manage and scale your functions with FaaS or CaaS!
 {% endhint %}
