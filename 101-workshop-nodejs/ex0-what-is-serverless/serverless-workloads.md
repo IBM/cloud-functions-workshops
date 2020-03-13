@@ -28,7 +28,7 @@ Serverless platforms typically support the management and deployment of Serverle
   - Functions are loaded and run on pre-configured, language-specific runtimes
 - **pre-packaged Containers** where the
   - Provider uses _Container-as-a-Service (CaaS)_ container-orchestration platforms like [Kubernetes](https://kubernetes.io/) and treat them as single-function applications.
-  - Developer must package functions within containers along with any necessary language dependencies and a service framework that can proxy network request and invoke the functions.
+  - Developer must package functions within containers along with any necessary language dependencies and a service framework that can handle HTTP network requests, invoke the functions and return responses.
 
 ![Serverless Workloads can be Functions or Functions packaged in Containers](images/101-ex0-serverless-workloads.png)
 
