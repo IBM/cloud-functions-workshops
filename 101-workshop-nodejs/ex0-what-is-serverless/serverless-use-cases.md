@@ -134,7 +134,7 @@ Yes, you can absolutely use Serverless functions to transform/enhance data "in s
 - IoT sensor data
 - Financial (market) data
 - In-Stream Analytics (e.g., _[TensorFlow](https://www.tensorflow.org/))_
-  - ![TensorFlow](images/tensorflow-logo-2d-trans-small.png)
+  <!-- - ![TensorFlow](images/tensorflow-logo-2d-trans-small.png) -->
 
 {% hint style="tip" %}
 Consider using the `Alarm` pattern along with ETL pipelines when working with "data-at-rest".
@@ -144,18 +144,29 @@ Consider using the `Alarm` pattern along with ETL pipelines when working with "d
 
 ![Serverless APIs Use Case ](images/101-ex0-use-case-apis.png)
 
-If you provide customer or internal facing API,  especially those that are not under a high, constant load, creating an API endpoint that is backed by a Serverless function should be your choice 100% of the time.
+If you provide customer or internal facing API,  especially those that are not under a high, constant load, creating an API endpoint that is backed by a Serverless function **should be your choice 100% of the time**.
 
-In fact, IBM Cloud Functions includes API Gateway integration that allows you to create sure APIs and even publish them using the OpenAPI or "Swagger" specification.
+In fact, IBM Cloud Functions includes API Gateway integration that allows you to create secure APIs and even publish them using the [OpenAPI Specification](https://www.openapis.org/) also known as _"Swagger"_.
 
-### 4. "Divide & Conquer" Workloads
+### 4. "Divide & Conquer" / Map Reduce
 
 !["Embarrassingly Parallel" Use Case ](images/101-ex0-use-case-divide-conquer.png)
 
-Serverless opens tha door to performing high-end analytics and problem solving that was previously only for available using expensive services using  pre-allocated server clusters.
+Serverless opens the door to performing high-end analytics and problem solving that was previously only for available using expensive services using  pre-allocated server clusters.
+
+Serverless offers a low cost alternative to run what are often called _**Embarrassingly Parallel Tasks**_ often needed for Divide & Conquer styled processing steps. These include:
+
+- **Map Reduce operations**
+- **Monte-Carlo simulations**
+- **Evolutionary Algorithms (EA)**
+- **Genetic Algorithms (GA)**
+- **Hyperparameter tuning**
+- **Web scraping**
+
+Serverless Providers are constantly competing to give each function large amounts of concurrent execution with guaranteed memory and execution time in order to perform such tasks.
 
 {% hint style="tip" %}
-Analytic workloads are one of the fastest growing use cases for Serverless.  IBM Cloud Functions has a dedicated [Python AI]() Serverless environment, ready made with the most popular analytic libraries for you to get started quickly!
+Analytic workloads are one of the fastest growing use cases for Serverless especially using the Python language.  IBM has created the [PyWren project](https://github.com/pywren/pywren-ibm-cloud) to provide libraries and examples that help you quickly build analytic application by integrating data from open source projects like [Jupyter](https://jupyter.org/) and [TensorFlow](https://www.tensorflow.org/).
 {% endhint %}
 
 If you want to see a tutorial that uses ICF for Deep learning, you may read [Leverage deep learning in IBM Cloud Functions](https://developer.ibm.com/technologies/artificial-intelligence/tutorials/leverage-deep-learning-in-apache-openwhisk-ibm-cloud-functions/).
