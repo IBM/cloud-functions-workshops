@@ -33,9 +33,7 @@ Serverless platforms typically support the management and deployment of Serverle
 ![Serverless Workloads can be Functions or Functions packaged in Containers](images/101-ex0-serverless-workloads.png)
 
 {% hint style="tip" %}
-IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also supports a _**"bring your own Container"**_ approach using a Docker SDK.  This allows you to create Docker containers optimized for any language with just the libraries and versions you need!
-
-**ICF's container support provides a great way migrating your existing, containerized applications to Serverless**.
+IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also supports a _**"bring your own Container" approach using a Docker SDK**_.  This feature allows you to create Docker containers optimized for any language with just the libraries and versions you need!
 {% endhint %}
 
 ## Packaging for Serverless FaaS
