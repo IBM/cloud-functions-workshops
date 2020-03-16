@@ -38,6 +38,15 @@ In general, with a FaaS Serverless implementation, the Developer needs only subm
 
 In these cases, the Serverless provider usually has "ready made" containers that not only contain system and language libraries for languages such as JavaScript (NodeJS), Python, Java and others, but also libraries support data transformation, network access and connections to databases and message queues.
 
+#### Packaging Steps
+
+![Packaging functions for FaaS Platform](images/101-ex0-package-for-faas.png)
+
+1. Write Function
+2. Select target language runtime
+3. _Optionally, create archive with Function and any additional libraries it needs_
+4. Submit, via API, to FaaS Serverless platform with selected runtime identifier
+
 ## Packaging for Serverless CaaS
 
 With a Serverless platform that is designed for containers, the developer must select a base container and build their own microservice "stack" to host and run their function. This typically involves selecting a base "runtime" container for their language and version, selecting and installing a service framework that can support HTTP network connections, and install their function and dependent application libraries into that service framework and then export that function on an endpoint (route) that is compatible with the Serverless platform.
