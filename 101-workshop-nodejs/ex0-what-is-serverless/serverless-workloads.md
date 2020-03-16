@@ -60,5 +60,5 @@ IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also give
 {% endhint %}
 
 {% hint style="success" %}
-Now you understand the general methods Serverless providers use to manage and scale your functions with FaaS or CaaS!
+Now you understand the general methods Serverless providers use to manage and scale your functions with FaaS or CaaS! _Find out more about [Preparing Apps for Actions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-prep) in IBM Cloud Functions._
 {% endhint %}
