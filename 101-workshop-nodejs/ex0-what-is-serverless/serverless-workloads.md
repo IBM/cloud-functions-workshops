@@ -61,9 +61,9 @@ With the CaaS approach, other operational responsibilities now become the respon
 
 1. Write your function _and plan to host it using a language-specific service framework._
 2. Select a base image from a repository with the language runtime version you desire.  _If able, select one that may have your service framework already installed._
-3. Build your function, any supporting libraries needed and service framework if not already included.
-4. Export your function as a service endpoint from your framework.
-5. Submit resultant image to CaaS Serverless platform. This could be a direct submission or indirect from a supported image repository.
+3. Build your function, any supporting libraries needed and service framework _if not already included in the image_.
+4. Export your function as a service endpoint from your framework. _Configure framework as needed to export logs and metrics._
+5. Submit resultant image to the CaaS Serverless platform. This could be a direct submission or indirect from a supported image repository.
 
 {% hint style="tip" %}
 IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also gives you the option to _**"bring your own Container" using a Docker SDK**_.  This feature allows you to create Docker containers optimized for any language with just the libraries and versions you need while exploring FaaS!
