@@ -38,7 +38,7 @@ In general, with a FaaS Serverless implementation, the Developer needs only subm
 
 In these cases, the Serverless provider usually has "ready made" containers that not only contain system and language libraries for languages such as JavaScript (NodeJS), Python, Java and others, but also libraries support data transformation, network access and connections to databases and message queues.
 
-#### Packaging Steps
+#### Typical Packaging Steps
 
 ![Packaging functions for FaaS Platform](images/101-ex0-package-for-faas.png)
 
@@ -54,6 +54,10 @@ With a Serverless platform that is designed for containers, the developer must s
 #### Additional responsibilities for CaaS functions
 
 With the CaaS approach, other operational responsibilities now become the responsibility of the developer preparing the container. The developer must now be responsible for overall container security, and maintaining the versions of not only the base container, but also of their chosen service framework along with any supporting libraries.  In addition, plans may have to be made to support capturing function-level logs and metrics which normally would  be transparent with a FaaS approach.
+
+#### Typical Packaging Steps
+
+TBD
 
 {% hint style="tip" %}
 IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also gives you the option to _**"bring your own Container" using a Docker SDK**_.  This feature allows you to create Docker containers optimized for any language with just the libraries and versions you need while exploring FaaS!
