@@ -42,10 +42,10 @@ In these cases, the Serverless provider usually has "ready made" containers that
 
 ![Packaging functions for FaaS Platform](images/101-ex0-package-for-faas.png)
 
-1. Write Function
-2. Select target language runtime
+1. Write Function in a language the FaaS platform supports
+2. Select target language runtime and version
 3. _Optionally, create archive with Function and any additional libraries it needs_
-4. Submit, via API, to FaaS Serverless platform with selected runtime identifier
+4. Submit functional workload to FaaS platform with selected runtime identifier. Typically via a supported API or client.
 
 ## Packaging for Serverless CaaS
 
