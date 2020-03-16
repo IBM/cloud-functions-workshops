@@ -59,8 +59,8 @@ With the CaaS approach, other operational responsibilities now become the respon
 
 ![Packaging functions for CaaS Platform](images/101-ex0-package-for-caas.png)
 
-1. Write your function and host it using a language-specific service framework.
-2. Select a base image from a repository with the language runtime version you desire.  If able, select one that may have your service framework already installed.
+1. Write your function _and plan to host it using a language-specific service framework._
+2. Select a base image from a repository with the language runtime version you desire.  _If able, select one that may have your service framework already installed._
 3. Build your function, any supporting libraries needed and service framework if not already included.
 4. Export your function as a service endpoint from your framework.
 5. Submit resultant image to CaaS Serverless platform. This could be a direct submission or indirect from a supported image repository.
