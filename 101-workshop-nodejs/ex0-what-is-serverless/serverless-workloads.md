@@ -40,9 +40,11 @@ In these cases, the Serverless provider usually has "ready made" containers that
 
 ## Packaging for Serverless CaaS
 
-With a Serverless platform that is designed for containers, the developer must select a base container and build their own microservice "stack" to host and run their function. This typically involves selecting a base "runtime" container for their language and version, selecting and installing a service framework that can support accepting network connects, and install their function and dependent application libraries into that service framework.
+With a Serverless platform that is designed for containers, the developer must select a base container and build their own microservice "stack" to host and run their function. This typically involves selecting a base "runtime" container for their language and version, selecting and installing a service framework that can support HTTP network connections, and install their function and dependent application libraries into that service framework and then export that function on an endpoint (route) that is compatible with the Serverless platform.
 
-This means that many operational responsibilities now become the problem of the developer. The developer must now be responsible for container security, and maintaining the versions of not only the base container, but of the framework itself and numerous more supporting libraries.  In addition, additional plans will have to be made if logging and monitoring are needed on the function which would likely be transparent with a FaaS.
+#### Additional responsibilities for CaaS functions
+
+With the CaaS approach, other operational responsibilities now become the responsibility of the developer preparing the container. The developer must now be responsible for overall container security, and maintaining the versions of not only the base container, but also of their chosen service framework along with any supporting libraries.  In addition, plans may have to be made to support capturing function-level logs and metrics which normally would  be transparent with a FaaS approach.
 
 {% hint style="tip" %}
 IBM Cloud Functions is a FaaS which runs functions amazingly fast, but also gives you the option to _**"bring your own Container" using a Docker SDK**_.  This feature allows you to create Docker containers optimized for any language with just the libraries and versions you need while exploring FaaS!
