@@ -67,7 +67,7 @@ Actions, Triggers, and Rules always belong in a namespace. If a namespace is not
 Namespaces are where Access Control can be applied to your Actions, Triggers and Rules requiring authorization provided by IBM's Cloud Identity and Access Management (IAM) services when others want to use them to create their applications.
 
 {% hint style="tip" %}
-- Read more on [Managing Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces)
+- _Read more on [Managing Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces) with your Actions._
 {% endhint %}
 
 ### Packages
@@ -79,7 +79,7 @@ Actions and Feeds do not need to belong to a package, but then developers would 
 Serverless application developers should always creating unique, meaningful package names to better allow them to be reused across multiple Serverless applications.
 
 {% hint style="tip" %}
-Read more on [Incorporating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) in your ICF applications.
+- _Read more on [Incorporating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) in your ICF applications._
 {% endhint %}
 
 ## Using Sequences and Compositions
