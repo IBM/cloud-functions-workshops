@@ -17,11 +17,11 @@
 #
 -->
 
-## Installing Cloud Functions Plugin
+# Installing the Cloud Functions Plugin
 
 This section will take you step-by-step through the [setup of the IBM Cloud Functions CLI plugin](https://cloud.ibm.com/functions/learn/cli).
 
-### Install IBM Cloud Functions CLI plugin
+## Install IBM Cloud Functions CLI plugin
 
 Use this command to install the Cloud Functions plugin for the IBM Cloud CLI.
 
@@ -40,7 +40,7 @@ OK
 Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephine/.bluemix/plugins/cloud-functions. Use 'ibmcloud plugin show cloud-functions' to show its details.
 ```
 
-### Target a Resource Group and Namespace
+## Target a Resource Group and Namespace
 
 1. List all available resource groups on your account:
 
@@ -55,7 +55,7 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
     Default   2cdb253b144c4d36ae8f1c125a3ab6d5   true            ACTIVE
     ```
 
-1. Target the desired resource group. In this case we target the group named `Default`:
+2. Target the desired resource group. In this case we target the group named `Default`:
 
     ```bash
     ibmcloud target -g Default
@@ -74,7 +74,7 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
     Space:             dev
     ```
 
-1. Verify your (default) namespace is configured to the `cloud-functions` plugin:
+3. Verify your (default) namespace is configured to the `cloud-functions` plugin:
 
     ```bash
     ibmcloud fn namespace list
@@ -87,7 +87,7 @@ Plug-in 'cloud-functions 1.0.xx' was successfully installed into /Users/Joesephi
 
     _**Note**: A default namespace should have been created for you as part of the installation and configuration of the `cloud-functions` plugin._
 
-### Test IBM Cloud Functions From The CLI
+## Test IBM Cloud Functions From The CLI
 
 Run the following command to invoke a test function from the command-line.
 
@@ -104,7 +104,7 @@ You should see that the built-in `echo` function responds with a JSON result tha
 ```
 
 {% hint style="success" %}
-🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉
+🎉 **Congratulations, you've successfully configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications...**
 {% endhint %}
 
 ### Using aliases for the Cloud Functions plugin
@@ -119,7 +119,7 @@ The IBM Cloud Functions plugin is referenced as a sub-command under the IBM Clou
 _**Info**: The `cloud-functions` plugin provides an IBM specific implementation of the [Apache OpenWhisk CLI](https://github.com/apache/incubator-openwhisk/blob/master/docs/cli.md). This is why one of the aliases is named `wsk`. However, the IBM version supports custom credentials and configurations needed for working with the IBM Cloud and its services._
 {% endhint %}
 
-### Logging out of your IBM Cloud account
+## Logging out of your IBM Cloud account
 
 {% hint style="warning" %}
 **Warning**: _**Do not logout of your IBM Cloud account now or you will have to redo steps you just completed!**_

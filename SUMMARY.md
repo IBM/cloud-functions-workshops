@@ -4,7 +4,7 @@
 * [Prerequisites](prereqs/README.md)
   * [Signing Up for an IBM Cloud Account](prereqs/signup.md)
   * [Setting Up the IBM Cloud CLI](prereqs/cli-setup.md)
-  * [Installing Cloud Functions Plugin](prereqs/cloud-functions.md)
+  * [Installing the Cloud Functions Plugin](prereqs/cloud-functions.md)
 * [Introductory Workshop for NodeJS](101-workshop-nodejs/README.md)
   * [What is Serverless?](101-workshop-nodejs/ex0-what-is-serverless/README.md)
     * [Definition](101-workshop-nodejs/ex0-what-is-serverless/serverless-defined.md)
