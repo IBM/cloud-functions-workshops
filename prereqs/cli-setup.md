@@ -21,7 +21,9 @@
 
 This section will take you step-by-step through [Getting started with the IBM Cloud CLI and Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) using the command line option.
 
-## Install IBM Cloud CLI [📃](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)
+## Install IBM Cloud CLI
+
+We have provided the basic instructions here with screenshots, but you can find the canonical IBM Cloud Instructions here: [IBM Cloud CLI Getting Started](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt)
 
 Download the `ibmcloud` CLI by running the command appropriate for your operating system:
 
