@@ -17,7 +17,7 @@
 #
 -->
 
-# Creating And Invoking Actions
+# Creating and Invoking Actions
 
 ## Creating Node.js Actions
 
