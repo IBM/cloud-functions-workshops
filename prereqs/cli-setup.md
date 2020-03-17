@@ -25,13 +25,14 @@ This section will take you step-by-step through [Getting started with the IBM Cl
 
 Download the `ibmcloud` CLI by running the command appropriate for your operating system:
 
-- **MacOS & Linux**:
+### MacOS & Linux
 
     ```bash
     curl -sL https://ibm.biz/idt-installer | bash
     ```
 
-- **Windows 10 Pro** (Powershell)
+### Windows 10 Pro (Powershell)
+
     Run the following as Administrator:
 
     ```bash
