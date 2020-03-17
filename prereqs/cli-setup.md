@@ -52,9 +52,9 @@ ibmcloud dev help
 
 1. Use this command to authenticate the IBM Cloud CLI with your account credentials.
 
-   ```bash
-   ibmcloud login
-   ```
+    ```bash
+    ibmcloud login
+    ```
 
 2. Enter account credentials for your IBM Cloud account.
 
