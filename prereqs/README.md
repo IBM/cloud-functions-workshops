@@ -16,9 +16,10 @@
 # limitations under the License.
 #
 -->
+
 # Prerequisites
 
-## Setting Up Dev Environment
+## Setting Up a Development Environment
 
 This exercise will set up your local development environment to use IBM Cloud Functions. These steps are a prerequisite before you can start building serverless applications.
 
