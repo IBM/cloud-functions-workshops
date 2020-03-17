@@ -17,7 +17,7 @@
 #
 -->
 
-## Sign Up for an IBM Cloud Account
+# Sign Up for an IBM Cloud Account
 
 You must have a valid IBM Cloud Account to complete exercises in the workshops.
 
@@ -29,7 +29,7 @@ Developers using "_Lite accounts_" are restricted to development within a single
 
 _**Note** IBM Cloud Functions is [available in other regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) as well if you upgrade from a Lite account._
 
-### Create an Account
+## Create an Account
 
 &#49;. Open a browser window
 
@@ -61,7 +61,7 @@ and click `Confirm account` in the email body which should take you back to IBM 
 You should be redirected there automatically after confirming the account from the email. Otherwise you can click this link: [https://cloud.ibm.com/](https://cloud.ibm.com/)
 {% endhint %}
 
-### Verify Default Region
+## Verify Default Region
 
 {% hint style="warning" %}
 **Please follow these instructions** _
