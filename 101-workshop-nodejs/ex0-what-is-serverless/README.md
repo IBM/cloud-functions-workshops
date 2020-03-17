@@ -25,18 +25,19 @@ In this lesson you will learn about:
 
 * What Serverless computing is
   * its characteristics
-* How it is simplifying the "Ops" landscape for Developers
-  * Understand the basic Serverless programming model using the semantics of IBM Cloud Functions (ICF)
-* Difference types of Serverless deployment models
-  * including Function-as-a-Service (FaaS) and Container-as-a-Service (CaaS) _with their pros and cons_
+* How Serverless simplifies the Operations landscape for Developers
+* The basic Serverless programming model using the semantics of IBM Cloud Functions (ICF)
+  * Difference between Function-as-a-Service (FaaS) and Container-as-a-Service (CaaS) workloads and deployment models_
 * The top use cases for Serverless
   * The types of problems Serverless is the right choice to solve
   * and where traditional servers may still be best
-* How IBM Cloud Functions implements Serverless at a high-level
-  * How ICF is a polyglot by supporting many programming languages
-  * and allows Compositions of functions to create Serverless applications
+* Why IBM Cloud Functions is a mature Serverless platform that supports Developer agility including:
+  * _Polyglot programming language support_
+  * _logical functional Compositions_
+  * _Built-in external event source adapters_
 
 Upon completion you should be able to:
 
 * Summarize Serverless computing in simple terms and be able to concisely describe  why, as a technology, it is an essential part of low-cost, rapid Cloud application development.
 * Identify and describe typical patterns of real-world problems that Serverless computing is ideal in solving.
+* Describe advanced features IBM Cloud Functions supports that make it a great choice for Serverless application development.
