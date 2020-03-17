@@ -50,6 +50,22 @@ Try running the help command:
 ibmcloud dev help
 ```
 
+and see if the help instructions are printed, for example:
+
+```bash
+NAME:
+   ibmcloud dev - Create, develop, deploy, and monitor applications
+
+USAGE:
+   ibmcloud dev command [arguments...] [command options]
+
+VERSION:
+   2.4.6
+
+COMMANDS:
+...
+```
+
 ## Login and Configure the IBM Cloud CLI [📃](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step3-configure-idt-env)
 
 1. Use this command to authenticate the IBM Cloud CLI with your account credentials.
