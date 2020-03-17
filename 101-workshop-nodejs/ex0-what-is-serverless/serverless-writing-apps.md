@@ -51,22 +51,46 @@ if your language is not supported, you can always create your own language runti
 
 ## Using Namespaces and Packages
 
-ICF provides a naming convention that allows developers to organize their functions and apply access control.
+ICF provides a naming convention that allows developers to organize their functions and apply access control.  Every entity in ICF can have a Fully-Qualified Name (FQN) with the following path-style format:
+
+```text
+/<Namespace Name>/<Package Name>/<Entity Name>
+```
 
 ### Namespaces
 
 Actions, Triggers, and Rules always belong in a namespace. If a namespace is not explicitly provided, they are created in a default namespace.
 
+Namespaces are where Access Control can be applied to your Actions, Triggers and Rules requiring authorization provided by IBM's Cloud Identity and Access Management (IAM) services when others want to use them to create their applications.
+
+- Read more on [Managing Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces)
+
 ### Packages
 
 Packages are logical, named groupings that can contain Actions and Feeds. A package cannot contain another package, so package nesting is not allowed.
 
-Actions and Feeds do not need to belong to a package, but then developers would have to worry about name collisions.
+Actions and Feeds do not need to belong to a package, but then developers would have to worry about **name collisions** causing referencing issues.
+
+Serverless application developers should always creating unique, meaningful package names to better allow them to be reused across multiple Serverless applications.
+
+- Read more on [Incorprating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) in your ICF applications.
 
 ## Using Sequences and Compositions
 
 ![Polyglot Sequences and Compositions on ICF](images/101-ex0-serverless-icf-compositions.png)
 
+### Sequences
+
+This class will show you how to create Action Sequences which ICF manages for you.  Actions in sequences can be written in any language as long as the data format from output from one Action is compatible with the input expected by the next Action in a sequence.
+
+Typically data between actions is normalized in JSON format, but Actions and sequences are not limited to just JSON format.
+
+### Compositions
+
+IBM Cloud Functions is one of the few Serverless platforms that offers the ability to compose polyglot function into programmatic workflows using a rich set of conditional logic and programming friendly constructs.
+
+This course will not cover Compositions, but more information can be found here in GitHub: [IBM Cloud Functions Composer](https://github.com/ibm-functions/composer)
+
 {% hint style="success" %}
-🎉_**Congratulations**! Now you have everything you need to know before actually writing your own Serverless Applications using IBM Cloud Functions!_ 🎉
+🎉_**Congratulations**! Now you have an overview of all you need to know to begin writing your own Serverless Applications using IBM Cloud Functions as part of this course!_ 🎉
 {% endhint %}
