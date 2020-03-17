@@ -17,7 +17,7 @@
 #
 -->
 
-# Setting Up the CLI
+# Setting Up the IBM Cloud CLI
 
 This section will take you step-by-step through [Getting started with the IBM Cloud CLI and Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) using the command line option.
 
@@ -32,13 +32,15 @@ Download the `ibmcloud` CLI by running the command appropriate for your operatin
     ```
 
 - **Windows 10 Pro** (Powershell)
-Run the following as Administrator:
+    Run the following as Administrator:
 
     ```bash
     [Net.ServicePointManager]::SecurityProtocol = "Tls12"; iex(New-Object Net.WebClient).DownloadString('https://ibm.biz/idt-win-installer')
     ```
 
-    - _**Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator._
+    {% hint style="tip" %}
+    **Tip** Right-click the Windows™ PowerShell icon, and select Run as administrator.
+    {% endhint %}
 
 ## Verify the Installation [🔗](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step2-verify-idt)
 
