@@ -60,7 +60,7 @@ ICF provides a naming convention that allows developers to organize their functi
 
 - _where `Enitity Name` is the name of your Action, Trigger or Rule_
 
-### Namespaces
+### **Namespaces**
 
 Actions, Triggers, and Rules always belong in a namespace. If a namespace is not explicitly provided, they are created in a default namespace.
 
@@ -70,7 +70,7 @@ Namespaces are where Access Control can be applied to your Actions, Triggers and
 - _Read more on [Managing Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces) with your Actions._
 {% endhint %}
 
-### Packages
+### **Packages**
 
 Packages are logical, named groupings that can contain Actions and Feeds. A package cannot contain another package, so package nesting is not allowed.
 
@@ -88,13 +88,13 @@ IBM Cloud Functions includes "built-in", public  _Packages_ with Event _Feeds_ t
 
 These packages include event integrations with the following services:
 
-- Alarms (periodic, cron)
-- GitHub
-- IBM Cloudant
-- IBM Cloud Object Storage (COS)
-- IBM Composer
-- IBM Event Streams (Messaging) (e.g., Kafka)
-- IBM Watson
+- **Alarms** (periodic, cron)
+- **GitHub**
+- **IBM Cloudant**
+- **IBM Cloud Object Storage (COS)**
+- **IBM Composer**
+- **IBM Event Streams** (Messaging) (e.g., Kafka)
+- **IBM Watson**
   - Discovery (Cognitive search)
   - Speech-to-Text, Text-to-Speech
   - Natural Language _(Translator, Classifier and Understanding)_
@@ -102,26 +102,26 @@ These packages include event integrations with the following services:
   - Personality insights
   - Visual Recognition
   - Assistant
-- Mobile SDK
-- Mobile Push Notifications
-- Slack
-- Weather Co.
-- WebSockets
-- Utilities _(e.g., curl, data, head, tail, cat, split, sort, echo)_
+- **Mobile SDK**
+- **Mobile Push Notifications**
+- **Slack**
+- **Weather Co.**
+- **WebSockets**
+- **Utilities** _(e.g., curl, data, head, tail, cat, split, sort, echo)_
 
 All you need do is "bind" them into your _Namespace_ with an alias along with your configurations (e.g., credentials) to reference them from your Actions.
 
 Some notable packages:
 
-### Alarms Feed
+### **Alarms Feed**
 
 The public Alarms package can be used to fire a trigger or feed at a specified frequency. Alarms are useful for setting up recurring jobs or tasks, such as invoking a system back up every hour.
 
-### Cloudant
+### **Cloudant**
 
 The public Cloudant package can be used to read, write, update, or delete documents and listen for changes to an IBM Cloudant (NoSQL) database.
 
-### COS (Cloud Object Storage)
+### **COS (Cloud Object Storage)**
 
 The public package used to integrate with an IBM® Cloud Object Storage instance and listen for changes in data. Similar to the Cloudant package.
 
@@ -135,9 +135,13 @@ The public package used to integrate with an IBM® Cloud Object Storage instance
 
 ### **Sequences**
 
-This class will show you how to create Action Sequences which ICF manages for you.  Actions in sequences can be written in any language as long as the data format from output from one Action is compatible with the input expected by the next Action in a sequence.
+ICF supports the declaration of sequences of Actions which behave collectively as a single Action. The function for each  Action in a sequence can be written in any language as long as the data format from the output from each Action in the sequence is compatible with the input expected by the next Action in a sequence.
 
 Typically data between actions is normalized in JSON format, but Actions and sequences are not limited to just JSON format.
+
+{% hint style="info" %}
+This course will show you how to create Action Sequences, using NodeJS functions, which ICF manages for you.
+{% endhint %}
 
 ### **Compositions**
 
