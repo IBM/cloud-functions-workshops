@@ -82,6 +82,36 @@ Serverless application developers should always creating unique, meaningful pack
 - _Read more on [Incorporating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) in your ICF applications._
 {% endhint %}
 
+## Packages & Event Feeds
+
+IBM Cloud Functions includes "built-in", public  _Packages_ with Event _Feeds_ that simplify integration with various popular services that are able to provide events (i.e., _Event Sources_) to your _Actions_.
+
+These packages include event integrations with :
+
+- Alarms service
+- Slack
+- Weather Co.
+- IBM Cloudant
+- IBM Cloud Object Storage (COS)
+- IBM Event Streams (Messaging) (e.g., Kafka)
+- Mobile Push Notifications
+- IBM Watson - Speech, Natural Language translators
+- and _others_
+
+All you need do is "bind" them into your _Namespace_ with an alias along with your configurations (e.g., credentials) to reference them from your Actions.
+
+{% hint style="tip" %}
+**Tip**: You can list all system packages using the `ibmcloud fn package list /whisk.system` command.
+{% endhint %}
+
+Some of the notable packages are:
+
+### Alarms Feed
+
+The public Alarms package can be used to fire a trigger or feed at a specified frequency. Alarms are useful for setting up recurring jobs or tasks, such as invoking a system back up every hour.
+
+###
+
 ## Using Sequences and Compositions
 
 ![Polyglot Sequences and Compositions on ICF](images/101-ex0-serverless-icf-compositions.png)
