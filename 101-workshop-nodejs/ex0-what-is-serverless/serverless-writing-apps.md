@@ -84,7 +84,7 @@ Serverless application developers should always creating unique, meaningful pack
 
 ## Packages & Event Feeds
 
-IBM Cloud Functions includes "built-in", public  _Packages_ with Event _Feeds_ that simplify integration with various popular services that are able to provide events (i.e., _Event Sources_) to your _Actions_.
+IBM Cloud Functions provides "built-in", public  _Packages_ that contain event _Feeds_ that simplify integration with various popular services that are able to produce events (i.e., _Event Sources_) to your _Actions_.
 
 These packages include event integrations with the following services:
 
