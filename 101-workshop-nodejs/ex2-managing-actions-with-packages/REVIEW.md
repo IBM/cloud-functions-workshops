@@ -37,11 +37,22 @@ True. You can invoke it and pass it parameters on invocation just like a normal 
 False. The action from the public package needs to bound to a logical name within a local namespace before default parameters can be applied to it.
 [explanation]
 
-2. If you bind a parameter value to a package, that value cannot be overridden on invocation.
+3. If you bind a parameter value to a package, that value cannot be overridden on invocation.
 
 (!) true
 (x) false
 
 [explanation]
 False. The parameter value on invocation always overrides those on the package binding.
+[explanation]
+
+4. After creating a custom package as private, you can clone the package to make it public.
+
+(!) true
+(x) false
+
+[explanation]
+False. You simply need to update the package using the <code>--shared</code> flag and with a value of <code>yes</code>value.
+For example:
+<p><code>ibmcloud fn package update custom --shared yes</code></p>
 [explanation]
