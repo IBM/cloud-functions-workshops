@@ -79,3 +79,25 @@ False. You simply need issue the <code>poll</code> command for activations as fo
 False. Actions can invoke other actions, acting as a proxy, using the NPM Apache OpenWhisk JavaScript library.
 <p><code>var openwhisk = require('openwhisk');</code></p>
 [explanation]
+
+---
+
+6. It is impossible to perform a blocking invocation on an asynchronous action.
+
+(!) true
+(x) false
+
+[explanation]
+False. Using Promises in NodeJS, it is possible for your function to return while waiting for the result of the Promise.
+[explanation]
+
+---
+
+7. If an action in the middle of a sequence fails, the platform will return the error after the last action in the sequence is invoked.
+
+(!) true
+(x) false
+
+[explanation]
+False. The platform will return the error from the failing action immediately.
+[explanation]
