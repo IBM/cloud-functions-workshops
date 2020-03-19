@@ -19,4 +19,22 @@
 
 # Review: Managing Actions with Packages
 
-1. TBD
+1. You can invoke actions in public packages as if they were normal actions
+
+(x) true
+(!) false
+
+[explanation]
+True. You can invoke it and pass it parameters on invocation just like a normal action.
+[explanation]
+
+2. You can provide default parameters to an action in a public package just as you would a normal action.
+
+(!) true
+(x) false
+
+[explanation]
+False. The action from the public package needs to bound to a logical name within a local namespace before default parameters can be applied to it.
+[explanation]
+
+
