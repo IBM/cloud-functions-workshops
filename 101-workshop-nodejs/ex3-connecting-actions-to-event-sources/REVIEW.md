@@ -19,4 +19,37 @@
 
 # Review: Connecting Actions to Event Sources
 
-1. TBD
+1. What is a Trigger?
+
+( ) An API that invokes a function
+( ) A network connection between an event source and a function
+(x) A named channel for a class of events
+( ) Event data that is sent to functions as key-value pairs
+
+[explanation]
+Triggers are named channels for classes or kinds of events sent from Event Sources.
+[explanation]
+
+---
+
+2. What is the purpose of a Rule?
+
+( ) associates a multiple triggers with a single action
+(x) associates a single trigger with a single action
+( ) associates a single trigger with multiple actions
+
+[explanation]
+Rules are used to associate one trigger with one action. After this kind of association is created, each time a trigger event is fired, the action is invoked.
+[explanation]
+
+---
+
+3. Rules allow you to define conditional logic that controls if an Action gets invoked based upon event data.
+
+( ) True
+(x) False
+
+
+[explanation]
+False. Rules are simply an association between a Trigger and an Action indicating that event data coming from a Trigger should "fire" and associated Action.  It is either enabled or disabled.
+[explanation]

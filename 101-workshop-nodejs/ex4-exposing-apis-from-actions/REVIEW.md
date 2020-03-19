@@ -17,6 +17,6 @@
 #
 -->
 
-# Review: Connecting Actions to Event Sources
+# Review: Exposing APIs from Actions
 
 1. TBD
