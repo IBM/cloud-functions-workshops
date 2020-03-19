@@ -58,7 +58,7 @@ True. You are able to pass nested JSON objects when invoking actions using the c
 
 ---
 
-3. It is not possible to monitor activation logs in real-time using the command line.
+4. It is not possible to monitor activation logs in real-time using the command line.
 
 (!) true
 (x) false
@@ -68,3 +68,14 @@ False. You simply need issue the <code>poll</code> command for activations as fo
 <p><code>ibmcloud fn activation poll</code></p>
 [explanation]
 
+---
+
+5. Actions cannot directly invoke other actions without using a sequence.
+
+(!) true
+(x) false
+
+[explanation]
+False. Actions can invoke other actions, acting as a proxy, using the NPM Apache OpenWhisk JavaScript library.
+<p><code>var openwhisk = require('openwhisk');</code></p>
+[explanation]
