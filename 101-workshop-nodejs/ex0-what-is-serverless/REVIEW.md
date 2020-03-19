@@ -20,7 +20,8 @@
 # Review: What is Serverless?
 
 1. What characteristics of Serverless computing contribute to its name?
-[ ] Developers can run backend code to access databases without using servers.
+
+[!] Developers can run backend code to access databases without using servers.
 [x] Serverless computing scales inherently to incoming events.
 [ ] Serverless computing does not use servers.
 [x] Server management decisions are hidden from the developer.
@@ -35,6 +36,7 @@ Serverless computing uses servers to execute functional code in response to even
 ---
 
 2. Serverless computing is a specific technology with a developed set of standards and practices.
+
 (!) True
 (x) False
 
@@ -45,6 +47,7 @@ Serverless computing still a cutting-edge Cloud technology that is implemented d
 ---
 
 3. Serverless computing requires the developer to allocate servers and machine resources.
+
 (!) true
 (X) false
 
@@ -54,6 +57,7 @@ Serverless computing still a cutting-edge Cloud technology that is implemented d
 ---
 
 4. Serverless computing scales inherently and executes stateless code in response to events.
+
 (!) false
 (x) true
 
@@ -76,9 +80,9 @@ Serverless computing still a cutting-edge Cloud technology that is implemented d
 
 6. You need to develop a project that is as cost-effective as possible. For which reasons would you pick serverless?
 
-[X] Serverless outsourcing leads to less infrastructure, operational, and development costs.
+[x] Serverless outsourcing leads to less infrastructure, operational, and development costs.
 [x] Serverless only charges for time when code is executing.
-[ ] Serverless applications can run in low-cost, pre-allocated capacity you can purchase in advance.
+[!] Serverless applications can run in low-cost, pre-allocated capacity you can purchase in advance.
 
 Note: Make sure you select all of the correct options—there may be more than one!
 
@@ -91,7 +95,7 @@ With Serverless, you only pay for compute costs that your functions use on a per
 7. Long running and non-separable tasks are types of tasks that typically work well in a serverless environment.
 
 (x) false
-( ) true
+(!) true
 
 [explanation]
 [explanation]
@@ -100,7 +104,7 @@ With Serverless, you only pay for compute costs that your functions use on a per
 
 8. Serverless scales automatically by running code only in response to event triggers.
 
-( ) incorrect
+(!) incorrect
 (x) correct
 
 ---
@@ -109,9 +113,13 @@ With Serverless, you only pay for compute costs that your functions use on a per
 
 ![Application Usage Graph](images/101-ex0-review-question-request-graph-1.png)
 
-<!-- <img width="80%" src="/static/101-ex0-review-question-request-graph-1.png">Application Usage Graph</img> -->
+<!-- <img width="80%" src="/static/101-ex0-review-question-request-graph-1.png"/> -->
 
-( ) The usage is mostly constant, so serverless computing would be a good fit for this usage case.
+(!) The usage is mostly constant, so serverless computing would be a good fit for this usage case.
 (x) The usage is mostly sporadic, so serverless computing is a good fit for this usage case.
 ( ) The usage is mostly constant, so serverless computing would be a bad fit for this usage case.
 ( ) The usage is mostly sporadic, so serverless computing is a bad fit for this usage case.
+
+[explanation]
+The usage graphs shows that requests to the application are very sporadic with long periods of little to no usage.  This is an ideal usage case for a serverless application to handle.
+[explanation]
