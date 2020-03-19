@@ -37,4 +37,11 @@ True. You can invoke it and pass it parameters on invocation just like a normal 
 False. The action from the public package needs to bound to a logical name within a local namespace before default parameters can be applied to it.
 [explanation]
 
+2. If you bind a parameter value to a package, that value cannot be overridden on invocation.
 
+(!) true
+(x) false
+
+[explanation]
+False. The parameter value on invocation always overrides those on the package binding.
+[explanation]
