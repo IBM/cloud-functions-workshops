@@ -49,7 +49,6 @@ Rules are used to associate one trigger with one action. After this kind of asso
 ( ) True
 (x) False
 
-
 [explanation]
 False. Rules are simply an association between a Trigger and an Action indicating that event data coming from a Trigger should "fire" and associated Action.  It is either enabled or disabled.
 [explanation]
