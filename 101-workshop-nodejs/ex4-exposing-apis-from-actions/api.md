@@ -48,7 +48,7 @@ First we will create the `hello` endpoint. Note that all actions used in an API 
     https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
     ```
 
-2. Check to see the api was create
+2. Check to see the API was created
 
     ```bash
     ibmcloud fn api list
