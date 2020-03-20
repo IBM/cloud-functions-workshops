@@ -200,6 +200,7 @@ blockquote
 }
 
 .callouttext{
+    align-self: center;
     background-color: transparent !important;
     margin-left: 1em !important;
     font-size: 1.0em;

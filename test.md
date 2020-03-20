@@ -49,6 +49,18 @@ The ideal of Serverless “in-a-nutshell” is...&NewLine;
 _Event-driven programming using stand-alone functions with no deployment or operational considerations_
 {% endhint %}
 
+## indented code with hint
+
+Some example of a hint immediately after a code block that is indented:
+
+  ```bash
+  command subcommand create BASE_PATH API_PATH API_VERB ACTION
+  ```
+
+{% hint style="warning" %}
+**Some example of a hint immediately after a code block that is indented.**
+{% endhint %}
+
 ### HTML Extension Test Indented
 
   {% hint style="warning" %}
