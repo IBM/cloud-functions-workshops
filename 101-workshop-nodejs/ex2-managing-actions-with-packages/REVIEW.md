@@ -56,3 +56,12 @@ False. You simply need to update the package using the <code>--shared</code> fla
 For example:
 <p><code>ibmcloud fn package update custom --shared yes</code></p>
 [explanation]
+
+5. If you have many Packages, you can better organize them by creating a Package that contains several similar packages.
+
+(!) true
+(x) false
+
+[explanation]
+False. Package nesting is not allowed, i.e. packages cannot contain other packages.
+[explanation]
