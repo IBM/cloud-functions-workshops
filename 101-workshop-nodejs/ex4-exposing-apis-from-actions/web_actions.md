@@ -86,7 +86,7 @@ The platform supports the following content-types: `.json`, `.html`, `.http`, `.
 
 ## HTTP request properties
 
-All web actions, when invoked, receives additional HTTP request details as parameters to the action input argument. These include:
+All web actions, when invoked, receive additional HTTP request details as parameters to the action input argument. These include:
 
 1. `__ow_method` \(type: string\). the HTTP method of the request.
 2. `__ow_headers` \(type: map string to string\): A the request headers.

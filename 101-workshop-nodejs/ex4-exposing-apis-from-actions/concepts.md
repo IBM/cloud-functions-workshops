@@ -41,7 +41,6 @@ Cloud Functions comes with an integrated API Gateway service. This allows  devel
 
 The API Gateway handles capabilities like routing based on request properties \(URI paths and HTTP method\), user authentication, rate limiting and more. Developers do not need to implement this features within the web action code.
 
-
 {% hint style="warning" %}
 _**Note** Several of the extended features described above, along with [support of the OpenAPI specification](https://github.com/apache/openwhisk-apigateway#API) or "Swagger", are quite deep and outside of the scope of this workshop._
 {% endhint %}

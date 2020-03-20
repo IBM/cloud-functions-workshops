@@ -8,7 +8,7 @@ _Once you have completed this exercise, you will have…_
 * **Created numerous examples of Web Actions**
 * **Enabled API Gateway integration including authentication and rate-limiting.**
 
-Once this exercise is finished, you will be able to creating scalable HTTP APIs using IBM Cloud Functions!
+Once this exercise is finished, you will be able to creating scalable HTTP accessible APIs for Actions using IBM Cloud Functions!
 
 ## Background
 
