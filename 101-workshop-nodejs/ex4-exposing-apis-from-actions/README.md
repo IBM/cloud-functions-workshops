@@ -5,7 +5,7 @@ This exercise shows you how to create public HTTP endpoints from IBM Cloud Funct
 _Once you have completed this exercise, you will have…_
 
 * **Learned how to expose your Actions as HTTP endpoints.**
-* **Created numerous example Web Actions**
+* **Created numerous examples of Web Actions**
 * **Enabled API Gateway integration including authentication and rate-limiting.**
 
 Once this exercise is finished, you will be able to creating scalable HTTP APIs using IBM Cloud Functions!
@@ -16,6 +16,8 @@ Serverless applications are a great solution for building public API endpoints. 
 
 OpenWhisk has a comprehensive RESTful API for the platform that allows you to invoke actions using authenticated HTTP requests. However, if you want to build APIs for public web sites or mobile applications, the authentication credentials will need embedding in client-side files. This is a terrible idea for obvious reasons…. but don't panic!
 
-OpenWhisk has a solution for creating public APIs to invoke your actions without exposing credentials. 😎
+{% hint style="tip" %}
+IBM Cloud Functions has a solution for creating public APIs to invoke your Actions without exposing credentials. 😎
+{% endhint %}
 
-Let's review some concepts which explain how this feature works in Apache OpenWhisk.
+First, let's review some concepts which explain how this feature works in Apache OpenWhisk...
