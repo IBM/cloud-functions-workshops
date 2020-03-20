@@ -24,7 +24,7 @@ This exercise will introduce the concepts needed to create and use actions with 
 _Once you have completed this exercise, you will have…_
 
 * **Created and invoked actions.**
-* **Understood how to pass parameters to actions.**
+* **Learned how to pass parameters to actions.**
 * **Created actions which return asynchronous results.**
 
 Once this exercise is finished, we will be able to create simple serverless functions using IBM Cloud Functions!
