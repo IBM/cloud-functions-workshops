@@ -19,7 +19,7 @@
 
 # Web Actions
 
-Let's turn the `hello` action into a web action. Once it has been converted, we can call this action using a normal HTTP request.
+Let's turn the `hello` action into a `"web action"` which means IBM Cloud Functions will create an HTTP accessible URL (endpoint) automatically which can be called externally using the HTTP protocol from clients like `curl` or web browsers.
 
 1. Update the action to set the `--web` flag to `true`.
 
@@ -31,7 +31,9 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
       ok: updated action hello
       ```
 
-2. Retrieve the web action URL exposed by the platform for this action.
+      The `hello` action has now been assigned an HTTP endpoint.
+
+2. Retrieve the web action's URL exposed by the platform for the `hello` action.
 
       ```bash
       ibmcloud fn action get hello --url
@@ -43,7 +45,37 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
 
       ```
 
-3. Invoke the web action URL with the JSON extension, passing in query parameters for `name` and `place`.
+3. Invoke the web action URL returned using the `curl` command.
+
+      ```bash
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
+      ```
+
+      It looks like nothing happened!  In fact, an HTTP response code of `204 No Content` was returned!
+
+      ```bash
+
+      ```
+
+      This is because we need to tell IBM Cloud Functions what content type we expect the function to return...
+
+4. Invoke the web action URL with a JSON extension using the `curl` command.
+
+     To do this we need to add `.json` after the action name at the end of the URL to tell ICF we want a JSON object returned. Try it invoking it now:
+
+      ```bash
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
+      ```
+
+      We now get a successful HTTP response in JSON format which matches the `.json` extension we added:
+
+      ```json
+      {
+         "message": "Hello undefined from undefined!"
+      }
+      ```
+
+      Additionally, we can invoke it with query parameters for `name` and `place`:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
@@ -55,7 +87,7 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
       }
       ```
 
-4. Disable web action support.
+5. Disable web action support.
 
       ```bash
       ibmcloud fn action update hello --web false
@@ -65,7 +97,7 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
       ok: updated action hello
       ```
 
-5. Verify the action is not externally accessible.
+6. Verify the action is no longer externally accessible.
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
@@ -73,8 +105,8 @@ Let's turn the `hello` action into a web action. Once it has been converted, we 
 
       ```json
       {
-      "error": "The requested resource does not exist.",
-      "code": "1dfc1f7cb457ed4bb1f2978fc75bd31f"
+        "error": "The requested resource does not exist.",
+        "code": "1dfc1f7cb457ed4bb1f2978fc75bd31f"
       }
       ```
 
@@ -166,7 +198,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       ...
       ```
 
-## Example - HTML response
+## Example: HTML response
 
 1. Create a new web action from the following source code in html.js.
 
@@ -208,7 +240,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       <html><body>Hello World!</body></html>
       ```
 
-## An SVG Response
+## Example: SVG Response
 
 1. Create a new function that has the SVG base64 encoded as the body
 
@@ -260,7 +292,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       <!-- GitHuib raw source: "https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/101-workshop-nodejs/ex4-exposing-apis-from-actions/images/atom.svg?sanitize=true" -->
       ![atom.svg](images/atom.svg)
 
-## Example - Manual JSON response
+## Example: Manual JSON response
 
 1. Create a new web action from the following source code called `manual.js`.
 
@@ -301,20 +333,20 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
       ```json
       {
-      "__ow_method": "get",
-      "__ow_headers": {
-         "accept": "*/*",
-         "user-agent": "curl/7.54.0",
-         "x-client-ip": "92.11.100.114",
-         "x-forwarded-proto": "https",
-         "host": "openwhisk.ng.bluemix.net:443",
-         "cache-control": "no-transform",
-         "via": "1.1 DwAAAD0oDAI-",
-         "x-global-transaction-id": "2654586489",
-         "x-forwarded-for": "92.11.100.114"
-      },
-      "__ow_path": "",
-      "hello": "world"
+        "__ow_method": "get",
+        "__ow_headers": {
+           "accept": "*/*",
+           "user-agent": "curl/7.54.0",
+           "x-client-ip": "92.11.100.114",
+           "x-forwarded-proto": "https",
+           "host": "openwhisk.ng.bluemix.net:443",
+           "cache-control": "no-transform",
+           "via": "1.1 DwAAAD0oDAI-",
+           "x-global-transaction-id": "2654586489",
+           "x-forwarded-for": "92.11.100.114"
+        },
+        "__ow_path": "",
+        "hello": "world"
       ```
 
 4. Use other HTTP methods or URI paths to show the parameters change.
