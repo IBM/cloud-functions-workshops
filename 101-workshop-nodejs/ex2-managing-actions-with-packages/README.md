@@ -23,9 +23,9 @@ This exercise will introduce the concepts needed to create and use packages with
 
 _Once you have completed this exercise, you will have…_
 
-* **Learnt how to find public packages.**
-* **Understood how to use public package actions and bindings.**
-* **Created and shared custom packages.**
+* **Learned how to find public packages.**
+* **Used public package actions and bindings.**
+* **Created and shared your own custom package.**
 
 Once this exercise is finished, we will be able to create and share actions using packages within IBM Cloud Functions!
 
