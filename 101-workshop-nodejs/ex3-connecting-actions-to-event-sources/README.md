@@ -4,7 +4,7 @@ This exercise introduces concepts \(triggers and rules\) used by the platform to
 
 _Once you have completed this exercise, you will have…_
 
-* **Understood how event sources are integrated into the platform.**
+* **Learned how event sources are integrated into the ICF platform.**
 * **Created example triggers and bound to actions using rules.**
 * **Tested connecting triggers to external event sources.**
 
@@ -17,4 +17,3 @@ Serverless applications are often described as "event-driven" because you can co
 In the previous example, we've been manually invoking actions using the command-line. Let's move onto connecting your actions to external event sources. OpenWhisk supports multiple external event sources like CouchDB, Apache Kafka, a cron-based scheduler and more.
 
 Before we jump into the details, let's review some concepts which explain how this feature works in Apache OpenWhisk.
-

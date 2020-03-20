@@ -4,7 +4,7 @@ This exercise shows you how to create public HTTP endpoints from IBM Cloud Funct
 
 _Once you have completed this exercise, you will have…_
 
-* **Understood how IBM Cloud Functions can expose HTTP endpoints.**
+* **Learned how to expose your Actions as HTTP endpoints.**
 * **Created numerous example Web Actions**
 * **Enabled API Gateway integration including authentication and rate-limiting.**
 
