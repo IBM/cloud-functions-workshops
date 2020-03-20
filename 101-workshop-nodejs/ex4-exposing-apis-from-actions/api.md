@@ -25,9 +25,9 @@ Let's now show how these web actions can be turned into an API using the [API Ga
 
 To create an API you would use the we will run the following command syntax:
 
-    ```bash
-    ibmcloud fn api create BASE_PATH API_PATH API_VERB ACTION
-    ```
+```bash
+ibmcloud fn api create BASE_PATH API_PATH API_VERB ACTION
+```
 
 {% hint style="warning" %}
 **The example above is merely an example of the syntax used to create an API endpoint and should not be run.**
