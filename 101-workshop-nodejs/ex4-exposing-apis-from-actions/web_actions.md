@@ -145,7 +145,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
       ```
 
-3. Check HTTP response is HTTP redirect.
+3. Check that the HTTP response is indeed an HTTP redirect.
 
       ```bash
       curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
@@ -262,7 +262,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 ## Example - Manual JSON response
 
-1. Create a new web action from the following source code in manual.js.
+1. Create a new web action from the following source code called `manual.js`.
 
       ```javascript
       function main(params) {

@@ -25,9 +25,9 @@ Let's now show how these web actions can be turned into an API using the [API Ga
 
 To create an API you would use the we will run the following command syntax:
 
-    ```bash
-    ibmcloud fn api create BASE_PATH API_PATH API_VERB ACTION
-    ```
+```bash
+ibmcloud fn api create BASE_PATH API_PATH API_VERB ACTION
+```
 
 {% hint style="warning" %}
 **The example above is merely an example of the syntax used to create an API endpoint and should not be run.**
@@ -76,7 +76,7 @@ We will now create endpoints for the other web actions created in the previous s
 
 ### Other Response Types
 
-Now we must be mindful that by default the IBM Cloud Functions expects that return type will be JSON. Since for the remaining functions this is not the case, we must be mindful to set the appropriate response types with the `--response-type TYPE` flag. Valid types include http, json, text, svg.
+We must be remember that, by default, IBM Cloud Functions expects a functions return content type will be JSON. Since for the remaining functions this is not the case, we must be mindful to set the appropriate response types with the `--response-type <TYPE>` flag. Valid type values include `http`, `json`, `text`, and `svg`.
 
 1. Create the endpoint for the http endpoint
 
@@ -231,8 +231,7 @@ As we can begin to tell, as the number of API endpoints increases, documenting a
             "title": "/myapi",
             "version": "1.0.0"
         },
-
-    ...
+        ...
     }
     ```
 

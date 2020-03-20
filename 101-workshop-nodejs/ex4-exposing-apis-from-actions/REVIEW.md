@@ -36,3 +36,13 @@ True. Making your Actions web accessible using IBM Cloud Functions is really tha
 [explanation]
 False. Web actions are provided all HTTP request information as parsed input arguments to their function including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code>> parameter so you will still need to parse the individual parameters from it.
 [explanation]
+
+3. Which command would you use to retrieve the HTTP endpoint for a web action?
+
+[!] ibmcloud fn api get &lt;action_name&gt;  --url
+[x] ibmcloud fn action get &lt;action_name&gt; --url
+[ ] ibmcloud fn api get &lt;action_name&gt; --http
+[ ] ibmcloud fn action get &lt;action_name&gt; --http
+
+[explanation]
+[explanation]
