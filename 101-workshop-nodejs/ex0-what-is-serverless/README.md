@@ -30,7 +30,7 @@ In this lesson you will learn about:
 * The top use cases for Serverless
   * The types of problems Serverless is the right choice to solve
   * and where traditional servers may still be best
-* Why IBM Cloud Functions is a mature Serverless platform that supports Developer agility by supporting:
+* Why IBM Cloud Functions is a mature Serverless platform that enables Developer agility by supporting:
   * _Polyglot_ programming languages
   * Logical functional _Compositions_
   * Built-in _Event adapters_ to various services and data sources
