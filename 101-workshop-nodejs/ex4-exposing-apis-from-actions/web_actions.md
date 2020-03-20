@@ -153,10 +153,10 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
       ```javascript
       function main() {
-         return {
-            headers: { location: "http://openwhisk.org" },
-            statusCode: 302
-         };
+            return {
+                  headers: { location: "https://openwhisk.apache.org/" },
+                  statusCode: 302
+            };
       }
       ```
 
@@ -196,9 +196,13 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       < Access-Control-Allow-Origin: *
       < Access-Control-Allow-Methods: OPTIONS, GET, DELETE, POST, PUT, HEAD, PATCH
       < Access-Control-Allow-Headers: Authorization, Content-Type
-      < location: http://openwhisk.org
+      < location: https://openwhisk.apache.org/
       ...
       ```
+
+4. Now try the URL in a browser...
+
+      _What website do you see?_
 
 ## Example: HTML response
 
