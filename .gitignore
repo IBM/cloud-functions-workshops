@@ -15,3 +15,6 @@ assets/
 
 # MD to HTML tooling
 .html
+
+# PowerPoint temporary
+~$*.ppt*

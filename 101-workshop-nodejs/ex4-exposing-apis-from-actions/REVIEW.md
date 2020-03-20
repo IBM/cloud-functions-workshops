@@ -24,15 +24,15 @@
 (x) true
 (!) false
 
-[Explanation]
+[explanation]
 True. Making your Actions web accessible using IBM Cloud Functions is really that easy.
-[Explanation]
+[explanation]
 
 2. Functions that are web actions need to parse the raw HTTP request header to obtain query parameters.
 
 (!) true
 (x) false
 
-[Explanation]
-False. Web actions are provided all HTTP request information as parsed input arguments to their function including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <__ow_query_> parameter so you will still need to parse the individual parameters from it.
-[Explanation]
+[explanation]
+False. Web actions are provided all HTTP request information as parsed input arguments to their function including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code>> parameter so you will still need to parse the individual parameters from it.
+[explanation]
