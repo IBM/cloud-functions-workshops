@@ -36,7 +36,7 @@ In IBM Cloud Functions, you can use _packages_ to bundle together related action
 * **Packages can only contain _actions_**. _Triggers_ and _rules_ are not supported at the moment.
 * **Package nesting is not allowed**, i.e. packages cannot contain other packages.
 
-Packages also **support default parameters**. Package parameters are automatically passed into actions during invocations.
+Packages also support parameters which are automatically passed into packaged actions during invocations as **default parameter values** when none are provided.
 
 {% hint style="tip" %}
 Package parameters provide a convenient method to _manage service credentials_ needed with multiple actions.
