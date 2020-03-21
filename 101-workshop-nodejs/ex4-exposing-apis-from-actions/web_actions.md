@@ -304,6 +304,8 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 ## Example: Manual JSON response
 
+If our function is only able to return a response in JSON, we can set the `content-type` manually in the function so the caller need not append `.json` to the URL.
+
 1. Create a new web action from the following source code called `manual.js`.
 
       ```javascript
