@@ -46,3 +46,12 @@ False. Web actions are provided all HTTP request information as parsed input arg
 
 [explanation]
 [explanation]
+
+4. If I have a web action that returns a JSON object, the caller must append <code>.json</code> to the web action's URL to get a successful response.
+
+(!) true
+(x) false
+
+[explanation]
+Alternatively, the function can manually set the <code>content-type</code> in the HTTP response header.  The caller then can call the URL of the web action without modification.
+[explanation]
