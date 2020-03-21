@@ -295,7 +295,11 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 3. Copy and paste that URL into your browser to see the image!
 
-      <!-- GitHuib raw source: "https://raw.githubusercontent.com/IBM/cloud-functions-workshops/master/101-workshop-nodejs/ex4-exposing-apis-from-actions/images/atom.svg?sanitize=true" -->
+      <!--
+      #######################################################
+      TODO: Figure out how to add width="20%" to SVG images.
+      #######################################################
+      -->
       ![atom.svg](images/atom.svg)
 
 ## Example: Manual JSON response
