@@ -21,6 +21,8 @@
 
 Let's now show how these web actions can be turned into an API using the [API Gateway](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-apigateway). First we will choose `/myapi` as the base path. This is the part of the path before the actual endpoint. For example: `example.com/basepath/endpoint`. This is useful for grouping endpoints together in a logical way and is how IBM Cloud Functions organizes your endpoints into a single API.
 
+At first glance, this does not appear to be different from web actions -- you tell IBM Cloud Functions to make your action or sequence to be invoked by calls to an external HTTP endpoint. It returns a URL for a HTTP endpoint. However, the key difference is that you are going through the API Gateway and are able to take advantage of a variety of features outside the scope of this course including [rate limiting, authentication](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-create_api), and [custom domains](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-custom_endpoint) for your API. This is all done by the API gateway with no changes to your action, whereas it would have to be handled by your action directly or just simply impossible to do if you were to just use web actions.
+
 ## Creating an API
 
 To create an API you would use the we will run the following command syntax:
@@ -92,7 +94,7 @@ We must be remember that, by default, IBM Cloud Functions expects a functions re
 2. Check to make sure that the redirect works
 
     ```bash
-    curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
+    curl -v https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
     ```
 
     ```bash
@@ -128,8 +130,10 @@ We must be remember that, by default, IBM Cloud Functions expects a functions re
     ok: created API /myapi/html GET for action /_/html
     https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
     ```
-
-4. Check the endpoints output
+    {% hint style="success" %}
+    While the content-type of the response is text/html, we are still using a response type of http and not html!
+    {% endhint %}
+4. Check the endpoints output. You can copy/paste the url into your browser of choice to see the html rendered and curl it to see the raw html text.
 
     ```bash
     curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
