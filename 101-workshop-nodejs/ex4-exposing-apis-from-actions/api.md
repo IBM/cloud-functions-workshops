@@ -245,30 +245,28 @@ As we can begin to tell, as the number of API endpoints increases, documenting a
     ibmcloud fn api get /myapi > myapi.json
     ```
 
-Now we can delete the existing API we have created and restore using this document:
+    Now we can delete the existing API we have created and restore using this document.
 
-    1. Delete the existing API
+3. Delete the existing API
 
     ```bash
     ibmcloud fn api delete /myapi
     ```
-
     ```bash
     ok: deleted API /myapi
     ```
 
-    2. Check that the endpoints are gone
+4. Check that the endpoints are gone
 
     ```bash
     ibmcloud fn api list
     ```
-
     ```bash
     ok: APIs
     Action                            Verb             API Name  URL
     ```
 
-3. Restore the endpoints from the OpenAPI Specification
+5. Restore the endpoints from the OpenAPI Specification
 
     ```bash
     ibmcloud fn api create -c myapi.json
@@ -287,7 +285,7 @@ Now we can delete the existing API we have created and restore using this docume
     https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
     ```
 
-4. We can now see that endpoints are restored
+6. We can now see that endpoints are restored
 
     ```bash
     ibmcloud fn api list
