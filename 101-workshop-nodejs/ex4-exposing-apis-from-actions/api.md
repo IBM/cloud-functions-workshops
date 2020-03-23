@@ -177,7 +177,7 @@ We must be remember that, by default, IBM Cloud Functions expects a functions re
 
     ```json
     {
-        body: {
+        "body": {
             "__ow_method": "put",
             "__ow_path": "",
             "hello": "world"
