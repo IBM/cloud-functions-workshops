@@ -1,0 +1,1 @@
+node ./md2html.js -s . -c static
