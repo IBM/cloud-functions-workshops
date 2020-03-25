@@ -31,7 +31,7 @@ Review the following steps and examples to create your first JavaScript action.
     }
     ```
 
-    * _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action._
+    _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action._
 
 2. Create an action from the 'hello.js' JavaScript function naming it `hello`:
 
