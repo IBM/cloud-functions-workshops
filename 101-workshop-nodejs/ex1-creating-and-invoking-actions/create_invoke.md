@@ -45,16 +45,16 @@ Review the following steps and examples to create your first JavaScript action.
 
 3. List all actions; it should show the `hello` action you just created:
 
-   ```bash
-   ibmcloud fn action list
-   ```
+    ```bash
+    ibmcloud fn action list
+    ```
 
-   ```text
-   actions
-   <NAMESPACE>/hello       private    nodejs10
-   ```
+    ```text
+    actions
+    <NAMESPACE>/hello       private    nodejs10
+    ```
 
-   You can see the `hello` action you just created under your account's default NAMESPACE.
+    You can see the `hello` action you just created under your account's default NAMESPACE.
 
 ## Invoking Actions
 
