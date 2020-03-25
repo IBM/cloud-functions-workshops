@@ -33,7 +33,7 @@ Review the following steps and examples to create your first JavaScript action.
 
     _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action._
 
-2. Create an action from the following JavaScript function. For this example, the action is called `hello`.
+2. Create an action from the 'hello.js' JavaScript function naming it `hello`:
 
     ```bash
     ibmcloud fn action create hello hello.js
@@ -43,7 +43,7 @@ Review the following steps and examples to create your first JavaScript action.
     ok: created action hello
     ```
 
-3. List the actions that you have created:
+3. List all actions; it should show the `hello` action you just created:
 
    ```bash
    ibmcloud fn action list
