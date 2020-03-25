@@ -54,7 +54,7 @@ Review the following steps and examples to create your first JavaScript action.
    <NAMESPACE>/hello       private    nodejs10
    ```
 
-   You can see the `hello` action you just created under your default NAMESPACE.
+   You can see the `hello` action you just created under your account's default NAMESPACE.
 
 ## Invoking Actions
 
