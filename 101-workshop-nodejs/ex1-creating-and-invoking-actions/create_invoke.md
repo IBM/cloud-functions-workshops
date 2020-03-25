@@ -25,23 +25,23 @@ Review the following steps and examples to create your first JavaScript action.
 
 1. Create a JavaScript file named 'hello.js' with these contents:
 
-   ```javascript
-   function main() {
-       return {payload: 'Hello world'};
-   }
-   ```
+    ```javascript
+    function main() {
+        return {payload: 'Hello world'};
+    }
+    ```
 
-   _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action._
+    _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action._
 
 2. Create an action from the following JavaScript function. For this example, the action is called `hello`.
 
-   ```bash
-   ibmcloud fn action create hello hello.js
-   ```
+    ```bash
+    ibmcloud fn action create hello hello.js
+    ```
 
-   ```text
-   ok: created action hello
-   ```
+    ```text
+    ok: created action hello
+    ```
 
 3. List the actions that you have created:
 
