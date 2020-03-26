@@ -21,9 +21,9 @@
 
 Event parameters can be passed to the action when it is invoked. Let's look at a sample action which uses the parameters to calculate the return values.
 
-## Passing parameters to an action
+## Passing parameters to an Action
 
-1. Update the file `hello.js` with the following following content:
+1. Update the file `hello.js` with the following following source code:
 
    ```javascript
    function main(params) {
@@ -33,13 +33,13 @@ Event parameters can be passed to the action when it is invoked. Let's look at a
 
    The input parameters are passed as a JSON object parameter to the `main` function. Notice how the `name` and `place` parameters are retrieved from the `params` object in this example.
 
-2. Update the `hello` action with the new source code.
+2. Update the `hello` action with the updated file.
 
    ```bash
    ibmcloud fn action update hello hello.js
    ```
 
-## Invoking action with parameters
+## Invoking an action with parameters
 
 When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, the shorter `-p` flag or using an input file containing raw JSON.
 

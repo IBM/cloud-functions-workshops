@@ -131,29 +131,9 @@ If you don't need the action result right away, you can omit the `--blocking` fl
     }
     ```
 
-## Retrieve the last activation result
+3. Retrieve the full activation record
 
-To access the most recent activation result use the `--last` or `-l` flag.
-
-1. Run the following command to get your last activation result.
-
-    ```bash
-    ibmcloud fn activation result --last
-    ```
-
-    ```json
-    {
-        "payload": "Hello world"
-    }
-    ```
-
-{% hint style="warning" %}
-You _do not need to use an Activation ID with the flag `--last`._
-{% endhint %}
-
-## Retrieve the full activation record
-
-1. To get the complete activation record use the `activation get` command using the activation ID from the invocation:
+To get the complete activation record use the `activation get` command using the activation ID from the invocation:
 
     ```bash
     ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
@@ -175,13 +155,49 @@ You _do not need to use an Activation ID with the flag `--last`._
     }
     ```
 
-{% hint style="info" %}
-**Tip** The `--last` flag can also be used to get the last activation record (`activation get --last`), from the activation logs.
+---
+
+## Retrieving Activation records
+
+If you forget to record the Activation ID, there a couple of `activation` commands to help you.
+
+### **Retrieve the last activation record**
+
+1. Run the following command to get your last activation record.
+
+    ```bash
+    ibmcloud fn activation get --last
+    ```
+
+    ```json
+    {
+        "payload": "Hello world"
+    }
+    ```
+
+### **Retrieve the last activation result**
+
+To access the most recent activation result use the `--last` or `-l` flag.
+
+1. Run the following command to get your last activation result.
+
+    ```bash
+    ibmcloud fn activation result --last
+    ```
+
+    ```json
+    {
+        "payload": "Hello world"
+    }
+    ```
+
+{% hint style="tip" %}
+Notice that you _did not need to use an Activation ID when using the flag `--last`._
 {% endhint %}
 
-## Retrieve activation list
+### **Retrieve recent activation list**
 
-1. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
+1. Run the following command to get a list of your most recent activations:
 
 ```bash
 ibmcloud fn activation list
