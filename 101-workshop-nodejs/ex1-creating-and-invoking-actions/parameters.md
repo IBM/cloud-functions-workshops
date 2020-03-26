@@ -17,29 +17,31 @@
 #
 -->
 
-# Using Action Parameters
+# Passing Action Parameters
 
 Event parameters can be passed to the action when it is invoked. Let's look at a sample action which uses the parameters to calculate the return values.
 
-## Passing parameters to an Action
+## Invoking an action with parameters
+
+First, we will need to update our function to look for parameters.
 
 1. Update the file `hello.js` with the following following source code:
 
-   ```javascript
-   function main(params) {
-       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
-   }
-   ```
+    ```javascript
+    function main(params) {
+        return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+    }
+    ```
 
-   The input parameters are passed as a JSON object parameter to the `main` function. Notice how the `name` and `place` parameters are retrieved from the `params` object in this example.
+    The input parameters are passed as a JSON object parameter to the `main` function. Notice how the `name` and `place` parameters are retrieved from the `params` object in this example.
 
-2. Update the `hello` action with the updated file.
+2. Update the `hello` action with the updated source code file.
 
-   ```bash
-   ibmcloud fn action update hello hello.js
-   ```
+    ```bash
+    ibmcloud fn action update hello hello.js
+    ```
 
-## Invoking an action with parameters
+### **Invoking using the `--param` flag**
 
 When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, the shorter `-p` flag or using an input file containing raw JSON.
 
@@ -65,7 +67,11 @@ When invoking actions through the command-line, parameter values can be passed a
 **Note** We used the `--result` option above. It implies a `blocking` invocation where the CLI waits for the activation to complete and then displays only the function's output as the `payload` value.
 {% endhint %}
 
-2. Create a file named `parameters.json` containing the following JSON.
+### **Invoking using the `--param-file` flag**
+
+Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `--param-file` flag:
+
+1. Create a file named `parameters.json` containing the following JSON.
 
     ```json
     {
@@ -74,7 +80,7 @@ When invoking actions through the command-line, parameter values can be passed a
     }
     ```
 
-3. Invoke the `hello` action using parameters from a JSON file.
+2. Invoke the `hello` action using parameters from the JSON file.
 
     ```bash
     ibmcloud fn action invoke --result hello --param-file parameters.json
@@ -86,7 +92,7 @@ When invoking actions through the command-line, parameter values can be passed a
     }
     ```
 
-### Nested parameters
+### Invoking with Nested parameters
 
 Parameter values can be any valid JSON value, including nested objects. Let's update our action to use child properties of the event parameters.
 
@@ -122,6 +128,8 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 🎉 **That was pretty easy, huh?** We can now pass parameters and access these values in our serverless functions. What about parameters that we need but don't want to manually pass in every time? Guess what, we have a trick for that...
 {% endhint %}
 
+---
+
 ## Setting default parameters
 
 Actions can be invoked with multiple named parameters. Recall that the `hello` action from the previous example expects two parameters: the _name_ of a person, and the _place_ where they're from.
@@ -130,51 +138,43 @@ Rather than pass all the parameters to an action every time, you can bind defaul
 
 Let's use the `hello` action from our previous example and bind a default value for the `place` parameter.
 
-Update the action by using the `--param` option to bind default parameter values.
+1. Update the action by using the `--param` option to bind default parameter values.
 
-```bash
-ibmcloud fn action update hello --param place Rivendell
-```
+    ```bash
+    ibmcloud fn action update hello --param place Rivendell
+    ```
 
-Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `--param-file` flag:
+2. Invoke the action, passing only the `name` parameter this time.
 
-Example parameter file called parameters.json:
+    ```bash
+    ibmcloud fn action invoke --result hello --param name Elrond
+    ```
 
-```json
-{
-    "place": "Rivendell"
-}
-```
+    ```json
+    {
+        "payload": "Hello, Elrond from Rivendell"
+    }
+    ```
 
-```bash
-ibmcloud fn action update hello --param-file parameters.json
-```
+    Notice that you did not need to specify the `place` parameter when you invoked the action.
 
-Invoke the action, passing only the `name` parameter this time.
+### Override a bound parameter
 
-```bash
-ibmcloud fn action invoke --result hello --param name Elrond
-```
+Bound parameters can still be overwritten by specifying the parameter value at invocation time.
 
-```json
-{
-    "payload": "Hello, Elrond from Rivendell"
-}
-```
+1. Invoke the action again, passing both `name` and `place` values.
 
-Notice that you did not need to specify the place parameter when you invoked the action. Bound parameters can still be overwritten by specifying the parameter value at invocation time.
+    ```bash
+    ibmcloud fn action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
+    ```
 
-Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
+    ```json
+    {
+        "payload": "Hello, Elrond from the Lonely Mountain"
+    }
+    ```
 
-```bash
-ibmcloud fn action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
-```
-
-```json
-{
-    "payload": "Hello, Elrond from the Lonely Mountain"
-}
-```
+    Notice that the command line value overwrites the value that was bound to the action.
 
 {% hint style="success" %}
 🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs.** Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, right?
