@@ -56,11 +56,13 @@ Review the following steps and examples to create your first JavaScript action.
 
     You can see the `hello` action you just created under your account's default NAMESPACE.
 
+---
+
 ## Invoking Actions
 
 After you create your action, you can run it on IBM Cloud Functions with the `invoke` command using one of two modes:
 
-- **blocking** - which will _**wait**_ for the result \(i.e., request/response style\) by specifying the `blocking` flag on the command-line.
+- **blocking** - which will _**wait** for the result_ \(i.e., request/response style\) by specifying the `--blocking` flag on the command-line.
 - **non-blocking** - which will invoke the action immediately, but _**not wait**_ for a response.
 
 Regardless, invocations always provide an **Activation ID** which can be used later to lookup the action's response.
@@ -114,7 +116,7 @@ If you don't need the action result right away, you can omit the `--blocking` fl
    ok: invoked /_/hello with id 6bf1f670ee614a7eb5af3c9fde813043
    ```
 
-2. Retrieve the activation result
+2. Retrieve the activation result using the activation ID from the invocation:
 
    ```bash
    ibmcloud fn activation result 6bf1f670ee614a7eb5af3c9fde81304
@@ -148,7 +150,7 @@ To access the most recent activation result use the `--last` or `-l` flag.
 
 ## Retrieve the full activation record
 
-  1. To get the complete activation record use the `activation get` command:
+  1. To get the complete activation record use the `activation get` command using the activation ID from the invocation:
 
   ```bash
   ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
