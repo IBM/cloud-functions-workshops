@@ -33,9 +33,9 @@ Review the following steps and examples to create your first JavaScript Action.
     }
     ```
 
-    _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the Action._
+    _The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action._
 
-2. Create an Action from the 'hello.js' JavaScript function naming it `hello`:
+2. Create an action from the 'hello.js' JavaScript function naming it `hello`:
 
     ```bash
     ibmcloud fn action create hello hello.js
@@ -45,7 +45,7 @@ Review the following steps and examples to create your first JavaScript Action.
     ok: created action hello
     ```
 
-3. List all Actions; it should show the `hello` Action you just created:
+3. List all actions; it should show the `hello` action you just created:
 
     ```bash
     ibmcloud fn action list
@@ -56,24 +56,24 @@ Review the following steps and examples to create your first JavaScript Action.
     <NAMESPACE>/hello       private    nodejs10
     ```
 
-    You can see the `hello` Action you just created under your account's default NAMESPACE.
+    You can see the `hello` action you just created under your account's default NAMESPACE.
 
 ---
 
 ## Invoking Actions
 
-After you create your Action, you can run it on IBM Cloud Functions with the `invoke` command using one of two modes:
+After you create your action, you can run it on IBM Cloud Functions with the `invoke` command using one of two modes:
 
 - **blocking** - which will _**wait** for the result_ \(i.e., request/response style\) by specifying the `--blocking` flag on the command-line.
-- **non-blocking** - which will invoke the Action immediately, but _**not wait**_ for a response.
+- **non-blocking** - which will invoke the action immediately, but _**not wait**_ for a response.
 
-Regardless, invocations always provide an **activation ID** which can be used later to lookup the Action's response which is part of an **activation record** the platform creates for each invocation.
+Regardless, invocations always provide an **activation ID** which can be used later to lookup the action's response which is part of an **activation record** the platform creates for each invocation.
 
 ### **Blocking Invocations**
 
 A blocking invocation request will _wait_ for the activation result to be available.
 
-1. Invoke the `hello` Action using the command-line as a blocking activation.
+1. Invoke the `hello` action using the command-line as a blocking activation.
 
     ```bash
     ibmcloud fn action invoke --blocking hello
@@ -101,17 +101,17 @@ A blocking invocation request will _wait_ for the activation result to be availa
     ```
 
 {% hint style="info" %}
-- The wait period is the lesser of 60 seconds or the Action's configured [time limit](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#per-action-timeout-ms-default-60s).
+- The wait period is the lesser of 60 seconds or the action's configured [time limit](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#per-action-timeout-ms-default-60s).
 - The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests \(see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#watching-action-output) for tips on monitoring activations\).
 {% endhint %}
 
 ### **Non-blocking invocations**
 
-A non-blocking invocation will invoke the Action immediately, but _not wait_ for a response.
+A non-blocking invocation will invoke the action immediately, but _not wait_ for a response.
 
 If you don't need the Action result right away, you can omit the `--blocking` flag to make a non-blocking invocation. You can get the result later by using the **Activation ID**.
 
-1. Invoke the `hello` Action using the command-line as a non-blocking activation.
+1. Invoke the `hello` action using the command-line as a non-blocking activation.
 
     ```bash
     ibmcloud fn action invoke hello
@@ -214,7 +214,7 @@ You can always get a list of your most recent activations to find their activati
     ```
 
 {% hint style="info" %}
-**Note** The **`Entity`** column indicates which Action was invoked along with the function's internal version. Every time you update an Action's code, the platform will increment the internal version number.
+**Note** The **`Entity`** column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
 {% endhint %}
 
 ---
@@ -226,10 +226,9 @@ You can always get a list of your most recent activations to find their activati
   - By convention, the `main` function is called _(you can always alias "main" to any function in your `.js` file)_.
 - **No build step**: Runtimes for all supported languages are already deployed in IBM Cloud Function server clusters waiting for your function to be invoked.
 - The **NodeJS runtime was inferred** via the function's `.js` extension. ICF will always use the latest supported NodeJS runtime version unless you explicitly set another version with the `--kind` flag _(not discussed in this course)_.
-- Your Action was installed into an IBM Cloud **Namespace**. This will allow you to apply **Identity and Access Management (IAM)** control to all Actions in a namespace _(not discussed in this course)_.
-- **Note**: Each time the `action update` subcommand is used to update your function, ICF increments the internal version of your Action.
+- Your action was installed into an IBM Cloud **Namespace**. This will allow you to apply **Identity and Access Management (IAM)** control to all actions in a namespace _(not discussed in this course)_.
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into Actions? Let's find out more...
+🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more...
 {% endhint %}
