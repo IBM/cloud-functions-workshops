@@ -1,11 +1,11 @@
-In this course you will learn how ...
+After you complete this course, you will be able to:
 
-- Serverless computing works and ways it can be used in Cloud applications
+- Comprehend how serverless computing works and ways it can be used in cloud applications
 
-- to create and manage Serverless functions with using the IBM Cloud Functions platform
+- Create and manage serverless functions using the IBM Cloud Functions platform
 
-- to expose functions as Cloud APIs and return different content types
+- Expose functions as cloud APIs and return different content types
 
-- to automate your functions using events
+- Automate your functions using events
 
-- to connect Serverless functions to your Cloud applications
+- Connect serverless functions to your cloud applications
