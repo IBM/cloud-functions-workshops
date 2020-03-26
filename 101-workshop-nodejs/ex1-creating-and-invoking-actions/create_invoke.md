@@ -133,7 +133,7 @@ If you don't need the action result right away, you can omit the `--blocking` fl
 
 3. Retrieve the full activation record
 
-To get the complete activation record use the `activation get` command using the activation ID from the invocation:
+    To get the complete activation record use the `activation get` command using the activation ID from the invocation:
 
     ```bash
     ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
@@ -192,22 +192,24 @@ To access the most recent activation result use the `--last` or `-l` flag.
     ```
 
 {% hint style="tip" %}
-Notice that you _did not need to use an Activation ID when using the flag `--last`._
+Notice that you _did not need an Activation ID when using the flag `--last`._
 {% endhint %}
 
 ### **Retrieve recent activation list**
 
+You can always get a list of your most recent activations to find their Activation IDs.
+
 1. Run the following command to get a list of your most recent activations:
 
-```bash
-ibmcloud fn activation list
-```
+    ```bash
+    ibmcloud fn activation list
+    ```
 
-```bash
-Datetime   Activation ID  Kind      Start Duration Status  Entity
-y:m:d:hm:s 44794bd6...    nodejs:10 cold  34s      success <NAMESPACE>/hello:0.0.1
-y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0.1
-```
+    ```bash
+    Datetime   Activation ID  Kind      Start Duration Status  Entity
+    y:m:d:hm:s 44794bd6...    nodejs:10 cold  34s      success <NAMESPACE>/hello:0.0.1
+    y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0.1
+    ```
 
 {% hint style="info" %}
 **Note** The **`Entity`** column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
