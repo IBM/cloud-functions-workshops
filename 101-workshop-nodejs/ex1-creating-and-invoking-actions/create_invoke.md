@@ -220,7 +220,7 @@ You can always get a list of your most recent activations to find their Activati
 ## Observations
 
 {% hint style="tip" %}
-- **No special code needed**, just the code with your favorite language
+- **No special code needed**. Just code with your favorite language.
   - By convention, the `main` function is called _(you can always alias "main" to any function in your `.js` file)_.
 - **No build step**: Runtimes for all supported languages are already deployed in IBM Cloud Function server clusters waiting for your function to be invoked.
 - The **NodeJS runtime was inferred** via the function's `.js` extension. ICF will always use the latest supported NodeJS runtime version unless you explicitly set another version with the `--kind` flag _(not discussed in this course)_.
