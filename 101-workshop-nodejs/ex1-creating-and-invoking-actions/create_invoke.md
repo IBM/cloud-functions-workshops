@@ -19,7 +19,7 @@
 
 # Create and Invoke Actions
 
-In this section, you will learn how to work with **actions** in IBM Cloud Functions (ICF). An action represents the serverless function, along with its conventions and metadata. If you recall, the _Action_ entity was shown as part of the IBM Cloud Functions programming model in the previous chapter.
+In this section, you will learn how to work with **actions** in IBM Cloud Functions (ICF). An action represents the serverless function, along with its conventions and metadata. If you recall, the _Action_ entity was shown as part of the ICF programming model in the previous chapter.
 
 Throughout this course, you might see the word _function_ used synonymously with the term _action_ since actions contain the functional source code, which is the primary focus.
 
@@ -226,11 +226,11 @@ You can always get a list of your most recent activations to find their activati
 {% hint style="tip" %}
 - **No special code needed**. Just code with your favorite language.
   - By convention, the `main` function is called _(you can always alias "main" to any function in your `.js` file)_.
-- **No build step**: Runtimes for all supported languages are already deployed in IBM Cloud Function server clusters waiting for your function to be invoked.
+- **No build step**: Runtimes for all supported languages are already deployed in ICF server clusters waiting for your function to be deployed and invoked.
 - The **NodeJS runtime was inferred** via the function's `.js` extension. ICF will always use the latest supported NodeJS runtime version unless you explicitly set another version with the `--kind` flag _(not discussed in this course)_.
 - Your action was installed into an IBM Cloud **Namespace**. This will allow you to apply **Identity and Access Management (IAM)** control to all actions in a namespace _(not discussed in this course)_.
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more...
+🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on ICF. What about passing data into actions? Let's find out more...
 {% endhint %}
