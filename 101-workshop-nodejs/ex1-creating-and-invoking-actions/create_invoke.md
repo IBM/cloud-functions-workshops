@@ -111,7 +111,7 @@ A blocking invocation request will _wait_ for the activation result to be availa
 
 A non-blocking invocation will invoke the action immediately, but _not wait_ for a response.
 
-If you don't need the Action result right away, you can omit the `--blocking` flag to make a non-blocking invocation. You can get the result later by using the **Activation ID**.
+If you don't need the Action result right away, you can omit the `--blocking` flag to make a non-blocking invocation. You can get the result later by using the activation ID.
 
 1. Invoke the `hello` action using the command-line as a non-blocking activation.
 
