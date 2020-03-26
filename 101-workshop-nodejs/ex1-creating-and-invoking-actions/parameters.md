@@ -112,17 +112,17 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 
 2. Invoke the action with a single `person` parameter that is valid JSON.
 
-   ```bash
-   ibmcloud fn action invoke --result hello-person -p person '{"name": "Elrond", "place": "Rivendell"}'
-   ```
+    ```bash
+    ibmcloud fn action invoke --result hello-person -p person '{"name": "Elrond", "place": "Rivendell"}'
+    ```
 
-   The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the action now expects:
+    The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the action now expects:
 
-   ```json
-   {
-       "payload": "Hello, Elrond from Rivendell"
-   }
-   ```
+    ```json
+    {
+        "payload": "Hello, Elrond from Rivendell"
+    }
+    ```
 
 {% hint style="success" %}
 🎉 **That was pretty easy, huh?** We can now pass parameters and access these values in our serverless functions. What about parameters that we need but don't want to manually pass in every time? Guess what, we have a trick for that...
