@@ -19,9 +19,9 @@
 
 # Passing Action Parameters
 
-Event parameters can be passed to the action when it is invoked. Let's look at a sample action which uses the parameters to calculate the return values.
+Event parameters can be passed to the Action function when it is invoked. Let's look at a sample Action which uses the parameters to calculate the return values.
 
-## Invoking an action with parameters
+## Invoking an Action with parameters
 
 First, we will need to update our function to look for parameters.
 
@@ -35,7 +35,7 @@ First, we will need to update our function to look for parameters.
 
     The input parameters are passed as a JSON object parameter to the `main` function. Notice how the `name` and `place` parameters are retrieved from the `params` object in this example.
 
-2. Update the `hello` action with the updated source code file.
+2. Update the `hello` Action with the updated source code file.
 
     ```bash
     ibmcloud fn action update hello hello.js
@@ -43,9 +43,9 @@ First, we will need to update our function to look for parameters.
 
 ### Invoking using the `--param` flag
 
-When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, the shorter `-p` flag or using an input file containing raw JSON.
+When invoking Actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, the shorter `-p` flag or using an input file containing raw JSON.
 
-1. Invoke the `hello` action using explicit command-line parameters using the `--param` flag.
+1. Invoke the `hello` Action using explicit command-line parameters using the `--param` flag.
 
     ```bash
     ibmcloud fn action invoke --result hello --param name Elrond --param place Rivendell
@@ -80,7 +80,7 @@ Passing parameters from a file requires the creation of a file containing the de
     }
     ```
 
-2. Invoke the `hello` action using parameters from the JSON file.
+2. Invoke the `hello` Action using parameters from the JSON file.
 
     ```bash
     ibmcloud fn action invoke --result hello --param-file parameters.json
@@ -94,9 +94,9 @@ Passing parameters from a file requires the creation of a file containing the de
 
 ### Invoking with Nested parameters
 
-Parameter values can be any valid JSON value, including nested objects. Let's update our action to use child properties of the event parameters.
+Parameter values can be any valid JSON value, including nested objects. Let's update our Action to use child properties of the event parameters.
 
-1. Create the `hello-person` action with the following source code.
+1. Create the `hello-person` Action with the following source code.
 
     ```javascript
     function main(params) {
@@ -108,15 +108,15 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
     ibmcloud fn action create hello-person hello-person.js
     ```
 
-    Now the action expects a single `person` parameter to have fields `name` and `place`.
+    Now the Action expects a single `person` parameter to have fields `name` and `place`.
 
-2. Invoke the action with a single `person` parameter that is valid JSON.
+2. Invoke the Action with a single `person` parameter that is valid JSON.
 
     ```bash
     ibmcloud fn action invoke --result hello-person -p person '{"name": "Elrond", "place": "Rivendell"}'
     ```
 
-    The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the action now expects:
+    The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the Action now expects:
 
     ```json
     {
@@ -132,19 +132,19 @@ Parameter values can be any valid JSON value, including nested objects. Let's up
 
 ## Setting default parameters
 
-Actions can be invoked with multiple named parameters. Recall that the `hello` action from the previous example expects two parameters: the _name_ of a person, and the _place_ where they're from.
+Actions can be invoked with multiple named parameters. Recall that the `hello` Action from the previous example expects two parameters: the _name_ of a person, and the _place_ where they're from.
 
-Rather than pass all the parameters to an action every time, you can bind default parameters. Default parameters are stored in the platform and automatically passed in during each invocation. If the invocation includes the same event parameter, this will overwrite the default parameter value.
+Rather than pass all the parameters to an Action every time, you can bind default parameters. Default parameters are stored in the platform and automatically passed in during each invocation. If the invocation includes the same event parameter, this will overwrite the default parameter value.
 
-Let's use the `hello` action from our previous example and bind a default value for the `place` parameter.
+Let's use the `hello` Action from our previous example and bind a default value for the `place` parameter.
 
-1. Update the action by using the `--param` option to bind default parameter values.
+1. Update the Action by using the `--param` option to bind default parameter values.
 
     ```bash
     ibmcloud fn action update hello --param place Rivendell
     ```
 
-2. Invoke the action, passing only the `name` parameter this time.
+2. Invoke the Action, passing only the `name` parameter this time.
 
      ```bash
      ibmcloud fn action invoke --result hello --param name Elrond
@@ -156,16 +156,16 @@ Let's use the `hello` action from our previous example and bind a default value 
      }
      ```
 
-    Notice that you did not need to specify the `place` parameter when you invoked the action.
+    Notice that you did not need to specify the `place` parameter when you invoked the Action.
 
 ### Override a bound parameter
 
 Bound parameters can still be overwritten by specifying the parameter value at invocation time.
 
-1. Invoke the action again, passing both `name` and `place` values.
+1. Invoke the Action again, passing both `name` and `place` values.
 
     ```bash
-    ibmcloud fn action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
+    ibmcloud fn Action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
     ```
 
     ```json
@@ -174,8 +174,16 @@ Bound parameters can still be overwritten by specifying the parameter value at i
     }
     ```
 
-Notice that the command line value overwrites the value that was bound to the action.
+Notice that the command line value overwrites the value that was bound to the Action.
+
+---
+
+## Observations
+
+{% hint style="tip" %}
+- Each time the `action update` subcommand is used to update your function, ICF increments the internal version of your Action.
+{% endhint %}
 
 {% hint style="success" %}
-🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs.** Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, right?
+🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs.** Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the Action source code. Neat, right?
 {% endhint %}
