@@ -197,7 +197,6 @@ y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0
 **Note** The **`Entity`** column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
 {% endhint %}
 
-<!-->
 ## Observations
 
 {% hint style="tip" %}
@@ -208,7 +207,6 @@ y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0
 - Your action was installed into an IBM Cloud **Namespace**. This will allow you to apply **Identity and Access Management (IAM)** control to all actions in a namespace _(not discussed in this course)_.
 - **Note**: Each time the action `'update'` subcommand is used to update your function, ICF increments the internal version of your action.
 {% endhint %}
--->
 
 {% hint style="success" %}
 🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more...
