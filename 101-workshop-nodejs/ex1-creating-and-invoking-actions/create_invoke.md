@@ -145,7 +145,7 @@ To access the most recent activation result use the `--last` or `-l` flag.
   ```
 
   {% hint style="warning" %}
-  _Do not use an activation ID with the flag `--last`._
+  You _do not need to use an Activation ID with the flag `--last`._
   {% endhint %}
 
 ## Retrieve the full activation record
