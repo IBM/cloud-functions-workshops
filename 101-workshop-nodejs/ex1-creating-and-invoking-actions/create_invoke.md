@@ -25,7 +25,7 @@ Throughout this course, you might see the word _function_ used synonymously with
 
 ## Creating Node.js Actions
 
-Review the following steps and examples to create your first JavaScript Action.
+Review the following steps and examples to create your first JavaScript action.
 
 1. Create a JavaScript file named 'hello.js' with these contents:
 
