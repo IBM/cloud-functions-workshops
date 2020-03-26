@@ -71,34 +71,37 @@ Regardless, invocations always provide an **Activation ID** which can be used la
 
 A blocking invocation request will _wait_ for the activation result to be available.
 
-The wait period is the lesser of 60 seconds or the action's configured [time limit](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#per-action-timeout-ms-default-60s). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests \(see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#watching-action-output) for tips on monitoring activations\).
-
 1. Invoke the `hello` action using the command-line as a blocking activation.
 
-  ```bash
-  ibmcloud fn action invoke --blocking hello
-  ```
+    ```bash
+    ibmcloud fn action invoke --blocking hello
+    ```
 
-  The command outputs the **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`) which can always be used later to lookup the response:
+    The command outputs the **Activation ID** (`44794bd6aab74415b4e42a308d880e5b`) which can always be used later to lookup the response:
 
-  ```bash
-  ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
-  ```
+    ```bash
+    ok: invoked /_/hello with id 44794bd6aab74415b4e42a308d880e5b
+    ```
 
-  and the complete **Activation record** in JSON format which contains all information about the activation including the function's complete `response`. The JavaScript function's output is the string `Hello world` which appears as the value of the `payload` key:
+    and the complete **Activation record** in JSON format which contains all information about the activation including the function's complete `response`. The JavaScript function's output is the string `Hello world` which appears as the value of the `payload` key:
 
-  ```json
-  ...
-  "response": {
-        "result": {
-            "payload": "Hello world"
-        },
-        "size": 25,
-        "status": "success",
-        "success": true
-    },
+    ```json
     ...
-  ```
+    "response": {
+          "result": {
+              "payload": "Hello world"
+          },
+          "size": 25,
+          "status": "success",
+          "success": true
+      },
+      ...
+    ```
+{% hint style="info" %}
+The wait period is the lesser of 60 seconds or the action's configured [time limit](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#per-action-timeout-ms-default-60s).
+
+The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests \(see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#watching-action-output) for tips on monitoring activations\).
+{% endhint %}
 
 ### Non-blocking invocations
 
@@ -108,25 +111,25 @@ If you don't need the action result right away, you can omit the `--blocking` fl
 
 1. Invoke the `hello` Action using the command-line as a non-blocking activation.
 
-   ```bash
-   ibmcloud fn action invoke hello
-   ```
+    ```bash
+    ibmcloud fn action invoke hello
+    ```
 
-   ```bash
-   ok: invoked /_/hello with id 6bf1f670ee614a7eb5af3c9fde813043
-   ```
+    ```bash
+    ok: invoked /_/hello with id 6bf1f670ee614a7eb5af3c9fde813043
+    ```
 
 2. Retrieve the activation result using the activation ID from the invocation:
 
-   ```bash
-   ibmcloud fn activation result 6bf1f670ee614a7eb5af3c9fde81304
-   ```
+    ```bash
+    ibmcloud fn activation result 6bf1f670ee614a7eb5af3c9fde81304
+    ```
 
-   ```json
-   {
-       "payload": "Hello world"
-   }
-   ```
+    ```json
+    {
+        "payload": "Hello world"
+    }
+    ```
 
 ## Retrieve the last activation result
 
@@ -144,9 +147,9 @@ To access the most recent activation result use the `--last` or `-l` flag.
   }
   ```
 
-  {% hint style="warning" %}
-  You _do not need to use an Activation ID with the flag `--last`._
-  {% endhint %}
+{% hint style="warning" %}
+You _do not need to use an Activation ID with the flag `--last`._
+{% endhint %}
 
 ## Retrieve the full activation record
 
@@ -172,9 +175,9 @@ To access the most recent activation result use the `--last` or `-l` flag.
   }
   ```
 
-  {% hint style="info" %}
-  **Tip** The `--last` flag can also be used to get the last activation record (`activation get --last`), from the activation logs.
-  {% endhint %}
+{% hint style="info" %}
+**Tip** The `--last` flag can also be used to get the last activation record (`activation get --last`), from the activation logs.
+{% endhint %}
 
 ## Retrieve activation list
 
