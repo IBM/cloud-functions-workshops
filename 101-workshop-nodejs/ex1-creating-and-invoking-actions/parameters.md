@@ -146,15 +146,15 @@ Let's use the `hello` action from our previous example and bind a default value 
 
 2. Invoke the action, passing only the `name` parameter this time.
 
-    ```bash
-    ibmcloud fn action invoke --result hello --param name Elrond
-    ```
+     ```bash
+     ibmcloud fn action invoke --result hello --param name Elrond
+     ```
 
-    ```json
-    {
+     ```json
+     {
         "payload": "Hello, Elrond from Rivendell"
-    }
-    ```
+     }
+     ```
 
     Notice that you did not need to specify the `place` parameter when you invoked the action.
 
