@@ -17,26 +17,26 @@
 #
 -->
 
-# What is Serverless?
+# What is serverless?
 
-## Learning Objectives
+## Learning objectives
 
-In this lesson you will learn about:
+In this lesson, you will learn:
 
-* What Serverless computing is and its characteristics
-* How Serverless simplifies the Operations landscape for Developers
-* The basic Serverless programming model using the semantics of IBM Cloud Functions (ICF)
-  * The difference between _Function-as-a-Service (FaaS)_ and _Container-as-a-Service (CaaS)_ workloads and deployment models
-* The top use cases for Serverless
-  * The types of problems Serverless is the right choice to solve
-  * and where traditional servers may still be best
-* Why IBM Cloud Functions is a mature Serverless platform that enables Developer agility by supporting:
-  * _Polyglot_ programming languages
-  * Logical functional _Compositions_
-  * Built-in _Event adapters_ to various services and data sources
+* What serverless computing is and its characteristics
+* How serverless simplifies the operations landscape for developers
+* The basic serverless programming model, using the semantics of IBM Cloud Functions (ICF), which includes:
+  * The differences between Function-as-a-Service (FaaS) and Container-as-a-Service (CaaS) workloads and deployment models
+* The top use cases for serverless, including:
+  * Problems that serverless can best solve
+  * Problems where traditional servers may work best
+* Why ICF is a mature serverless platform that enables developer agility by supporting:
+  * Polyglot programming languages
+  * Logical functional compositions
+  * Built-in event adapters to various services and data sources
 
-Upon completion you should be able to:
+Upon completion of this lesson, you should be able to:
 
-* Summarize Serverless computing in simple terms and be able to concisely describe  why, as a technology, it is an essential part of low-cost, rapid Cloud application development.
-* Identify and describe typical patterns of real-world problems that Serverless computing is ideal in solving.
-* Describe advanced features IBM Cloud Functions supports that make it a great choice for Serverless application development.
+* Summarize serverless computing in simple terms and be able to concisely describe why, as a technology, it is an essential part of low-cost, rapid cloud application development
+* Identify and describe typical patterns of real-world problems that serverless computing is ideal in solving
+* Describe advanced features ICF supports that make it ideal for serverless application development
