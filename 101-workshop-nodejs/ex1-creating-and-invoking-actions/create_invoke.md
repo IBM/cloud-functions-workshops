@@ -194,17 +194,17 @@ y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0
 **Note** The **`Entity`** column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
 {% endhint %}
 
-{% hint style="success" %}
-🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more...
-{% endhint %}
+## Observations
 
-### Observations
-
-{% hint style="success" %}
+{% hint style="tip" %}
 - **No special code needed**, just the code with your favorite language
   - By convention, the `main` functions is called _(you can always alias "main" to any function in your `.js` file)_.
 - **No build step**: Runtimes for all supported languages are already deployed in IBM Cloud Function server clusters waiting for your function to be invoked.
 - **NodeJS inferred** via function's `.js` extension and will use the latest supported NodeJS runtime version. If you want a specific NodeJS version, you can explicitly set with `--kind` flag _(not discussed in this course)_.
 - Your action was installed into IBM Cloud **Namespace** which allows you to  apply **Identity and Access Management (IAM) access control** to any action. _(not discussed in this course)_.
 - **Note**: The action `update` subcommand will update the internal version of your function source code _(allowing existing actions to complete with source code version in-flight)_
+{% endhint %}
+
+{% hint style="success" %}
+🎉 **Great work!** You have now learned how to create, deploy and invoke your own serverless functions on IBM Cloud Functions. What about passing data into actions? Let's find out more...
 {% endhint %}
