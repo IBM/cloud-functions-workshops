@@ -67,7 +67,7 @@ After you create your action, you can run it on IBM Cloud Functions with the `in
 
 Regardless, invocations always provide an **Activation ID** which can be used later to lookup the action's response.
 
-### Blocking Invocations
+### **Blocking Invocations**
 
 A blocking invocation request will _wait_ for the activation result to be available.
 
@@ -103,7 +103,7 @@ A blocking invocation request will _wait_ for the activation result to be availa
 - The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests \(see [here](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions.md#watching-action-output) for tips on monitoring activations\).
 {% endhint %}
 
-### Non-blocking invocations
+### **Non-blocking invocations**
 
 A non-blocking invocation will invoke the action immediately, but _not wait_ for a response.
 
