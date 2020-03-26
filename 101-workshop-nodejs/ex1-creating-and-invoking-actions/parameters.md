@@ -174,7 +174,7 @@ Bound parameters can still be overwritten by specifying the parameter value at i
     }
     ```
 
-    Notice that the command line value overwrites the value that was bound to the action.
+Notice that the command line value overwrites the value that was bound to the action.
 
 {% hint style="success" %}
 🎉 **Default parameters are awesome for handling parameters like authentication keys for APIs.** Letting the platform pass them in automatically means you don't have include these keys in invocation requests or include them in the action source code. Neat, right?
