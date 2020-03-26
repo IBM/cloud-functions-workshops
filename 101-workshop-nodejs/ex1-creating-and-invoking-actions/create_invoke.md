@@ -19,7 +19,7 @@
 
 # Create and Invoke Actions
 
-In this section, we will show you how to work with IBM Cloud Function **Actions** which represent the serverless function along with its conventions and metadata as part of the programming model.  Throughout this course, you may see the word _function_ which may be used synonymously with the term _action_ since the functional source code of the _action_ is the primary focus for the developer.
+In this section, we will show you how to work with **Actions** in IBM Cloud Functions which represent the serverless function along with its conventions and metadata as part of the programming model.  Throughout this course, you may see the word _function_ which may be used synonymously with the term _action_ since the functional source code of the _action_ is the primary focus for the developer.
 
 ## Creating Node.js Actions
 
