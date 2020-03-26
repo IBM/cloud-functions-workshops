@@ -201,7 +201,7 @@ y:m:d:hm:s 6bf1f670...    nodejs:10 warm  2ms      success <NAMESPACE>/hello:0.0
 
 {% hint style="tip" %}
 - **No special code needed**, just the code with your favorite language
-  - By convention, the `main` functions is called _(you can always alias "main" to any function in your `.js` file)_.
+  - By convention, the `main` function is called _(you can always alias "main" to any function in your `.js` file)_.
 - **No build step**: Runtimes for all supported languages are already deployed in IBM Cloud Function server clusters waiting for your function to be invoked.
 - The **NodeJS runtime was inferred** via the function's `.js` extension. ICF will always use the latest supported NodeJS runtime version unless you explicitly set another version with the `--kind` flag _(not discussed in this course)_.
 - Your action was installed into an IBM Cloud **Namespace**. This will allow you to apply **Identity and Access Management (IAM)** control to all actions in a namespace _(not discussed in this course)_.
