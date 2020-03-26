@@ -41,7 +41,7 @@ First, we will need to update our function to look for parameters.
     ibmcloud fn action update hello hello.js
     ```
 
-### **Invoking using the `--param` flag**
+### Invoking using the `--param` flag
 
 When invoking actions through the command-line, parameter values can be passed as through explicit command-line parameters `—param` flag, the shorter `-p` flag or using an input file containing raw JSON.
 
@@ -67,7 +67,7 @@ When invoking actions through the command-line, parameter values can be passed a
 **Note** We used the `--result` option above. It implies a `blocking` invocation where the CLI waits for the activation to complete and then displays only the function's output as the `payload` value.
 {% endhint %}
 
-### **Invoking using the `--param-file` flag**
+### Invoking using the `--param-file` flag
 
 Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `--param-file` flag:
 
