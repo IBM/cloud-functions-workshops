@@ -137,15 +137,15 @@ To access the most recent activation result use the `--last` or `-l` flag.
 
 1. Run the following command to get your last activation result.
 
-  ```bash
-  ibmcloud fn activation result --last
-  ```
+    ```bash
+    ibmcloud fn activation result --last
+    ```
 
-  ```json
-  {
-      "payload": "Hello world"
-  }
-  ```
+    ```json
+    {
+        "payload": "Hello world"
+    }
+    ```
 
 {% hint style="warning" %}
 You _do not need to use an Activation ID with the flag `--last`._
@@ -153,27 +153,27 @@ You _do not need to use an Activation ID with the flag `--last`._
 
 ## Retrieve the full activation record
 
-  1. To get the complete activation record use the `activation get` command using the activation ID from the invocation:
+1. To get the complete activation record use the `activation get` command using the activation ID from the invocation:
 
-  ```bash
-  ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
-  ```
+    ```bash
+    ibmcloud fn activation get 6bf1f670ee614a7eb5af3c9fde813043
+    ```
 
-  ```json
-  ok: got activation 6bf1f670ee614a7eb5af3c9fde813043
-  {
-    ...
-    "response": {
-        "result": {
-            "payload": "Hello world"
-        },
-        "size": 25,
-        "status": "success",
-        "success": true
-    },
-    ...
-  }
-  ```
+    ```json
+    ok: got activation 6bf1f670ee614a7eb5af3c9fde813043
+    {
+      ...
+      "response": {
+          "result": {
+              "payload": "Hello world"
+          },
+          "size": 25,
+          "status": "success",
+          "success": true
+      },
+      ...
+    }
+    ```
 
 {% hint style="info" %}
 **Tip** The `--last` flag can also be used to get the last activation record (`activation get --last`), from the activation logs.
