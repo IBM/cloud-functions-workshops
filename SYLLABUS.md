@@ -29,7 +29,7 @@
 
 ### Module 2 - Create and invoke actions
 
-- Create and invoke a Node.js action using blocking and non-blocking invocations
+- Create and invoke actions
 - Use action parameters
 - Retrieve action logs
 - Asynchronous actions

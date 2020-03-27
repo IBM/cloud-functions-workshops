@@ -19,6 +19,8 @@
 
 # What is serverless?
 
+_"What is Serverless computing and what is it good for?"_
+
 ## Learning objectives
 
 In this lesson, you will learn:
