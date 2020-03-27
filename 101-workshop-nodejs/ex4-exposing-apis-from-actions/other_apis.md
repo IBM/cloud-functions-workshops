@@ -31,9 +31,11 @@ This is a supplementary document showing the creation of API endpoints for the w
     ok: created API /myapi/html GET for action /_/html
     https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
     ```
+    
 {% hint style="success" %}
 **While the content-type of the response is text/html, we are still using a response type of http and not html!**
 {% endhint %}
+
 2. Check the endpoints output. You can copy/paste the url into your browser of choice to see the html rendered and curl it to see the raw html text.
 
     ```bash
