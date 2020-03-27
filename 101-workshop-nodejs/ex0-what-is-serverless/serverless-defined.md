@@ -17,19 +17,11 @@
 #
 -->
 
-# What is Serverless?
+# What is serverless?
 
-## The marketing hype
+It's most likely that the term _serverless_ was coined to attract the attention of developers wishing to reduce the server costs of running their applications. Although the name implies that code can be run without the need for classic servers, that simply is not true!
 
-Likely, thanks to some _marketing person_, the term _"Serverless"_ was coined to attract the attention of people wishing reduce the server costs of running their applications.
-
-{% hint style="warning" %}
-The name implies that code can be run without the need for classic servers _**which is absolutely not true**_!
-{% endhint %}
-
-## The ideal of Serverless
-
-You can likely find any number of definitions for the concept of Serverless, but _"in-a-nutshell"_ and for the purpose of this course, you can think of it as:
+There are a number of definitions for serverless concepts, but for the purpose of this course, serverless is defined as follows:
 
 {% hint style="definition" %}
 **serv&middot;er&middot;less**
@@ -38,10 +30,4 @@ _adjective_ (of computing)
 1. _Event-driven application programming using stand-alone functions with no deployment or operational considerations_
 {% endhint %}
 
-### Serverless "is a" misnomer
-
-To be clear...
-
-{% hint style="success" %}
-_**<u>Servers exist</u>**, but are <u>not</u> the Developer’s concern._
-{% endhint %}
+To be clear, serverless is a misnomer. How? Because servers exist but are not a concern for developers!
