@@ -21,9 +21,9 @@
 
 ### Module 1 - Serverless basics
 
-- Differentiate a Function-as-a-Service (FaaS) from a Container-as-a-Service (CaaS)
 - How serverless is simplifying the Ops landscape for developers
 - Understand the basic serverless programming model and semantics of IBM Cloud Functions
+- Differentiate a Function-as-a-Service (FaaS) from a Container-as-a-Service (CaaS)
 - Top use cases for serverless
 - How IBM Cloud Functions implements serverless
 
@@ -53,4 +53,9 @@
 - Create web-enabled actions
 - API management of web actions
 
+### Module 6 - Use the Web User Interface (Web UI)
 
+- create and invoke an action
+- create a trigger
+- create an API
+- explore the monitoring dashboard
