@@ -19,38 +19,38 @@
 
 ## Syllabus
 
-### Module 1 - What is Serverless computing and what is it good for?
+### Module 1 - Serverless basics
 
-- Differentiating Function-as-a-Service (FaaS) from Container-as-a-Service (CaaS)
-- How Serverless is simplifying the "Ops" landscape for Developers
-- Understand the basic Serverless programming model and semantics of IBM Cloud Functions
-- What are the top use cases for Serverless
-- How IBM Cloud Functions implements Serverless at a high-level
+- Differentiate a Function-as-a-Service (FaaS) from a Container-as-a-Service (CaaS)
+- How serverless is simplifying the Ops landscape for developers
+- Understand the basic serverless programming model and semantics of IBM Cloud Functions
+- Top use cases for serverless
+- How IBM Cloud Functions implements serverless
 
-### Module 2 - Creating and Invoking Actions
+### Module 2 - Create and invoke actions
 
-- Creating and Node.js Actions and Invoking using blocking and non-blocking Invocations
-- Using Action Parameters
-- Retrieving Action Logs
-- Asynchronous Actions
-- Using Action Sequences
+- Create and invoke a Node.js action using blocking and non-blocking invocations
+- Use action parameters
+- Retrieve action logs
+- Asynchronous actions
+- Practice action sequences
 
-### Module 3 - Managing Actions with Packages
+### Module 3 - Manage actions with packages
 
-- Using packaged Actions
-- Creating your own packages
+- Use packaged actions
+- Create your own packages
 
-### Module 4 - Connecting Actions to Event Sources
-
-- Understanding the concepts
-- Creating Triggers
-- Using Rules
-- Connecting Trigger Feeds
-
-### Module 5 - Exposing APIs from Actions
+### Module 4 - Connect actions to event sources
 
 - Understand the concepts
-- Creating Web-enabled Actions
-- API Management of Web Actions
+- Create triggers
+- Practice rules
+- Connect trigger feeds
+
+### Module 5 - Expose APIs from actions
+
+- Understand the concepts
+- Create web-enabled actions
+- API management of web actions
 
 
