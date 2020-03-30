@@ -13,4 +13,4 @@
 
 ## Recommended skills prior to taking this course
 
-- Basic knowledge if NodeJS (JavaScript) programming
+- Basic knowledge of NodeJS (JavaScript) programming
