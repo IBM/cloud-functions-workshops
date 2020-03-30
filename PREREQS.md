@@ -1,9 +1,8 @@
-## An **IBM Cloud Account**
-
+- A valid **IBM Cloud Account**
     - Verify the account has targeted a region where the IBM Cloud Functions (ICF) service is available.
-    - Verify the account has targeted a Cloud Foundry (CF) namespace as the `default`.
+    - Verify the account has targeted a Cloud Foundry (CF) namespace as the default namespace.
 
-- Installation if the **IBM Cloud Command Line Interface (CLI)** and installation of the **Cloud Functions (CF) plugin**
+- Installation of the **IBM Cloud Command Line Interface (CLI)** and installation of the **Cloud Functions (CF) plugin**
     - General IBM CLI Installation guide: [https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started)
     - IBM Cloud Functions install guide: [https://cloud.ibm.com/functions/learn/cli](https://cloud.ibm.com/functions/learn/cli)
 
