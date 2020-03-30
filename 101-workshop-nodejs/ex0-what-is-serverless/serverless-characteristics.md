@@ -17,55 +17,45 @@
 #
 -->
 
-# Characteristics of Serverless
+# Characteristics of serverless
 
-## Taking the "Ops" out of "DevOps"
+## Taking the Ops out of DevOps
 
-In today's agile-focused world, Developers are now (more than ever) expected to understand the operational considerations of deploying, hosting and maintaining their applications "on the Cloud"; hence the term "DevOps".
+In today's agile-focused world, developers are now, more than ever, expected to understand the operational considerations of deploying, hosting, and maintaining their applications on the cloud. This often means developers spend less time coding applications and much more time worrying about the operational aspects.
 
-However, this often means less time actually coding the application and much more time worrying about the operational aspects.
+![The DevOps blues](images/101-ex0-serverless-devops-blues.png)
 
-![The "DevOps" blues](images/101-ex0-serverless-devops-blues.png)
+## NoOps for developers
 
-## “→ NoOps” for the Developer
+To enable developers to focus on coding, providers of serverless computing strive to approach **zero** operational considerations. This can be achieved by offloading all the labor-intensive operational tasks to the serverless provider which includes:
 
-Providers of Serverless computing strive to **approach zero operational considerations**, often referred to as "NoOps", for the Developer.
+- Maximizing compute, memory, and networking utilization
 
-## Provider “implements” Operations
+- Minimizing compute costs by using a _[Pay-As-You-GO (PAYGO)](https://en.wikipedia.org/wiki/PAYGO)_ cost model
 
-All the labor-intensive operational tasks are offloaded to the Serverless provider which include:
-
-- **Maximizing Utilization**
-  - Compute / Memory / Networking
-
-- **Minimizing Compute Costs**
-  - using a _[Pay-As-You-GO (PAYGO)](https://en.wikipedia.org/wiki/PAYGO)_ cost model
-
-- **Guarantees all the "Ops"**
-  - Scaling,
-  - Low latency,
-  - High Availability (HA),
-  - Multi-region,
-  - Monitoring,
-  - Logging,
+- Guaranteeing all the Ops, including:
+  - Scaling
+  - Low latency
+  - High Availability (HA)
+  - Multi-region
+  - Monitoring
+  - Logging
   - Security
 
 {% hint style="warning" %}
-_Your Serverlesss operational features savings varies by provider and their Service License Agreements (SLAs)._
+Savings on your serverless operational features may vary by provider and Service License Agreements (SLAs).
 {% endhint %}
 
 {% hint style="info" %}
-Across-the-board, IBM Cloud Functions and its SLA offers all these Operational services at the highest level of quality and service for every price plan.
+IBM Cloud Functions (ICF) and its SLA offers operational services at the highest level of quality and service for every price plan.
 {% endhint %}
 
-## Getting back to coding business logic
+## Back to coding
 
-Thanks to Serverless, once the "Ops" is taken out of "DevOps", Developers can return their attention to writing truly amazing applications that focus on just the business logic. The end result is not only increased agility delivering software based on actual customer needs, but also serves to maximize Developer joy in doing their daily work.
+Thanks to serverless, once the Ops is taken out of DevOps, developers can return their attention to writing amazing applications that focus on business logic. The result is not only increased agility delivering software based on actual customer needs, but also serves to maximize developer joy in doing their daily work.
 
-![Serverless increases Developer joy!](images/101-ex0-serverless-developer-joy.png)
-
-As you will find by taking this course...
+![Serverless increases developer's joy!](images/101-ex0-serverless-developer-joy.png)
 
 {% hint style="success" %}
-The IBM Cloud Functions (ICF) Serverless platform not only delivers on all the Operational features, but also exceeds what most providers offer while always keeping the focus on the Developer!
+The ICF serverless platform not only delivers on all the operational features, but also exceeds what most providers offer, while always keeping the focus on the developer!
 {% endhint %}
