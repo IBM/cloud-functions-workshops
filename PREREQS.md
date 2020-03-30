@@ -1,3 +1,5 @@
+## Prerequisites
+
 - A valid **IBM Cloud Account**
     - Verify the account has targeted a region where the IBM Cloud Functions (ICF) service is available.
     - Verify the account has targeted a Cloud Foundry (CF) namespace as the default namespace.
