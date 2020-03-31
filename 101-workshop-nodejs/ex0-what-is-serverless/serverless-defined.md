@@ -30,4 +30,8 @@ _adjective_ (of computing)
 1. _Event-driven application programming using stand-alone functions with no deployment or operational considerations_
 {% endhint %}
 
+{% hint style="info" %}
 To be clear, **serverless is a misnomer**. Why? Because servers exist but are not a concern for developers!
+{% endhint %}
+
+Next, let's explore some of the characteristics of serverless...

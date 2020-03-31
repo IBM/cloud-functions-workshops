@@ -92,7 +92,7 @@ You can also pass parameters from a file containing the desired content in JSON 
     }
     ```
 
-### Invoking with Nested parameters
+### Invoking with nested parameters
 
 Parameter values can be any valid JSON value, including nested objects. Let's update our action to use child properties of the event parameters.
 
