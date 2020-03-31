@@ -70,7 +70,7 @@ In the case of the ICF's model, the event source is more conceptual and the **Fe
 
 1. Connection: A dedicated running service that maintains a persistent connection to an event source (for example, implementing a client of a message queue service or database) that creates and generates events on its behalf.
 
-Feeds that are implemnented as long-running services are sometimes referenced as event provider services.
+Feeds that are implemented as long-running services are sometimes referenced as event provider services.
 
 {% hint style="tip" %}
 Later in the course, you will learn how to implement a **polling feed service** using a serverless function that is periodically triggered from an  alarm!
@@ -80,7 +80,7 @@ Later in the course, you will learn how to implement a **polling feed service** 
 
 **Triggers** are not part of every serverless programming model but are a powerful concept within ICF that supports the [observer design pattern](https://en.wikipedia.org/wiki/Observer_pattern) effectively.
 
-In ICF, the trigger is a programmatic construct that represents a class of or stream of events that are suitable for one or more associated functions to process. In this pattern, the functions themselves are the observers or sinks for the event data. This loose association allows both the functions and the event sources to remain independent and agnostic to any specific underlying event processing implementations.
+In ICF, the trigger is a programmatic construct that represents a class of or stream of events that are suitable for one or more associated functions to process. In this pattern, the functions themselves are the _observers_ or event "sinks" for the event data. This loose association allows both the functions and the event sources to remain independent and agnostic to any specific underlying event processing implementations.
 
 {% hint style="info" %}
 The term trigger in the model is intended to draw upon the analogy of triggering or firing a weapon; therefore, you may encounter these terminologies instead of terms like invoking or calling a function.
@@ -98,8 +98,7 @@ Within the ICF programming model, the **Action** represents more than just the a
 - **Parameter defaults**: This is the default values applied when they are missing from the event data.
 - **Limits**: Limits can be optional for an action timeout, memory, and log size which is constrained by ICF maximums.
 - **Annotations**: An associated system and user appended metadata.
-
-Advanced features allow auto-managing action updates through hashing the action, its function, signature, and metadata.
+    - Advanced deployment tooling even utilizes annotations to enable auto-managing client-server synchronization of packages, actions, triggers, rules and other data via hashing techniques.
 
 As you proceed through this course using ICF, you will use the term action more often than the word function. Know that this course primarily references the function which is central to the action.
 
