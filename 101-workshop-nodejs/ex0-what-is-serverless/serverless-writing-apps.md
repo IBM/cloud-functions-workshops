@@ -112,7 +112,11 @@ These packages include event integrations with the following services:
 
 All you need do is "bind" them into your namespace with an alias along with your configurations (e.g., credentials) to reference them from your Actions.
 
-Some notable packages:
+## Notable packages popular in ICF applications
+
+Some of the packages ICF provides deserve special mention not only because they are useful for almost any serverless application, but also within ICF they represent scalable, IBM managed services that you do not need to deploy and run yourself.
+
+All you need do is bind the package with proper inputs (e.g., credentials for storage services) and ICF does the rest!
 
 ### **Alarms Feed**
 
