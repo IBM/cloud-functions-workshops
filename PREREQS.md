@@ -11,7 +11,7 @@ To follow this course, you must:
 4. Install the [Cloud Functions (CF)](https://cloud.ibm.com/functions/learn/cli) plugin.
 
 {% hint style="info" %}
-[A step-by-step guide](https://github.com/IBM/cloud-functions-workshops/tree/master/prereqs) (with screenshots) is available that covers both the IBM Cloud CLI (step 3) and Cloud Functions plugin (step 4) installations.
+[A step-by-step guide](https://github.com/IBM/cloud-functions-workshops/tree/master/prereqs) (with screenshots) is available that covers both the IBM Cloud CLI _(step 3)_ and Cloud Functions plugin _(step 4)_ installations.
 {% endhint %}
 
 ## Recommended skills prior to taking this course
