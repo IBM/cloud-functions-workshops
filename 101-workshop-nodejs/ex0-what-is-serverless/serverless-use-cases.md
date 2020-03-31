@@ -17,13 +17,13 @@
 #
 -->
 
-# When to apply Serverless
+# When to apply serverless
 
-## Serverless as the ultimate Microservice framework
+## Serverless as the ultimate microservice framework
 
 If you have already moved towards deconstructing your monolithic applications to embrace microservices and reactive programming concepts, then Serverless should be viewed as the ultimate programming evolution towards realizing and optimizing these concepts as a computing service in a language-agnostic way.
 
-### General patterns for Serverless
+### General patterns for serverless
 
 #### **Unpredictable load**
 
@@ -41,7 +41,7 @@ Most user-driven use cases, including data driven by workflows with human intera
 Hosting these cases as Serverless functions on IBM Cloud Functions can be extremely cost-effective for both its [PAYGO](https://en.wikipedia.org/wiki/PAYGO) cost model and its ability to automatically scale on-demand.
 {% endhint %}
 
-### Serverless Anti-patterns
+### Serverless anti-patterns
 
 #### **Functions under constant load**
 
@@ -69,7 +69,7 @@ Please note that there are ways to recognize and mitigate against these anti-pat
 
 ---
 
-# "Top 4" Serverless use cases
+# "Top 4" serverless use cases
 
 Although you can use Serverless to solve most problems, here are four general use cases Developers looking adopting Serverless should consider.
 
@@ -99,7 +99,7 @@ In this course, we will actually show you how to setup the Alarm feed provider i
 If you want to read more about ICF Alarms check out this blog:
 - _[New Alarm based trigger events for IBM Cloud Functions](https://www.ibm.com/cloud/blog/new-alarm-based-trigger-events-for-ibm-cloud-functions)_
 
-## 2. **Extract-Transform-Load (ETL) Pipelines**
+## 2. **Extract-Transform-Load (ETL) pipelines**
 
 ![ETL Pipeline Use Case ](images/101-ex0-use-case-etl-pipeline.png)
 
@@ -128,7 +128,7 @@ Configure a client feed to "pull" messages off a queue and trigger an action wit
 
 - Message Queues _(e.g., Kafka, RabbitMQ)_
 
-#### _Streaming Data (Analytics)_
+#### _Streaming data (analytics)_
 
 Yes, you can absolutely use Serverless functions to transform/enhance data "in stream"!
 
@@ -164,7 +164,7 @@ Serverless offers a low cost alternative to run what are often called _**Embarra
 - **Hyperparameter tuning**
 - **Web scraping**
 
-Serverless Providers are constantly competing to give each function large amounts of concurrent execution with guaranteed memory and execution time in order to perform such tasks.  In fact, some researchers are using Serverless in conjunction with technologies such as [Apache Spark](https://spark.apache.org/) which requires more dedicated compute resources for performing these tasks.
+Serverless providers are constantly competing to give each function large amounts of concurrent execution with guaranteed memory and execution time in order to perform such tasks.  In fact, some researchers are using Serverless in conjunction with technologies such as [Apache Spark](https://spark.apache.org/) which requires more dedicated compute resources for performing these tasks.
 
 {% hint style="tip" %}
 Analytic workloads are one of the fastest growing use cases for Serverless especially using the Python language.  IBM has created the [PyWren project](https://github.com/pywren/pywren-ibm-cloud) to provide libraries and examples that help you quickly build analytic application by integrating data from open source projects like [Jupyter](https://jupyter.org/) and [TensorFlow](https://www.tensorflow.org/).
