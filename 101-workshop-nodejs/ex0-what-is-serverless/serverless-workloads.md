@@ -24,9 +24,9 @@
 Serverless platforms typically support the management and deployment of serverless functions either using:
 
 - **Functions directly** where the:
-  - Provider uses an orchestration system optimized for a Function-as-a-Service (FaaS).
+  - Provider uses an orchestration system optimized for Function-as-a-Service (FaaS).
   - Functions are loaded and run on pre-configured, language-specific runtimes.
-  
+
 - **Pre-packaged containers** where the:
   - Provider uses Container-as-a-Service (CaaS) container-orchestration platforms like [Kubernetes](https://kubernetes.io/) and treats them as single-function applications.
   - Developer must package functions within containers, along with any necessary language dependencies. This requires a service framework that can handle HTTP network requests, invoke the functions, and return responses.
@@ -44,9 +44,9 @@ In these cases, the serverless provider usually has ready-made containers that c
 ![Packaging functions for a FaaS platform](images/101-ex0-package-for-faas.png)
 
 1. Write your function in a language that the FaaS platform supports.
-1. Select the target language runtime and version. You need to also find out what additional libraries it may already include.
-1. If needed, create an archive with a function and any additional libraries not supported by the runtime.
-1. Submit the function or archive it to a FaaS platform with a selected runtime identifier. This is typically done through a supported API client.
+2. Select the target language runtime and version. You need to also find out what additional libraries it may already include.
+3. If needed, create an archive with a function and any additional libraries not supported by the runtime.
+4. Submit the function or archive it to a FaaS platform with a selected runtime identifier. This is typically done through a supported API client.
 
 ## Packaging for serverless CaaS
 
@@ -61,10 +61,10 @@ With the CaaS approach, other operational responsibilities now become the respon
 ![Packaging functions for a CaaS platform](images/101-ex0-package-for-caas.png)
 
 1. Write your function and plan to host it using a language-specific service framework.
-1. Select a base image from a repository with the language runtime version you desire. If you are able to, select one that may have your service framework already installed.
-1. Build your function, any supporting libraries needed, and service framework if it’s not already included in the image.
-1. Export your FaaS endpoint from your framework and configure the framework as needed to export logs and metrics.
-1. Submit the resultant image to the CaaS serverless platform. This could be a direct submission or indirect from a supported image repository.
+2. Select a base image from a repository with the language runtime version you desire. If you are able to, select one that may have your service framework already installed.
+3. Build your function, any supporting libraries needed, and service framework if it’s not already included in the image.
+4. Export your FaaS endpoint from your framework and configure the framework as needed to export logs and metrics.
+5. Submit the resultant image to the CaaS serverless platform. This could be a direct submission or indirect from a supported image repository.
 
 {% hint style="tip" %}
 ICF is a FaaS which runs functions fast, but also gives you the option to "bring your own container" using a Docker SDK. This feature allows you to create Docker containers optimized for any language with only the libraries and versions you need while exploring a FaaS!
