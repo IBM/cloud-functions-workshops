@@ -144,7 +144,9 @@ The function for each action in a sequence can be written in any language as lon
 
 #### Data between actions in a sequence must be compatible
 
-Typically data between actions is normalized in JSON format, but actions and sequences are not limited to just JSON format.  Currently, it is up to the serverless application developer to assure data compatibility between actions.
+Typically data between actions is normalized in JSON format, but actions and sequences are not limited to just JSON format.
+
+_Currently, it is up to the serverless application developer to assure data compatibility between actions._
 
 {% hint style="info" %}
 This course will show you how to create action sequences, using NodeJS functions, which ICF manages for you.
