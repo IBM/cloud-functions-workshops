@@ -23,7 +23,7 @@ Mature serverless platforms, such as IBM Cloud Functions, provide features that 
 
 This section will describe some ICF-specific features that differentiate it from other Serverless platforms and enable developers in writing truly amazing Serverless applications.
 
-## What's a Polyglot?
+## What's a polyglot?
 
 IBM Cloud Functions is a polyglot serverless platform meaning it understands and supports multiple programming languages for authoring functions.
 
@@ -47,7 +47,7 @@ This currently includes the latest LTS releases for:
 - **Swift**
 - **PHP**
 
-If your language is not supported, you can always create your own language runtime using a Docker skeleton or build from compatible runtimes for other languages from the Apache OpenWhisk project:
+as well as a few other languages. If your language is not supported, you can always create your own language runtime using a Docker skeleton or build from compatible runtimes for other languages from the Apache OpenWhisk project:
 
 - [Apache OpenWhisk -> Downloads -> Action Runtimes](https://openwhisk.apache.org/downloads.html#component-releases)
 
@@ -129,7 +129,7 @@ The public Cloudant package can be used to read, write, update, or delete docume
 The public package used to integrate with an IBM® Cloud Object Storage instance and listen for changes in data. Similar to the Cloudant package.
 
 {% hint style="success" %}
-All you need do is bind the package to your namespace, configure it with proper parameter values (e.g., credentials for storage services) and ICF does the rest!
+All you need do is bind any of these packages to your namespace, configure it with proper parameter values (e.g., credentials for storage services) and ICF does the rest!
 {% endhint %}
 
 {% hint style="tip" %}
