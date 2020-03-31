@@ -44,7 +44,6 @@ Manual sources are either:
 - **Directly** from a user calling a front-end API (public or private) with data.
 - **Indirectly** from a user interacting with a website that uses serverless to generate web content.
 
-
 #### Automated sources
 
 Automated sources include:
@@ -64,11 +63,11 @@ The conceptual list of automated sources that can be processed by serverless fun
 
 In the case of the ICF's model, the event source is more conceptual and the **Feed** represents an adapter service in the system. The feed understands how to connect to and/or receive data from an event source, adapt it to a normalized form, and then feed it to one or more functions by invoking triggers. Feeds follow one of three patterns:
 
-1. Hook: A feed uses a webhook facility or callback mechanism exposed by an external service that generates events like an event source.
+1. _Hook_: A feed uses a webhook facility or callback mechanism exposed by an external service that generates events like an event source.
 
-1. Polling: A service that polls an external service endpoint periodically to fetch new data and generate its own events.
+2. _Polling_: A service that polls an external service endpoint periodically to fetch new data and generate its own events.
 
-1. Connection: A dedicated running service that maintains a persistent connection to an event source (for example, implementing a client of a message queue service or database) that creates and generates events on its behalf.
+3. _Connection_: A dedicated running service that maintains a persistent connection to an event source (for example, implementing a client of a message queue service or database) that creates and generates events on its behalf.
 
 Feeds that are implemented as long-running services are sometimes referenced as event provider services.
 

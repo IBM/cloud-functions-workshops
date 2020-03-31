@@ -44,8 +44,8 @@ In these cases, the serverless provider usually has ready-made containers that c
 ![Packaging functions for a FaaS platform](images/101-ex0-package-for-faas.png)
 
 1. Write your function in a language that the FaaS platform supports.
-2. Select the target language runtime and version. You need to also find out what additional libraries it may already include.
-3. If needed, create an archive with a function and any additional libraries not supported by the runtime.
+2. Select the target language runtime and version. _You should also find out what additional libraries the runtime may already include._
+3. If needed, create an archive with your function and any required libraries not already included in the runtime.
 4. Submit the function or archive it to a FaaS platform with a selected runtime identifier. This is typically done through a supported API client.
 
 ## Packaging for serverless CaaS
