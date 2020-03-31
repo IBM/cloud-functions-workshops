@@ -116,8 +116,6 @@ All you need do is "bind" them into your namespace with an alias along with your
 
 Some of the packages ICF provides deserve special mention not only because they are useful for almost any serverless application, but also within ICF they represent scalable, IBM managed services that you do not need to deploy and run yourself.
 
-All you need do is bind the package with proper inputs (e.g., credentials for storage services) and ICF does the rest!
-
 ### **Alarms Feed**
 
 The public Alarms package can be used to fire a trigger or feed at a specified frequency. Alarms are useful for setting up recurring jobs or tasks, such as invoking a system back up every hour.
@@ -130,8 +128,12 @@ The public Cloudant package can be used to read, write, update, or delete docume
 
 The public package used to integrate with an IBM® Cloud Object Storage instance and listen for changes in data. Similar to the Cloudant package.
 
+{% hint style="success" %}
+All you need do is bind the package to your namespace, configure it with proper parameter values (e.g., credentials for storage services) and ICF does the rest!
+{% endhint %}
+
 {% hint style="tip" %}
-**Tip**: Learn more about [Integrating Pacakges](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) with IBM Cloud Functions.
+**Tip**: Learn more about [Integrating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) with IBM Cloud Functions.
 {% endhint %}
 
 ## Using Sequences and Compositions
