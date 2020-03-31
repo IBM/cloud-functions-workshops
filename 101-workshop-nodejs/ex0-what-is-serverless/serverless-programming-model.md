@@ -17,108 +17,106 @@
 #
 -->
 
-# The Serverless Programming Model
+# The serverless programming model
 
-## A Least Common Denominator (LCD) view
+## A least common denominator (LCD) view
 
-There is no singular open standard for Serverless, its programming model, its deployment model or as a consequence its APIs.  Different providers may use different, but similar, semantics to describe the component parts that play a role in taking an event and causing a Serverless function to execute.
+There is no singular open standard for the serverless programming model,  deployment model, or, as a consequence, its APIs. Different providers may use different, but similar, semantics to describe the component parts that play a role in taking an event and causing a serverless function to execute.
 
-Shown below is a basic view of how Serverless works using the most common semantics from the Serverless domain and applicable to IBM Cloud Functions.
+Shown below is a basic view of how serverless works using the most common semantics from the serverless domain which is also applicable to IBM Cloud Functions (ICF).
 
 ![Least Common Denominator (LCD) - Programming Model](images/101-ex0-serverless-lcd-model.png)
 
-## It all starts with an **Event**
+## It all starts with an event
 
-Regardless of implementation or who you discuss Serverless with, it is all about invoking a function based upon an associated event and the data it is designed to operate on.
+Regardless of implementation or who you discuss serverless with, it’s all about invoking a function based upon an associated event and the data it’s designed to operate on.
 
-## These events all come from an **Event Source**
+## Events originate from an Event Source
 
-Events that can be associated with functions always come from "real world" or originating sources. In a Serverless programming model, the _Event Source_ can just be conceptual or represent an actual "adapter" service that understands how to receive "raw" event data from the "originator" and turn it into data that a function can process.
+Events that can be associated with functions always come from real-world or originating sources. In a serverless programming model, the **Event Source** can be conceptual or represent an adapter service that understands how to receive raw event data from the originator. This can then be turned into data that a function can process.
 
-Event Sources can represent entities that produce event data from manual or automated originating events. These may include:
+Event sources can represent entities that produce event data from manual or automated originating events. These may include manual and automated sources.
 
 #### Manual sources
 
-- _Directly_ - from a user calling a front-end API (public or private) with data.
-- _Indirectly_ - from a user interacting with a website that uses Serverless to generated web content.
+Manual sources are either:
+
+- **Directly** from a user calling a front-end API (public or private) with data.
+- **Indirectly** from a user interacting with a website that uses serverless to generate web content.
+
 
 #### Automated sources
 
-- Periodic "alarm" events to process data on a schedule (e.g., batch jobs)
-- Changes data storage devices (e.g., SQL databases, S3 Cloud Object Storage)
-- Messages received on a Message Queue (e.g., Kafka, Rabbit MQ)
+Automated sources include:
+
+- Periodic alarm events to process data on a schedule, or batch jobs
+- Change data storage devices like SQL databases and S3 Cloud Object Storage
+- Received messages on a message queue like Kafka and Rabbit MQ
 - Email messages
-- Mobile "push" notifications
-- IoT sensor data (e.g., Vehicle performance data, weather data)
+- Mobile push notifications
+- IoT sensor data, including vehicle performance data and weather data
 
 {% hint style="success" %}
-The conceptual list of automated sources that can be processed by Serverless functions is of course endless!
+The conceptual list of automated sources that can be processed by serverless functions is endless!
 {% endhint %}
 
-## The **Feed** is the event adapter
+## The Feed is the event adapter
 
-In the case of ICF's model, the _Event Source_ is more conceptual and the **Feed** actually represents an "adapter" service in the system that understands how to connect to and/or receive data from an _Event Source_, adapt it to a normalized form and then "feed" it to one or more functions by invoking _Triggers_.
+In the case of the ICF's model, the event source is more conceptual and the **Feed** represents an adapter service in the system. The feed understands how to connect to and/or receive data from an event source, adapt it to a normalized form, and then feed it to one or more functions by invoking triggers. Feeds follow one of three patterns:
 
-### Feeds follow one of three patterns:
+1. Hook: A feed uses a webhook facility or callback mechanism exposed by an external service that generates events like an event source.
 
-#### _Hook_
+1. Polling: A service that polls an external service endpoint periodically to fetch new data and generate its own events.
 
-A feed uses a "webhook" facility or "callback" mechanism exposed by an external  service that generates events (i.e., an event source).
+1. Connection: A dedicated running service that maintains a persistent connection to an event source (for example, implementing a client of a message queue service or database) that creates and generates events on its behalf.
 
-#### _Polling_
-
-A service that polls an external service endpoint periodically to fetch new data and generate its own "events".
-
-#### _Connection_
-
-A dedicated service running somewhere that maintains a persistent connection to an event source (e.g., implements a client of a message queue service or database) creates events. These types of feed implementations are called event **Provider Services**.
+Feeds that are implemnented as long-running services are sometimes referenced as event provider services.
 
 {% hint style="tip" %}
-Later in the course, we will show how to actually implement a **Polling Feed Service** using a Serverless function that is periodically triggered from an  Alarm!
+Later in the course, you will learn how to implement a **polling feed service** using a serverless function that is periodically triggered from an  alarm!
 {% endhint %}
 
-## Why does ICF use **Triggers**?
+## Why does ICF use triggers?
 
-Triggers are not part of every Serverless programming model, but are a powerful concept within IBM Cloud Functions that supports the [Observer design pattern](https://en.wikipedia.org/wiki/Observer_pattern) effectively.
+**Triggers** are not part of every serverless programming model but are a powerful concept within ICF that supports the [observer design pattern](https://en.wikipedia.org/wiki/Observer_pattern) effectively.
 
-In IBM Cloud Functions, the _Trigger_ is a programmatic construct that represents a "class of" or "stream of" events that is suitable for one or more associated functions to process.  In this pattern the functions themselves are the _Observers_ or "sinks" (for the event data).  This loose association allows both the functions and the _Event Sources_ to remain independent from and agnostic to any specific underlying event processing implementations.
+In ICF, the trigger is a programmatic construct that represents a class of or stream of events that are suitable for one or more associated functions to process. In this pattern, the functions themselves are the observers or sinks for the event data. This loose association allows both the functions and the event sources to remain independent and agnostic to any specific underlying event processing implementations.
 
 {% hint style="info" %}
-The name _Trigger_ in our model is intended to draw upon the analogy of _"triggering"_ or _"firing"_ a weapon; therefore, you may encounter these terms instead of _"invoking"_ or _"calling"_ a function.
+The term trigger in the model is intended to draw upon the analogy of triggering or firing a weapon; therefore, you may encounter these terminologies instead of terms like invoking or calling a function.
 {% endhint %}
 
-## Why call a function an **Action**?
+## Why call a function an Action?
 
-Within the ICF programming model, the _Action_ represents more than just the actual functional code that gets executed.  It also represents the metadata associated with the function itself which includes:
+Within the ICF programming model, the **Action** represents more than just the actual functional code that gets executed. It also represents the metadata associated with the function itself which includes:
 
-- **Name & Namespace** logical names used to uniquely reference the Action within ICF and apply access control
-- **Description** (optional) of function purpose and usage
-- **Runtime** language runtime type and version
-- **Versioning** internal version tracked as the code changes over time
-- **Parameter declarations** (input and output) type data and descriptions
-- **Parameter defaults** default values applied when missing from the event data
-- **Limits** (optional) limits for Action timeout, memory and log size (constrained by ICF maximums)
-- **Annotations** associated system and user appended metadata
-  - _Advanced features allow auto-managing Action updates through hashing the Action, its function, signature and metadata_
-- _**and more ...**_
+- **Name and namespace**: These are logical names used to uniquely reference the action within ICF and apply access control.
+- **Description**: An (optional) explanation of the function purpose and usage.
+- **Runtime**: Runtime includes the language, runtime type, and version.
+- **Versioning**: The internal version is tracked as the code changes over time.
+- **Parameter declarations**: This includes input and output type data and descriptions.
+- **Parameter defaults**: This is the default values applied when they are missing from the event data.
+- **Limits**: Limits can be optional for an action timeout, memory, and log size which is constrained by ICF maximums.
+- **Annotations**: An associated system and user appended metadata.
 
-As we proceed through the course using IBM Cloud Functions, we will use the term _Action_ more often then the word function. Just know that we are still primarily referencing the function which is central to the _Action_.
+Advanced features allow auto-managing action updates through hashing the action, its function, signature, and metadata.
 
-## The last piece of the model is the **Rule**
+As you proceed through this course using ICF, you will use the term action more often than the word function. Know that this course primarily references the function which is central to the action.
 
-In order for a successful design of the Observer pattern described above, we need to introduce one last logical component to the programming model we have not shown yet called the **Rule**.
+## The last piece of the model is the Rule
 
-Rules are used to _associate one Trigger with one Action_. After this kind of association is created, each time a trigger event is fired, the action is invoked.
-They can be viewed as an on/off switch that enables or disables Trigger events reaching an Action.
+In order for a successful design of the observer pattern described above, you need to introduce one last logical component to the programming model. That is called the **Rule**.
+
+Rules are used to associate one trigger with one action. After this kind of association is created, each time a trigger event is fired, the action is invoked. Think of them as an on/off switch that enables or disables trigger events reaching an action.
 
 ![Trigger-Rule-Action Relationship](images/101-ex0-serverless-trigger-rule-action.png)
 
-With an appropriate set of rules, a single Trigger event can invoke multiple Actions, or events from multiple Triggers can invoke the same action.
+With an appropriate set of rules, a single trigger event can invoke multiple actions. Events from multiple triggers can invoke the same action.
 
 | 1 Trigger, 2 Actions | 2 Triggers, 1 Action |
 :-------------------------:|:-------------------------:
 | ![1 Trigger, 2 Actions](images/101-ex0-serverless-1-trigger-2-action.png) | ![2 Triggers, 1 Action](images/101-ex0-serverless-2-trigger-1-action.png)|
 
 {% hint style="success" %}
-As you can see, the IBM Cloud Functions (ICF) programming model has been well thought out and has lead to a robust and powerful implementation of Serverless that you will soon experience first-hand!
+As you can see, the ICF programming model has been well thought out and has led to a robust and powerful implementation of serverless that you will soon experience first-hand!
 {% endhint %}
