@@ -17,9 +17,9 @@
 #
 -->
 
-# Review: What is Serverless?
+# Review: What is serverless?
 
-1. What characteristics of Serverless computing contribute to its name?
+1. What characteristics of serverless computing contribute to its name?
 
 [!] Developers can run backend code to access databases without using servers.
 [x] Serverless computing scales inherently to incoming events.
@@ -27,10 +27,10 @@
 [x] Server management decisions are hidden from the developer.
 [ ] Serverless developers only need to configure the service framework for their chosen language.
 
-Note: Make sure you select all of the correct options—there may be more than one!
+Note: Make sure you select all the correct options; there may be more than one!
 
 [explanation]
-Serverless computing uses servers to execute functional code in response to events. Developers do not need to setup, configure or manage servers or language-specific service frameworks in order to develop or run their functions.  In addition, the Serverless platform handles all aspects of management and operations including scaling, monitoring, logging and security.
+Serverless computing uses servers to execute functional code in response to events. You do not need to setup, configure, or manage servers or language-specific service frameworks in order to develop or run your functions. In addition, the serverless platform handles all aspects of management and operations, including scaling, monitoring, logging, and security.
 [explanation]
 
 ---
@@ -41,7 +41,7 @@ Serverless computing uses servers to execute functional code in response to even
 (x) False
 
 [explanation]
-Serverless computing still a cutting-edge Cloud technology that is implemented differently by different Serverless providers. Different providers may use different paradigms to run and scale your functional code.  There is no standardized API, no standardized packaging mechanism not Also, you will find that the arguments, environment .  It is always best to look for Serverless solution providers who are working with others in proven open source organizations and projects to promote Serverless maturity and standards.
+Serverless computing is still a cutting-edge cloud technology that is implemented differently by different serverless providers. Different providers may use different paradigms to run and scale functional code.  There is no standardized API or standardized packaging mechanism. Also, you will find that the arguments and environment differ.  It is always best to look for serverless solution providers who are working with others in proven open source organizations and projects to promote serverless maturity and standards.
 [explanation]
 
 ---
@@ -66,12 +66,14 @@ Serverless computing still a cutting-edge Cloud technology that is implemented d
 
 ---
 
-5. Isabelle decided to use serverless computing for a project that crops photos automatically when added to cloud storage. How would you judge her choice?
+5. Isabelle decided to use serverless computing for a project that crops photos automatically when added to cloud storage. How would you critique her choice?
 
 (!) Serverless is a great choice here because it allows Isabelle to manage the allocation of machine resources.
 ( ) Serverless won’t work well here because it depends too much on how often customers will be uploading photos.
 (x) Serverless may work well, but Isabelle will have to spend some time configuring servers to handle the infrequent uploads.
 (X) Serverless is a great choice because it can flexibly react to incoming photos and crop them as needed.
+
+Note: Make sure you select all the correct options; there may be more than one!
 
 [explanation]
 [explanation]
@@ -84,10 +86,10 @@ Serverless computing still a cutting-edge Cloud technology that is implemented d
 [x] Serverless only charges for time when code is executing.
 [!] Serverless applications can run in low-cost, pre-allocated capacity you can purchase in advance.
 
-Note: Make sure you select all of the correct options—there may be more than one!
+Note: Make sure you select all the correct options; there may be more than one!
 
 [explanation]
-With Serverless, you only pay for compute costs that your functions use on a per-invocation basis (i.e., "Pay-as-you-go").  The Serverless providers worry about all the Infrastructure and DevOps while all your developers worry about is writing functional business logic. There is no need to pay for pre-allocated capacity as the provider will scale your functions as needed each receiving the compute and memory limits that you are guaranteed by your license agreements.
+With serverless, you only pay for compute costs that your functions use on a per-invocation basis (remember the PAYGO model discussed earlier in this course). Serverless providers worry about the infrastructure and DevOps while you focus on writing functional business logic. There is no need to pay for pre-allocated capacity. Your provider will scale your functions as needed, each receiving the compute and memory limits that you are guaranteed by your license agreements.
 [explanation]
 
 ---
