@@ -19,11 +19,11 @@
 
 # Asynchronous actions
 
-## Returning asynchronous results
+## Return asynchronous results
 
-JavaScript functions that run asynchronously may need to return the activation result after the `main` function has returned. You can accomplish this by returning a Promise in your action.
+JavaScript functions that run asynchronously may need to return the activation result after the `main` function has returned. You can accomplish this by returning a promise in your action.
 
-1. Save the following content in a file called `asyncAction.js`.
+1. Save the following content in a file called `asyncAction.js`:
 
 ```javascript
 function main(args) {
@@ -35,15 +35,15 @@ function main(args) {
  }
 ```
 
-Notice that the `main` function returns a Promise, which indicates that the activation hasn't completed yet, but is expected to in the future.
+Notice that the `main` function returns a promise, which indicates that the activation hasn't completed yet, but is expected to in the future.
 
-The `setTimeout()` JavaScript function in this case waits for two seconds before calling the callback function. This represents the asynchronous code and goes inside the Promise's callback function.
+The `setTimeout()` JavaScript function, in this case, waits for two seconds before calling the callback function. This represents the asynchronous code and goes inside the promise's callback function.
 
-The Promise's callback takes two arguments, resolve and reject, which are both functions. The call to `resolve()`fulfills the Promise and indicates that the activation has completed normally.
+The promise's callback takes two arguments, resolve and reject, which are both functions. The call to `resolve()`fulfills the promise and indicates that the activation has completed normally.
 
-A call to `reject()` can be used to reject the Promise and signal that the activation has completed abnormally.
+A call to `reject()` can be used to reject the promise and signal that the activation has completed abnormally.
 
-## Testing asynchronous timeouts
+## Test asynchronous timeouts
 
 1. Run the following commands to create the action and invoke it:
 
@@ -82,12 +82,12 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
    Checking the `duration` field in the activation record, you can see that this activation took slightly over two seconds to complete.
 
 {% hint style="info" %}
-**Actions have a** `timeout` **parameter that enforces the maximum duration for an invocation.** This value defaults to 60 seconds and can be changed to a maximum of 5 minutes.
+Actions have a `timeout` parameter that enforces the maximum duration for an invocation. This value defaults to 60 seconds and can be changed to a maximum of 5 minutes.
 {% endhint %}
 
 Let's look at what happens when an action invocation takes longer than the `timeout`.
 
-1. Update the `asyncAction` timeout to 1000ms.
+1. Update the `asyncAction` timeout to 1000ms:
 
    ```bash
    ibmcloud fn action update asyncAction --timeout 1000
@@ -97,7 +97,7 @@ Let's look at what happens when an action invocation takes longer than the `time
    ok: updated action asyncAction
    ```
 
-2. Invoke the action and block on the result.
+2. Invoke the action and block on the result:
 
    ```bash
    ibmcloud fn action invoke asyncAction --result
@@ -111,7 +111,7 @@ Let's look at what happens when an action invocation takes longer than the `time
 
    The error message returned by the platform indicates the action didn't return a response within the user-specified timeout. If we change the `timeout` back to a value higher than the artificial delay in the function, it should work again.
 
-3. Update the `asyncAction` timeout to `10000 ms`.
+3. Update the `asyncAction` timeout to `10000 ms`:
 
    ```bash
    ibmcloud fn action update asyncAction --timeout 10000
@@ -121,7 +121,7 @@ Let's look at what happens when an action invocation takes longer than the `time
    ok: updated action asyncAction
    ```
 
-4. Invoke the action and block on the result.
+4. Invoke the action and block on the result:
 
    ```bash
    ibmcloud fn action invoke asyncAction --result
@@ -134,13 +134,13 @@ Let's look at what happens when an action invocation takes longer than the `time
    ```
 
 {% hint style="info" %}
-🎉**Bonus Exercise** Try out this exercise [Calling an external API from an Async action](../bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge!
+Bonus exercise: Try out this exercise [Calling an external API from an Async action](../bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge!
 {% endhint %}
 
 {% hint style="tip" %}
-**Asynchronous actions are necessary for calling other APIs or cloud services**. Don't forget about that timeout though!
+Asynchronous actions are necessary for calling other APIs or cloud services. Don't forget about that timeout though!
 {% endhint %}
 
 {% hint style="success" %}
-**The power of asynchronous actions is now yours!** There is no need to wait for those longer-running functions as IBM Cloud Functions does that for you! Next, let's look at how we might compose simple chains of actions using sequences...
+The power of asynchronous actions is now yours! There is no need to wait for those longer-running functions, as ICF does that for you! Next, let's look at how we might compose simple chains of actions using sequences.
 {% endhint %}
