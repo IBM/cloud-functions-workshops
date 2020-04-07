@@ -17,9 +17,9 @@
 #
 -->
 
-# Review: Creating and Invoking actions
+# Review: Create and invoke actions
 
-1. If you were to execute the following command which invokes a "helloworld" action:
+1. If you were to execute the following command which invokes a Hello World action:
 
 <p><code>ibmcloud fn action invoke hello</code></p>
 
@@ -40,7 +40,7 @@ False. The command did not use the <code>--blocking</code> flag so only an activ
 (!) false
 
 [explanation]
-True. Parameters can be passed directly when onvoking an action using the <code>--param</code> flag or indirectly from a file using the  <code>--param-file</code> flag.
+True. Parameters can be passed directly when invoking an action using the <code>--param</code> flag or indirectly from a file using the  <code>--param-file</code> flag.
 [explanation]
 
 ---
@@ -58,13 +58,13 @@ True. You are able to pass nested JSON objects when invoking actions using the c
 
 ---
 
-4. It is not possible to monitor activation logs in real-time using the command line.
+4. It is not possible to monitor activation logs in real time using the command line.
 
 (!) true
 (x) false
 
 [explanation]
-False. You simply need issue the <code>poll</code> command for activations as follows:
+False. You simply need to issue the <code>poll</code> command for activations as follows:
 <p><code>ibmcloud fn activation poll</code></p>
 [explanation]
 
@@ -88,7 +88,7 @@ False. Actions can invoke other actions, acting as a proxy, using the NPM Apache
 (x) false
 
 [explanation]
-False. Using Promises in NodeJS, it is possible for your function to return while waiting for the result of the Promise.
+False. Using promises in Node.js, it is possible for your function to return while waiting for the result of the promise.
 [explanation]
 
 ---
