@@ -17,15 +17,13 @@
 #
 -->
 
-# Creating Packages
+# Create packages
 
-## Creating new custom packages
+Custom packages can be used to group your own actions, manage default parameters, and share entities with other users.
 
-Custom packages can be used to group your own actions, manage default parameters and share entities with other users.
+Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool:
 
-Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
-
-1. Create a package called "custom".
+1. Create a package called custom:
 
    ```bash
    ibmcloud fn package create custom
@@ -35,7 +33,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
    ok: created package custom
    ```
 
-2. Get a summary of the package.
+2. Get a summary of the package:
 
    ```bash
    ibmcloud fn package get --summary custom
@@ -48,13 +46,13 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    Notice that the package is empty.
 
-3. Create a file called `identity.js` that contains the following action code. This action returns all input parameters.
+3. Create a file called `identity.js` that contains the following action code. This action returns all input parameters:
 
    ```javascript
    function main(args) { return args; }
    ```
 
-4. Create an `identity` action in the `custom` package.
+4. Create an `identity` action in the `custom` package:
 
    ```bash
    ibmcloud fn action create custom/identity identity.js
@@ -66,7 +64,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    Creating an action in a package requires that you prefix the action name with a package name.
 
-5. Get a summary of the package again.
+5. Get a summary of the package again:
 
    ```bash
    ibmcloud fn package get --summary custom
@@ -81,7 +79,7 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
 
    You can see the `custom/identity` action in your namespace now.
 
-6. Invoke the action in the package.
+6. Invoke the action in the package:
 
    ```bash
    ibmcloud fn action invoke --result custom/identity
@@ -91,13 +89,13 @@ Let's demonstrate how to do this now using the `ibmcloud fn` CLI tool…
    {}
    ```
 
-## Setting default package parameters
+## Set default package parameters
 
-You can set default parameters for all the entities in a package. You do this by setting package-level parameters that are inherited by all actions in the package.
+You can set default parameters for all the entities in a package. You do this by setting package level parameters that are inherited by all actions in the package.
 
 To see how this works, try the following example:
 
-1. Update the `custom` package with two parameters: `city` and `country`.
+1. Update the `custom` package with two parameters: `city` and `country`:
 
    ```bash
    ibmcloud fn package update custom --param city Austin --param country USA
@@ -107,7 +105,7 @@ To see how this works, try the following example:
    ok: updated package custom
    ```
 
-2. Display the parameters in the package.
+2. Display the parameters in the package:
 
 
    ```bash
@@ -130,7 +128,7 @@ To see how this works, try the following example:
    ...
    ```
 
-3. Observe how the `identity` action in the package inherits these parameters from the package.
+3. Observe how the `identity` action in the package inherits these parameters from the package:
 
    ```bash
    ibmcloud fn action get custom/identity
@@ -152,7 +150,7 @@ To see how this works, try the following example:
    ...
    ```
 
-3. Invoke the identity action without any parameters to verify that the action indeed inherits the parameters.
+3. Invoke the identity action without any parameters to verify that the action indeed inherits the parameters:
 
    ```bash
    ibmcloud fn action invoke --result custom/identity
@@ -165,7 +163,7 @@ To see how this works, try the following example:
    }
    ```
 
-4. Invoke the identity action with some parameters.
+4. Invoke the identity action with a few parameters:
 
    ```bash
    ibmcloud fn action invoke --result custom/identity --param city Dallas --param state Texas
@@ -180,10 +178,10 @@ To see how this works, try the following example:
    ```
 
 {% hint style="info" %}
-Invocation parameters are merged with the package parameters with the **invocation parameters overriding the package parameters**.
+Invocation parameters are merged with the package parameters. The invocation parameters override the package parameters.
 {% endhint %}
 
-## Sharing packages
+## Share packages
 
 After the actions and feeds that comprise a package are debugged and tested, the package can be shared with all OpenWhisk users. Sharing the package makes it possible for the users to bind the package, invoke actions in the package, and author OpenWhisk rules and sequence actions.
 
@@ -197,7 +195,7 @@ After the actions and feeds that comprise a package are debugged and tested, the
    ok: updated package custom
    ```
 
-2. Display the `publish` property of the package to verify that it is now true.
+2. Display the `publish` property of the package to verify that it is now true:
 
    ```bash
    ibmcloud fn package get custom
@@ -216,9 +214,9 @@ After the actions and feeds that comprise a package are debugged and tested, the
    }
    ```
 
-   Others can now use your `custom` package, including binding to the package or directly invoking an action in it. Other users must know the fully qualified names of the package to bind it or invoke actions in it. Actions and feeds within a shared package are _public_. If the package is private, then all of its contents are also private.
+   Others can now use your `custom` package, including binding to the package or directly invoking an action in it. Other users must know the fully qualified names of the package to bind it or invoke actions in it. Actions and feeds within a shared package are **public**. If the package is private, then all of its contents are also private.
 
-3. Get a description of the package to show the fully qualified names of the package and action.
+3. Get a description of the package to show the fully qualified names of the package and action:
 
    ```bash
    ibmcloud fn package get --summary custom
@@ -231,8 +229,8 @@ After the actions and feeds that comprise a package are debugged and tested, the
      (parameters: none defined)
    ```
 
-   In the previous example, you're working with the `myNamespace` namespace which,as you can see, appears in the fully qualified name.
+   In the previous example, you're working with the `myNamespace` namespace which, as you can see, appears in the fully qualified name.
 
 {% hint style="success" %}
-🎉 **Congratulations on sharing your first public IBM Cloud Functions Package!** 🎉
+Congratulations on sharing your first public ICF package!
 {% endhint %}
