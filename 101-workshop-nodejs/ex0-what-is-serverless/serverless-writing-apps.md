@@ -19,128 +19,120 @@
 
 # Writing serverless applications with IBM Cloud Functions
 
-Mature serverless platforms, such as IBM Cloud Functions, provide features that allow you to build cloud-native applications by composing your Serverless functions into more complex data transformations and workflows.
+Mature serverless platforms, such as IBM Cloud Functions (ICF), provide features that allow you to build cloud-native applications by composing your serverless functions into more complex data transformations and workflows.
 
-This section will describe some ICF-specific features that differentiate it from other Serverless platforms and enable developers in writing truly amazing Serverless applications.
+This section describes some ICF-specific features that differentiate it from other serverless platforms and enable developers in writing amazing serverless applications.
 
 ## What's a polyglot?
 
-IBM Cloud Functions is a polyglot serverless platform meaning it understands and supports multiple programming languages for authoring functions.
+ICF is a polyglot serverless platform, meaning it understands and supports multiple programming languages for authoring functions.
 
-This allows developers to choose the language that works best for them, which can:
+This allows you to choose the language that works best for you, which can:
 
 - Reduce the need to learn new languages
-- Increase code reuse _simplifying migration_
-  - Especially important when integrating with services and data sources that provide libraries in specific languages.
+- Increase code reuse, simplifying migration. This is especially important when integrating with services and data sources that provide libraries in specific languages
 - Leverage language-specific knowledge to code more efficient functions
 
-### **ICF Supported languages**
+### ICF supported languages
 
-The ICF team attempts to provide all the most popular Serverless languages and versions; their current list of supported language runtimes can always be found here:
-
-- [ICF Runtimes](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-runtimes)
+The ICF team attempts to provide the most popular serverless languages and versions. For a comprehensive list of supported language runtimes, see [ICF runtimes](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-runtimes).
 
 This currently includes the latest LTS releases for:
 
-- **NodeJS**
-- **Python**
-- **Swift**
-- **PHP**
+- Node.js
+- Python
+- Swift
+- PHP
 
-as well as a few other languages. If your language is not supported, you can always create your own language runtime using a Docker skeleton or build from compatible runtimes for other languages from the Apache OpenWhisk project:
+_Note that there are a few languages not listed_
 
-- [Apache OpenWhisk -> Downloads -> Action Runtimes](https://openwhisk.apache.org/downloads.html#component-releases)
+If your language is not supported, you can always create your own language runtime using a Docker skeleton or build from compatible runtimes for other languages from the Apache OpenWhisk project, which can be found at [Apache OpenWhisk -> Downloads -> Action Runtimes](https://openwhisk.apache.org/downloads.html#component-releases).
+
 
 ## Using namespaces and packages
 
-ICF provides a naming convention that allows developers to organize their functions and apply access control.  Every entity in ICF can have a Fully-Qualified Name (FQN) with the following path-style format:
+ICF provides a naming convention that allows you to organize functions and apply access control. Every entity in ICF can have a fully qualified name (FQN) with the following path-style format:
 
 ```text
 /<Namespace Name>/<Package Name>/<Entity Name>
 ```
 
-- _where `Enitity Name` is the name of your Action, Trigger or Rule_
+It should be pointed out that `Enitity Name` is the name of your action, trigger, or rule.
 
-### **Namespaces**
+### Namespaces
 
 Actions, triggers, and rules always belong in a namespace. If a namespace is not explicitly provided, they are created in a default namespace.
 
-Namespaces are where Access Control can be applied to your Actions, Triggers and Rules requiring authorization provided by IBM's Cloud Identity and Access Management (IAM) services when others want to use them to create their applications.
+Namespaces are where access control can be applied to your actions, triggers, and rules. This requires authorization from IBM's Cloud Identity and Access Management (IAM) services when others want to use them to create their applications.
 
 {% hint style="tip" %}
-- _Read more on [Managing Namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces) with your Actions._
+Read more on [managing namespaces](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-namespaces) with your actions.
 {% endhint %}
 
-### **Packages**
+### Packages
 
-Packages are logical, named groupings that can contain Actions and Feeds. A package cannot contain another package, so package nesting is not allowed.
+Packages are logical, named groupings that can contain actions and feeds. A package cannot contain another package, so package nesting is not allowed.
 
-Actions and feeds do not need to belong to a package, but then developers would have to worry about **name collisions** when they are combined with other developers' packages to form applications causing referencing issues.
+Actions and feeds do not need to belong to a package, which means you have to be aware of **name collisions** when they are combined with other developers' packages to form applications. This can cause referencing issues.
 
-Serverless application developers should always creating unique, meaningful package names to better allow them to be reused across multiple Serverless applications.
+As a serverless application developer, you should always create unique, meaningful package names to better allow them to be reused across multiple serverless applications.
 
 {% hint style="tip" %}
-- _Read more on [Incorporating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) in your ICF applications._
+Read more on [incorporating packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) in your ICF applications.
 {% endhint %}
 
-## Packages & event Feeds
+## Packages and event feeds
 
-IBM Cloud Functions provides "built-in", public packages that contain event **Feeds** that simplify integration with various popular services that are able to produce events (a.k.a., **Event Sources**) to your actions.
+ICF provides built-in, public packages that contain event feeds that simplify integration with various popular services that are able to produce events (also known as event sources) to your actions.
 
 These packages include event integrations with the following services:
 
-- **Alarms** (periodic, cron)
-- **GitHub**
-- **IBM Cloudant**
-- **IBM Cloud Object Storage (COS)**
-- **IBM Composer**
-- **IBM Event Streams** (Messaging) (e.g., Kafka)
-- **IBM Watson**
-  - Discovery (Cognitive search)
-  - Speech-to-Text, Text-to-Speech
-  - Natural Language _(Translator, Classifier and Understanding)_
-  - Tone Analyzer
+- Alarms, both periodic and cron
+- GitHub
+- IBM Cloudant
+- IBM Cloud Object Storage (COS)
+- IBM Composer
+- IBM Event Streams (Messaging) (e.g., Kafka)
+- IBM Watson
+  - Discovery (cognitive search)
+  - Speech to Text and Text to Speech
+  - Natural language (Translator, Classifier and Understanding)_
+  - Tone analyzer
   - Personality insights
-  - Visual Recognition
+  - Visual recognition
   - Assistant
-- **Mobile SDK**
-- **Mobile Push Notifications**
-- **Slack**
-- **Weather Co.**
-- **WebSockets**
-- **Utilities** _(e.g., curl, data, head, tail, cat, split, sort, echo)_
+- Mobile SDK
+- Mobile push notifications
+- Slack
+- The Weather Company
+- WebSockets
+- Utilities like curl, data, head, tail, cat, split, sort, and echo
 
-All you need do is "bind" them into your namespace with an alias along with your configurations (e.g., credentials) to reference them from your Actions.
+All you need do is bind them into your namespace with an alias along with your configurations (credentials) to reference them from your actions.
 
 ## Notable packages popular in ICF applications
 
-Some of the packages ICF provides deserve special mention not only because they are useful for almost any serverless application, but also within ICF they represent scalable, IBM managed services that you do not need to deploy and run yourself.
+Some of the packages ICF provides deserve special mention because they are useful for almost any serverless application and within ICF, they represent scalable, IBM managed services that you do not need to deploy and run yourself.
 
-### **Alarms Feed**
+- **Alarms feed**: The public alarms package can be used to fire a trigger or feed at a specified frequency. Alarms are useful for setting up recurring jobs or tasks, such as invoking a system back up every hour.
 
-The public Alarms package can be used to fire a trigger or feed at a specified frequency. Alarms are useful for setting up recurring jobs or tasks, such as invoking a system back up every hour.
+- **Cloudant**: The public Cloudant package can be used to read, write, update, or delete documents and listen for changes to an IBM Cloudant (NoSQL) database.
 
-### **Cloudant**
-
-The public Cloudant package can be used to read, write, update, or delete documents and listen for changes to an IBM Cloudant (NoSQL) database.
-
-### **COS (Cloud Object Storage)**
-
-The public package used to integrate with an IBM® Cloud Object Storage instance and listen for changes in data. Similar to the Cloudant package.
+- **Cloud Object Storage (COS)**: The public package used to integrate with an IBM COS instance and listen for changes in data. Similar to the Cloudant package.
 
 {% hint style="success" %}
-All you need do is bind any of these packages to your namespace, configure it with proper parameter values (e.g., credentials for storage services) and ICF does the rest!
+All you need do is bind any of these packages to your namespace, configure it with proper parameter values (for example, credentials for storage services) and ICF does the rest!
 {% endhint %}
 
 {% hint style="tip" %}
-**Tip**: Learn more about [Integrating Packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) with IBM Cloud Functions.
+Learn more about [integrating packages](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_ov) with ICF.
 {% endhint %}
 
-## Using Sequences and Compositions
+## Using sequences and compositions
 
-![Polyglot Sequences and Compositions on ICF](images/101-ex0-serverless-icf-compositions.png)
+![Polyglot sequences and compositions on ICF](images/101-ex0-serverless-icf-compositions.png)
 
-### **Sequences**
+### Sequences
 
 ICF supports the declaration of sequences of actions which behave collectively as a single action.
 
@@ -150,22 +142,22 @@ The function for each action in a sequence can be written in any language as lon
 
 #### Data between actions in a sequence must be compatible
 
-Typically data between actions is normalized in JSON format, but actions and sequences are not limited to just JSON format.
+Typically, data between actions is normalized in JSON format. However, actions and sequences are not limited to just JSON format.
 
-_Currently, it is up to the serverless application developer to assure data compatibility between actions._
+Currently, it is up to the serverless application developer to assure data compatibility between actions.
 
 {% hint style="info" %}
-This course will show you how to create action sequences, using NodeJS functions, which ICF manages for you.
+This course will show you how to create action sequences, using Node.js functions, which ICF manages for you.
 {% endhint %}
 
-### **Compositions**
+### Compositions
 
-IBM Cloud Functions is one of the few serverless platforms that offers the ability to compose polyglot function into programmatic workflows using a rich set of conditional logic and programming friendly constructs.
+ICF is one of the few serverless platforms that offers the ability to compose polyglot function into programmatic workflows using a rich set of conditional logic and programming friendly constructs.
 
 {% hint style="info" %}
 This course will not cover compositions, but information on how to integrate them can be found on IBM Cloud using the [Composer Package](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-pkg_composer).  Canonical documents and its actual implementation can be found on its project GitHub: [IBM Cloud Functions Composer](https://github.com/ibm-functions/composer).
 {% endhint %}
 
 {% hint style="success" %}
-🎉**Congratulations**! Now you have an overview of the key ways to integrate Serverless using IBM Cloud Functions when writing your cloud-native applications! 🎉
+Congratulations! Now you have an overview of essential ways to integrate serverless using ICF when writing your cloud-native applications!
 {% endhint %}
