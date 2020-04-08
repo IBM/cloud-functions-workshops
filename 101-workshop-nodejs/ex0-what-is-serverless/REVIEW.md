@@ -102,16 +102,8 @@ With serverless, you only pay for compute costs that your functions use on a per
 [explanation]
 [explanation]
 
----
 
-8. Serverless scales automatically by running code only in response to event triggers.
-
-(!) incorrect
-(x) correct
-
----
-
-9. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
+8. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
 
 ![Application Usage Graph](images/101-ex0-review-question-request-graph-1.png)
 
