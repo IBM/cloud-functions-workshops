@@ -23,7 +23,7 @@
 
 1. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
 
-![Application Usage Graph](ex0-what-is-serverless/images/101-ex0-review-question-request-graph-1.png)
+![Application Usage Graph](ex0-what-is-serverless/images/101-ex0-review-question-request-graph-2.png)
 
 <!-- <img width="80%" src="/static/101-ex0-review-question-request-graph-2.png"/> -->
 
