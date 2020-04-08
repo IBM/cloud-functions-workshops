@@ -21,6 +21,17 @@
 
 --- <!-- EX0 -->
 
+1. IBM Cloud Functions scales your actions automatically only in response to event triggers.
+
+(x) false
+(!) true
+
+[explanation]
+False.  ICF also scales your actions automatically in response to web or HTTP API invocations if you have enabled them as web actions and/or created a private or public API for them.  
+[explanation]
+
+---
+
 1. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
 
 ![Application Usage Graph](ex0-what-is-serverless/images/101-ex0-review-question-request-graph-2.png)
