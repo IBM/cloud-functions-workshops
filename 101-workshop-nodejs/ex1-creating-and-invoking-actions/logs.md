@@ -17,13 +17,13 @@
 #
 -->
 
-# Retrieving Action Logs
+# Retrieve action logs
 
-Application logs are essential to debugging production issues. In IBM Cloud Functions, all output written to `stdout` and `stderr` by actions is available in the activation records.
+Application logs are essential to debugging production issues. In IBM Cloud Functions (ICF), all output written to `stdout` and `stderr` by actions is available in the activation records.
 
-## Creating activation logs
+## Create activation logs
 
-1. Create a new action named `logs` from the following source files.
+1. Create a new action named `logs` from the following source files:
 
     ```javascript
     function main(params) {
@@ -41,7 +41,7 @@ Application logs are essential to debugging production issues. In IBM Cloud Func
     ok: created action logs
     ```
 
-2. Invoke the `logs` action to generate some logs.
+2. Invoke the `logs` action to generate logs:
 
     ```bash
     ibmcloud fn action invoke -r logs -p hello world
@@ -53,9 +53,9 @@ Application logs are essential to debugging production issues. In IBM Cloud Func
     }
     ```
 
-## Accessing activation logs
+## Access activation logs
 
-Retrieve activation record to verify logs have been recorded.
+Retrieve the activation record to verify logs have been recorded:
 
 ```text
 ibmcloud fn activation get --last
@@ -73,7 +73,7 @@ ok: got activation 9fc044881705479580448817053795bd
 }
 ```
 
-Logs can also be retrieved without showing the whole activation record, using the `activation logs` command.
+Logs can also be retrieved without showing the whole activation record, using the `activation logs` command:
 
 ```bash
 ibmcloud fn activation logs --last
@@ -84,11 +84,11 @@ ibmcloud fn activation logs --last
 20xx-11-14T09:49:03.021816473Z stderr: this is an error message
 ```
 
-## Polling activation logs
+## Poll activation logs
 
-Activation logs can be monitored in real-time, rather than manually retrieving individual activation records.
+Activation logs can be monitored in real time, rather than manually retrieving individual activation records.
 
-1. In another terminal, run the following command to monitor logs from the `logs` actions.
+1. In another terminal, run the following command to monitor logs from the `logs` actions:
 
    ```bash
    ibmcloud fn activation poll
@@ -99,7 +99,7 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
    Polling for activation logs
    ```
 
-2. In your original terminal, run the following command multiple times.
+2. In your original terminal, run the following command multiple times:
 
    ```bash
    ibmcloud fn action invoke logs -p hello world
@@ -109,7 +109,7 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
    ok: invoked /_/logs with id 0e8d715393504f628d715393503f6227
    ```
 
-3. Check the output from the `poll` command to see the activation logs.
+3. Check the output from the `poll` command to see the activation logs:
 
    ```bash
    Activation: 'logs' (ae57d06630554ccb97d06630555ccb8b)
@@ -132,5 +132,5 @@ Activation logs can be monitored in real-time, rather than manually retrieving i
    ```
 
 {% hint style="success" %}
-As you can see, activation logs provide critical insight into your functions when running within the IBM Cloud Functions service. Next let's explore how we can call other actions from an action allowing for function reuse.
+As you can see, activation logs provide critical insight into your functions when running within the ICF service. Next, let's explore how we can call other actions from an action allowing for function reuse.
 {% endhint %}
