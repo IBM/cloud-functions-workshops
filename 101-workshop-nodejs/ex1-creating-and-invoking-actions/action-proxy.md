@@ -17,19 +17,19 @@
 #
 -->
 
-# Calling Other Actions
+# Calling other actions
 
-Using serverless platforms to implement reusable functions means you will often want to invoke one action from another. IBM Cloud Functions provides a [RESTful API](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json) to invoke actions programmatically.
+Using serverless platforms to implement reusable functions means you will often want to invoke one action from another. IBM Cloud Functions (ICF) provides a [RESTful API](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/openwhisk/openwhisk/master/core/controller/src/main/resources/apiv1swagger.json) to invoke actions programmatically.
 
-Rather than having to [manually construct the HTTP requests](https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md#actions) to invoke actions from within the IBM Cloud Functions runtime, client libraries are pre-installed to make this easier.
+Rather than having to [manually construct the HTTP requests](https://github.com/apache/incubator-openwhisk/blob/master/docs/rest_api.md#actions) to invoke actions from within the ICF runtime, client libraries are pre-installed to make this easier.
 
-These libraries make it simple to invoke other actions, fire triggers and access all other platform services.
+These libraries make it simple to invoke other actions, fire triggers, and access all other platform services.
 
-## Proxy example
+## Example proxy
 
-Let's look an example of creating a "proxy" action which invokes another action _(i.e, our `hello` action)_ if a "password" is present in the input parameters.
+Let's look at an example of creating a proxy action which invokes another action (like your `hello` action) if a password is present in the input parameters.
 
-1. Create the following new action named `proxy` from the following source files.
+1. Create the new action named `proxy` from the following source files:
 
     ```javascript
     var openwhisk = require('openwhisk');
@@ -49,10 +49,10 @@ Let's look an example of creating a "proxy" action which invokes another action 
     ```
 
 {% hint style="info" %}
-**Note** The function uses the [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library which is pre-installed in the IBM Cloud Functions runtime (so you do not need to package it). _Its source code can be found here:_ [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
+The function uses the [NPM Apache OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library which is pre-installed in the ICF runtime (so you do not need to package it). Its source code can be found here: [https://github.com/apache/openwhisk-client-js/](https://github.com/apache/openwhisk-client-js/).
 {% endhint %}
 
-2. Invoke the proxy with an incorrect password.
+2. Invoke the proxy with an incorrect password:
 
     ```bash
     ibmcloud fn action invoke proxy -p password wrong -r
@@ -65,10 +65,10 @@ Let's look an example of creating a "proxy" action which invokes another action 
     ```
 
 {% hint style="tip" %}
-**Note** On the invoke call above, we used the short form for the `--result` flag which is `-r`.
+On the invoke call above, you used the short form for the `--result` flag which is `-r`.
 {% endhint %}
 
-3. Invoke the proxy with the correct password.
+3. Invoke the proxy with the correct password:
 
     ```bash
     ibmcloud fn action invoke proxy -p password secret -p name Bernie -p place Vermont -r
@@ -80,7 +80,7 @@ Let's look an example of creating a "proxy" action which invokes another action 
     }
     ```
 
-4. Review the activations list to show both actions were invoked.
+4. Review the activations list to show both actions were invoked:
 
    ```bash
    ibmcloud fn activation list -l 2
@@ -93,9 +93,9 @@ Let's look an example of creating a "proxy" action which invokes another action 
     ```
 
 {% hint style="tip" %}
-**Note** On the invoke call above, we used the short form for the `--last` flag which is `-l` with a parameter to only `list` the last `2` activations.
+On the invoke call above, you used the short form for the `--last` flag which is `-l` with a parameter to only `list` the last `2` activations.
 {% endhint %}
 
 {% hint style="success" %}
-🎉**Congrats on proxying an action!** Be sure to _**[check out all the cool things](https://github.com/apache/openwhisk-client-js/#examples)**_ the [NPM OpenWhisk](https://www.npmjs.com/package/openwhisk) JavaScript library can be used for such _"invoking triggers"_ to fire events and _"chaining action calls"_ within actions.
+Congratulations on proxying an action! Be sure to [check out all the cool things](https://github.com/apache/openwhisk-client-js/#examples) the NPM OpenWhisk JavaScript library can be used for. Everything from invoking triggers to firing events to chaining action calls within actions can be performed!
 {% endhint %}
