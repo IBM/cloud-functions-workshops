@@ -19,16 +19,7 @@
 
 # Final Exam
 
-1. Multiple triggers can be configured to fire the same action.
-
-(!) incorrect
-(x) correct
-
-[explanation]
-Triggers can be connected to the same action using separate rules.
-[explanation]
-
----
+--- <!-- EX0 -->
 
 1. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
 
@@ -44,3 +35,34 @@ Triggers can be connected to the same action using separate rules.
 [explanation]
 The usage graphs shows that requests to the application are very fairly constant with request rate averaging roughly 6k over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
 [explanation]
+
+
+--- <!-- EX1 -->
+
+
+--- <!-- EX2 -->
+
+
+--- <!-- EX3 -->
+1. Multiple triggers can be configured to fire the same action.
+
+(!) incorrect
+(x) correct
+
+[explanation]
+Triggers can be connected to the same action using separate rules.
+[explanation]
+
+--- <!-- EX4 -->
+
+
+--- <!-- EX5 -->
+
+1. If you wish to monitor your action invocations, you need to use the web user interface.
+
+(!) true (x) false
+
+[explanation]
+False. The CLI's `action poll` command allows you to see activation records as they are created (live), but you will not get the views and filters the web user interface experience provides.
+[explanation]
+
