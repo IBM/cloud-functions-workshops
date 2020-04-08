@@ -25,6 +25,7 @@
 (!) false
 
 [explanation]
+The intent of the web user interface is to provide functional equivalency to the that provided by the CLI. In fact, the web ui actually provides simplified access to other IBM Cloud services such as Alarms, Cloudant, Logging and more that is often much harder to do from the command line.
 [explanation]
 
 ---
@@ -35,4 +36,5 @@
 (!) false
 
 [explanation]
+True.  The **Monitor** feature of the web UI provides an easy means to view recent activations of actions and triggers over periods of time. The **Logging** feature can be used to automatically send complete activation records to IBM Clouds Observability service for long term retention and analysis alongside all your other IBM Cloud events.
 [explanation]
