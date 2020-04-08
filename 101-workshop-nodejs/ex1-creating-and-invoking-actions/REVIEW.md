@@ -88,7 +88,7 @@ False. Actions can invoke other actions, acting as a proxy, using the NPM Apache
 (x) false
 
 [explanation]
-False. Using promises in Node.js, it is possible for your function to return while waiting for the result of the promise.
+False. Using `Promises` in Node.js, it is possible for your function to return while waiting for the result of the promise.
 [explanation]
 
 ---

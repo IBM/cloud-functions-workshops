@@ -21,7 +21,7 @@
 
 ## Return asynchronous results
 
-JavaScript functions that run asynchronously may need to return the activation result after the `main` function has returned. You can accomplish this by returning a promise in your action.
+JavaScript functions that run asynchronously may need to return the activation result after the `main` function has returned. You can accomplish this by returning a Node.js `Promise` in your action.
 
 1. Save the following content in a file called `asyncAction.js`:
 
