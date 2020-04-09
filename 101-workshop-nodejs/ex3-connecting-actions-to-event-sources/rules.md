@@ -1,18 +1,18 @@
-# Using Rules
+# Use rules
 
 Rules are used to associate a trigger with an action. Each time a trigger event is fired, the action is invoked with the event parameters.
 
-## Creating rules
+## Create rules
 
-As an example, create a rule that calls the `hello` action whenever a location update is triggered.
+As an example, let’s create a rule that calls the `hello` action whenever a location update is triggered.
 
-1. Check the `hello` action exists and responds to the correct event parameters.
+1. Check the `hello` action exists and responds to the correct event parameters:
 
     ```bash
     ibmcloud fn action invoke --result hello --param name Oliver --param place "Starling City"
     ```
 
-2. Check the trigger exists.
+2. Check the trigger exists:
 
     ```bash
     ibmcloud fn trigger get locationUpdate
@@ -38,7 +38,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
         ],
     ```
 
-3. Create the rule using the command-line. The three parameters are the name of the rule, the trigger, and the action.
+3. Create the rule using the command line. The three parameters are the name of the rule, the trigger, and the action:
 
     ```bash
     ibmcloud fn rule create myRule locationUpdate hello
@@ -48,7 +48,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
     ok: created rule myRule
     ```
 
-4. Retrieve rule details to show the trigger and action bound by this rule.
+4. Retrieve rule details to show the trigger and action bound by this rule:
 
     ```bash
     ibmcloud fn rule get myRule
@@ -74,12 +74,12 @@ As an example, create a rule that calls the `hello` action whenever a location u
     ```
 
 {% hint style="success" %}
-**Success! The `locationUpdate` Trigger is now connected to the `hello` action via the `myRule` Rule!**.
+Success! The `locationUpdate` trigger is now connected to the `hello` action via the `myRule` rule!
 {% endhint %}
 
-## Testing rules
+## Test rules
 
-1. Fire the `locationUpdate` trigger. Each time that you fire the trigger with an event, the `hello` action is called with the event parameters.
+1. Fire the `locationUpdate` trigger. Each time that you fire the trigger with an event, the `hello` action is called with the event parameters:
 
     ```bash
     ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Krypton"
@@ -89,7 +89,7 @@ As an example, create a rule that calls the `hello` action whenever a location u
     ok: triggered /_/locationUpdate with id 5c153c01d76d49dc953c01d76d99dc34
     ```
 
-2. Verify that the action was invoked by checking the activations list.
+2. Verify that the action was invoked by checking the activations list:
 
     ```bash
     ibmcloud fn activation list --limit 2
@@ -101,9 +101,9 @@ As an example, create a rule that calls the `hello` action whenever a location u
     5c153c01d76d49dc953c01d76d99dc34 unknown warm  0s       success locationUpdate
     ```
 
-   We can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
+   You can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
 
-3. Retrieving the trigger activation record will show the actions and rules invoked from this activation.
+3. Retrieving the trigger activation record will show the actions and rules invoked from this activation:
 
     ```text
     ibmcloud fn activation result 5ee74025c2384f30a74025c2382f30c1
@@ -115,11 +115,11 @@ As an example, create a rule that calls the `hello` action whenever a location u
     }
     ```
 
-   You can see that the hello action received the event payload and returned the expected string.
+   The hello action received the event payload and returned the expected string.
 
 Activation records for triggers store the rules and actions fired for an event and the event parameters.
 
-4. Explore the results of the activation.
+4. Explore the results of the activation:
 
     ```text
     ibmcloud fn activation result 5c153c01d76d49dc953c01d76d99dc34
@@ -142,17 +142,17 @@ Activation records for triggers store the rules and actions fired for an event a
 
 You can create multiple rules that associate the same trigger with different actions.
 
-**Can you create another trigger and rule that calls the** `hello` **action? 🤔**
+_But can you create another trigger and rule that calls the `hello` action?_
 
-* You can also use rules with sequences. For example, one can create an action sequence `recordLocationAndHello`that is activated by the rule `anotherRule`.
+You can also use rules with sequences. For example, you can create an action sequence `recordLocationAndHello` that is activated by the rule `anotherRule`.
 
-1. create a simple sequence:
+1. Create a simple sequence:
 
     ```text
     ibmcloud fn action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
     ```
 
-2. connect the `locationUpdate` trigger to the sequence with another rule:
+2. Connect the `locationUpdate` trigger to the sequence with another rule:
 
     ```text
     ibmcloud fn rule create anotherRule locationUpdate recordLocationAndHello
@@ -164,17 +164,17 @@ You can create multiple rules that associate the same trigger with different act
     ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
     ```
 
-4. what do you see if you check the activation logs now?
+4. If you check the activation logs now, you’ll see:
 
     ```bash
     ibmcloud fn activation list --limit 5
     ```
 
-## Disabling rules
+## Disable rules
 
-Rules are enabled upon creation but can be disabled and re-enabled using the command-line.
+Rules are enabled upon creation but can be disabled and re-enabled using the command line.
 
-1. Disable the rule connecting the `locationUpdate` trigger and `hello` action.
+1. Disable the rule connecting the `locationUpdate` trigger and `hello` action:
 
     ```bash
     ibmcloud fn rule disable myRule
@@ -184,7 +184,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
     ok: disabled rule myRule
     ```
 
-2. Fire the trigger again.
+2. Fire the trigger again:
 
     ```bash
     ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
@@ -194,7 +194,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
     ok: triggered /_/locationUpdate with id 53f85c39087d4c15b85c39087dac1571
     ```
 
-3. Check the activation list there are no new activation records.
+3. Check the activation list. There shouldn’t be any new activation records:
 
     ```bash
     ibmcloud fn activation list --limit 2
@@ -207,30 +207,27 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
     ```
 
 {% hint style="warning" %}
-**The latest activation records were from the previous example!**. _Activation records for triggers are only recorded when they are bound to an active rule._
+The latest activation records were from the previous example! Activation records for triggers are only recorded when they are bound to an active rule.
 {% endhint %}
 
 {% hint style="success" %}
-🎉 **Excellent work! Now we have a way to connect actions to events in OpenWhisk, how do we connect triggers to event sources like messages queues? Enter trigger feeds…** 🎉
+Excellent work! Now you have a way to connect actions to events in OpenWhisk. It’s time to learn more about trigger feeds so you can connect triggers to event sources like message queues.
 {% endhint %}
 
 ---
 
 ## Troubleshooting
 
-### Unable to invoke action 'hello': Request defines parameters that are not allowed
+You may see the following error if you have previously bound the `place` parameter to a fixed value:
 
-{% hint style="tip" %}
-**You may see this error if you have previously "bound" the `place` parameter to a fixed value.**.
-{% endhint %}
+_Unable to invoke action 'hello': Request defines parameters that are not allowed_
 
-If you see this error attempting to invoke the `hello` action with a `place` parameter:
+If you see this error:
 
     ```text
     error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
     ```
-
-1. Delete the old `hello` action and create it again...
+while attempting to invoke the `hello` action with a `place` parameter, you’ll need to delete the old `hello` action and create it again:
 
     ```bash
     ibmcloud fn action delete hello
@@ -238,5 +235,5 @@ If you see this error attempting to invoke the `hello` action with a `place` par
     ```
 
 {% hint style="warning" %}
-**Once you bind a parameter, there is no current way to unbind it; you will have to delete it and start over.**.
+Once you bind a parameter, there is no current way to unbind it; you will have to delete it and start over.
 {% endhint %}
