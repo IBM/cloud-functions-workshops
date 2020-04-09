@@ -52,3 +52,13 @@ Rules are used to associate one trigger with one action. After this kind of asso
 [explanation]
 False. Rules are simply an association between a Trigger and an Action indicating that event data coming from a Trigger should "fire" and associated Action.  It is either enabled or disabled.
 [explanation]
+
+4. Multiple actions can be fired from a single trigger.
+
+(!) incorrect
+(x) correct
+
+[explanation]
+Correct. Multiple actions can be connected to the same trigger using separate rules. This allows a single event to cause many parallel serverless actions to begin processing the same data in different ways at the same time.
+[explanation]
+
