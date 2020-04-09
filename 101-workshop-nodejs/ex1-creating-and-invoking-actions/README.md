@@ -19,7 +19,7 @@
 
 # Create and invoke actions
 
-This exercise will introduce the concepts needed to create and use actions with IBM Cloud Functions (ICF).
+This exercise will introduce the concepts needed to create and use **actions** with IBM Cloud Functions (ICF). If you recall, the _Action_ entity was shown as part of the ICF programming model in the previous chapter.
 
 Once you have completed this exercise, you will know how to:
 

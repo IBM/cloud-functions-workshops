@@ -19,7 +19,7 @@
 
 # Manage actions with packages
 
-This exercise will introduce the concepts needed to create and use packages with IBM Cloud Functions (ICF).
+This exercise will introduce the concepts needed to create and use **packages** with IBM Cloud Functions (ICF). Packages are named entities in ICF that allow you to logically group similar actions as well as allow them to share parameters.
 
 Once you have completed this exercise, you will have:
 
@@ -35,7 +35,7 @@ In ICF, you can use packages to bundle together related actions and even share t
 
 * Packages can only contain actions. Triggers and rules are **not** supported at the moment.
 
-* Package nesting is not allowed, meaning packages cannot contain other packages.
+* Package nesting is **not** allowed, meaning packages cannot contain other packages.
 
 Packages also support parameters which are automatically passed into packaged actions during invocations as **default parameter values** when none are provided.
 
