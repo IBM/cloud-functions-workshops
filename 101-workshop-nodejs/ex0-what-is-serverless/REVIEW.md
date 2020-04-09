@@ -65,9 +65,8 @@ Serverless computing is still a cutting-edge cloud technology that is implemente
 ( ) Serverless may work well, but Isabelle will have to spend some time configuring servers to handle the infrequent uploads.
 (X) Serverless is a great choice because it can flexibly react to incoming photos and crop them as needed.
 
-Note: Make sure you select all the correct options; there may be more than one!
-
 [explanation]
+This is an example of an Extract, Transform and Load (ETL) Pipeline which is ideally suited for serverless actions which can be triggered to crop photos as they arrive in a datastore.
 [explanation]
 
 6. You need to develop a project that is as cost-effective as possible. For which reasons would you pick serverless?
