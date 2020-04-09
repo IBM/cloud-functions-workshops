@@ -105,7 +105,7 @@ Correct. Multiple triggers can be connected to the same action using separate ru
 (!) false
 
 [explanation]
-True. Using web actions to prepare content, with any HTTP Content-Type and using dynamic data from multiple sources, makes it possible create compelling web sites using only serverless.
+True. Using web actions to prepare and make web accessible content, with any HTTP Content-Type and using dynamic data from multiple sources, makes it possible create compelling web sites using only serverless.
 [explanation]
 
 ### Use the Web User Interface (Web UI)
