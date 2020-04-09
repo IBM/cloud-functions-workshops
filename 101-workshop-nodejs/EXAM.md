@@ -43,7 +43,7 @@ False.  ICF also scales your actions automatically in response to web or HTTP AP
 The usage graphs shows that requests to the application are very fairly constant with request rate averaging roughly 6k over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
 [explanation]
 
-5. Tobias is trying to create an image recognition model for object analysis using large amounts of raw image data.  Is serverless a good choice in helping in these tasks?
+1. Tobias is trying to create an image recognition model for object analysis using large amounts of raw image data.  Is serverless a good choice in helping in these tasks?
 
 (!) Serverless is a great choice here, but Tobias will have to configure his account to handle the amount of processing needed.
 ( ) Serverless won’t work well here because processing the large amount of raw data would be too costly.
@@ -99,7 +99,14 @@ Correct. Multiple triggers can be connected to the same action using separate ru
 
 ### Exposing APIs from Actions
 
+1. It may be possible to construct a website entirely using serverless actions.
 
+(x) True
+(!) false
+
+[explanation]
+True. Using web actions to prepare content using many content types using dynamic data from multiple dat sources makes it possible create compelling web sites using only serverless.
+[explanation]
 
 ### Use the Web User Interface (Web UI)
 
