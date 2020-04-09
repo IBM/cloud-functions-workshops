@@ -27,7 +27,7 @@ Throughout this course, you might see the word _function_ used synonymously with
 
 The following steps and examples demonstrate how to create your first JavaScript action.
 
-1. Create a JavaScript file named hello.js with these contents:
+1. Create a JavaScript file named `hello.js` with these contents:
 
     ```javascript
     function main() {
@@ -37,7 +37,7 @@ The following steps and examples demonstrate how to create your first JavaScript
 
     The JavaScript file might contain additional functions. However, by convention, a function called `main` is the default entry point for the action.
 
-2. Create an action from the hello.js JavaScript function, naming it `hello`:
+2. Create an action from the `hello.js` JavaScript function, naming it `hello`:
 
     ```bash
     ibmcloud fn action create hello hello.js
@@ -227,7 +227,7 @@ The `Entity` column indicates which action was invoked along with the function's
 - **No special code is needed**. You can code with your favorite language!
   - By convention, the `main` function is called. You can always alias "main" to any function in your `.js` file.
 - **No build step**. Runtimes for all supported languages are already deployed in ICF server clusters waiting for your function to be deployed and invoked.
-- The Node.js runtime was inferred via the function's `.js` extension. ICF will always use the latest supported Node.js runtime version unless you explicitly set another version with the `--kind` flag _This is not discussed in this course_.
+- **Node.js runtime inferred**. The Node.js runtime was inferred via the function's `.js` extension. ICF will always use the latest supported Node.js runtime version unless you explicitly set another version with the `--kind` flag _This is not discussed in this course_.
 - Your action was installed into an IBM Cloud namespace. This will allow you to apply Identity and Access Management (IAM) control to all actions in a namespace _This is not discussed in this course_.
 {% endhint %}
 
