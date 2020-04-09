@@ -50,6 +50,24 @@ The usage graphs shows that requests to the application are very fairly constant
 
 --- <!-- EX1 -->
 
+1. Actions cannot directly invoke other actions without using a sequence.
+
+(!) true
+(x) false
+
+[explanation]
+False. Actions can invoke other actions, acting as a proxy, using the NPM Apache OpenWhisk JavaScript library.
+<p><code>var openwhisk = require('openwhisk');</code></p>
+[explanation]
+
+1. You are able to pass parameters when invoking an action using the command line directly or indirectly using a parameter file.
+
+(x) true
+(!) false
+
+[explanation]
+True. Parameters can be passed directly when invoking an action using the <code>--param</code> flag or indirectly from a file using the  <code>--param-file</code> flag.
+[explanation]
 
 --- <!-- EX2 -->
 
