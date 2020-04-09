@@ -17,9 +17,9 @@
 #
 -->
 
-# Review: Connecting Actions to Event Sources
+# Review: Connect actions to event sources
 
-1. What is a Trigger?
+1. What is a trigger?
 
 ( ) An API that invokes a function
 ( ) A network connection between an event source and a function
@@ -27,14 +27,14 @@
 ( ) Event data that is sent to functions as key-value pairs
 
 [explanation]
-Triggers are named channels for classes or kinds of events sent from Event Sources.
+Triggers are named channels for classes or kinds of events sent from event sources.
 [explanation]
 
 ---
 
-2. What is the purpose of a Rule?
+2. What is the purpose of a rule?
 
-( ) associates a multiple triggers with a single action
+( ) associates multiple triggers with a single action
 (x) associates a single trigger with a single action
 ( ) associates a single trigger with multiple actions
 
@@ -44,13 +44,13 @@ Rules are used to associate one trigger with one action. After this kind of asso
 
 ---
 
-3. Rules allow you to define conditional logic that controls if an Action gets invoked based upon event data.
+3. Rules allow you to define conditional logic that controls if an action gets invoked based upon event data.
 
 ( ) True
 (x) False
 
 [explanation]
-False. Rules are simply an association between a Trigger and an Action indicating that event data coming from a Trigger should "fire" and associated Action.  It is either enabled or disabled.
+False. Rules are simply an association between a trigger and an action indicating that event data coming from a trigger should fire an associated action. It is either enabled or disabled.
 [explanation]
 
 4. Multiple actions can be fired from a single trigger.
@@ -61,4 +61,3 @@ False. Rules are simply an association between a Trigger and an Action indicatin
 [explanation]
 Correct. Multiple actions can be connected to the same trigger using separate rules. This allows a single event to cause many parallel serverless actions to begin processing the same data in different ways at the same time.
 [explanation]
-
