@@ -101,18 +101,19 @@ Correct. Multiple triggers can be connected to the same action using separate ru
 
 1. It may be possible to construct a website entirely using serverless actions.
 
-(x) True
+(x) true
 (!) false
 
 [explanation]
-True. Using web actions to prepare content using many content types using dynamic data from multiple dat sources makes it possible create compelling web sites using only serverless.
+True. Using web actions to prepare content, with any HTTP Content-Type and using dynamic data from multiple sources, makes it possible create compelling web sites using only serverless.
 [explanation]
 
 ### Use the Web User Interface (Web UI)
 
 1. If you wish to monitor your action invocations, you need to use the web user interface.
 
-(!) true (x) false
+(!) true 
+(x) false
 
 [explanation]
 False. The CLI's `action poll` command allows you to see activation records as they are created (live), but you will not get the views and filters the web user interface experience provides.
