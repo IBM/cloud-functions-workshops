@@ -34,18 +34,7 @@ False. The command did not use the <code>--blocking</code> flag so only an activ
 
 ---
 
-2. You are able to pass parameters when invoking an action using the command line directly or indirectly using a parameter file.
-
-(x) true
-(!) false
-
-[explanation]
-True. Parameters can be passed directly when invoking an action using the <code>--param</code> flag or indirectly from a file using the  <code>--param-file</code> flag.
-[explanation]
-
----
-
-3. When invoking actions, parameter values can be any valid JSON value, including nested objects.
+2. When invoking actions, parameter values can be any valid JSON value, including nested objects.
 
 (x) true
 (!) false
@@ -58,7 +47,7 @@ True. You are able to pass nested JSON objects when invoking actions using the c
 
 ---
 
-4. It is not possible to monitor activation logs in real time using the command line.
+3. It is not possible to monitor activation logs in real time using the command line.
 
 (!) true
 (x) false
@@ -70,19 +59,7 @@ False. You simply need to issue the <code>poll</code> command for activations as
 
 ---
 
-5. Actions cannot directly invoke other actions without using a sequence.
-
-(!) true
-(x) false
-
-[explanation]
-False. Actions can invoke other actions, acting as a proxy, using the NPM Apache OpenWhisk JavaScript library.
-<p><code>var openwhisk = require('openwhisk');</code></p>
-[explanation]
-
----
-
-6. It is impossible to perform a blocking invocation on an asynchronous action.
+4. It is impossible to perform a blocking invocation on an asynchronous action.
 
 (!) true
 (x) false
@@ -93,7 +70,7 @@ False. Using `Promises` in Node.js, it is possible for your function to return w
 
 ---
 
-7. If an action in the middle of a sequence fails, the platform will return the error after the last action in the sequence is invoked.
+5. If an action in the middle of a sequence fails, the platform will return the error after the last action in the sequence is invoked.
 
 (!) true
 (x) false
