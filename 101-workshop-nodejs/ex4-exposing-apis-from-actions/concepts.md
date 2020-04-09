@@ -19,30 +19,27 @@
 
 # Concepts
 
-## Web Actions
+## Web actions
 
-Cloud Function actions can be annotated with a special flag (i.e., `--web true`) at creation to convert them into "web actions". The result is the corresponding creation of a public URL that can be used to trigger the action from any web app.
+Cloud Function actions can be annotated with a special flag, such as`--web true`, at creation to convert them into [web actions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web). The result is the corresponding creation of a public URL that can be used to trigger the action from any web app.
 
-Web actions can then also be invoked via HTTP requests without user authentication where the HTTP request parameters are automatically converted in event parameters. Web actions are able to control the HTTP response headers and body to support any content-types, manage cookies, perform HTTP redirects directly.
+Web actions can then be invoked via HTTP requests without user authentication where the HTTP request parameters are automatically converted in event parameters. Web actions are able to control the HTTP response headers and body to support any content types, manage cookies, and perform HTTP redirects directly.
 
-In addition, requesters can specify the `content-type` they want for the response as one of `.json`, `.html`, `.http`, `.svg` or `.text`. For convenience, the `.http` extension is the default.
+In addition, requesters can specify the `content-type` they want for the response as `.json`, `.html`, `.http`, `.svg` or `.text`. For convenience, the `.http` extension is the default.
 
 {% hint style="warning" %}
-If you want to implement user authentication, rate limiting, request routing, or if you are building high-traffic and enterprise APIs, the better choice is to use the Cloud Functions API Gateway features described in the next section.
+If you want to implement user authentication, rate limiting, request routing, or if you are building high traffic and enterprise APIs, the better choice is to use the Cloud Functions API Gateway features described in the next section.
 {% endhint %}
 
-{% hint style="info" %}
-Find out more about [Web Actions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web).
-{% endhint %}
 
 ## API Gateway
 
-Cloud Functions comes with an integrated API Gateway service. This allows  developers to create new HTTP APIs which map incoming requests to actions.
+Cloud Functions comes with an integrated API Gateway service. This allows you to create new HTTP APIs which map incoming requests to actions.
 
-The API Gateway handles capabilities like routing based on request properties \(URI paths and HTTP method\), user authentication, rate limiting and more. Developers do not need to implement this features within the web action code.
+The API Gateway handles capabilities like routing based on request properties \(URI paths and HTTP method\), user authentication, rate limiting, and more. You do not need to implement this feature within the web action code.
 
 {% hint style="warning" %}
-_**Note** Several of the extended features described above, along with [support of the OpenAPI specification](https://github.com/apache/openwhisk-apigateway#API) or "Swagger", are quite deep and outside of the scope of this workshop._
+Several of the extended features described above, along with [support of the OpenAPI Specification](https://github.com/apache/openwhisk-apigateway#API) or "Swagger", are quite deep and outside of the scope of this course.
 {% endhint %}
 
 {% hint style="info" %}
