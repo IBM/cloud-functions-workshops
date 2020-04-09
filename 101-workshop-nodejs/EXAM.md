@@ -30,13 +30,9 @@
 False.  ICF also scales your actions automatically in response to web or HTTP API invocations if you have enabled them as web actions and/or created a private or public API for them.  
 [explanation]
 
----
-
 1. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
 
 ![Application Usage Graph](ex0-what-is-serverless/images/101-ex0-review-question-request-graph-2.png)
-
-<!-- <img width="80%" src="/static/101-ex0-review-question-request-graph-2.png"/> -->
 
 (!) The usage is mostly constant, so serverless computing would be a good fit for this usage case.
 ( ) The usage is mostly sporadic, so serverless computing is a good fit for this usage case.
@@ -45,6 +41,17 @@ False.  ICF also scales your actions automatically in response to web or HTTP AP
 
 [explanation]
 The usage graphs shows that requests to the application are very fairly constant with request rate averaging roughly 6k over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
+[explanation]
+
+5. Tobias is trying to create an image recognition model using large amounts of raw image data.  Is serverless a good choice?
+
+(!) Serverless is a great choice here, but Tobias will have to configure his account to handle the scaling needed.
+( ) Serverless won’t work well here because processing the large amount of raw data would be too costly.
+( ) Serverless is not a good choice because Tobias processing iamge data takes
+(X) Serverless may be a good choice in both dividing the data into manageable pieces as well as analyzing the data parallel.
+
+[explanation]
+This is an example of an embarassingly parallel task where serverless could be used to help in two ways. First, it can be used to divide the large data sets into smaller ones that enables parallel processing. Then it can be used again in parallel to analyze the data and aggregate the results.
 [explanation]
 
 ## Create and invoke actions
@@ -78,7 +85,6 @@ True. Parameters can be passed directly when invoking an action using the <code>
 [explanation]
 False. Package nesting is not allowed, i.e. packages cannot contain other packages.
 [explanation]
-
 
 ### Connecting Actions to Event Sources
 
