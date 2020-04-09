@@ -33,8 +33,6 @@ Note: Make sure you select all the correct options; there may be more than one!
 Serverless computing uses servers to execute functional code in response to events. You do not need to setup, configure, or manage servers or language-specific service frameworks in order to develop or run your functions. In addition, the serverless platform handles all aspects of management and operations, including scaling, monitoring, logging, and security.
 [explanation]
 
----
-
 2. Serverless computing is a specific technology with a developed set of standards and practices.
 
 (!) True
@@ -44,8 +42,6 @@ Serverless computing uses servers to execute functional code in response to even
 Serverless computing is still a cutting-edge cloud technology that is implemented differently by different serverless providers. Different providers may use different paradigms to run and scale functional code.  There is no standardized API or standardized packaging mechanism. Also, you will find that the arguments and environment differ.  It is always best to look for serverless solution providers who are working with others in proven open source organizations and projects to promote serverless maturity and standards.
 [explanation]
 
----
-
 3. Serverless computing requires the developer to allocate servers and machine resources.
 
 (!) true
@@ -53,8 +49,6 @@ Serverless computing is still a cutting-edge cloud technology that is implemente
 
 [explanation]
 [explanation]
-
----
 
 4. Serverless computing scales inherently and executes stateless code in response to events.
 
@@ -64,13 +58,11 @@ Serverless computing is still a cutting-edge cloud technology that is implemente
 [explanation]
 [explanation]
 
----
-
 5. Isabelle decided to use serverless computing for a project that crops photos automatically when added to cloud storage. How would you critique her choice?
 
 (!) Serverless is a great choice here because it allows Isabelle to manage the allocation of machine resources.
 ( ) Serverless won’t work well here because it depends too much on how often customers will be uploading photos.
-(x) Serverless may work well, but Isabelle will have to spend some time configuring servers to handle the infrequent uploads.
+( ) Serverless may work well, but Isabelle will have to spend some time configuring servers to handle the infrequent uploads.
 (X) Serverless is a great choice because it can flexibly react to incoming photos and crop them as needed.
 
 Note: Make sure you select all the correct options; there may be more than one!
@@ -78,12 +70,10 @@ Note: Make sure you select all the correct options; there may be more than one!
 [explanation]
 [explanation]
 
----
-
 6. You need to develop a project that is as cost-effective as possible. For which reasons would you pick serverless?
 
 [x] Serverless outsourcing leads to less infrastructure, operational, and development costs.
-[x] Serverless only charges for time when code is executing.
+[x] Serverless only charges for the time when code is executing.
 [!] Serverless applications can run in low-cost, pre-allocated capacity you can purchase in advance.
 
 Note: Make sure you select all the correct options; there may be more than one!
@@ -92,8 +82,6 @@ Note: Make sure you select all the correct options; there may be more than one!
 With serverless, you only pay for compute costs that your functions use on a per-invocation basis (remember the PAYGO model discussed earlier in this course). Serverless providers worry about the infrastructure and DevOps while you focus on writing functional business logic. There is no need to pay for pre-allocated capacity. Your provider will scale your functions as needed, each receiving the compute and memory limits that you are guaranteed by your license agreements.
 [explanation]
 
----
-
 7. Long running and non-separable tasks are types of tasks that typically work well in a serverless environment.
 
 (x) false
@@ -101,7 +89,6 @@ With serverless, you only pay for compute costs that your functions use on a per
 
 [explanation]
 [explanation]
-
 
 8. You are given the following graph of usage for an application you are developing. Which of the following is a correct conclusion of the graph?
 
