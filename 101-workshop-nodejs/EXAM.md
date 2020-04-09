@@ -77,7 +77,7 @@ True. Parameters can be passed directly when invoking an action using the <code>
 
 ### Managing Actions with Packages
 
-1. If you have many Packages, you can better organize them by creating a Package that contains several similar packages.
+1. If you have many packages of actions, you can better organize them by creating a package that contains several similar packages.
 
 (!) true
 (x) false
