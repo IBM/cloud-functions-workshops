@@ -19,7 +19,7 @@
 
 # Create and invoke actions
 
-In this section, you will learn how to work with **actions** in IBM Cloud Functions (ICF). An action represents the serverless function, along with its conventions and metadata. If you recall, the _Action_ entity was shown as part of the ICF programming model in the previous chapter.
+In this section, you will learn how to work with **actions** in IBM Cloud Functions (ICF). An action represents the serverless function, along with its conventions and metadata.
 
 Throughout this course, you might see the word _function_ used synonymously with the term _action_ since actions contain the functional source code, which is the primary focus.
 
