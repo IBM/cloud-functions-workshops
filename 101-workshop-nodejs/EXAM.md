@@ -88,7 +88,7 @@ False. Package nesting is not allowed, i.e. packages cannot contain other packag
 (x) correct
 
 [explanation]
-Correct. Multiple triggers can be connected to the same action using separate rules.
+Correct. Multiple triggers can be connected to the same action using separate rules.  This allows similar event data doming from different event sources to be processed by the same serverless action.
 [explanation]
 
 ### Exposing APIs from Actions
