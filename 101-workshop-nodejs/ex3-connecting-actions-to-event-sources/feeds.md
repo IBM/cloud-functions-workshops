@@ -17,13 +17,13 @@
 #
 -->
 
-# Connecting Trigger Feeds
+# Connecting trigger feeds
 
-Trigger feeds allow you to connect triggers to external event sources. Event sources will fire registered triggers each time an event occurs. Here's a list of the event sources currently supported on IBM Cloud Functions: [https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md](https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md)
+Trigger feeds allow you to connect triggers to external event sources. Event sources will fire registered triggers each time an event occurs. Here’s a [list of the event sources](https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md) currently supported on IBM Cloud Functions (ICF).
 
 This example shows how to use a feed in the [Alarms package](https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md) to fire a trigger every minute, which invokes an action using a rule.
 
-1. Get a description of the feeds in the `/whisk.system/alarms` package.
+1. Get a description of the feeds in the `/whisk.system/alarms` package:
 
       ```bash
       ibmcloud fn package get --summary /whisk.system/alarms
@@ -40,7 +40,7 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
          (parameters: cron, startDate, stopDate)
       ```
 
-2. Retrieve the details for the `alarms/interval` feed.
+2. Retrieve the details for the `alarms/interval` feed:
 
       ```text
       ibmcloud fn action get --summary /whisk.system/alarms/interval
@@ -67,7 +67,7 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
       ok: created trigger everyMinute
       ```
 
-3. Connect this trigger to the `hello` action with a new rule.
+3. Connect this trigger to the `hello` action with a new rule:
 
       ```bash
       ibmcloud fn rule create everyMinuteRule everyMinute hello
@@ -77,7 +77,7 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
       ok: created rule everyMinuteRule
       ```
 
-4. Check that the action is being invoked every minute by polling for activation logs.
+4. Check that the action is being invoked every minute by polling for activation logs:
 
       ```bash
       ibmcloud fn activation poll
@@ -92,12 +92,12 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
       ]
       ```
 
-   You should see activations every minute the trigger and the action. The action receives the parameters `{"name":"Mork", "place":"Ork"}` on every invocation.
+   You should see activations every minute for both the trigger and the action. The action receives the parameters `{"name":"Mork", "place":"Ork"}` on every invocation.
 
-5. Delete the trigger and rule
+5. Delete the trigger and rule:
 
    {% hint style="warning" %}
-   **IMPORTANT: Be sure to delete the trigger and rule or this event will be running forever!**
+   **Important**: Be sure to delete the trigger and rule or this event will be running **forever**!
    {% endhint %}
 
    ```bash
@@ -109,5 +109,5 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
    ```
 
 {% hint style="success" %}
-🎉 **Understanding triggers and rules allows you to build event-driven applications using IBM Cloud Functions.** Create some actions, hook up events and let the platform take care of everything else, what could be easier? 🎉
+Understanding triggers and rules allows you to build event-driven applications using ICF. All you have to do is create some actions, hook up events, and let the platform take care of everything else! What could be easier? 
 {% endhint %}
