@@ -1,6 +1,6 @@
 # Connect actions to event sources
 
-This exercise introduces concepts like triggers and rules used by the platform to integrate external event providers.
+This exercise introduces concepts like **triggers** and **rules** used by the platform to connect events from event providers and sources to **actions**. If you recall, the _Trigger_ and _Rule_ entities were shown as part of the ICF programming model in the previous chapter.
 
 Once you have completed this exercise, you will have:
 
