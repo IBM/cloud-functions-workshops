@@ -88,7 +88,7 @@ False. Package nesting is not allowed, i.e. packages cannot contain other packag
 (x) correct
 
 [explanation]
-Triggers can be connected to the same action using separate rules.
+Multiple triggers can be connected to the same action using separate rules.
 [explanation]
 
 ### Exposing APIs from Actions
