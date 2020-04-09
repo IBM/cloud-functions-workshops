@@ -19,7 +19,7 @@
 
 # Final Exam
 
---- <!-- EX0 -->
+## What is serverless?
 
 1. IBM Cloud Functions scales your actions automatically only in response to event triggers.
 
@@ -47,8 +47,7 @@ False.  ICF also scales your actions automatically in response to web or HTTP AP
 The usage graphs shows that requests to the application are very fairly constant with request rate averaging roughly 6k over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
 [explanation]
 
-
---- <!-- EX1 -->
+## Create and invoke actions
 
 1. Actions cannot directly invoke other actions without using a sequence.
 
@@ -69,10 +68,20 @@ False. Actions can invoke other actions, acting as a proxy, using the NPM Apache
 True. Parameters can be passed directly when invoking an action using the <code>--param</code> flag or indirectly from a file using the  <code>--param-file</code> flag.
 [explanation]
 
---- <!-- EX2 -->
+### Managing Actions with Packages
+
+1. If you have many Packages, you can better organize them by creating a Package that contains several similar packages.
+
+(!) true
+(x) false
+
+[explanation]
+False. Package nesting is not allowed, i.e. packages cannot contain other packages.
+[explanation]
 
 
---- <!-- EX3 -->
+### Connecting Actions to Event Sources
+
 1. Multiple triggers can be configured to fire the same action.
 
 (!) incorrect
@@ -82,10 +91,11 @@ True. Parameters can be passed directly when invoking an action using the <code>
 Triggers can be connected to the same action using separate rules.
 [explanation]
 
---- <!-- EX4 -->
+### Exposing APIs from Actions
 
 
---- <!-- EX5 -->
+
+### Use the Web User Interface (Web UI)
 
 1. If you wish to monitor your action invocations, you need to use the web user interface.
 
@@ -94,4 +104,3 @@ Triggers can be connected to the same action using separate rules.
 [explanation]
 False. The CLI's `action poll` command allows you to see activation records as they are created (live), but you will not get the views and filters the web user interface experience provides.
 [explanation]
-
