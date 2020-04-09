@@ -43,12 +43,12 @@ False.  ICF also scales your actions automatically in response to web or HTTP AP
 The usage graphs shows that requests to the application are very fairly constant with request rate averaging roughly 6k over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
 [explanation]
 
-5. Tobias is trying to create an image recognition model using large amounts of raw image data.  Is serverless a good choice?
+5. Tobias is trying to create an image recognition model for object analysis using large amounts of raw image data.  Is serverless a good choice in helping in these tasks?
 
-(!) Serverless is a great choice here, but Tobias will have to configure his account to handle the scaling needed.
+(!) Serverless is a great choice here, but Tobias will have to configure his account to handle the amount of processing needed.
 ( ) Serverless won’t work well here because processing the large amount of raw data would be too costly.
-( ) Serverless is not a good choice because Tobias processing iamge data takes
-(X) Serverless may be a good choice in both dividing the data into manageable pieces as well as analyzing the data parallel.
+( ) Serverless is not a good choice because Tobias would need dedicated servers that have the processing power for analytics.
+(X) Serverless may be a good choice in both dividing the data into manageable pieces as well as analyzing the data in parallel.
 
 [explanation]
 This is an example of an embarassingly parallel task where serverless could be used to help in two ways. First, it can be used to divide the large data sets into smaller ones that enables parallel processing. Then it can be used again in parallel to analyze the data and aggregate the results.
