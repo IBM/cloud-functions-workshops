@@ -129,11 +129,11 @@ All web actions, when invoked, receive additional HTTP request details as parame
 5. `__ow_body` \(type: string\): The request body entity, as a base64 encoded string when content is binary or JSON object/array, or plain string otherwise
 6. `__ow_query` \(type: string\): The query parameters from the request as an unparsed string
 
-The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy. 
+The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy.
 
-The `__ow_query` is available only when a web action elects to handle the [raw HTTP request](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\). 
+The `__ow_query` is available only when a web action elects to handle the [raw HTTP request](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\).
 
-The `__ow_body` property is present either when handling raw HTTP requests or when the HTTP request entity is not a JSON object or from data. 
+The `__ow_body` property is present either when handling raw HTTP requests or when the HTTP request entity is not a JSON object or from data.
 
 Web actions otherwise receive query and body parameters as first class properties in the action arguments. Body parameters take precedence over query parameters, which in turn take precedence over action and package parameters.
 
@@ -208,7 +208,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 4. Now try the URL in a browser.
 
-      What website do you see?
+      Did your action successfully redirect to the Apache OpenWhisk project website?
 
 ## Example: HTML response
 
