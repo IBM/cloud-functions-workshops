@@ -25,12 +25,17 @@ Cloud Function actions can be annotated with a special flag, `--web true`, at cr
 
 Web actions can then be invoked via HTTP requests without user authentication where the HTTP request parameters are automatically converted in event parameters. Web actions are able to control the HTTP response headers and body to support any content types, manage cookies, and perform HTTP redirects directly.
 
-In addition, requesters can specify the `content-type` they want for the response as one of the following: `.json`, `.html`, `.http`, `.svg` or `.text` if the web action supports returning more than one. For convenience, the `.http` extension is the default.
+Some benefits of using web actions include:
+
+- Invoke a web action from anywhere without defining a trigger or a rule.
+- Accessible through a REST interface without the need for credentials.
+- Supports any type of HTTP method including GET, POST (the default), PUT, PATCH, and DELETE, as well as HEAD and OPTIONS.
+
+In addition, if the web action is able to return more than one `content-type` on an HTTP response, requesters can specify the `content-type` they want by adding an extension to its assigened URL.  Supported extensions include `.json`, `.html`, `.http`, `.svg` or `.text` For convenience, the `.http` extension is the default when not specified.
 
 {% hint style="warning" %}
 If you want to implement user authentication, rate limiting, request routing, or if you are building high traffic and enterprise APIs, the better choice is to use the Cloud Functions API Gateway features described in the next section.
 {% endhint %}
-
 
 ## API Gateway
 
