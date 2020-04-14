@@ -17,13 +17,13 @@
 #
 -->
 
-# Web Actions
+# Web actions
 
-Web actions are actions which can be called externally using the HTTP protocol from clients like `curl` or web browsers.  IBM Cloud Functions provides a simple flag, `--web true`, which will cause it to automatically create an HTTP accessible URL (endpoint) for any action.
+Web actions are actions that can be called externally using the HTTP protocol from clients like `curl` or web browsers. IBM Cloud Functions (ICF) provides a simple flag, `--web true`, which causes it to automatically create an HTTP accessible URL (endpoint) for any action.
 
 Let's turn the `hello` action into a `"web action"`!
 
-1. Update the action to set the `--web` flag to `true`.
+1. Update the action to set the `--web` flag to `true`:
 
       ```bash
       ibmcloud fn action update hello --web true
@@ -35,7 +35,7 @@ Let's turn the `hello` action into a `"web action"`!
 
       The `hello` action has now been assigned an HTTP endpoint.
 
-2. Retrieve the web action's URL exposed by the platform for the `hello` action.
+2. Retrieve the web action's URL exposed by the platform for the `hello` action:
 
       ```bash
       ibmcloud fn action get hello --url
@@ -47,29 +47,29 @@ Let's turn the `hello` action into a `"web action"`!
 
       ```
 
-3. Invoke the web action URL returned using the `curl` command.
+3. Invoke the web action URL returned using the `curl` command:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
       ```
 
-      It looks like nothing happened!  In fact, an HTTP response code of `204 No Content` was returned!
+      It looks like nothing happened! In fact, an HTTP response code of `204 No Content` was returned.
 
       ```bash
       &nbsp;
       ```
 
-      This is because we need to tell IBM Cloud Functions what content type we expect the function to return...
+      This is because you need to tell ICF what `content-type` you expect the function to return.
 
 4. Invoke the web action URL with a JSON extension using the `curl` command.
 
-     To do this we need to add `.json` after the action name, at the end of the URL, to tell ICF we want a JSON object returned. Try it invoking it now:
+     To do this you need to add `.json` after the action name, at the end of the URL, to tell ICF you want a JSON object returned. Try invoking it now:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
       ```
 
-      We now get a successful HTTP response in JSON format which matches the `.json` extension we added:
+      You now get a successful HTTP response in JSON format which matches the `.json` extension you added:
 
       ```json
       {
@@ -77,7 +77,7 @@ Let's turn the `hello` action into a `"web action"`!
       }
       ```
 
-      Additionally, we can invoke it with query parameters for `name` and `place`:
+      Additionally, you can invoke it with query parameters for `name` and `place`:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
@@ -89,7 +89,7 @@ Let's turn the `hello` action into a `"web action"`!
       }
       ```
 
-5. Disable web action support.
+5. Disable web action support:
 
       ```bash
       ibmcloud fn action update hello --web false
@@ -99,7 +99,7 @@ Let's turn the `hello` action into a `"web action"`!
       ok: updated action hello
       ```
 
-6. Verify the action is no longer externally accessible.
+6. Verify the action is no longer externally accessible:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
@@ -114,42 +114,48 @@ Let's turn the `hello` action into a `"web action"`!
 
 ## Content extensions
 
-Web actions invoked through the platform API need a content extension to tell the platform how to interpret the content returned from the action. In the example above, we were using the `.json` extension. This tells the platform to serialize the return value out to a JSON response.
+Web actions invoked through the platform API need a content extension to tell the platform how to interpret the content returned from the action. In the example above, you were using the `.json` extension. This tells the platform to serialize the return value out to a JSON response.
 
-The platform supports the following content-types: `.json`, `.html`, `.http`, `.svg` or `.text`. If no content extension is provided, it defaults to `.http` which gives the action full control of the HTTP response.
+The platform supports the following `content-types`: `.json`, `.html`, `.http`, `.svg` or `.text`. If no content extension is provided, it defaults to `.http`, which gives the action full control of the HTTP response.
 
 ## HTTP request properties
 
 All web actions, when invoked, receive additional HTTP request details as parameters to the action input argument. These include:
 
-1. `__ow_method` \(type: string\). the HTTP method of the request.
-2. `__ow_headers` \(type: map string to string\): A the request headers.
-3. `__ow_path` \(type: string\): the unmatched path of the request \(matching stops after consuming the action extension\).
-4. `__ow_user` \(type: string\): the namespace identifying the OpenWhisk authenticated subject
-5. `__ow_body` \(type: string\): the request body entity, as a base64 encoded string when content is binary or JSON object/array, or plain string otherwise
-6. `__ow_query` \(type: string\): the query parameters from the request as an unparsed string
+1. `__ow_method` \(type: string\): The HTTP method of the request
+2. `__ow_headers` \(type: map string to string\): The request headers
+3. `__ow_path` \(type: string\): The unmatched path of the request \(matching stops after consuming the action extension\)
+4. `__ow_user` \(type: string\): The namespace identifying the OpenWhisk authenticated subject
+5. `__ow_body` \(type: string\): The request body entity, as a base64 encoded string when content is binary or JSON object/array, or plain string otherwise
+6. `__ow_query` \(type: string\): The query parameters from the request as an unparsed string
 
-The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy. The `__ow_query` is available only when a web action elects to handle the ["raw" HTTP request](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\). The `__ow_body` property is present either when handling "raw" HTTP requests, or when the HTTP request entity is not a JSON object or form data. Web actions otherwise receive query and body parameters as first class properties in the action arguments with body parameters taking precedence over query parameters, which in turn take precedence over action and package parameters.
+The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy. 
 
-## Controlling HTTP responses
+The `__ow_query` is available only when a web action elects to handle the [raw HTTP request](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\). 
 
-Web actions can return a JSON object with the following properties to directly control the HTTP response returned to the client.
+The `__ow_body` property is present either when handling raw HTTP requests or when the HTTP request entity is not a JSON object or from data. 
 
-1. `headers`: a JSON object where the keys are header-names and the values are string, number, or boolean values for those headers \(default is no headers\). To send multiple values for a single header, the header's value should be a JSON array of values.
-2. `statusCode`: a valid HTTP status code \(default is 200 OK if body is not empty otherwise 204 No Content\).
-3. `body`: a string which is either plain text, JSON object or array, or a base64 encoded string for binary data \(default is empty response\).
+Web actions otherwise receive query and body parameters as first class properties in the action arguments. Body parameters take precedence over query parameters, which in turn take precedence over action and package parameters.
 
-The `body` is considered empty if it is `null`, the empty string `""` or undefined.
+## Control HTTP responses
 
-If a `content-type header` is not declared in the action result’s `headers`, the body is interpreted as `application/json` for non-string values, and `text/html` otherwise. When the `content-type` is defined, the controller will determine if the response is binary data or plain text and decode the string using a base64 decoder as needed. Should the body fail to decoded correctly, an error is returned to the caller.
+Web actions can return a JSON object with the following properties to directly control the HTTP response returned to the client:
+
+1. `headers`: A JSON object where the keys are header names and the values are string, number, or boolean values for those headers \(default is no headers\). To send multiple values for a single header, the header's value should be a JSON array of values.
+2. `statusCode`: A valid HTTP status code \(default is 200 OK if body is not empty otherwise 204 No Content\).
+3. `body`: A string which is either plain text, JSON object or array, or a base64 encoded string for binary data \(default is empty response\).
+
+The `body` is considered empty if it is `null`, the empty string `""`, or undefined.
+
+If a `content-type header` is not declared in the action result’s `headers`, the body is interpreted as `application/json` for non-string values and `text/html` otherwise. When the `content-type` is defined, the controller will determine if the response is binary data or plain text and decode the string using a base64 decoder as needed. Should the body fail to decode correctly, an error is returned to the caller.
 
 ## Additional features
 
-Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/master/docs/webactions.md), see the documentation for full details on all these capabilities.
+Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/master/docs/webactions.md). See the documentation for full details on all these capabilities.
 
 ## Example - HTTP redirect
 
-1. Create a new web action from the following source code in `redirect.js`.
+1. Create a new web action from the following source code in `redirect.js`:
 
       ```javascript
       function main() {
@@ -168,7 +174,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       ok: created action redirect
       ```
 
-2. Retrieve URL for new web action
+2. Retrieve the URL for a new web action:
 
       ```bash
       ibmcloud fn action get redirect --url
@@ -179,7 +185,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
       ```
 
-3. Check that the HTTP response is indeed an HTTP redirect.
+3. Check that the HTTP response is indeed an HTTP redirect:
 
       ```bash
       curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
@@ -200,13 +206,13 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       ...
       ```
 
-4. Now try the URL in a browser...
+4. Now try the URL in a browser.
 
-      _What website do you see?_
+      What website do you see?
 
 ## Example: HTML response
 
-1. Create a new web action from the following source code in html.js.
+1. Create a new web action from the following source code in html.js:
 
       ```javascript
       function main() {
@@ -225,7 +231,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       ok: created action html
       ```
 
-2. Retrieve the URL for the web action
+2. Retrieve the URL for the web action:
 
       ```bash
       ibmcloud fn action get html --url
@@ -236,7 +242,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
       ```
 
-3. Check HTTP response is HTML and we should copy/paste that into our browser.
+3. Check the HTTP response is HTML and copy and paste that into your browser:
 
       ```bash
       curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
@@ -248,7 +254,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 ## Example: SVG Response
 
-1. Create a new function that has the SVG base64 encoded as the body
+1. Create a new function that has the SVG base64 encoded as the body:
 
       ```javascript
       // The "svg" that is base64 encoded in the "body" param below:
@@ -282,7 +288,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
       ok: updated action atom
       ```
 
-2. Get the URL for the new atom web action
+2. Get the URL for the new atom web action:
 
       ```bash
       ibmcloud fn action get atom --url
@@ -304,9 +310,9 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 ## Example: Manual JSON response
 
-If our function is only able to return a response in JSON, we can set the `content-type` manually in the function so the caller need not append `.json` to the URL.
+If our function is only able to return a response in JSON, you can set the `content-type` manually in the function. This is so the caller doesn’t need to append `.json` to the URL.
 
-1. Create a new web action from the following source code called `manual.js`.
+1. Create a new web action from the following source code called `manual.js`:
 
       ```javascript
       function main(params) {
@@ -326,7 +332,7 @@ If our function is only able to return a response in JSON, we can set the `conte
       ok: created action manual
       ```
 
-2. Retrieve URL for new web action
+2. Retrieve the URL for a new web action:
 
       ```bash
       ibmcloud fn action get manual --url
@@ -337,7 +343,7 @@ If our function is only able to return a response in JSON, we can set the `conte
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual
       ```
 
-3. Check HTTP response is JSON.
+3. Check the HTTP response is JSON:
 
       ```bash
       curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world
@@ -361,7 +367,7 @@ If our function is only able to return a response in JSON, we can set the `conte
         "hello": "world"
       ```
 
-4. Use other HTTP methods or URI paths to show the parameters change.
+4. Use other HTTP methods or URI paths to show the parameters change:
 
       ```bash
       curl -XPOST https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world
@@ -386,5 +392,5 @@ If our function is only able to return a response in JSON, we can set the `conte
       ```
 
 {% hint style="success" %}
-🎉 **Web Actions are cool!** Web Actions are an awesome feature allowing you make your Actions accessible on the web while controlling Content Types.  You can even generate HTML and other website content "on-the-fly" without hosting a content server!
+Aren’t web actions cool? They are a great feature that allows you to make you’re actions accessible on the web while controlling content types.  You can even generate HTML and other website content on the fly without hosting a content server!
 {% endhint %}
