@@ -21,10 +21,10 @@
 
 ## What is serverless?
 
-1. IBM Cloud Functions scales your actions automatically only in response to event triggers.
+1. ICF scales your actions automatically only in response to event triggers.
 
-(x) false
-(!) true
+(!) True
+(x) False
 
 [explanation]
 False.  ICF also scales your actions automatically in response to web or HTTP API invocations if you have enabled them as web actions and/or created a private or public API for them.  
@@ -40,10 +40,10 @@ False.  ICF also scales your actions automatically in response to web or HTTP AP
 ( ) The usage is mostly sporadic, so serverless computing is a bad fit for this usage case.
 
 [explanation]
-The usage graphs shows that requests to the application are very fairly constant with request rate averaging roughly 6k over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
+The usage graphs shows that requests to the application are very fairly constant, with the request rate averaging roughly 6,000 over the provided time interval. In this usage case, it is likely more cost effective to pay for dedicated servers (computing services) with enough planned capacity to handle such a load.
 [explanation]
 
-1. Tobias is trying to create an image recognition model for object analysis using large amounts of raw image data.  Is serverless a good choice in helping in these tasks?
+1. Tobias is trying to create an image recognition model for object analysis using large amounts of raw image data.  Is serverless a good choice in helping with these tasks?
 
 (!) Serverless is a great choice here, but Tobias will have to configure his account to handle the amount of processing needed.
 ( ) Serverless won’t work well here because processing the large amount of raw data would be too costly.
@@ -58,8 +58,8 @@ This is an example of an embarassingly parallel task where serverless could be u
 
 1. Actions cannot directly invoke other actions without using a sequence.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
 False. Actions can invoke other actions, acting as a proxy, using the NPM Apache OpenWhisk JavaScript library.
@@ -68,53 +68,53 @@ False. Actions can invoke other actions, acting as a proxy, using the NPM Apache
 
 1. You are able to pass parameters when invoking an action using the command line directly or indirectly using a parameter file.
 
-(x) true
-(!) false
+(x) True
+(!) False
 
 [explanation]
 True. Parameters can be passed directly when invoking an action using the <code>--param</code> flag or indirectly from a file using the  <code>--param-file</code> flag.
 [explanation]
 
-### Managing Actions with Packages
+### Manage actions with packages
 
 1. If you have many packages of actions, you can better organize them by creating a package that contains several similar packages.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
-False. Package nesting is not allowed, i.e. packages cannot contain other packages.
+False. Package nesting is not allowed. Remember, packages cannot contain other packages.
 [explanation]
 
-### Connecting Actions to Event Sources
+### Connect actions to event sources
 
 1. Multiple triggers can be configured to fire the same action.
 
-(!) incorrect
-(x) correct
+(!) Incorrect
+(x) Correct
 
 [explanation]
 Correct. Multiple triggers can be connected to the same action using separate rules.  This allows similar event data, coming from different event sources, to be processed by the same serverless action.
 [explanation]
 
-### Exposing APIs from Actions
+### Expose APIs from actions
 
 1. It may be possible to construct a website entirely using serverless actions.
 
-(x) true
-(!) false
+(x) True
+(!) False
 
 [explanation]
-True. Using web actions to prepare content and make it web accessible, with any HTTP Content-Type and using dynamic data from multiple sources, makes it possible create compelling web sites using only serverless.
+True. Using web actions to prepare content and make it web accessible, with any HTTP `content-type` and using dynamic data from multiple sources, makes it possible create compelling websites using only serverless.
 [explanation]
 
-### Use the Web User Interface (Web UI)
+### Use the Web UI
 
-1. If you wish to monitor your action invocations, you need to use the web user interface.
+1. If you wish to monitor your action invocations, you need to use the Web UI.
 
-(!) true 
-(x) false
+(!) True 
+(x) False
 
 [explanation]
-False. The CLI's `action poll` command allows you to see activation records as they are created (live), but you will not get the views and filters the web user interface experience provides.
+False. The CLI's `action poll` command allows you to see activation records as they are created (live), but you will not get the views and filters the Web UI experience provides.
 [explanation]
