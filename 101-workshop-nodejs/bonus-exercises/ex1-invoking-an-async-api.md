@@ -17,17 +17,17 @@
 #
 -->
 
-# Calling an external API from an Async action
+# Call an external API from an async action
 
 This exercise challenges you to create a new action that takes a price and currency and returns a message that contains the equivalent amount of Bitcoin.  The actual conversion will be done by calling an external API asynchronously from your function.
 
 ## Input
 
-The action should take two parameters, `amount` and `currency`. The `amount` parameter is a number and `currency` is a three letter [currency code](https://www.iban.com/currency-codes.html).
+The action should take two parameters: `amount` and `currency`. The `amount` parameter is a number and `currency` is a three letter [currency code](https://www.iban.com/currency-codes.html).
 
 ## Output
 
-Return the following JSON template with the input parameters and bitcoin amounts.
+Return the following JSON template with the input parameters and bitcoin amounts:
 
 ```json
 {
@@ -40,9 +40,9 @@ If either the `amount` or `currency` parameters are missing, return an error wit
 
 ## Resources
 
-This [Coindesk Version 1 API](https://api.coindesk.com/v1/bpi/currentprice.json) returns real-time bitcoin prices. This includes rates for the `USD`, `GBP` and `EUR` currencies.
+This [Coindesk Version 1 API](https://api.coindesk.com/v1/bpi/currentprice.json) returns real time Bitcoin prices. This includes rates for the `USD`, `GBP`, and `EUR` currencies.
 
-This [Currency Converter API](https://free.currencyconverterapi.com/) returns exchanges rates between traditional currencies.
+This [Currency Converter API](https://free.currencyconverterapi.com/) returns exchange rates between traditional currencies.
 
 Use the `request-promise` [module](https://www.npmjs.com/package/request-promise) to make external API requests. It comes pre-installed in the runtime.
 
