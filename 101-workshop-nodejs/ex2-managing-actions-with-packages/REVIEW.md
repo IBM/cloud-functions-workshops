@@ -17,21 +17,21 @@
 #
 -->
 
-# Review: Managing Actions with Packages
+# Review: Manage actions with packages
 
-1. You can invoke actions in public packages as if they were normal actions
+1. You can invoke actions in public packages as if they were normal actions.
 
-(x) true
-(!) false
+(x) True
+(!) False
 
 [explanation]
-True. You can invoke it and pass it parameters on invocation just like a normal action.
+True. You can invoke it and pass its parameters on invocation just like a normal action.
 [explanation]
 
 2. You can provide default parameters to an action in a public package just as you would a normal action.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
 False. The action from the public package needs to bound to a logical name within a local namespace before default parameters can be applied to it.
@@ -39,8 +39,8 @@ False. The action from the public package needs to bound to a logical name withi
 
 3. If you bind a parameter value to a package, that value cannot be overridden on invocation.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
 False. The parameter value on invocation always overrides those on the package binding.
@@ -48,8 +48,8 @@ False. The parameter value on invocation always overrides those on the package b
 
 4. After creating a custom package as private, you can clone the package to make it public.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
 False. You simply need to update the package using the <code>--shared</code> flag and with a value of <code>yes</code>value.
