@@ -1,6 +1,6 @@
 # Actions
 
-Select "Actions" from the left-hand menu panel on the homepage.[This page](https://cloud.ibm.com/functions/actions) is the management page for actions. It shows actions within the chosen region, org and space.
+Select "Actions" from the left-hand menu panel on the homepage.[This page](https://cloud.ibm.com/functions/actions) is the management page for actions. It shows actions within the chosen region, org, and space.
 
 ![action details page](images/101-ex5-action-overview.png)
 
@@ -8,7 +8,7 @@ Select an action from the page to move to the action details page.
 
 ## Details overview
 
-The action details page will show properties for the chosen action.
+The action details page shows properties for the chosen action.
 
 For supported runtimes, action source code is shown in an editor which allows users to make changes live.
 
@@ -16,14 +16,14 @@ For supported runtimes, action source code is shown in an editor which allows us
 
 Using the menu on the left-hand side, different properties for the action can be accessed and modified.
 
-* _"Code"_ - shows action source code in editor.
-* _"Parameters"_ - shows default parameters for the action.
-* _"Runtime"_ - shows the action runtime, timeout value and memory limit.
-* _"Endpoints"_ - allows you to expose the action as web action.
-* _"Connected Triggers"_ - shows the triggers action is connected to.
-* _"Enclosing Sequences"_ - shows sequences which use this action.
+* **Code** shows action source code in editor.
+* **Parameters** shows default parameters for the action.
+* **Runtime** shows the action runtime, timeout value, and memory limit.
+* **Endpoints** allow you to expose the action as a web action.
+* **Connected triggers** shows the triggers the action is connected to.
+* **Enclosing sequences** shows sequences which use this action.
 
-## Invoking actions
+## Invoke actions
 
 Click the "Invoke" button to invoke an action and display the resulting activation record.
 
