@@ -21,8 +21,8 @@
 
 1. Any action can be made accessible on the web by simply setting the flag <code>--web</code> to <code>true</code>.
 
-(x) true
-(!) false
+(x) True
+(!) False
 
 [explanation]
 True. Making your Actions web accessible using IBM Cloud Functions is really that easy.
@@ -30,8 +30,8 @@ True. Making your Actions web accessible using IBM Cloud Functions is really tha
 
 2. Functions that are web actions need to parse the raw HTTP request header to obtain query parameters.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
 False. Web actions are provided all HTTP request information as parsed input arguments to their function including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code>> parameter so you will still need to parse the individual parameters from it.
@@ -50,8 +50,8 @@ The `action get` retrieves the full action record which will include the URL, bu
 
 4. If I have a web action that returns a JSON object, the caller must append <code>.json</code> to the web action's URL to get a successful response.
 
-(!) true
-(x) false
+(!) True
+(x) False
 
 [explanation]
 Alternatively, the function can manually set the <code>content-type</code> in the HTTP response header.  The caller then can call the URL of the web action without modification.
