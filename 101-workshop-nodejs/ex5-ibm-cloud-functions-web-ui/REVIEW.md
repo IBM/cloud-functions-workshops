@@ -17,24 +17,24 @@
 #
 -->
 
-# Review: IBM Cloud Functions Web User Interface
+# Review: IBM Cloud Functions (ICF) Web User Interface (Web UI)
 
-1. Using the IBM Cloud Functions web user interface, you can accomplish everything you can using the command line interface (CLI).
+1. When using the ICF Web UI, you can accomplish everything you can using the CLI.
 
-(x) true
-(!) false
+(x) True
+(!) False
 
 [explanation]
-The intent of the web user interface is to provide functional equivalency to the that provided by the CLI. In fact, the web ui actually provides simplified access to other IBM Cloud services such as Alarms, Cloudant, Logging and more that is often much harder to do from the command line.
+The intent of the Web UI is to provide functional equivalency to the that provided by the CLI. In fact, the Web UI actually provides simplified access to other IBM Cloud services such as alarms, Cloudant, logging, and more, that is often much harder to do from the command line.
 [explanation]
 
 ---
 
-1. The IBM Cloud Functions web interface provides access to logs and action metrics.
+1. The ICF Web UI provides access to logs and action metrics.
 
-(x) true
-(!) false
+(x) True
+(!) False
 
 [explanation]
-True.  The **Monitor** feature of the web UI provides an easy means to view recent activations of actions and triggers over periods of time. The **Logging** feature can be used to automatically send complete activation records to IBM Clouds Observability service for long term retention and analysis alongside all your other IBM Cloud events.
+True.  The **monitor** feature of the Web UI provides an easy means to view recent activations of actions and triggers over periods of time. The **logging** feature can be used to automatically send complete activation records to IBM Clouds Observability service for long term retention and analysis alongside all your other IBM Cloud events.
 [explanation]
