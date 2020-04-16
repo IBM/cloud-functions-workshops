@@ -21,7 +21,7 @@
 
 Event parameters can be passed to an action's function when it is invoked. Let's look at a sample action which uses the parameters to calculate the return values.
 
-## Invoking an action with parameters
+## Invoke an action with parameters
 
 First, we will need to update our function to look for parameters.
 
