@@ -25,7 +25,7 @@
 (!) False
 
 [explanation]
-The intent of the Web UI is to provide functional equivalency to the that provided by the CLI. In fact, the Web UI actually provides simplified access to other IBM Cloud services such as alarms, Cloudant, logging, and more, that is often much harder to do from the command line.
+True. The intent of the Web UI is to provide functional equivalency to the that provided by the CLI. In fact, the Web UI actually provides simplified access to other IBM Cloud services such as  Alarms, Cloudant, monitoring, and logging, that are often much harder to utilize from the command line.
 [explanation]
 
 ---
