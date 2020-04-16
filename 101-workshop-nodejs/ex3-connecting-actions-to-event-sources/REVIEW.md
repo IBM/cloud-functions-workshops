@@ -55,8 +55,8 @@ False. Rules are simply an association between a trigger and an action indicatin
 
 4. Multiple actions can be fired from a single trigger.
 
-(!) incorrect
-(x) correct
+(!) Incorrect
+(x) Correct
 
 [explanation]
 Correct. Multiple actions can be connected to the same trigger using separate rules. This allows a single event to cause many parallel serverless actions to begin processing the same data in different ways at the same time.
