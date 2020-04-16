@@ -44,16 +44,17 @@ Serverless computing is still a cutting-edge cloud technology that is implemente
 
 3. Serverless computing requires the developer to allocate servers and machine resources.
 
-(!) true
-(X) false
+(!) True
+(X) False
 
 [explanation]
 [explanation]
 
 4. Serverless computing scales inherently and executes stateless code in response to events.
 
-(!) false
-(x) true
+(x) True
+(!) False
+
 
 [explanation]
 [explanation]
@@ -83,8 +84,8 @@ With serverless, you only pay for compute costs that your functions use on a per
 
 7. Long running and non-separable tasks are types of tasks that typically work well in a serverless environment.
 
-(x) false
-(!) true
+(!) True
+(x) False
 
 [explanation]
 [explanation]
