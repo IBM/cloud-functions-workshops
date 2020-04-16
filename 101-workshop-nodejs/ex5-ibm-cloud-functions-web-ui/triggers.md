@@ -2,7 +2,7 @@
 
 Select "Triggers" from the left-hand menu panel on the homepage.
 
-[This page](https://cloud.ibm.com/functions/triggers) is the management page for triggers. It shows triggers within the selected region and namespace. The following screenshot shows a listing of triggers in the `test-iam-namespace` for the `Dallas` region:
+[This page](https://cloud.ibm.com/functions/triggers) is the management page for triggers. It shows triggers within the selected region and namespace. The following screenshot shows a listing of triggers created in the `test-iam-namespace` in the `Dallas` region:
 
 ![Triggers Overview Page](images/101-ex5-triggers-overview.png)
 
