@@ -34,7 +34,7 @@ True. Making your actions web accessible using IBM Cloud Functions (ICF) is real
 (x) false
 
 [explanation]
-False. Web actions are provided all HTTP request information as parsed input arguments to their function, including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code>> parameter so you will still need to parse the individual parameters from it.
+False. Web actions are provided all HTTP request information as parsed input arguments to their function, including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code> parameter so you will still need to parse the individual parameters from it.
 [explanation]
 
 3. Which command would you use to retrieve the HTTP endpoint for a web action?
