@@ -39,7 +39,7 @@ If you want several actions to work in sequence, you do not have to code the log
 
 Let's look at an example of using sequences.
 
-1. Create the file \(`funcs.js`\) using the following:
+1. Create the file \(`funcs.js`\) and add the following functions:
 
     ```javascript
     function split(params) {
