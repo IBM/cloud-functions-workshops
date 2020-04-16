@@ -17,7 +17,7 @@
 #
 -->
 
-# Review: Exposing APIs from Actions
+# Review: Expose APIs from actions
 
 1. Any action can be made accessible on the web by simply setting the flag <code>--web</code> to <code>true</code>.
 
@@ -25,7 +25,7 @@
 (!) false
 
 [explanation]
-True. Making your Actions web accessible using IBM Cloud Functions is really that easy.
+True. Making your actions web accessible using IBM Cloud Functions (ICF) is really that easy.
 [explanation]
 
 2. Functions that are web actions need to parse the raw HTTP request header to obtain query parameters.
@@ -34,7 +34,7 @@ True. Making your Actions web accessible using IBM Cloud Functions is really tha
 (x) false
 
 [explanation]
-False. Web actions are provided all HTTP request information as parsed input arguments to their function including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code>> parameter so you will still need to parse the individual parameters from it.
+False. Web actions are provided all HTTP request information as parsed input arguments to their function, including the HTTP query parameters.  The parameters are provided as an unparsed string value for the <code>__ow_query_</code>> parameter so you will still need to parse the individual parameters from it.
 [explanation]
 
 3. Which command would you use to retrieve the HTTP endpoint for a web action?
@@ -45,14 +45,14 @@ False. Web actions are provided all HTTP request information as parsed input arg
 [ ] ibmcloud fn action get &lt;action_name&gt; --http
 
 [explanation]
-The `action get` retrieves the full action record which will include the URL, but additionally supplying the `--url` flag limits the result to just the HTTP endpoint value assigned to the action.
+The `action get` retrieves the full action record which will include the URL. Supplying the `--url` flag limits the result to just the HTTP endpoint value assigned to the action.
 [explanation]
 
-4. If I have a web action that returns a JSON object, the caller must append <code>.json</code> to the web action's URL to get a successful response.
+4. If you have a web action that returns a JSON object, the caller must append <code>.json</code> to the web action's URL to get a successful response.
 
 (!) true
 (x) false
 
 [explanation]
-Alternatively, the function can manually set the <code>content-type</code> in the HTTP response header.  The caller then can call the URL of the web action without modification.
+Alternatively, the function can manually set the <code>content-type</code> in the HTTP response header.  The caller can then call the URL of the web action without modification.
 [explanation]
