@@ -35,3 +35,7 @@ From the [trigger create page](https://cloud.ibm.com/functions/triggers), new tr
 4. Fill in "Trigger Name" and "Description"
 5. Click "Create"
 ![](images/101-ex5-create-trigger-name.png)
+
+{% hint style="info" %}
+When you connect a trigger to an action, the underlying code of the web UI automatically creates a **rule** "under the covers" which is enabled by default. You can disable the rule for any action by selecting "connected actions" from the trigger details page.
+{% endhint %}
