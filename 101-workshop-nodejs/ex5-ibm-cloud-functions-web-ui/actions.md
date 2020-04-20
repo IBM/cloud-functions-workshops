@@ -2,13 +2,17 @@
 
 ## List actions for namespace and region
 
-Select "Actions" from the left-hand menu panel on the IBM Cloud Functions homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions). The page shows actions within the chosen namespace, and region currently selected within IBM Cloud.
+1. Select "Actions" from the left-hand menu panel on the IBM Cloud Functions homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions).
+
+The page shows actions within the chosen namespace, and region currently selected within IBM Cloud.
 
 ![action details page](images/101-ex5-action-overview.png)
 
 ## Details overview
 
-The action details page shows properties for the chosen action. Click oin the name of any action listed to move to the action details page.
+The action details page shows properties for the chosen action.
+
+1. Click on the name of any action listed to move to the action details page.
 
 For supported language runtimes, an action source code is shown in an editor which allows users to make changes and publish them immediately making them live to callers.
 
@@ -25,7 +29,7 @@ Using the menu on the left-hand side, different properties for the action can be
 
 ## Invoke actions
 
-Click the "Invoke" button to invoke an action and display the resulting activation record.
+1. Click the "Invoke" button to invoke the action and display the resulting activation record.
 
 _Input parameters to invocations can be modified using the "Change Input" button._
 
