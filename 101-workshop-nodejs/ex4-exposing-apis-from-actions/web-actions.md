@@ -216,7 +216,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 ## Example: HTML response
 
-1. Create a new web action from the following source code in html.js:
+1. Create a new web action named `html` from the following source code in html.js:
 
       ```javascript
       function main() {
@@ -258,7 +258,7 @@ Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/
 
 ## Example: SVG Response
 
-1. Create a new function that has the SVG base64 encoded as the body:
+1. Create a new web action named `atom` that has the following code that includes base64-encoded SVG content in the `body`:
 
       ```javascript
       // The "svg" that is base64 encoded in the "body" param below:
