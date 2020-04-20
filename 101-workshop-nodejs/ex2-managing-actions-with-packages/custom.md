@@ -17,7 +17,7 @@
 #
 -->
 
-# Create packages
+# Create custom packages
 
 Custom packages can be used to group your own actions, manage default parameters, and share entities with other users.
 
