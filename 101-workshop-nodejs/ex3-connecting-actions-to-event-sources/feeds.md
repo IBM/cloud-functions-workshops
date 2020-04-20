@@ -17,7 +17,7 @@
 #
 -->
 
-# Connecting trigger feeds
+# Connect trigger feeds
 
 Trigger feeds allow you to connect triggers to external event sources. Event sources will fire registered triggers each time an event occurs. Here’s a [list of the event sources](https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md) currently supported on IBM Cloud Functions (ICF).
 
@@ -109,5 +109,5 @@ This example shows how to use a feed in the [Alarms package](https://github.com/
    ```
 
 {% hint style="success" %}
-Understanding triggers and rules allows you to build event-driven applications using ICF. All you have to do is create some actions, hook up events, and let the platform take care of everything else! What could be easier? 
+Understanding triggers and rules allows you to build event-driven applications using ICF. All you have to do is create some actions, hook up events, and let the platform take care of everything else! What could be easier?
 {% endhint %}
