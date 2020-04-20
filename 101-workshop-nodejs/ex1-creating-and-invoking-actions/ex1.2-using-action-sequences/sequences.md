@@ -17,7 +17,7 @@
 #
 -->
 
-# Action sequences
+# Create and invoke sequences
 
 IBM Cloud Functions (ICF) supports a kind of action called a sequence. Sequence actions are created using a list of existing actions. When the sequence action is invoked, each action is executed in order of the action parameter list. Input parameters are passed to the first action in the sequence. Output from each function in the sequence is passed as the input to the next function and so on. The output from the last action in the sequence is returned as the response result.
 

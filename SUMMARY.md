@@ -19,7 +19,7 @@
     * [Retrieving Action Logs](101-workshop-nodejs/ex1-creating-and-invoking-actions/retrieve-logs.md)
     * [Calling Other Actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/action-proxy.md)
     * [Asynchronous actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/async.md)
-    * [Using Action Sequences](101-workshop-nodejs/ex1-creating-and-invoking-actions/ex1.2-using-action-sequences/README.md)
+    * [Use action sequences](101-workshop-nodejs/ex1-creating-and-invoking-actions/ex1.2-using-action-sequences/README.md)
       * [Action Sequences](101-workshop-nodejs/ex1-creating-and-invoking-actions/ex1.2-using-action-sequences/sequences.md)
   * [Managing Actions with Packages](101-workshop-nodejs/ex2-managing-actions-with-packages/README.md)
     * [Using Packages](101-workshop-nodejs/ex2-managing-actions-with-packages/existing.md)
