@@ -21,7 +21,7 @@
 
 Web actions are actions that can be called externally using the HTTP protocol from clients like `curl` or web browsers. IBM Cloud Functions (ICF) provides a simple flag, `--web true`, which causes it to automatically create an HTTP accessible URL (endpoint) for any action.
 
-Let's turn the `hello` action into a "web action"!
+Let's turn the `hello` action into a web action!
 
 1. Update the action to set the `--web` flag to `true`:
 
@@ -122,7 +122,7 @@ In most cases, it is advisable to have the web action set the content type expli
 
 ## HTTP request properties
 
-All web actions created using the `--web` flag are also treated as `http` actions meaning they could add be called with different HTTP methods (e.g., GET, POST, DELETE, etc.).
+All web actions created using the `--web` flag are also treated as `http` actions, meaning they can be called with different HTTP methods like GET, POST, or DELETE.
 
 HTTP web actions, when invoked, also receive additional HTTP request details as parameters to the action input argument. These include:
 
@@ -155,7 +155,7 @@ If a `content-type` header value is not declared in the action result’s `heade
 
 ## Additional features
 
-Web actions have a [lot more features](https://github.com/apache/openwhisk/blob/master/docs/webactions.md). See the documentation for full details on all these capabilities.
+Web actions have many more features. See the [documentation](https://github.com/apache/openwhisk/blob/master/docs/webactions.md)) for full details on all these capabilities.
 
 ## Example - HTTP redirect
 
