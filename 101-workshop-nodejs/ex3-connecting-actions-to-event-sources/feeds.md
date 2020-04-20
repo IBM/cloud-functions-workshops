@@ -19,9 +19,9 @@
 
 # Connect trigger feeds
 
-Trigger feeds allow you to connect triggers to external event sources. Event sources will fire registered triggers each time an event occurs. Here’s a [list of the event sources](https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md) currently supported on IBM Cloud Functions (ICF).
+Trigger feeds allow you to connect triggers to external event sources. Event sources will fire registered triggers each time an event occurs. Here’s a [list of the packages](https://github.com/apache/incubator-openwhisk/blob/master/docs/catalog.md) currently supported on IBM Cloud Functions (ICF) which include feeds to easily connect you to services like Slack, GitHub and IBM Watson.
 
-This example shows how to use a feed in the [Alarms package](https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md) to fire a trigger every minute, which invokes an action using a rule.
+This example shows how to use the [Alarms package](https://github.com/apache/incubator-openwhisk-package-alarms/blob/master/README.md) feed to fire a trigger every minute, which invokes an action using a rule.
 
 1. Get a description of the feeds in the `/whisk.system/alarms` package:
 
