@@ -15,7 +15,7 @@
     * [Writing serverless applications](101-workshop-nodejs/ex0-what-is-serverless/serverless-writing-apps.md)
   * [Create and invoke actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/README.md)
     * [Create and invoke actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/create-invoke.md)
-    * [Use action parameters](101-workshop-nodejs/ex1-creating-and-invoking-actions/parameters.md)
+    * [Use action parameters](101-workshop-nodejs/ex1-creating-and-invoking-actions/use-parameters.md)
     * [Retrieving Action Logs](101-workshop-nodejs/ex1-creating-and-invoking-actions/retrieve-logs.md)
     * [Calling Other Actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/action-proxy.md)
     * [Asynchronous actions](101-workshop-nodejs/ex1-creating-and-invoking-actions/async.md)
