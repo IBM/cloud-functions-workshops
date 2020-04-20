@@ -1,16 +1,16 @@
-# Actions
+# Managing actions from the web UI
+
+## List actions for namespace and region
 
 Select "Actions" from the left-hand menu panel on the IBM Cloud Functions homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions). The page shows actions within the chosen namespace, and region currently selected within IBM Cloud.
 
 ![action details page](images/101-ex5-action-overview.png)
 
-Select an action from the page to move to the action details page.
-
 ## Details overview
 
-The action details page shows properties for the chosen action.
+The action details page shows properties for the chosen action. Click oin the name of any action listed to move to the action details page.
 
-For supported runtimes, action source code is shown in an editor which allows users to make changes live.
+For supported language runtimes, an action source code is shown in an editor which allows users to make changes and publish them immediately making them live to callers.
 
 ![action details page](images/101-ex5-action-editor.png)
 
