@@ -29,7 +29,7 @@
     * [Create triggers](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/triggers.md)
     * [Use Rules](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/rules.md)
     * [Connect trigger feeds](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/feeds.md)
-  * [Exposr APIs from actions](101-workshop-nodejs/ex4-exposing-apis-from-actions/README.md)
+  * [Expose APIs from actions](101-workshop-nodejs/ex4-exposing-apis-from-actions/README.md)
     * [Concepts](101-workshop-nodejs/ex4-exposing-apis-from-actions/concepts.md)
     * [Web actions](101-workshop-nodejs/ex4-exposing-apis-from-actions/web_actions.md)
     * [API Management](101-workshop-nodejs/ex4-exposing-apis-from-actions/api.md)
