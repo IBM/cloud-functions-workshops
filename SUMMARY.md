@@ -24,7 +24,7 @@
   * [Manage actions with packages](101-workshop-nodejs/ex2-managing-actions-with-packages/README.md)
     * [Use existing packages](101-workshop-nodejs/ex2-managing-actions-with-packages/existing.md)
     * [Create custom packages](101-workshop-nodejs/ex2-managing-actions-with-packages/custom.md)
-  * [Connecting Actions to Event Sources](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/README.md)
+  * [Connect actions to event sources](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/README.md)
     * [Concepts](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/concepts.md)
     * [Creating Triggers](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/triggers.md)
     * [Using Rules](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/rules.md)

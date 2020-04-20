@@ -19,7 +19,7 @@
 
 # Concepts
 
-In this section you will learn about using two components of the IBM Cloud Functions (ICF) programming model called `triggers` and `rules` which are used to associate  event data with your `actions`.
+In this section you will learn about using two components of the IBM Cloud Functions (ICF) programming model called `triggers` and `rules` which are used to associate event data with your `actions`.
 
 ## Triggers
 
@@ -60,7 +60,7 @@ You can set up rules so that a single trigger event invokes multiple actions, an
 * `imageUpload -> classifyImage` rule
 * `imageUpload -> thumbnailImage` rule
 
-The three rules establish the following behavior: 
+The three rules establish the following behavior:
 
 * Images in both tweets and uploaded images are classified
 * Uploaded images are classified
