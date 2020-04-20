@@ -60,8 +60,6 @@ The following steps and examples demonstrate how to create your first JavaScript
 
     You can see the `hello` action you just created under your account's default `NAMESPACE`.
 
----
-
 ## Invoke actions
 
 After you create your action, you can run it on ICF with the `invoke` command using one of two modes:
