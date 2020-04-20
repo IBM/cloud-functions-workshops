@@ -42,3 +42,7 @@ In this page, API details can either be filled out manually or imported from an 
 5. Fill out the "Path" field as "/hello".
 6. Choose an action from the drop-down list.
 7. Click the "Create" button.
+
+{% hint style="success" %}
+As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI and the Cloud Functions plugin and more!
+{% endhint %}
