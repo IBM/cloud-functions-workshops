@@ -30,8 +30,6 @@
 Triggers are named channels for classes or kinds of events sent from event sources.
 [explanation]
 
----
-
 2. What is the purpose of a rule?
 
 ( ) associates multiple triggers with a single action
@@ -41,8 +39,6 @@ Triggers are named channels for classes or kinds of events sent from event sourc
 [explanation]
 Rules are used to associate one trigger with one action. After this kind of association is created, each time a trigger event is fired, the action is invoked.
 [explanation]
-
----
 
 3. Rules allow you to define conditional logic that controls if an action gets invoked based upon event data.
 
