@@ -41,8 +41,9 @@ This currently includes the latest LTS releases for:
 
 - Node.js
 - Python
-- Swift
 - PHP
+- Ruby
+- Swift
 
 _Note that there are a few languages not listed_
 

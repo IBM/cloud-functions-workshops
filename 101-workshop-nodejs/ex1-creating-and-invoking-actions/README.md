@@ -31,7 +31,7 @@ After this, you’ll be able to create simple serverless functions using ICF!
 
 ## Background
 
-Actions are stateless code snippets (functions) that run on the ICF platform. The platform supports functions written in JavaScript (Node.js), Python, Java, Go, PHP, Ruby, .NET or Ballerina programming languages. It also supports functions implemented as executables (binary programs) packaged in Docker containers.
+Actions are stateless code snippets (functions) that run on the ICF platform. The platform supports functions written in JavaScript (Node.js), Python, PHP, Ruby or Swift as well as many other programming languages. It also supports functions implemented as executables (binary programs) packaged in Docker containers.
 
 Actions can be used to do many things. For example, an action can be used to respond to a database change, aggregate a set of API calls, post a Tweet, or even work with AI and analytics services to detect objects in an image or streamed video.
 
