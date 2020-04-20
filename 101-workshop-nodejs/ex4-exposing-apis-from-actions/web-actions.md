@@ -21,7 +21,7 @@
 
 Web actions are actions that can be called externally using the HTTP protocol from clients like `curl` or web browsers. IBM Cloud Functions (ICF) provides a simple flag, `--web true`, which causes it to automatically create an HTTP accessible URL (endpoint) for any action.
 
-Let's turn the `hello` action into a `"web action"`!
+Let's turn the `hello` action into a "web action"!
 
 1. Update the action to set the `--web` flag to `true`:
 
@@ -114,7 +114,7 @@ Let's turn the `hello` action into a `"web action"`!
 
 ## Content types and extensions
 
-Web actions invoked through the platform API either have to set thje HTTP response `content-type` explicitly within the action function or the caller must append a content extension on the URL so the platform will set the `content-type` on the function's behalf.
+Web actions invoked through the platform API either have to set the HTTP response header's `content-type` explicitly within the action function or the caller must append a content extension on the URL so the platform will set the `content-type` on the function's behalf.
 
 The platform supports the following content type extensions: `.json`, `.html`, `.http`, `.svg` or `.text` for the request. If no content extension is provided, the platform defaults to `.http`.
 
