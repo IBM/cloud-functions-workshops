@@ -1,8 +1,4 @@
-# Conclusion
-
-{% hint style="success" %}
-Congratulations on completing the Serverless Fundamentals using IBM Cloud Functions course!
-{% endhint %}
+# Course Summary
 
 During this course you have learned:
 
@@ -17,3 +13,7 @@ During this course you have learned:
 * How to expose your actions to the web for direct access from HTTP clients and web browsers with various content types.
 
 * Navigate the web user interface to perform these features and more.
+
+{% hint style="success" %}
+Congratulations on completing the Serverless Fundamentals using IBM Cloud Functions course!
+{% endhint %}
