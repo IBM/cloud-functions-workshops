@@ -2,9 +2,9 @@
 
 ## List actions for namespace and region
 
-1. Select "Actions" from the left-hand menu panel on the IBM Cloud Functions homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions).
+1. Select "Actions" from the left-hand menu panel on the IBM Cloud **Functions** homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions). It shows actions created within the selected IBM Cloud namespace and region.
 
-The page shows actions within the chosen namespace, and region currently selected within IBM Cloud.
+The following screenshot shows a listing of actions created in the `test-iam-namespace` namespace in the `Dallas` region:
 
 ![action details page](images/101-ex5-action-overview.png)
 
