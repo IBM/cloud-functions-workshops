@@ -1,18 +1,20 @@
 # Managing triggers
 
+## List triggers for a namespace and region
+
 1. Select "Triggers" from the left-hand menu panel on the **Functions** homepage which will display the [management page for triggers](https://cloud.ibm.com/functions/triggers). It shows triggers created within the selected IBM Cloud namespace and region.
 
 The following screenshot shows a listing of triggers created in the `test-iam-namespace` namespace in the `Dallas` region:
 
-![Triggers Overview Page](images/101-ex5-triggers-overview.png)
-
-Select a trigger from the page to move to the trigger details page.
+![Trigger listing page](images/101-ex5-triggers-overview.png)
 
 ## Details overview
 
 The trigger details page shows properties for the chosen trigger.
 
-![Triggers Overview Page](images/101-ex5-trigger-details.png)
+1. Click on the name of any trigger listed to move to the trigger details page.
+
+![Trigger details page](images/101-ex5-trigger-details.png)
 
 Using the menu on the left-hand side, different properties for the trigger can be accessed and modified.
 
@@ -22,7 +24,7 @@ Using the menu on the left-hand side, different properties for the trigger can b
 
 ## Create triggers
 
-From the [trigger overview page](https://cloud.ibm.com/functions/triggers), new triggers can be created.
+From the [trigger create page](https://cloud.ibm.com/functions/triggers), new triggers can be created.
 
 1. Select the "Create" button from the page.
 ![](images/101-ex5-create-trigger-hp.png)
