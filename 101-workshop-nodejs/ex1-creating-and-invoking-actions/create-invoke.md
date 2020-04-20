@@ -159,8 +159,6 @@ If you don't need the action result right away, you can omit the `--blocking` fl
     }
     ```
 
----
-
 ## Retrieve activation records
 
 If you forget to record the activation ID, there are a couple of `activation` commands to help you.
@@ -218,8 +216,6 @@ You can always get a list of your most recent activations to find their activati
 {% hint style="info" %}
 The `Entity` column indicates which action was invoked along with the function's internal version. Every time you update an action's code, the platform will increment the internal version number.
 {% endhint %}
-
----
 
 ## Observations
 
