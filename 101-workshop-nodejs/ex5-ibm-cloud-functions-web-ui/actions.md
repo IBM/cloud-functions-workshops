@@ -1,4 +1,4 @@
-# Managing actions from the web UI
+# Managing actions
 
 ## List actions for namespace and region
 
