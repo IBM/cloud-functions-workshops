@@ -4,7 +4,8 @@ This exercise will introduce the [IBM Cloud Functions Web UI](https://cloud.ibm.
 
 Once you have completed this exercise, you will:
 
-* Understand how to find and use the ICF Web UI
+* Understand how to find and use the ICF Web UI within IBM Cloud
+* Perform the same tasks within the web UI as you did from the CLI
 
 Once this exercise is finished, you will be able to use the Web UI to build and manage serverless applications on IBM Cloud!
 
