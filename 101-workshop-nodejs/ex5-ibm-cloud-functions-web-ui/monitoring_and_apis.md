@@ -2,7 +2,7 @@
 
 IBM Cloud Functions (ICF) Web UI comes with a [comprehensive visualization dashboard](https://cloud.ibm.com/functions/dashboard) for monitoring serverless applications.
 
-This dashboard shows activations within a region, org, and space. Developers can see activation results, invocation times, and logging output through the dashboard. Activations displayed can be filtered by name or time window.
+This dashboard shows activations within a region and namespace. Developers can see activation results, invocation times, and logging output through the dashboard. Activations displayed can be filtered by name or time window.
 
 ![monitoring view](images/101-ex5-monitoring.png)
 
@@ -42,4 +42,3 @@ In this page, API details can either be filled out manually or imported from an 
 5. Fill out the "Path" field as "/hello".
 6. Choose an action from the drop-down list.
 7. Click the "Create" button.
-
