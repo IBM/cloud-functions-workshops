@@ -8,11 +8,11 @@ The following screenshot shows a listing of triggers created in the `test-iam-na
 
 ![Trigger listing page](images/101-ex5-triggers-overview.png)
 
+2. Click on the name of any trigger listed to move to the trigger details page.
+
 ## Details overview
 
 The trigger details page shows properties for the chosen trigger.
-
-1. Click on the name of any trigger listed to move to the trigger details page.
 
 ![Trigger details page](images/101-ex5-trigger-details.png)
 

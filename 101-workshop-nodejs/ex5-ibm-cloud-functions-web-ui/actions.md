@@ -8,13 +8,13 @@ The following screenshot shows a listing of actions created in the `test-iam-nam
 
 ![action listing page](images/101-ex5-action-overview.png)
 
+2. Click on the name of any action listed to move to the action details page.
+
 ## Details overview
 
 The action details page shows properties for the chosen action.
 
-1. Click on the name of any action listed to move to the action details page.
-
-For supported language runtimes, an action source code is shown in an editor which allows users to make changes and publish them immediately making them live to callers.
+For actions written in a supported language runtime, a source code editor with the action code is displayed. It allows users to make live changes and publish them making them immediately available to users.
 
 ![action details page](images/101-ex5-action-editor.png)
 
@@ -29,7 +29,7 @@ Using the menu on the left-hand side, different properties for the action can be
 
 ## Invoke actions
 
-1. Click the "Invoke" button to invoke the action and display the resulting activation record.
+3. Click the "Invoke" button to invoke the action and display the resulting activation record.
 
 _Input parameters to invocations can be modified using the "Change Input" button._
 
