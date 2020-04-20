@@ -1,6 +1,6 @@
 # Actions
 
-Select "Actions" from the left-hand menu panel on the homepage.[This page](https://cloud.ibm.com/functions/actions) is the management page for actions. It shows actions within the chosen region, org, and space.
+Select "Actions" from the left-hand menu panel on the IBM Cloud Functions homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions). The page shows actions within the chosen namespace, and region currently selected within IBM Cloud.
 
 ![action details page](images/101-ex5-action-overview.png)
 
