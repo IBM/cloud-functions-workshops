@@ -112,15 +112,19 @@ Let's turn the `hello` action into a `"web action"`!
       }
       ```
 
-## Content extensions
+## Content types and extensions
 
-Web actions invoked through the platform API need a content extension to tell the platform how to interpret the content returned from the action. In the example above, you were using the `.json` extension. This tells the platform to serialize the return value out to a JSON response.
+Web actions invoked through the platform API either have to set thje HTTP response `content-type` explicitly within the action function or the caller must append a content extension on the URL so the platform will set the `content-type` on the function's behalf.
 
-The platform supports the following `content-types`: `.json`, `.html`, `.http`, `.svg` or `.text`. If no content extension is provided, it defaults to `.http`, which gives the action full control of the HTTP response.
+The platform supports the following content type extensions: `.json`, `.html`, `.http`, `.svg` or `.text` for the request. If no content extension is provided, the platform defaults to `.http`.
+
+In most cases, it is advisable to have the web action set the content type explicitly when possible.
 
 ## HTTP request properties
 
-All web actions, when invoked, receive additional HTTP request details as parameters to the action input argument. These include:
+All web actions created using the `--web` flag are also treated as `http` actions meaning they could add be called with different HTTP methods (e.g., GET, POST, DELETE, etc.).
+
+HTTP web actions, when invoked, also receive additional HTTP request details as parameters to the action input argument. These include:
 
 1. `__ow_method` \(type: string\): The HTTP method of the request
 2. `__ow_headers` \(type: map string to string\): The request headers
@@ -147,7 +151,7 @@ Web actions can return a JSON object with the following properties to directly c
 
 The `body` is considered empty if it is `null`, the empty string `""`, or undefined.
 
-If a `content-type header` is not declared in the action result’s `headers`, the body is interpreted as `application/json` for non-string values and `text/html` otherwise. When the `content-type` is defined, the controller will determine if the response is binary data or plain text and decode the string using a base64 decoder as needed. Should the body fail to decode correctly, an error is returned to the caller.
+If a `content-type` header value is not declared in the action result’s `headers`, the body is interpreted as `application/json` for non-string values and `text/html` otherwise. When the `content-type` is defined, the controller will determine if the response is binary data or plain text and decode the string using a base64 decoder as needed. Should the body fail to decode correctly, an error is returned to the caller.
 
 ## Additional features
 
