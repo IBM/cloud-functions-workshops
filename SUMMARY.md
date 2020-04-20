@@ -31,7 +31,7 @@
     * [Connect trigger feeds](101-workshop-nodejs/ex3-connecting-actions-to-event-sources/feeds.md)
   * [Expose APIs from actions](101-workshop-nodejs/ex4-exposing-apis-from-actions/README.md)
     * [Concepts](101-workshop-nodejs/ex4-exposing-apis-from-actions/concepts.md)
-    * [Web actions](101-workshop-nodejs/ex4-exposing-apis-from-actions/web_actions.md)
+    * [Web actions](101-workshop-nodejs/ex4-exposing-apis-from-actions/web-actions.md)
     * [API Management](101-workshop-nodejs/ex4-exposing-apis-from-actions/api.md)
   * [IBM Cloud Functions Web UI](101-workshop-nodejs/ex5-ibm-cloud-functions-web-ui/README.md)
     * [Actions](101-workshop-nodejs/ex5-ibm-cloud-functions-web-ui/actions.md)
