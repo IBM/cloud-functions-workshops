@@ -57,24 +57,26 @@ Let's turn the `hello` action into a web action!
 
       ```bash
       curl -v "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
-
-      > GET /api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello HTTP/2
-      > Host: us-south.functions.cloud.ibm.com
-      > User-Agent: curl/7.54.0
-      > Accept: */*
-      * Connection state changed (MAX_CONCURRENT_STREAMS updated)!
-      < HTTP/2 204
       ```
 
-      {% hint style="success" %}
-      This unexpected result occurred because you need to tell ICF what `content-type` you expect the function to return since the function did not explicitly set one.
-      {% endhint %}
+      ```bash
+      ...
+      GET /api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello HTTP/2
+      Host: us-south.functions.cloud.ibm.com
+      User-Agent: curl/7.54.0
+      Accept: */*
+      * Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+      HTTP/2 204
+      ...
+      ```
 
-### Add the JSON content extension
+{% hint style="info" %}
+This unexpected result occurred because you need to tell ICF what `content-type` you expect the function to return since the function did not explicitly set one.
+{% endhint %}
 
 4. Invoke the web action URL with a JSON extension using the `curl` command.
 
-     To signal ICF to set the `content-type` to `application/json` on the response, you need to add `.json` after the action name, at the end of the URL. Try invoking it now:
+     To signal ICF to set the `content-type` to `application/json` on the HTTP response, you need to add `.json` after the action name, at the end of the URL. Try invoking it now:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
