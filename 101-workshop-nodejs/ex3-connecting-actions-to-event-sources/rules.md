@@ -140,6 +140,8 @@ Activation records for triggers store the rules and actions fired for an event a
     {"statusCode":0,"success":true,"activationId":"5ee74025c2384f30a74025c2382f30c1","rule":"user@host.com_dev/myRule","action":"user@host.com_dev/hello"}
     ```
 
+## Connect same trigger to another action
+
 You can create multiple rules that associate the same trigger with different actions.
 
 _But can you create another trigger and rule that calls the `hello` action?_
@@ -169,6 +171,25 @@ You can also use rules with sequences. For example, you can create an action seq
     ```bash
     ibmcloud fn activation list --limit 5
     ```
+
+    ```bash
+    b1084edae6f04a75884edae6f08a75d9 nodejs:10 warm  2ms        success 3cc8e80c-1...13fee32/hello:0.0.3
+    07683c48a7af44c0a83c48a7af94c0cd nodejs:10 cold  237ms      success 3cc8e80c-1...13fee32/echo:0.0.475
+    49d047150ddc498c9047150ddcc98cee nodejs:10 warm  5ms        success 3cc8e80c-1...13fee32/hello:0.0.3
+    93e4680a56d84f73a4680a56d89f7362 sequence  warm  604ms      success 3cc8e80c-1...13fee32/recordLocationAndHello:0.0.1
+    2902e554efdb441d7ae554efdb411d797 unknown   warm  0s        success 3cc8e80c-1...13fee32/locationUpdate:0.0.2
+    ```
+
+5. Examine the results for the `recordLocationAndHello` trigger:
+
+    ```bash
+    ibmcloud fn activation result 93e4680a56d84f73a4680a56d89f7362
+    {
+        "payload": "Hello, Kara from Argo City"
+    }
+    ```
+
+    This shows we were able to invoke the same `hello` action twice with the same trigger using two different rules.
 
 ## Disable rules
 
