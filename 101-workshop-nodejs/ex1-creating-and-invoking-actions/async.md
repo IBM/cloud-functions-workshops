@@ -133,9 +133,9 @@ Let's look at what happens when an action invocation takes longer than the `time
    }
    ```
 
-{% hint style="info" %}
+<!-- {% hint style="info" %}
 Bonus exercise: Try out this exercise [Calling an external API from an Async action](../bonus-exercises/ex1-invoking-an-async-api.md) to test your knowledge!
-{% endhint %}
+{% endhint %} -->
 
 {% hint style="tip" %}
 Asynchronous actions are necessary for calling other APIs or cloud services. Don't forget about that timeout though!
