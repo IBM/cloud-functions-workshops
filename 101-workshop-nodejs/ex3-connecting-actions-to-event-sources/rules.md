@@ -252,7 +252,7 @@ while attempting to invoke the `hello` action with a `place` parameter, you’ll
 
     ```bash
     ibmcloud fn action delete hello
-    ibmcloud fn action create hello ~hello.js
+    ibmcloud fn action create hello hello.js
     ```
 
 {% hint style="warning" %}
