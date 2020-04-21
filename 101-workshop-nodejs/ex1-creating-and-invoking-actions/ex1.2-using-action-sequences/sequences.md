@@ -75,6 +75,10 @@ Let's look at an example of using sequences.
     ibmcloud fn action create join funcs.js --main join
     ```
 
+{% hint style="info" %}
+Notice how our JavaScript source code had no `main` function. Instead, when we created each action, we supplied the name of the function to be used as its `main` function using the flag `--main`.
+{% endhint %}
+
 ## Create sequence actions
 
 1. Test each action to verify it is working.
