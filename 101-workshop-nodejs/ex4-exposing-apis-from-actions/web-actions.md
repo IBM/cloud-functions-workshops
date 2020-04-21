@@ -86,7 +86,7 @@ This unexpected result occurred because you need to tell ICF what `content-type`
 
       ```json
       {
-         "message": "Hello undefined from undefined!"
+         "message": "Hello undefined from Rivendell!"
       }
       ```
 
