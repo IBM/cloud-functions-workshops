@@ -1,7 +1,5 @@
 # Course summary
 
-Congratulations! You’ve successfully completed the Serverless Fundamentals using IBM Cloud Functions (ICF) course.
-
 During this course you learned:
 
 * What serverless computing is, how it works, and its basic programming model. You even learned more about serverless top use cases and patterns.
@@ -15,3 +13,7 @@ During this course you learned:
 * How to expose your actions to the web for direct access from HTTP clients and web browsers with various content types.
 
 * Navigate the web user interface to perform these features and more.
+
+{% hint style="success" %}
+Congratulations! You’ve successfully completed the Serverless Fundamentals using IBM Cloud Functions (ICF) course.
+{% endhint %}
