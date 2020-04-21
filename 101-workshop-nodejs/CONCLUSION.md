@@ -1,3 +1,8 @@
+
+{% hint style="success" %}
+Congratulations! You’ve successfully completed the Serverless Fundamentals using IBM Cloud Functions (ICF) course.
+{% endhint %}
+
 # Course summary
 
 During this course you learned:
@@ -14,6 +19,16 @@ During this course you learned:
 
 * Navigate the web user interface to perform these features and more.
 
-{% hint style="success" %}
-Congratulations! You’ve successfully completed the Serverless Fundamentals using IBM Cloud Functions (ICF) course.
+## Learn more
+
+This course has provided the fundamentals needed to understand and begin utilizing the power of serverless using IBM Cloud Functions.
+
+The [Serverless home page](https://developer.ibm.com/technologies/serverless/) of [IBM Developer](https://developer.ibm.com/technologies/) provides many more articles, tutorials and code patterns that show you how to create advanced serverless applications that integrate with various IBM Cloud and external services.
+
+Subscribe to the [IBM Cloud newsletter](https://developer.ibm.com/newsletters/cloud/) to always get notified of the latest serverless content.
+
+---
+
+{% hint style="warning" %}
+Don't forget to take and pass the final exam in order to receive certification!
 {% endhint %}
