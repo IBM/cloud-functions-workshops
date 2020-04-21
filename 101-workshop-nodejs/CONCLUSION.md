@@ -21,11 +21,11 @@ During this course you learned:
 
 ## Learn more
 
-This course has provided the fundamentals needed to understand and begin utilizing the power of serverless using IBM Cloud Functions.
+This course has provided the fundamentals needed to understand and begin utilizing the power of serverless using ICF.
 
-The [Serverless home page](https://developer.ibm.com/technologies/serverless/) of [IBM Developer](https://developer.ibm.com/technologies/) provides many more articles, tutorials and code patterns that show you how to create advanced serverless applications that integrate with various IBM Cloud and external services.
+If you'd like to continue to build on your knowledge, [IBM Developer](https://developer.ibm.com) provides articles, tutorials, code patterns, and more that demonstrate how to create advanced [serverless](https://developer.ibm.com/technologies/serverless/) applications that integrate with various IBM Cloud and external services. 
 
-Subscribe to the [IBM Cloud newsletter](https://developer.ibm.com/newsletters/cloud/) to always get notified of the latest serverless content.
+Don't forget to subscribe to the [IBM Cloud newsletter](https://developer.ibm.com/newsletters/cloud/) to stay up to date with the latest serverless content!
 
 ---
 
