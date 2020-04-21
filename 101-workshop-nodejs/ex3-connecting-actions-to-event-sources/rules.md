@@ -205,7 +205,7 @@ Rules are enabled upon creation but can be disabled and re-enabled using the com
     ok: disabled rule myRule
     ```
 
-2. Fire the trigger again:
+2. Fire the `locationUpdate` trigger again:
 
     ```bash
     ibmcloud fn trigger fire locationUpdate --param name Kara --param place "Argo City"
