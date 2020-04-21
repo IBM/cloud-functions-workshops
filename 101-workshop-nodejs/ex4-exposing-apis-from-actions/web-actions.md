@@ -66,7 +66,11 @@ Let's turn the `hello` action into a web action!
       < HTTP/2 204
       ```
 
-      This is because you need to tell ICF what `content-type` you expect the function to return since the function did not explicitly set one.
+      {% hint style="success" %}
+      This unexpected result occurred because you need to tell ICF what `content-type` you expect the function to return since the function did not explicitly set one.
+      {% endhint %}
+
+      Next. let's use a content extension to get the result we expected.
 
 4. Invoke the web action URL with a JSON extension using the `curl` command.
 
