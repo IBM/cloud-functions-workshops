@@ -50,16 +50,23 @@ Let's turn the `hello` action into a web action!
 3. Invoke the web action URL returned using the `curl` command:
 
       ```bash
-      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
+      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
       ```
 
-      It looks like nothing happened! In fact, an HTTP response code of `204 No Content` was returned.
+      It looks like nothing happened! In fact, an HTTP response code of `204 No Content` was returned which you can verify if you add the verbose flag `-v`:
 
       ```bash
-      &nbsp;
+      curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
+
+      > GET /api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello HTTP/2
+      > Host: us-south.functions.cloud.ibm.com
+      > User-Agent: curl/7.54.0
+      > Accept: */*
+      * Connection state changed (MAX_CONCURRENT_STREAMS updated)!
+      < HTTP/2 204
       ```
 
-      This is because you need to tell ICF what `content-type` you expect the function to return.
+      This is because you need to tell ICF what `content-type` you expect the function to return since the function did not explicitly set one.
 
 4. Invoke the web action URL with a JSON extension using the `curl` command.
 
