@@ -70,11 +70,11 @@ Let's turn the `hello` action into a web action!
       This unexpected result occurred because you need to tell ICF what `content-type` you expect the function to return since the function did not explicitly set one.
       {% endhint %}
 
-      Next. let's use a content extension to get the result we expected.
+### Add the JSON content extension
 
 4. Invoke the web action URL with a JSON extension using the `curl` command.
 
-     To do this you need to add `.json` after the action name, at the end of the URL, to tell ICF you want a JSON object returned. Try invoking it now:
+     To signal ICF to set the `content-type` to `application/json` on the response, you need to add `.json` after the action name, at the end of the URL. Try invoking it now:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
