@@ -23,6 +23,11 @@
 
 In today's agile-focused world, developers are now, more than ever, expected to understand the operational considerations of deploying, hosting, and maintaining their applications on the cloud. This often means developers spend less time coding applications and much more time worrying about the operational aspects.
 
+<!--
+#######################################################
+TODO: Figure out how to add width="60%" to images.
+#######################################################
+-->
 ![The DevOps blues](images/101-ex0-serverless-devops-blues.png)
 
 ## NoOps for developers
@@ -54,6 +59,11 @@ IBM Cloud Functions (ICF) and its SLA offers operational services at the highest
 
 Thanks to serverless, once the Ops is taken out of DevOps, developers can return their attention to writing amazing applications that focus on business logic. The result is not only increased agility delivering software based on actual customer needs, but also serves to maximize developer joy in doing their daily work.
 
+<!--
+#######################################################
+TODO: Figure out how to add width="60%" to images.
+#######################################################
+-->
 ![Serverless increases developer's joy!](images/101-ex0-serverless-developer-joy.png)
 
 {% hint style="success" %}
