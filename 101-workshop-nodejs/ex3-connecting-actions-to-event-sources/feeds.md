@@ -58,7 +58,7 @@ This example shows how to use the [Alarms package](https://github.com/apache/inc
       3. Create a trigger that fires every minute using this feed.
 
       ```bash
-      ibmcloud wsk trigger create everyMinute --feed /whisk.system/alarms/interval -p minutes 1 -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
+      ibmcloud trigger create everyMinute --feed /whisk.system/alarms/interval -p minutes 1 -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"
       ```
 
       ```text
