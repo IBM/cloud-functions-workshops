@@ -38,6 +38,8 @@ Triggers can be explicitly fired by a user or by an external event source. A fee
 
 Instances of triggers can also be fired with parameters that can be passed on to one or more actions they can be connected to using rules.
 
+---
+
 ## Rules
 
 A rule associates one trigger with one action. Every firing of the trigger causes the corresponding action to be invoked with the trigger event as input.
