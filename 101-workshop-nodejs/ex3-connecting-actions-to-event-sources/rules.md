@@ -132,6 +132,7 @@ Activation records for triggers store the rules and actions fired for an event a
     }
     ```
 
+<!-- ICF disabled this feature
     ```text
     ibmcloud fn activation logs 5c153c01d76d49dc953c01d76d99dc34
     ```
@@ -139,6 +140,7 @@ Activation records for triggers store the rules and actions fired for an event a
     ```text
     {"statusCode":0,"success":true,"activationId":"5ee74025c2384f30a74025c2382f30c1","rule":"user@host.com_dev/myRule","action":"user@host.com_dev/hello"}
     ```
+-->
 
 ## Connect same trigger to another action
 
