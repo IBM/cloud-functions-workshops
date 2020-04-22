@@ -130,7 +130,7 @@ That was pretty easy, right? You can now pass parameters and access these values
 
 ---
 
-## Set default parameters
+## Bind default parameters
 
 Actions can be invoked with multiple named parameters. Recall that the `hello` action from the previous example expects two parameters: the _name_ of a person and the _place_ where they're from.
 
@@ -158,9 +158,9 @@ Let's use the `hello` action from your previous example and bind a default value
 
     Notice that you did not need to specify the `place` parameter when you invoked the action.
 
-## Override a bound parameter
+### Override a bound parameter
 
-Bound parameters can still be overwritten by specifying the parameter value at invocation time.
+Default parameter bindings on an action can still be overwritten by specifying the parameter value at invocation time.
 
 1. Invoke the action again, passing both `name` and `place` values:
 
