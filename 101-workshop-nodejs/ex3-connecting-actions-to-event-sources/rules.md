@@ -142,7 +142,7 @@ Success! The `locationUpdate` trigger is now connected to the `hello` action via
     ```
 -->
 
-## Connect same trigger to another action
+## Connect the same trigger to another action
 
 You can create multiple rules that associate the same trigger with different actions.
 
@@ -243,13 +243,13 @@ Excellent work! Now you have a way to connect actions to events in OpenWhisk. It
 
 ### Finalized parameters
 
-If you see the following error while attempting to invoke the `hello` action with parameters:
+You may see the following error while attempting to invoke the `hello` action with parameters:
 
 ```text
 error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
 ```
 
-then it likely means the action was turned into a web action causing all its bound parameters to become `final` (protected).
+This likely means the action was turned into a web action, causing all its bound parameters to become `final` (protected).
 
 You can verify this by looking at the value of the `final` annotation of the action using the `get` command:
 
