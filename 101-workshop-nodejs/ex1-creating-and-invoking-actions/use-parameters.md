@@ -158,7 +158,7 @@ Let's use the `hello` action from your previous example and bind a default value
 
     Notice that you did not need to specify the `place` parameter when you invoked the action.
 
-### Override a bound parameter
+## Override a bound parameter
 
 Bound parameters can still be overwritten by specifying the parameter value at invocation time.
 
