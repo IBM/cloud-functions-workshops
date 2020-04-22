@@ -21,6 +21,8 @@
 
 Web actions are actions that can be called externally using the HTTP protocol from clients like `curl` or web browsers. IBM Cloud Functions (ICF) provides a simple flag, `--web true`, which causes it to automatically create an HTTP accessible URL (endpoint) for any action.
 
+## Create and invoke a web action
+
 Let's turn the `hello` action into a web action!
 
 1. Update the action to set the `--web` flag to `true`:
@@ -90,11 +92,11 @@ This unexpected result occurred because you need to tell ICF what `content-type`
       }
       ```
 
-### Using query parameters
+## Requests with query parameters
 
-      Additionally, you can invoke it with query parameters.
+Additionally, you can invoke web actions with query parameters.
 
-1. Invoke the `hello` web action with a `name` query parameter:
+1. Use curl to invoke the `hello` web action with a `name` query parameter:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine"
@@ -106,9 +108,9 @@ This unexpected result occurred because you need to tell ICF what `content-type`
       }
       ```
 
-      If you have following all the exercises in this course, you will see that the `place` parameter has a default value bound to it.
+      If you have been following all the exercises in this course, you will see that the `place` parameter has a default value bound to it.
 
-2. Invoke the `hello` web action with a `name` and `place` query parameters:
+2. Now, try to invoke the `hello` web action with both a `name` and `place` query parameters:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
@@ -121,7 +123,7 @@ This unexpected result occurred because you need to tell ICF what `content-type`
       }
       ```
 
-      This error is because web actions, by default finalize all bound parameters making them protected from changes on the request.  In this case, the `place` parameter was bound to the value `Rivendell`.
+      This error is because web actions, by default, finalize (protect) all bound parameters making them protected from changes on HTTP requests.  In this case, the `place` parameter was bound to the value `Rivendell`.
 
 3. Set the `final` annotation to `false`:
 
@@ -130,7 +132,9 @@ This unexpected result occurred because you need to tell ICF what `content-type`
       ok: updated action hello
       ```
 
-4. Retry the previous invocation:
+      This will override the protection on bound parameters.
+
+4. Retry the previous invocation with both query parameters:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
@@ -267,7 +271,11 @@ Web actions have many more features. See the [documentation](https://github.com/
 
       Did your action successfully redirect to the Apache OpenWhisk project website?
 
-## Example: HTML response
+## Web actions with non JSON content types
+
+This section includes some examples of web actions return other content types which you can try in your browser.
+
+### Example: HTML response
 
 1. Create a new web action named `html` from the following source code in html.js:
 
@@ -309,7 +317,7 @@ Web actions have many more features. See the [documentation](https://github.com/
       <html><body>Hello World!</body></html>
       ```
 
-## Example: SVG Response
+### Example: SVG Response
 
 1. Create a new web action named `atom` that has the following code that includes base64-encoded SVG content in the `body`:
 
@@ -365,7 +373,7 @@ Web actions have many more features. See the [documentation](https://github.com/
       -->
       ![atom.svg](images/atom.svg)
 
-## Example: Manual JSON response
+### Example: Manual JSON response
 
 If our function is only able to return a response in JSON, you can set the `content-type` manually in the function. This is so the caller doesn’t need to append `.json` to the URL.
 
