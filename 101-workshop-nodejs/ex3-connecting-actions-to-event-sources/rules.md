@@ -249,7 +249,7 @@ If you see the following error while attempting to invoke the `hello` action wit
 error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
 ```
 
-This likely means the action was turned into a web action causing all its bound parameters to become `final` (protected).
+then it likely means the action was turned into a web action causing all its bound parameters to become `final` (protected).
 
 The simplest solution is to delete the old `hello` action and create it again:
 
