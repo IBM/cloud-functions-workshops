@@ -241,21 +241,26 @@ Excellent work! Now you have a way to connect actions to events in OpenWhisk. It
 
 ## Troubleshooting
 
-You may see the following error if you have previously bound the `place` parameter to a fixed value:
-
-_Unable to invoke action 'hello': Request defines parameters that are not allowed_
-
 If you see this error:
 
-    ```text
-    error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
-    ```
+```text
+error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
+```
+
 while attempting to invoke the `hello` action with a `place` parameter, you’ll need to delete the old `hello` action and create it again:
 
-    ```bash
-    ibmcloud fn action delete hello
-    ibmcloud fn action create hello hello.js
-    ```
+```bash
+ibmcloud fn action delete hello
+ibmcloud fn action create hello hello.js
+```
+
+where `hello.js` contains:
+
+```javascript
+function main(params) {
+    return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+}
+```
 
 {% hint style="warning" %}
 Once you bind a parameter, there is no current way to unbind it; you will have to delete it and start over.
