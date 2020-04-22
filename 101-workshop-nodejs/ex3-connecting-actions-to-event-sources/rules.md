@@ -251,6 +251,10 @@ error: Unable to invoke action 'hello': Request defines parameters that are not 
 
 then it likely means the action was turned into a web action causing all its bound parameters to become `final` (protected).
 
+{% hint style="warning" %}
+Once a bound parameter is finalized, there is no current way to unbind it; you will have to delete it and start over.
+{% endhint %}
+
 The simplest solution is to delete the old `hello` action and create it again:
 
 ```bash
@@ -265,7 +269,3 @@ function main(params) {
     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
 }
 ```
-
-{% hint style="warning" %}
-Once you bind a parameter, there is no current way to unbind it; you will have to delete it and start over.
-{% endhint %}
