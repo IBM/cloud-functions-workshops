@@ -50,13 +50,13 @@ Let's turn the `hello` action into a web action!
 3. Invoke the web action URL returned using the `curl` command:
 
       ```bash
-      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
+      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
       ```
 
       It looks like nothing happened! In fact, an HTTP response code of `204 No Content` was returned which you can verify if you add the verbose flag `-v`:
 
       ```bash
-      curl -v "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
+      curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
       ```
 
       ```bash
@@ -79,14 +79,14 @@ This unexpected result occurred because you need to tell ICF what `content-type`
      To signal ICF to set the `content-type` to `application/json` on the HTTP response, you need to add `.json` after the action name, at the end of the URL. Try invoking it now:
 
       ```bash
-      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
+      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json
       ```
 
       You now get a successful HTTP response in JSON format which matches the `.json` extension you added:
 
       ```json
       {
-         "message": "Hello undefined from Rivendell"
+         "message": "Hello, undefined from Rivendell"
       }
       ```
 
@@ -139,20 +139,18 @@ All web actions created using the `--web` flag are also treated as `http` action
 
 HTTP web actions, when invoked, also receive additional HTTP request details as parameters to the action input argument. These include:
 
-1. `__ow_method` \(type: string\): The HTTP method of the request
-2. `__ow_headers` \(type: map string to string\): The request headers
-3. `__ow_path` \(type: string\): The unmatched path of the request \(matching stops after consuming the action extension\)
-4. `__ow_user` \(type: string\): The namespace identifying the OpenWhisk authenticated subject
-5. `__ow_body` \(type: string\): The request body entity, as a base64 encoded string when content is binary or JSON object/array, or plain string otherwise
-6. `__ow_query` \(type: string\): The query parameters from the request as an unparsed string
-
-The `__ow_user` is only present when the web action is [annotated to require authentication](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-actions) and allows a web action to implement its own authorization policy.
-
-The `__ow_query` is available only when a web action elects to handle the [raw HTTP request](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling). It is a string containing the query parameters parsed from the URI \(separated by `&`\).
-
-The `__ow_body` property is present either when handling raw HTTP requests or when the HTTP request entity is not a JSON object or from data.
+1. `__ow_method` \(type: string\): The HTTP method of the request.
+2. `__ow_headers` \(type: map string to string\): The request headers.
+3. `__ow_path` \(type: string\): The unmatched path of the request \(matching stops after consuming the action extension\).
+4. `__ow_body` \(type: string\): The request body entity, as a base64 encoded string when content is binary or JSON object/array, or plain string otherwise. Only present if handling raw HTTP requests, or when the HTTP request entity is not a JSON object or form data.
+5. `__ow_query` \(type: string\): The query parameters from the request as an unparsed string. Click [here](https://github.com/apache/openwhisk/blob/master/docs/webactions.md#raw-http-handling) for more information.
+6. `__ow_user` \(type: string\): The namespace identifying the ICF authenticated subject. Only present if the `require-whisk-auth` annotation is set. Click [here](https://github.com/apache/openwhisk/blob/master/docs/annotations.md#annotations-specific-to-web-action) for more information.
 
 Web actions otherwise receive query and body parameters as first class properties in the action arguments. Body parameters take precedence over query parameters, which in turn take precedence over action and package parameters.
+
+{% hint style="tip" %}
+Web actions can also be [enabled to handle "raw" HTTP requests](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web#actions_web_raw_enable). This setting allows the function to directly manage the "raw" HTTP query string and body content meaning the actions can receive and process `content-types` other than JSON objects.
+{% endhint %}
 
 ## Control HTTP responses
 
