@@ -241,13 +241,17 @@ Excellent work! Now you have a way to connect actions to events in OpenWhisk. It
 
 ## Troubleshooting
 
-If you see this error:
+### Finalized parameters
+
+If you see the following error while attempting to invoke the `hello` action with parameters:
 
 ```text
 error: Unable to invoke action 'hello': Request defines parameters that are not allowed (e.g., reserved properties).
 ```
 
-while attempting to invoke the `hello` action with a `place` parameter, you’ll need to delete the old `hello` action and create it again:
+This likely means the action was turned into a web action causing all its bound parameters to become `final` (protected).
+
+The simplest solution is to delete the old `hello` action and create it again:
 
 ```bash
 ibmcloud fn action delete hello
