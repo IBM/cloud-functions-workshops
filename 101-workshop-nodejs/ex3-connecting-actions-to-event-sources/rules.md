@@ -103,23 +103,7 @@ Success! The `locationUpdate` trigger is now connected to the `hello` action via
 
    You can see the trigger activation \(`5c153c01d76d49dc953c01d76d99dc34`\) is recorded, followed by the `hello` action activation \(`5ee74025c2384f30a74025c2382f30c1`\).
 
-3. Retrieving the trigger activation record will show the actions and rules invoked from this activation:
-
-    ```text
-    ibmcloud fn activation result 5ee74025c2384f30a74025c2382f30c1
-    ```
-
-    ```text
-    {
-        "payload": "Hello, Kara from Krypton"
-    }
-    ```
-
-   The hello action received the event payload and returned the expected string.
-
-Activation records for triggers store the rules and actions fired for an event and the event parameters.
-
-4. Explore the results of the activation:
+3. Explore the `locationUpdate` trigger activation record:
 
     ```text
     ibmcloud fn activation result 5c153c01d76d49dc953c01d76d99dc34
@@ -131,6 +115,22 @@ Activation records for triggers store the rules and actions fired for an event a
         "place": "Krypton"
     }
     ```
+
+    Activation results for triggers show the event parameters.
+
+4. Explore the results of the `hello` action activation record:
+
+    ```text
+    ibmcloud fn activation result 5ee74025c2384f30a74025c2382f30c1
+    ```
+
+    ```text
+    {
+        "payload": "Hello, Kara from Krypton"
+    }
+    ```
+
+    The hello action received the event parameters from the trigger and returned the expected string in the result.
 
 <!-- ICF disabled this feature
     ```text
@@ -182,7 +182,7 @@ You can also use rules with sequences. For example, you can create an action seq
     2902e554efdb441d7ae554efdb411d797 unknown   warm  0s        success 3cc8e80c-1...13fee32/locationUpdate:0.0.2
     ```
 
-5. Examine the results for the `recordLocationAndHello` trigger:
+5. Examine the result for the `recordLocationAndHello` trigger:
 
     ```bash
     ibmcloud fn activation result 93e4680a56d84f73a4680a56d89f7362
