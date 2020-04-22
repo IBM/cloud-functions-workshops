@@ -251,21 +251,29 @@ error: Unable to invoke action 'hello': Request defines parameters that are not 
 
 then it likely means the action was turned into a web action causing all its bound parameters to become `final` (protected).
 
-{% hint style="warning" %}
-Once a bound parameter is finalized, there is no current way to unbind it; you will have to delete it and start over.
-{% endhint %}
-
-The simplest solution is to delete the old `hello` action and create it again:
+You can verify this by looking at the value of the `final` annotation of the action using the `get` command:
 
 ```bash
-ibmcloud fn action delete hello
-ibmcloud fn action create hello hello.js
+ibmcloud fn action get hello
+
+ok: got action hello
+{
+    "name": "hello",
+    ...
+    "annotations": [
+        ...
+        {
+            "key": "final",
+            "value": true
+        }
+    ],
+   ...
+}
 ```
 
-where `hello.js` contains:
+The simplest solution is to set the `final` annotation to `false`:
 
-```javascript
-function main(params) {
-    return {payload:  'Hello, ' + params.name + ' from ' + params.place};
-}
+```bash
+ibmcloud fn action update hello -a final false
+ok: updated action hello
 ```

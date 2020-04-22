@@ -176,6 +176,10 @@ Default parameter bindings on an action can still be overwritten by specifying t
 
 Notice that the command line value overwrites the value that was bound to the action.
 
+{% hint style="warning" %}
+Once parameters are bound, there is no current way to unbind them; you will have to delete the entire action and start over binding only the parameters you want.
+{% endhint %}
+
 ---
 
 ## Observations
