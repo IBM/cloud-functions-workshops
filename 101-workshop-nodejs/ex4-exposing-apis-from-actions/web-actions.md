@@ -146,7 +146,7 @@ Additionally, you can invoke web actions with query parameters.
       }
       ```
 
-### Disable web action support
+## Disable web action support
 
 1. Update the action to set the `--web` flag to `false`:
 
