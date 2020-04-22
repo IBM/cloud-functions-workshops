@@ -90,19 +90,61 @@ This unexpected result occurred because you need to tell ICF what `content-type`
       }
       ```
 
-      Additionally, you can invoke it with query parameters for `name` and `place`:
+### Using query parameters
+
+      Additionally, you can invoke it with query parameters.
+
+1. Invoke the `hello` web action with a `name` query parameter:
+
+      ```bash
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine"
+      ```
+
+      ```json
+      {
+         "message": "Hello, Josephine from Rivendell"
+      }
+      ```
+
+      If you have following all the exercises in this course, you will see that the `place` parameter has a default value bound to it.
+
+2. Invoke the `hello` web action with a `name` and `place` query parameters:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
       ```
 
-      ```json
+      ```bash
       {
-         "message": "Hello Josephine from Austin!"
+          "code": "5675a20dbab5e05445d2a55b38236946",
+          "error": "Request defines parameters that are not allowed (e.g., reserved properties)."
       }
       ```
 
-5. Disable web action support:
+      This error is because web actions, by default finalize all bound parameters making them protected from changes on the request.  In this case, the `place` parameter was bound to the value `Rivendell`.
+
+3. Set the `final` annotation to `false`:
+
+      ```bash
+      ibmcloud fn action update hello -a final false
+      ok: updated action hello
+      ```
+
+4. Retry the previous invocation:
+
+      ```bash
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
+      ```
+
+      ```bash
+      {
+          "payload": "Hello, Josephine from Austin"
+      }
+      ```
+
+### Disable web action support
+
+1. Update the action to set the `--web` flag to `false`:
 
       ```bash
       ibmcloud fn action update hello --web false
@@ -112,10 +154,10 @@ This unexpected result occurred because you need to tell ICF what `content-type`
       ok: updated action hello
       ```
 
-6. Verify the action is no longer externally accessible:
+2. Verify the action is no longer externally accessible:
 
       ```bash
-      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json?name=Josephine&place=Austin"
+      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json
       ```
 
       ```json
