@@ -210,11 +210,11 @@ The `body` is considered empty if it is `null`, the empty string `""`, or undefi
 
 If a `content-type` header value is not declared in the action result’s `headers`, the body is interpreted as `application/json` for non-string values and `text/html` otherwise. When the `content-type` is defined, the controller will determine if the response is binary data or plain text and decode the string using a base64 decoder as needed. Should the body fail to decode correctly, an error is returned to the caller.
 
-## Additional features
+## Additional features of web actions
 
 Web actions have many more features. See the [documentation](https://github.com/apache/openwhisk/blob/master/docs/webactions.md)) for full details on all these capabilities.
 
-## Example - HTTP redirect
+### Example - HTTP redirect
 
 1. Create a new web action from the following source code in `redirect.js`:
 
