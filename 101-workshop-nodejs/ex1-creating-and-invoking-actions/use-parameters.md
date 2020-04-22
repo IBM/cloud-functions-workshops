@@ -41,7 +41,7 @@ First, we will need to update our function to look for parameters.
     ibmcloud fn action update hello hello.js
     ```
 
-### Invoke using the `--param` flag
+### Invoke using the command line parameters
 
 When invoking actions through the command line, parameter values can be explicitly passed using the `—param` flag or the shorter `-p` flag.
 
@@ -67,7 +67,7 @@ When invoking actions through the command line, parameter values can be explicit
 In the invocation above, the `--result` option was used. This flag implies a `blocking` invocation where the command-line interface (CLI) waits for the activation to complete and then displays only the function's resulting output as the `payload` value.
 {% endhint %}
 
-### Invoke using the `--param-file` flag
+### Invoke using parameters declared in a file
 
 You can also pass parameters from a file containing the desired content in JSON format. The filename must then be passed using the `--param-file` flag.
 
@@ -165,7 +165,7 @@ Bound parameters can still be overwritten by specifying the parameter value at i
 1. Invoke the action again, passing both `name` and `place` values:
 
     ```bash
-    ibmcloud fn Action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
+    ibmcloud fn action invoke --result hello --param name Elrond --param place "the Lonely Mountain"
     ```
 
     ```json
