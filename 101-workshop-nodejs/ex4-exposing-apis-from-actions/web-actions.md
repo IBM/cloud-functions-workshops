@@ -362,9 +362,9 @@ This section includes a few examples of web actions returning other content type
       -->
       ![atom.svg](images/atom.svg)
 
-      {% hint style="info" %}
-      If you want to see the unencoded SVG XML source, you can save the image file to your local computer and view it in a text editor.
-      {% endhint %}
+{% hint style="info" %}
+If you want to see the unencoded SVG XML source, you can save the image file to your local computer and view it in a text editor.
+{% endhint %}
 
 ### Example: Manual JSON response
 
