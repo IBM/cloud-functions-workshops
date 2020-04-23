@@ -129,10 +129,13 @@ Additionally, you can invoke web actions with query parameters.
 
       ```bash
       ibmcloud fn action update hello -a final false
+      ```
+
+      ```bash
       ok: updated action hello
       ```
 
-      This will override the protection on bound parameters.
+      This will override the default protection on bound parameters.
 
 4. Retry the previous invocation with both query parameters:
 
