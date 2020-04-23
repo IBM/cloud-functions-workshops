@@ -325,21 +325,7 @@ This section includes a few examples of web actions returning other content type
 1. Create a new web action named `atom` that has the following code that includes base64-encoded SVG content in the `body`:
 
       ```javascript
-      // The "svg" that is base64 encoded in the "body" param below:
-      // <svg xmlns="http://www.w3.org/2000/svg" viewBox="-52 -53 100 100" stroke-width="2">
-      //  <g fill="none">
-      //   <ellipse stroke="#66899a" rx="6" ry="44"/>
-      //   <ellipse stroke="#e1d85d" rx="6" ry="44" transform="rotate(-66)"/>
-      //   <ellipse stroke="#80a3cf" rx="6" ry="44" transform="rotate(66)"/>
-      //   <circle  stroke="#4b541f" r="44"/>
-      //  </g>
-      //  <g fill="#66899a" stroke="white">
-      //   <circle fill="#80a3cf" r="13"/>
-      //   <circle cy="-44" r="9"/>
-      //   <circle cx="-40" cy="18" r="9"/>
-      //   <circle cx="40" cy="18" r="9"/>
-      //  </g>
-      // </svg>
+      // The SVG XML markup has been base64 encoded in the "body" param below:
       function main() {
          return { headers: { 'Content-Type': 'image/svg+xml' },
             statusCode: 200,
@@ -356,7 +342,7 @@ This section includes a few examples of web actions returning other content type
       ok: updated action atom
       ```
 
-      If you want to see the unencoded SVG source, click [here](/static/atom.svg) to view it.
+      If you want to see the unencoded SVG XML source, you can save the [atom.svg](/static/atom.svg) file to your local computer and view it in a text editor.
 
 2. Get the URL for the new atom web action:
 
