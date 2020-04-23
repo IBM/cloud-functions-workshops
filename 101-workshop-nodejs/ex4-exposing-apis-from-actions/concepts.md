@@ -32,7 +32,7 @@ A few benefits of using web actions include:
 - Supports any `content-type` on an HTTP response, including HTML, XML, SVG, PNG, and more, with intelligent defaults for JSON payloads
 - Supports any type of HTTP method including GET, POST (the default), PUT, PATCH, and DELETE, as well as HEAD and OPTIONS
 
-{% hint style="warning" %}
+{% hint style="tip" %}
 If you want to implement user authentication, rate limiting, request routing, or if you are building high traffic and enterprise APIs, the better choice is to use the Cloud Functions API Gateway features described in the next section.
 {% endhint %}
 
