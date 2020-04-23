@@ -241,7 +241,7 @@ Excellent work! Now you have a way to connect actions to events in OpenWhisk. It
 
 ## Troubleshooting
 
-### Finalized parameters
+### Reserved properties error
 
 You may see the following error while attempting to invoke the `hello` action with parameters:
 
