@@ -23,14 +23,14 @@ Let's now explore how web actions can be turned into an API using the [API Gatew
 
 At first glance, APIs do not seem to be very different from web actions since ICF already generated an HTTP endpoint. However, the key difference is that with an actual API, you are going through an API Gateway service and are able to take advantage of a variety of features outside the scope of this course including [rate limiting, authentication](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-create_api), and [custom domains](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-custom_endpoint) for your API.
 
-Again, all these API Gateway features are provided with no changes to your action. Trying to do these things in your function code would simply be impossible and the many benefits of serverless.
+Again, all these API Gateway features are provided with no changes to your action. Trying to do these things in your function code would likely be impossible and negate the many benefits of serverless.
 
 ## Create an API
 
 To create an API, you will use the following command syntax:
 
 ```bash
-ibmcloud fn api create &lt;BASE_PATH&gt; &lt;API_NAME&gt; &lt;HTTP_METHOD&gt; &lt;ACTION_NAME&gt;
+ibmcloud fn api create <BASE_PATH> <API_NAME> <HTTP_METHOD> <ACTION_NAME>
 ```
 
 {% hint style="warning" %}
