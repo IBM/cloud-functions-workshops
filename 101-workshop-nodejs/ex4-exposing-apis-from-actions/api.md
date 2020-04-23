@@ -25,7 +25,7 @@ At first glance, APIs do not seem to be very different from web actions since IC
 
 Again, all these API Gateway features are provided with no changes to your action. Trying to do these things in your function code would likely be impossible and negate the many benefits of serverless.
 
-## Create an API
+## API create syntax
 
 To create an API, you will use the following command syntax:
 
@@ -37,9 +37,11 @@ ibmcloud fn api create <BASE_PATH> <API_NAME> <HTTP_METHOD> <ACTION_NAME>
 The example above is merely shows the syntax used to create an API endpoint and should **not** be run.
 {% endhint %}
 
-### Hello endpoint
+## Create API endpoints
 
-Note that all actions used in an API must be web actions, so you mustn't forget to run `ibmcloud fn action update hello --web true` prior to running the commands below.
+Note that all actions used in an API must be web actions. If they are not, you can run `ibmcloud fn action update <action name> --web true` prior to running the commands below.
+
+### Greeting endpoint
 
 1. Run the following command to create a simple HTTP `GET` endpoint for the `hello` action:
 
