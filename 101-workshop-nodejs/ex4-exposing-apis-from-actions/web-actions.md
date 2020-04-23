@@ -52,13 +52,13 @@ Let's turn the `hello` action into a web action!
 3. Invoke the web action URL returned using the `curl` command:
 
       ```bash
-      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
       ```
 
       It looks like nothing happened! In fact, an HTTP response code of `204 No Content` was returned which you can verify if you add the verbose flag `-v`:
 
       ```bash
-      curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello
+      curl -v "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello"
       ```
 
       ```bash
@@ -81,7 +81,7 @@ This unexpected result occurred because you need to tell ICF what `content-type`
      To signal ICF to set the `content-type` to `application/json` on the HTTP response, you need to add `.json` after the action name, at the end of the URL. Try invoking it now:
 
       ```bash
-      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
       ```
 
       You now get a successful HTTP response in JSON format which matches the `.json` extension you added:
@@ -161,7 +161,7 @@ Additionally, you can invoke web actions with query parameters.
 2. Verify the action is no longer externally accessible:
 
       ```bash
-      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
       ```
 
       ```json
@@ -249,7 +249,7 @@ Web actions have many more features. See the sICF [documentation](https://cloud.
 3. Check that the HTTP response is indeed an HTTP redirect:
 
       ```bash
-      curl -v https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect
+      curl -v "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/redirect"
       ```
 
       ```bash
@@ -310,7 +310,7 @@ This section includes a few examples of web actions returning other content type
 3. Check that the HTTP response is HTML and copy and paste that into your browser:
 
       ```bash
-      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html"
       ```
 
       ```html
@@ -411,7 +411,7 @@ If our function is only able to return a response in JSON, you can set the `cont
 3. Check that the HTTP response is JSON:
 
       ```bash
-      curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world
+      curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world"
       ```
 
       ```json
@@ -435,7 +435,7 @@ If our function is only able to return a response in JSON, you can set the `cont
 4. Use other HTTP methods or URI paths to show that the parameters change:
 
       ```bash
-      curl -XPOST https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world
+      curl -XPOST "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world"
       ```
 
       ```json
