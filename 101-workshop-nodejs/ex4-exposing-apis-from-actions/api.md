@@ -187,8 +187,7 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ```
 
     ```bash
-    ok: APIs
-    Action                            Verb             API Name  URL
+    TODO TODO TODO !!!!!!!!!!!!!!!!!!!!!!
     ```
 
 6. Restore the endpoints from the OpenAPI Specification:
