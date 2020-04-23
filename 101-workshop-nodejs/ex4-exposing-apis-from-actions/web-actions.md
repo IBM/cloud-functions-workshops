@@ -123,7 +123,7 @@ Additionally, you can invoke web actions with query parameters.
       }
       ```
 
-      This error is because web actions, by default, finalize (protect) all bound parameters making them protected from changes on HTTP requests.  In this case, the `place` parameter was bound to the value `Rivendell`.
+      This error is because web actions, by default, finalize (protect) all bound parameters, making them protected from changes on HTTP requests. In this case, the `place` parameter was bound to the value `Rivendell`.
 
 3. Set the `final` annotation to `false`:
 
@@ -195,7 +195,7 @@ HTTP web actions, when invoked, also receive additional HTTP request details as 
 Web actions otherwise receive query and body parameters as first class properties in the action arguments. Body parameters take precedence over query parameters, which in turn take precedence over action and package parameters.
 
 {% hint style="tip" %}
-Web actions can also be [enabled to handle "raw" HTTP requests](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web#actions_web_raw_enable). This setting allows the function to directly manage the "raw" HTTP query string and body content meaning the actions can receive and process `content-types` other than JSON objects.
+Web actions can also be [enabled to handle raw HTTP requests](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web#actions_web_raw_enable). This setting allows the function to directly manage the raw HTTP query string and body content, meaning the actions can receive and process `content-types` other than JSON objects.
 {% endhint %}
 
 ## Control HTTP responses
@@ -273,7 +273,7 @@ Web actions have many more features. See the [documentation](https://github.com/
 
 ## Web actions with non JSON content types
 
-This section includes some examples of web actions return other content types which you can try in your browser.
+This section includes a few examples of web actions returning other content types. You can follow along by trying these examples in your browser.
 
 ### Example: HTML response
 
@@ -307,7 +307,7 @@ This section includes some examples of web actions return other content types wh
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
       ```
 
-3. Check the HTTP response is HTML and copy and paste that into your browser:
+3. Check that the HTTP response is HTML and copy and paste that into your browser:
 
       ```bash
       curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/html
@@ -408,7 +408,7 @@ If our function is only able to return a response in JSON, you can set the `cont
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual
       ```
 
-3. Check the HTTP response is JSON:
+3. Check that the HTTP response is JSON:
 
       ```bash
       curl https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world
@@ -432,7 +432,7 @@ If our function is only able to return a response in JSON, you can set the `cont
         "hello": "world"
       ```
 
-4. Use other HTTP methods or URI paths to show the parameters change:
+4. Use other HTTP methods or URI paths to show that the parameters change:
 
       ```bash
       curl -XPOST https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world
