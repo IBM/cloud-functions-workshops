@@ -21,12 +21,16 @@
 
 Hello, future serverless developers!
 
-Welcome to this introductory course that is designed to teach you how to develop serverless applications, composed of loosely coupled microservice-like functions. In this course, you will use [IBM Cloud Functions](https://cloud.ibm.com/functions) (ICF), a Functions-as-a-Service (FaaS) platform based on [Apache OpenWhisk](https://openwhisk.apache.org/).
+Welcome to this introductory course that is designed to teach you how to develop serverless applications, composed of loosely coupled microservice-like functions. In this course, you will use [IBM Cloud Functions](https://cloud.ibm.com/functions) (ICF), a Functions-as-a-Service (FaaS) platform based on [Apache OpenWhisk](https://openwhisk.apache.org/) and the Node.js language.
 
-This course begins by providing an overview of serverless basics and how it runs on IBM Cloud Functions. You then will get a chance to set up your development environment so you can dive into creating, deploying, and invoking serverless functions using Node.js. This course explains how to replace the Node.js functions with equivalent code, so you are free to use your favorite language, such as Python, Java, or Swift.
+This course begins by providing an overview of serverless basics and how it runs on IBM Cloud Functions. You then will get a chance to set up your development environment so you can dive into creating, deploying, and invoking serverless functions using Node.js.
 
-Once you are comfortable with creating serverless functions, the next step is to connect functions to events, like message queues. This allows microservices to fire automatically. Finally, you will learn how to expose serverless functions as public API endpoints, enabling the build of serverless web applications.
+Once you are comfortable with creating serverless functions, we will show you how to connect your functions to events. This allows microservices to fire automatically. Finally, you will learn how to expose serverless functions as public, web accessible HTTP endpoints and APIs, further simplifying the creation of serverless web applications using ICF.
 
 Without further ado, welcome to the future of cloud development; you'll never want to manage another server again!
 
 Are you ready? Let's go!
+
+{% hint style="info" %}
+Although this course uses the Node.js language in its examples, you are free to use your favorite supported language, such as Python, Rust or Swift by simply supplying equivalent functional code.
+{% endhint %}
