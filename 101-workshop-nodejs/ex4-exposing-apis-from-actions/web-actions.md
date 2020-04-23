@@ -149,7 +149,7 @@ Additionally, you can invoke web actions with query parameters.
       }
       ```
 
-## Disable web action support
+<!-- ## Disable web action support (we cannot disable as we use this in API create...)
 
 1. Update the action to set the `--web` flag to `false`:
 
@@ -172,7 +172,7 @@ Additionally, you can invoke web actions with query parameters.
         "error": "The requested resource does not exist.",
         "code": "1dfc1f7cb457ed4bb1f2978fc75bd31f"
       }
-      ```
+      ``` -->
 
 ## Content types and extensions
 
