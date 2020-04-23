@@ -212,7 +212,7 @@ If a `content-type` header value is not declared in the action result’s `heade
 
 ## Additional features of web actions
 
-Web actions have many more features. See the [documentation](https://github.com/apache/openwhisk/blob/master/docs/webactions.md)) for full details on all these capabilities.
+Web actions have many more features. See the sICF [documentation](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web) for full details on all these capabilities.
 
 ### Example - HTTP redirect
 
