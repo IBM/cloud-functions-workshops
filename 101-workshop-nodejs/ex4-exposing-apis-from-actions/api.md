@@ -74,7 +74,7 @@ Note that all actions used in an API must be web actions, so you mustn't forget 
 
     ```json
     {
-        "greeting": "Hello, undefined from undefined"
+        "greeting": "Hello, undefined from Rivendell"
     }
     ```
 
@@ -111,13 +111,11 @@ As you can begin to tell, as the number of API endpoints increases, documenting 
 
     ```bash
     ok: APIs
-    Action                                     Verb  API Name  URL
-    /josephine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
-    /josephine.watson@gmail.com_ns/html         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
-    /josephine.watson@gmail.com_ns/manual       put    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
-    /josephine.watson@gmail.com_ns/redirect     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
-    /josephine.watson@gmail.com_ns/atom         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
+    Action                                      Verb  API Name  URL
+    /2ca6a304-a717-4486-ae33-1ba6be11a393/he     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
+    /2ca6a304-a717-4486-ae33-1ba6be11a393/re     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
     ```
+
 {% hint style="warning" %}
 If you did not do the optional exercise, your output will be smaller as you have fewer endpoints. That is fine for the purposes of this demonstration.
 {% endhint %}
