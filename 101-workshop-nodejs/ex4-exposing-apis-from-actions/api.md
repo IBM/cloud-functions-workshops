@@ -34,7 +34,7 @@ ibmcloud fn api create <BASE_PATH> <API_NAME> <HTTP_METHOD> <ACTION_NAME>
 ```
 
 {% hint style="warning" %}
-Be advised that the example above is merely an example of the syntax used to create an API endpoint and should **not** be run.
+The example above is merely shows the syntax used to create an API endpoint and should **not** be run.
 {% endhint %}
 
 ### Hello endpoint
