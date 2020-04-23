@@ -325,7 +325,7 @@ This section includes a few examples of web actions returning other content type
 1. Create a new web action named `atom` that has the following code that includes base64-encoded SVG content in the `body`:
 
       ```javascript
-      // The SVG XML markup has been base64 encoded in the "body" param below:
+      // The SVG XML image source has been base64 encoded in the "body" param below:
       function main() {
          return { headers: { 'Content-Type': 'image/svg+xml' },
             statusCode: 200,
@@ -341,8 +341,6 @@ This section includes a few examples of web actions returning other content type
       ```bash
       ok: updated action atom
       ```
-
-      If you want to see the unencoded SVG XML source, you can save the [atom.svg](/static/atom.svg) file to your local computer and view it in a text editor.
 
 2. Get the URL for the new atom web action:
 
@@ -363,6 +361,10 @@ This section includes a few examples of web actions returning other content type
       #######################################################
       -->
       ![atom.svg](images/atom.svg)
+
+      {% hint style="info" %}
+      If you want to see the unencoded SVG XML source, you can save the image file to your local computer and view it in a text editor.
+      {% endhint %}
 
 ### Example: Manual JSON response
 
