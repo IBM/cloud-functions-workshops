@@ -116,8 +116,8 @@ As you can begin to tell, as the number of API endpoints increases, documenting 
     /2ca6a304-a717-4486-ae33-1ba6be11a393/re     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
     ```
 
-{% hint style="warning" %}
-If you did not do the optional exercise, your output will be smaller as you have fewer endpoints. That is fine for the purposes of this demonstration.
+{% hint style="info" %}
+Note that your listing may have more API endpoints if you tried the optional exercises.
 {% endhint %}
 
 2. View the OpenAPI Specification for `myapi` using the following command:
@@ -153,6 +153,7 @@ If you did not do the optional exercise, your output will be smaller as you have
     ```bash
     ibmcloud fn api delete /myapi
     ```
+
     ```bash
     ok: deleted API /myapi
     ```
@@ -162,6 +163,7 @@ If you did not do the optional exercise, your output will be smaller as you have
     ```bash
     ibmcloud fn api list
     ```
+
     ```bash
     ok: APIs
     Action                            Verb             API Name  URL
@@ -174,16 +176,7 @@ If you did not do the optional exercise, your output will be smaller as you have
     ```
 
     ```bash
-    ok: created API /myapi/redirect get for action /josephine.watson@gmail.com_ns/redirect
-    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
-    ok: created API /myapi/hello get for action /josephine.watson@gmail.com_ns/hello
-    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
-    ok: created API /myapi/html get for action /josephine.watson@gmail.com_ns/html
-    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
-    ok: created API /myapi/manual put for action /josephine.watson@gmail.com_ns/manual
-    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
-    ok: created API /myapi/atom get for action /josephine.watson@gmail.com_ns/atom
-    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
+    TODO TODO TODO !!!!!!!!!!!!!!!!!!!!!!
     ```
 
 7. You can now see that the endpoints are restored:
@@ -193,13 +186,7 @@ If you did not do the optional exercise, your output will be smaller as you have
     ```
 
     ```bash
-    ok: APIs
-    Action                                     Verb  API Name  URL
-    /josephine.watson@gmail.com_ns/atom         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/atom
-    /josephine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
-    /josephine.watson@gmail.com_ns/html         get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
-    /josephine.watson@gmail.com_ns/manual       put    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual
-    /josephine.watson@gmail.com_ns/redirect     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
+    TODO TODO TODO !!!!!!!!!!!!!!!!!!!!!!
     ```
 
 This OpenAPI Specification can now be stored in your code repository and used to update endpoints, documentation, or event generate stub code!
