@@ -19,18 +19,18 @@
 
 #  API Management of web actions
 
-Let's now explore how these web actions can be turned into an API using the [API Gateway](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-apigateway). 
+Let's now explore how these web actions can be turned into an API using the [API Gateway](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-apigateway).
 
-First, we will choose `/myapi` as the base path. This is the part of the path before the actual endpoint. For example: `example.com/basepath/endpoint`. This is useful for grouping endpoints together in a logical way and is how IBM Cloud Functions (ICF) organizes your endpoints into a single API.
+At first glance, APIs do not seem to be very different from web actions since ICF already generated an HTTP endpoint. However, the key difference is that with an actual API, you are going through an API Gateway service and are able to take advantage of a variety of features outside the scope of this course including [rate limiting, authentication](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-create_api), and [custom domains](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-custom_endpoint) for your API.
 
-At first glance, this does not appear to be different from web actions -- you tell ICF to make your action or sequence to be invoked by calls to an external HTTP endpoint. It returns a URL for an HTTP endpoint. However, the key difference is that you are going through the API Gateway and are able to take advantage of a variety of features outside the scope of this course including [rate limiting, authentication](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-create_api), and [custom domains](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-custom_endpoint) for your API. This is all done by the API Gateway with no changes to your action, whereas it would have to be handled by your action directly or just simply impossible to do if you were to just use web actions.
+Again, all these API Gateway features are provided with no changes to your action. Trying to do these things in your function code would simply be impossible and the many benefits of serverless.
 
 ## Create an API
 
-To create an API, run the following command syntax:
+To create an API, you will use the following command syntax:
 
 ```bash
-ibmcloud fn api create BASE_PATH API_PATH API_VERB ACTION
+ibmcloud fn api create &lt;BASE_PATH&gt; &lt;API_NAME&gt; &lt;HTTP_METHOD&gt; &lt;ACTION_NAME&gt;
 ```
 
 {% hint style="warning" %}
@@ -39,17 +39,19 @@ Be advised that the example above is merely an example of the syntax used to cre
 
 ### Hello endpoint
 
-First you need to create the `hello` endpoint. Note that all actions used in an API must be web actions, so you mustn't forget to run `ibmcloud fn action update hello --web true` prior to running the commands below.
+In this example, we will use `/myapi` as the base path and `greeting` as the API endpoint name. Having a base path name is useful for grouping APIs together in a logical way within ICF.
 
-1. Run the following command to create a simple GET endpoint for the `hello` action:
+Note that all actions used in an API must be web actions, so you mustn't forget to run `ibmcloud fn action update hello --web true` prior to running the commands below.
+
+1. Run the following command to create a simple HTTP `GET` endpoint for the `hello` action:
 
     ```bash
-    ibmcloud fn api create /myapi /foo get hello
+    ibmcloud fn api create /myapi /greeting get hello
     ```
 
     ```bash
-    ok: created API /myapi/foo GET for action /_/hello
-    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
+    ok: created API /myapi/greeting GET for action /_/hello
+    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
     ```
 
 2. Check to see that the API was created:
@@ -61,21 +63,21 @@ First you need to create the `hello` endpoint. Note that all actions used in an 
     ```bash
     ok: APIs
     Action                                     Verb  API Name  URL
-    /joesphine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/hello
+    /joesphine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
     ```
 
-3. Now let’s invoke that API via curl:
+3. Now let’s invoke that `greeting` API via curl:
 
     ```bash
-    curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/aac6bc4a6f94f19dd008e64513b62bf155af5703a95a142f0c9a6ea83af81300/myapi/foo
+    curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
     ```
 
     ```json
     {
-    "greeting": "Hello, undefined from undefined"
+        "greeting": "Hello, undefined from undefined"
     }
     ```
-    
+
 You have now created and invoked your first IBM Cloud Functions (ICF) API endpoint!
 
 ### Other response types
