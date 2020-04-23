@@ -54,7 +54,7 @@ Note that all actions used in an API must be web actions, so you mustn't forget 
 
     In this example, we used `/myapi` as the API base path and `greeting` as the API endpoint name. Having a base path name is useful for grouping APIs together in a logical way within ICF.
 
-2. Check to see that the API was created:
+2. Verify the API was created:
 
     ```bash
     ibmcloud fn api list
@@ -63,7 +63,7 @@ Note that all actions used in an API must be web actions, so you mustn't forget 
     ```bash
     ok: APIs
     Action                                     Verb  API Name  URL
-    /joesphine.watson@gmail.com_ns/hello        get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
+    /2ca6a304-a717-4486-ae33-1ba6be11a393/he    get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
     ```
 
 3. Now let’s invoke that `greeting` API via curl:
@@ -103,7 +103,7 @@ You’ve now successfully created an endpoint for an HTTP response type. The oth
 
 As you can begin to tell, as the number of API endpoints increases, documenting and managing them becomes increasingly difficult. One solution to this is to use the [OpenAPI Specification](https://swagger.io/specification/). This has a plethora of tools around for documenting, creating stub projects, and more, in a variety of languages. And it is supported by ICF!
 
-1. Let's take stock of our API by listing out all the endpoints:
+1. Let's take stock of our APIs by listing out all the endpoints:
 
     ```bash
     ibmcloud fn api list
@@ -135,6 +135,26 @@ Note that your listing may have more API endpoints if you tried the optional exe
         "info": {
             "title": "/myapi",
             "version": "1.0.0"
+        },
+        "paths": {
+        "/greeting": {
+            "get": {
+                "operationId": "getGreeting",
+                "responses": {
+                    "default": {
+                        "description": "Default response"
+                    }
+                },
+                "x-openwhisk": {
+                    "action": "hello",
+                    "namespace": "2ca6a304-a717-4486-ae33-1ba6be11a393",
+                    "package": "",
+                    "url": "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/hello.json"
+                }
+            }
+        },
+        "/redirect": {
+            ...
         },
         ...
     }
