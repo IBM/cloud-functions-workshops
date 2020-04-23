@@ -17,7 +17,7 @@
 #
 -->
 
-# Welcome to the "Serverless Fundamentals using IBM Cloud Functions" course
+# Welcome to the Serverless Fundamentals using IBM Cloud Functions course
 
 Hello, future serverless developers!
 
