@@ -401,7 +401,7 @@ If our function is only able to return a response in JSON, you can set the `cont
       https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual
       ```
 
-3. Check that the HTTP response is JSON:
+3. Check that the HTTP response is JSON and the HTTP method is `get`:
 
       ```bash
       curl "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual?hello=world"
@@ -433,7 +433,7 @@ If our function is only able to return a response in JSON, you can set the `cont
       }
       ```
 
-4. Use other HTTP methods or URI paths to show that the parameters change:
+4. Try calling it with an HTTP POST method and with a URI path:
 
       ```bash
       curl -XPOST "https://us-south.functions.cloud.ibm.com/api/v1/web/2ca6a304-a717-4486-ae33-1ba6be11a393/default/manual/subpath?hello=world"
@@ -441,21 +441,17 @@ If our function is only able to return a response in JSON, you can set the `cont
 
       ```json
       {
-         "__ow_method": "post",
-         "__ow_headers": {
-            "accept": "*/*",
-            "user-agent": "curl/7.54.0",
-            "x-client-ip": "92.11.100.114",
-            "x-forwarded-proto": "https",
-            "host": "openwhisk.ng.bluemix.net:443",
-            "via": "1.1 AgAAAB+7NgA-",
-            "x-global-transaction-id": "2897764571",
-            "x-forwarded-for": "92.11.100.114"
-         },
-         "__ow_path": "/subpath",
-         "hello": "world"
+          "__ow_headers": {
+          "accept": "*/*",
+          ...
+        },
+        "__ow_method": "post",
+        "__ow_path": "/subpath",
+        "hello": "world"
       }
       ```
+
+      As you can see, the `__ow_method` and `__ow_path` reflected the URL changes and the parameter passed in the HTTP query string was indeed provided in the JSON.
 
 {% hint style="success" %}
 Aren’t web actions cool? They are a great feature that allows you to make you’re actions accessible on the web while controlling content types.  You can even generate HTML and other website content on the fly without hosting a content server!
