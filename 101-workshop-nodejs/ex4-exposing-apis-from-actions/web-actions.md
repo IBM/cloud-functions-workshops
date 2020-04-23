@@ -409,20 +409,28 @@ If our function is only able to return a response in JSON, you can set the `cont
 
       ```json
       {
-        "__ow_method": "get",
         "__ow_headers": {
-           "accept": "*/*",
-           "user-agent": "curl/7.54.0",
-           "x-client-ip": "92.11.100.114",
-           "x-forwarded-proto": "https",
-           "host": "openwhisk.ng.bluemix.net:443",
-           "cache-control": "no-transform",
-           "via": "1.1 DwAAAD0oDAI-",
-           "x-global-transaction-id": "2654586489",
-           "x-forwarded-for": "92.11.100.114"
+          "accept": "*/*",
+          "accept-encoding": "gzip",
+          "cdn-loop": "cloudflare",
+          "cf-connecting-ip": "47.220.174.18",
+          "cf-ipcountry": "US",
+          "cf-ray": "5889fd324e5057cf-DFW",
+          "cf-request-id": "024a1c9369000057cf67a37200000001",
+          "cf-visitor": "{\"scheme\":\"https\"}",
+          "host": "us-south.functions.cloud.ibm.com",
+          "user-agent": "curl/7.54.0",
+          "x-forwarded-for": "47.220.174.20, 172.69.69.221",
+          "x-forwarded-host": "us-south.functions.cloud.ibm.com",
+          "x-forwarded-port": "443",
+          "x-forwarded-proto": "https",
+          "x-global-k8fdic-transaction-id": "d50c08e4b616c6ad8ad0dd95e41be4e3",
+          "x-real-ip": "172.69.69.221",
+          "x-request-id": "d50c08e4b616c6ad8ad0dd95e41be4e3"
         },
-        "__ow_path": "",
-        "hello": "world"
+        "__ow_method": "get",
+        "__ow_path": ""
+      }
       ```
 
 4. Use other HTTP methods or URI paths to show that the parameters change:
