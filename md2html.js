@@ -481,8 +481,10 @@ if (argv.c && argv.t != CURRENT_DIR) {
             targetImageFile = createAbsoluteTargetFilename(imageFilename, argv.t)
             createTargetDirectory(path.dirname(targetImageFile))
             fs.copyFile(imageFilename, targetImageFile, (err) => {
-            if (err) throw err;
-              console.log(">>      to: '" + path.relative(__dirname,targetImageFile) + "'...")
+            if (err)
+              throw err
+            else
+              console.log(">>Copied: '" + targetImageFile + "' success!...");
             });
           }
       }

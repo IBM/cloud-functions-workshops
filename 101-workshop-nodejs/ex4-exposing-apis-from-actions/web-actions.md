@@ -356,6 +356,8 @@ This section includes a few examples of web actions returning other content type
       ok: updated action atom
       ```
 
+      If you want to see the unencoded SVG source, click [here](/static/atom.svg) to view it.
+
 2. Get the URL for the new atom web action:
 
       ```bash
