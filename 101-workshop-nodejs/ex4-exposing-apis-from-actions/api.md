@@ -19,7 +19,7 @@
 
 #  API Management of web actions
 
-Let's now explore how these web actions can be turned into an API using the [API Gateway](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-apigateway).
+Let's now explore how web actions can be turned into an API using the [API Gateway](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-apigateway).
 
 At first glance, APIs do not seem to be very different from web actions since ICF already generated an HTTP endpoint. However, the key difference is that with an actual API, you are going through an API Gateway service and are able to take advantage of a variety of features outside the scope of this course including [rate limiting, authentication](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-create_api), and [custom domains](https://cloud.ibm.com/docs/api-gateway?topic=api-gateway-custom_endpoint) for your API.
 
