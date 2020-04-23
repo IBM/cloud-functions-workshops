@@ -39,8 +39,6 @@ Be advised that the example above is merely an example of the syntax used to cre
 
 ### Hello endpoint
 
-In this example, we will use `/myapi` as the base path and `greeting` as the API endpoint name. Having a base path name is useful for grouping APIs together in a logical way within ICF.
-
 Note that all actions used in an API must be web actions, so you mustn't forget to run `ibmcloud fn action update hello --web true` prior to running the commands below.
 
 1. Run the following command to create a simple HTTP `GET` endpoint for the `hello` action:
@@ -53,6 +51,8 @@ Note that all actions used in an API must be web actions, so you mustn't forget 
     ok: created API /myapi/greeting GET for action /_/hello
     https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
     ```
+
+    In this example, we used `/myapi` as the API base path and `greeting` as the API endpoint name. Having a base path name is useful for grouping APIs together in a logical way within ICF.
 
 2. Check to see that the API was created:
 
