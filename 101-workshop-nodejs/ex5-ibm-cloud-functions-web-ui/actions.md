@@ -6,9 +6,11 @@
 
 The following screenshot shows a listing of actions created in the `test-iam-namespace` namespace in the `Dallas` region:
 
-![action listing page](images/101-ex5-action-overview.png)
+![action listing page](images/101-ex5-action-list.png)
 
-2. Click on the name of any action listed to move to the action details page.
+2. Click on the name of the `hello` action to move to the action details page.
+
+![action details page](images/101-ex5-action-list-select.png)
 
 ## Details overview
 
@@ -16,7 +18,7 @@ The action details page shows properties for the chosen action.
 
 For actions written in a supported language runtime, a source code editor with the action code is displayed. It allows users to make live changes and publish them making them immediately available to users.
 
-![action details page](images/101-ex5-action-editor.png)
+![action details page](images/101-ex5-action-details.png)
 
 Using the menu on the left-hand side, different properties for the action can be accessed and modified.
 
@@ -31,9 +33,21 @@ Using the menu on the left-hand side, different properties for the action can be
 
 3. Click the "Invoke" button to invoke the action and display the resulting activation record.
 
-_Input parameters to invocations can be modified using the "Change Input" button._
+![Invoking an action](images/101-ex5-action-invoke.png)
 
-![Invoking an action](images/101-ex5-invoking-action.png)
+4. Click the "Invoke with parameters" button.
+
+![Invoking an action with parameters](images/101-ex5-action-invoke-with-params.png)
+
+5. Update JSON object with the `name` input parameter and click "Apply".
+
+![Invoking an action with parameters](images/101-ex5-action-change-params.png)
+
+6. Click "Invoke" again.
+
+What do you see in the `results` of the activation record for this invocation?
+
+![Invoking an action with parameters](images/101-ex5-action-invoke-with-name-param.png)
 
 ## Creating actions
 
