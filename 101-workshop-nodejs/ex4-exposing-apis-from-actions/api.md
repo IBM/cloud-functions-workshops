@@ -182,7 +182,7 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ok: deleted API /myapi
     ```
 
-5. Check that the endpoints are gone:
+5. Check that the API endpoints are gone:
 
     ```bash
     ibmcloud fn api list
@@ -192,6 +192,8 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ok: APIs
     Action                            Verb             API Name  URL
     ```
+
+    The list should be empty.
 
 6. Restore the endpoints from the OpenAPI Specification:
 
