@@ -200,10 +200,10 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ```
 
     ```bash
-    ok: APIs
-    Action                                      Verb  API Name  URL
-    /3cc8e80c-1e29-4d99-b530-a89bf13fee32/he     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
-    /3cc8e80c-1e29-4d99-b530-a89bf13fee32/re     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
+    ok: created API /myapi/greeting get for action /3cc8e80c-1e29-4d99-b530-a89bf13fee32/hello
+    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
+    ok: created API /myapi/redirect get for action /3cc8e80c-1e29-4d99-b530-a89bf13fee32/redirect
+    https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
     ```
 
 7. You can now see that the endpoints are restored:
@@ -213,7 +213,10 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ```
 
     ```bash
-    TODO TODO TODO !!!!!!!!!!!!!!!!!!!!!!
+    ok: APIs
+    Action                                      Verb  API Name  URL
+    /3cc8e80c-1e29-4d99-b530-a89bf13fee32/he     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
+    /3cc8e80c-1e29-4d99-b530-a89bf13fee32/re     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
     ```
 
 This OpenAPI Specification can now be stored in your code repository and used to update endpoints, documentation, or event generate stub code!
