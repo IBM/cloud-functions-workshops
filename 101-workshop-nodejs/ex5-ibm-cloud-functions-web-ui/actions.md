@@ -49,22 +49,34 @@ What do you see in the `results` of the activation record for this invocation?
 
 ![Invoke action with parameters](images/101-ex5-action-invoke-with-name-param.png)
 
-## Creating actions
+## Create new action
 
-From the [action listing page](https://cloud.ibm.com/functions/actions), new actions can be created by providing the source code through the browser-based editor.
+1. Return to the [action listing page](https://cloud.ibm.com/functions/actions) using the breadcrumb in the top-left of the page.
 
-1. Select the "Create" button from the page.
+![Return to action listing](images/101-ex5-action-breadcrumb.png)
+
+2. Select the "Create" button from the page.
 
 ![Create a new action](images/101-ex5-action-create.png)
 
-2. Choose "Create Action" from the list.
+3. click on "Action" from the "Create" entity list.
 
-![Creating an action](images/101-ex5-creating-action-list.png)
+![Create an action](images/101-ex5-entity-create-action.png)
 
-3. Fill in the "Action name" and choose the "Runtime".
+4. Fill in the `hello2` for the "Action name".
 
-4. Click "Create"
+The "Runtime" dropdown should already be defaulted to the latest Node.js runtime version.
 
-![Creating an action](images/101-ex5-creating-action-modal.png)
+![Create an action](images/101-ex5-action-create-new.png)
 
-5. Fill in the editor with your action source code.
+5. Click "Create".
+
+You should now see your `hello2` action indthe action details page. By default, all new actions in the web UI are pre-filled with a "hello world" function for the chosen language runtime:
+
+![Action editor with new action](images/101-ex5-action-create-new-editor.png)
+
+from here you can modify the source code to have any function you like!
+
+{% hint style="success" %}
+Well done! You now can fully use the web UI to create and manage new actions as you did in the CLI.
+{% endhint %}
