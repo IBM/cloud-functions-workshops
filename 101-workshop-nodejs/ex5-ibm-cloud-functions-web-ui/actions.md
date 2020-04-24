@@ -10,7 +10,7 @@ The following screenshot shows a listing of actions created in the `test-iam-nam
 
 2. Click on the name of the `hello` action to move to the action details page.
 
-![action details page](images/101-ex5-action-list-select.png)
+![Select the hello action](images/101-ex5-action-list-select.png)
 
 ## Details overview
 
@@ -33,31 +33,38 @@ Using the menu on the left-hand side, different properties for the action can be
 
 3. Click the "Invoke" button to invoke the action and display the resulting activation record.
 
-![Invoking an action](images/101-ex5-action-invoke.png)
+![Invoke an action](images/101-ex5-action-invoke.png)
 
 4. Click the "Invoke with parameters" button.
 
-![Invoking an action with parameters](images/101-ex5-action-invoke-with-params.png)
+![Invoke an action with parameters](images/101-ex5-action-invoke-with-params.png)
 
 5. Update JSON object with the `name` input parameter and click "Apply".
 
-![Invoking an action with parameters](images/101-ex5-action-change-params.png)
+![Change action input parameters](images/101-ex5-action-change-params.png)
 
 6. Click "Invoke" again.
 
 What do you see in the `results` of the activation record for this invocation?
 
-![Invoking an action with parameters](images/101-ex5-action-invoke-with-name-param.png)
+![Invoke action with parameters](images/101-ex5-action-invoke-with-name-param.png)
 
 ## Creating actions
 
-From the [action create page](https://cloud.ibm.com/functions/actions), new actions can be created by providing the source code through the browser-based editor.
+From the [action listing page](https://cloud.ibm.com/functions/actions), new actions can be created by providing the source code through the browser-based editor.
 
 1. Select the "Create" button from the page.
-![Creating an action](images/101-ex5-creating-action-hp.png)
+
+![Create a new action](images/101-ex5-action-change-params.png)
+
 2. Choose "Create Action" from the list.
+
 ![Creating an action](images/101-ex5-creating-action-list.png)
+
 3. Fill in the "Action name" and choose the "Runtime".
+
 4. Click "Create"
+
 ![Creating an action](images/101-ex5-creating-action-modal.png)
+
 5. Fill in the editor with your action source code.
