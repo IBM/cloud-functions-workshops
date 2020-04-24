@@ -55,7 +55,7 @@ From the [action listing page](https://cloud.ibm.com/functions/actions), new act
 
 1. Select the "Create" button from the page.
 
-![Create a new action](images/101-ex5-action-change-params.png)
+![Create a new action](images/101-ex5-action-create.png)
 
 2. Choose "Create Action" from the list.
 
