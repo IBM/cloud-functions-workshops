@@ -41,7 +41,7 @@ This is a supplementary document showing the creation of API endpoints for the w
 2. Check the endpoints output. You can copy/paste the url into your browser of choice to see the html rendered and curl it to see the raw html text.
 
     ```bash
-    curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html
+    curl "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/html"
     ```
 
     ```html
@@ -49,7 +49,8 @@ This is a supplementary document showing the creation of API endpoints for the w
     ```
 
 ## SVG Endpoint
-1. Create the endpoint for the atom svg action
+
+1. Create the endpoint for the `atom` svg action
 
     ```bash
     ibmcloud fn api create /myapi /atom get atom --response-type http
@@ -66,7 +67,7 @@ This is a supplementary document showing the creation of API endpoints for the w
 
 ## Creating an Endpoint with an PUT HTTP method
 
-1. Finally we create a PUT endpoint for the manual JSON action
+1. Finally we create an HTTP `put` method for the manual JSON action
 
     ```bash
     ibmcloud fn api create /myapi /manual put manual --response-type json
@@ -80,7 +81,7 @@ This is a supplementary document showing the creation of API endpoints for the w
 2. Test the output of the PUT action
 
     ```bash
-    curl -XPUT https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual\?hello\=world
+    curl -XPUT "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual\?hello\=world"
     ```
 
     ```json
@@ -100,12 +101,13 @@ This is a supplementary document showing the creation of API endpoints for the w
 3. Test that a GET request does not work since we have not set up a GET endpoint
 
     ```bash
-    curl -XGET https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual\?hello\=world
+    curl -XGET "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/manual\?hello\=world"
     ```
 
     ```json
     {"status":404,"message":"Error: Whoops. Verb not supported."}
     ```
+
 You can define more than one HTTP method for a single endpoint, so it is possible to have different methods execute different web actions on the same endpoint.
 
 {% hint style="success" %}

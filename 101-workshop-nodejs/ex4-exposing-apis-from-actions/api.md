@@ -71,7 +71,7 @@ Note that all actions used in an API must be web actions. If they are not, you c
 3. Now let’s invoke that `greeting` API via curl:
 
     ```bash
-    curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
+    curl "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting"
     ```
 
     ```json
@@ -84,7 +84,9 @@ You have now created and invoked your first IBM Cloud Functions (ICF) API endpoi
 
 ### Other response types
 
-You must be remember that, by default, ICF expects a functions return `content-type` will be JSON. Since for the remaining functions this is not the case, you must be mindful to set the appropriate response types with the `--response-type <TYPE>` flag. Valid type values include `http`, `json`, `text`, and `svg`. Let's demonstrate how to create non-JSON endpoints by creating an endpoint for your redirect web action.
+If you do not return the default , we explicitly set the appropriate response type with the `--response-type <TYPE>` flag. Valid type values include `http`, `json`, `text`, and `svg`.
+
+Let's demonstrate how to create an endpoint for your redirect web action.
 
 1. Create the endpoint for the HTTP endpoint:
 
@@ -187,7 +189,8 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ```
 
     ```bash
-    TODO TODO TODO !!!!!!!!!!!!!!!!!!!!!!
+    ok: APIs
+    Action                            Verb             API Name  URL
     ```
 
 6. Restore the endpoints from the OpenAPI Specification:
@@ -197,7 +200,10 @@ Note that your listing may have more API endpoints if you tried the optional exe
     ```
 
     ```bash
-    TODO TODO TODO !!!!!!!!!!!!!!!!!!!!!!
+    ok: APIs
+    Action                                      Verb  API Name  URL
+    /3cc8e80c-1e29-4d99-b530-a89bf13fee32/he     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/greeting
+    /3cc8e80c-1e29-4d99-b530-a89bf13fee32/re     get    /myapi  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/d9903f40439f1a268b7dcbac42a389cdde605f3f3bef57f69789be6df438361e/myapi/redirect
     ```
 
 7. You can now see that the endpoints are restored:
