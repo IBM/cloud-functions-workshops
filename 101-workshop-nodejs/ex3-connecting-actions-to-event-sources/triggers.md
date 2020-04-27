@@ -103,5 +103,5 @@ Events you fire to the `locationUpdate` trigger currently do not do anything. To
 {% endhint %}
 
 {% hint style="success" %}
-Let's continue by connecting actions to triggers.
+Let's continue by connecting actions to triggers using rules.
 {% endhint %}
