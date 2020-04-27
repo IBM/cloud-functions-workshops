@@ -34,10 +34,18 @@ You can explore these options later at your convenience.
 
 ![Return to trigger listing](images/101-ex5-trigger-breadcrumb.png)
 
-1. Select the "Create" button from the page.
-![](images/101-ex5-create-trigger-hp.png)
+2. Select the "Create" button from the page.
+
+![Create a new trigger](images/101-ex5-trigger-create.png)
+
+3. click on "Trigger" from the "Create" entity list.
+
+![Create a trigger](images/101-ex5-entity-create-trigger.png)
+
 2. Choose "Create Trigger" from the list.
-![](images/101-ex5-create-trigger-select-trigger.png)
+![](images/
+101-ex5-create-trigger-select-trigger.png)
+
 3. Choose "Trigger type" as "Custom Trigger"
 ![](images/101-ex5-create-trigger-type.png)
 4. Fill in "Trigger Name" and "Description"
