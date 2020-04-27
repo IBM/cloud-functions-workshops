@@ -234,5 +234,5 @@ The latest activation records were from the previous example! Activation records
 {% endhint %}
 
 {% hint style="success" %}
-Excellent work! Now you have a way to connect actions to events in OpenWhisk. It’s time to learn more about trigger feeds so you can connect triggers to event sources like message queues.
+Excellent work! Now you have a way to connect events to actions using triggers and rules. It’s time to learn more about trigger feeds so you can connect triggers to event sources like data stores, message queues and just about anything.
 {% endhint %}
