@@ -39,6 +39,10 @@ Let's see what happens when we invoke the selected action from the details page.
 
 ![Invoke an action](images/101-ex5-action-invoke.png)
 
+as you can see the results show that output of the action with the default `location` parameter applied.
+
+Next, let's invoke the action with a value for the `name` parameter.
+
 2. Click the "Invoke with parameters" button.
 
 ![Invoke an action with parameters](images/101-ex5-action-invoke-with-params.png)
@@ -52,6 +56,8 @@ Let's see what happens when we invoke the selected action from the details page.
 What do you see in the `results` of the activation record for this invocation?
 
 ![Invoke action with parameters](images/101-ex5-action-invoke-with-name-param.png)
+
+The activation result should show the `name` parameter value was successfully passed into the action.
 
 ## Create new action
 
