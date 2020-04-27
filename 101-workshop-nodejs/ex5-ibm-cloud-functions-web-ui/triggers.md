@@ -66,7 +66,7 @@ You can explore these options later at your convenience.
 
 ![Select Custom Trigger](images/101-ex5-trigger-connect-action-existing-add.png)
 
-You should now see your new trigger in the trigger details page:
+You should now see your new trigger in the trigger details page with its connection enabled to the `hello` action:
 
 ![Select Custom Trigger](images/101-ex5-trigger-connect-action-complete.png)
 
