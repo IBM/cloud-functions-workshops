@@ -20,7 +20,7 @@ For actions written in a supported language runtime, a source code editor with t
 
 ![action details page](images/101-ex5-action-details.png)
 
-Using the menu on the left-hand side, different properties for the action can be accessed and modified.
+Using the menu on the left-hand side, different properties for the action can be accessed and modified:
 
 * **Code** shows action source code in editor.
 * **Parameters** shows default parameters for the action.
@@ -29,21 +29,25 @@ Using the menu on the left-hand side, different properties for the action can be
 * **Connected triggers** shows the triggers the action is connected to.
 * **Enclosing sequences** shows sequences which use this action.
 
+You can explore these options later at your convenience.
+
 ## Invoke actions
 
-3. Click the "Invoke" button to invoke the action and display the resulting activation record.
+Let's see what happens when we invoke the selected action from the details page.
+
+1. Click the "Invoke" button to invoke the action and display the resulting activation record.
 
 ![Invoke an action](images/101-ex5-action-invoke.png)
 
-4. Click the "Invoke with parameters" button.
+2. Click the "Invoke with parameters" button.
 
 ![Invoke an action with parameters](images/101-ex5-action-invoke-with-params.png)
 
-5. Update JSON object with the `name` input parameter and click "Apply".
+3. Update JSON object with the `name` input parameter and click "Apply".
 
 ![Change action input parameters](images/101-ex5-action-change-params.png)
 
-6. Click "Invoke" again.
+4. Click "Invoke" again.
 
 What do you see in the `results` of the activation record for this invocation?
 

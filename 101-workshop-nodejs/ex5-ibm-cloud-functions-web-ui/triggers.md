@@ -18,11 +18,15 @@ The trigger details page shows properties for the chosen trigger.
 
 ![Trigger details page](images/101-ex5-trigger-details.png)
 
-Using the menu on the left-hand side, different properties for the trigger can be accessed and modified.
+In this case, we see that the `locationUpdate` trigger is connected to two actions using the two rules we created earlier.
+
+Using the menu on the left-hand side, different properties for the trigger can be accessed and modified:
 
 * **Connected actions**  shows the actions this trigger is connected to.
 * **Parameters** shows default parameters for the action.
 * **Endpoints** show details on how to fire this trigger remotely.
+
+You can explore these options later at your convenience.
 
 ## Create triggers
 
