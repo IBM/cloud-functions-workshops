@@ -30,7 +30,9 @@ You can explore these options later at your convenience.
 
 ## Create triggers
 
-From the [trigger create page](https://cloud.ibm.com/functions/triggers), new triggers can be created.
+1. Return to the [trigger listing page](https://cloud.ibm.com/functions/triggers) using the `Triggers` breadcrumb in the top-left of the page.
+
+![Return to trigger listing](images/101-ex5-trigger-breadcrumb.png)
 
 1. Select the "Create" button from the page.
 ![](images/101-ex5-create-trigger-hp.png)

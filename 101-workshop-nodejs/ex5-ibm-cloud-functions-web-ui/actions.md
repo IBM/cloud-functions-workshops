@@ -61,7 +61,7 @@ The activation result should show the `name` parameter value was successfully pa
 
 ## Create new action
 
-1. Return to the [action listing page](https://cloud.ibm.com/functions/actions) using the breadcrumb in the top-left of the page.
+1. Return to the [action listing page](https://cloud.ibm.com/functions/actions) using the `Actions` breadcrumb in the top-left of the page.
 
 ![Return to action listing](images/101-ex5-action-breadcrumb.png)
 
