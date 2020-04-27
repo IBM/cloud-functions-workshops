@@ -88,5 +88,5 @@ You should now see your `hello2` action indthe action details page. By default, 
 from here you can modify the source code to have any function you like!
 
 {% hint style="success" %}
-Well done! You now can fully use the web UI to create and manage new actions as you did in the CLI.
+Well done! You now can use the web UI to create and manage new actions as you did in the CLI.
 {% endhint %}

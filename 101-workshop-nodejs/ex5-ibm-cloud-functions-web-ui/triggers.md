@@ -38,20 +38,42 @@ You can explore these options later at your convenience.
 
 ![Create a new trigger](images/101-ex5-trigger-create.png)
 
-3. click on "Trigger" from the "Create" entity list.
+3. Click on "Trigger" from the "Create" entity list.
 
 ![Create a trigger](images/101-ex5-entity-create-trigger.png)
 
-2. Choose "Create Trigger" from the list.
-![](images/
-101-ex5-create-trigger-select-trigger.png)
+4. Click on "Custom Trigger".
 
-3. Choose "Trigger type" as "Custom Trigger"
-![](images/101-ex5-create-trigger-type.png)
-4. Fill in "Trigger Name" and "Description"
-5. Click "Create"
-![](images/101-ex5-create-trigger-name.png)
+![Select Custom Trigger](images/101-ex5-trigger-create-type.png)
+
+5. Configure the trigger by filling in the  "Trigger Name" and "Description"
+
+![Configure trigger name and description](images/101-ex5-trigger-create-configure-name.png)
+
+6. Click "Create"
+
+![](images/101-ex5-trigger-create-configure-create.png)
+
+7. Your trigger has been created, but is not yet connected to an action. Click "Add" in "Connected Actions".
+
+![Select Custom Trigger](images/101-ex5-trigger-connect-action-add.png)
+
+8. Let's connect it to an exiting action. Click "Select Existing".
+
+![Select Custom Trigger](images/101-ex5-trigger-connect-action-add-select.png)
+
+9. Select the `hello` action from the dropdown and click "Add".
+
+![Select Custom Trigger](images/101-ex5-trigger-connect-action-existing-add.png)
+
+You should now see your new trigger in the trigger details page:
+
+![Select Custom Trigger](images/101-ex5-trigger-connect-action-complete.png)
 
 {% hint style="info" %}
-When you connect a trigger to an action, the underlying code of the web UI automatically creates a **rule** "under the covers" which is enabled by default. You can disable the rule for any action by selecting "connected actions" from the trigger details page.
+When you connect a trigger to an action, the underlying code of the web UI automatically creates a **rule** "under the covers". The rule, shown as a **Connection** in the details page, is enabled by default.
+{% endhint %}
+
+{% hint style="success" %}
+Kudos! You now can use the web UI to create and connect new triggers to actions as you did in the CLI.
 {% endhint %}
