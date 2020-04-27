@@ -10,7 +10,7 @@ The following screenshot shows a listing of actions created in the `test-iam-nam
 
 2. Click on the name of the `hello` action to move to the action details page.
 
-![Select the hello action](images/101-ex5-action-list-select.png)
+![Select an action from list](images/101-ex5-action-list-select.png)
 
 ## Details overview
 
@@ -25,7 +25,7 @@ Using the menu on the left-hand side, different properties for the action can be
 * **Code** shows action source code in editor.
 * **Parameters** shows default parameters for the action.
 * **Runtime** shows the action runtime, timeout value, and memory limit.
-* **Endpoints** allow you to expose the action as a web action.
+* **Endpoints** allow you to enable the action as a web action, and/or raw HTTP action and shows its HTTP endpoint.
 * **Connected triggers** shows the triggers the action is connected to.
 * **Enclosing sequences** shows sequences which use this action.
 
