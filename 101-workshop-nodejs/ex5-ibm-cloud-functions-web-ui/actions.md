@@ -69,19 +69,17 @@ The activation result should show the `name` parameter value was successfully pa
 
 ![Create a new action](images/101-ex5-action-create.png)
 
-3. click on "Action" from the "Create" entity list.
+3. Click on "Action" from the "Create" entity list.
 
 ![Create an action](images/101-ex5-entity-create-action.png)
 
-4. Fill in the `hello2` for the "Action name".
+4. Fill in the `hello2` for the "Action name" and Click "Create".
 
 The "Runtime" dropdown should already be defaulted to the latest Node.js runtime version.
 
 ![Create an action](images/101-ex5-action-create-new.png)
 
-5. Click "Create".
-
-You should now see your `hello2` action indthe action details page. By default, all new actions in the web UI are pre-filled with a "hello world" function for the chosen language runtime:
+You should now see your `hello2` action in the action details page. By default, all new actions in the web UI are pre-filled with a "hello world" function for the chosen language runtime:
 
 ![Action editor with new action](images/101-ex5-action-create-new-editor.png)
 
