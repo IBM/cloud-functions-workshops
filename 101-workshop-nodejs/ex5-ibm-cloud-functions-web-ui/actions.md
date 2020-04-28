@@ -1,5 +1,7 @@
 # Managing actions
 
+Using the web UI, you can easily create, edit, invoke and manage actions within packages for different IBM Cloud namespaces and regions.
+
 ## List actions for a namespace and region
 
 1. Select "Actions" from the left-hand menu panel on the IBM Cloud **Functions** homepage which will display the [Management page for actions](https://cloud.ibm.com/functions/actions). It shows actions created within the selected IBM Cloud namespace and region.

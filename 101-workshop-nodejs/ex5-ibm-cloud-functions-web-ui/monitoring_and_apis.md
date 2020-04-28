@@ -1,12 +1,22 @@
 # Monitoring and APIs
 
-IBM Cloud Functions (ICF) Web UI comes with a [comprehensive visualization dashboard](https://cloud.ibm.com/functions/dashboard) for monitoring serverless applications.
+## Monitoring activations
 
-This dashboard shows activations within a region and namespace. Developers can see activation results, invocation times, and logging output through the dashboard. Activations displayed can be filtered by name or time window.
+IBM Cloud Functions (ICF) Web UI comes with a [comprehensive visualization dashboard](https://cloud.ibm.com/functions/dashboard) for monitoring invocations of actions and triggers within a region and namespace.
 
-![monitoring view](images/101-ex5-monitoring.png)
+Developers can see activation results, invocation times, and logging output through the dashboard. An activation summary and timeline are displayed and can be filtered by action name.  Trigger invocations can also be excluded from the view.
 
-## APIs
+![Monitoring dashboard](images/101-ex5-monitoring.png)
+
+Clicking on an activation ID in the "Activity Log" will show you the complete activation record in either raw or JSON format along with the HTTP request and response headers.
+
+When things are going wrong with your actions, this dashboard will provide a nice starting point to debug the issue.
+
+{% hint style="info" %}
+If you wish to retain and create views on activations across your account, you can setup and connect ICF to the IBM Cloud logging service by clicking on the "Logs" item in the left menu.
+{% endhint %}
+
+## Managing APIs
 
 HTTP endpoints for web actions can be created and managed through the ICF Web UI. Using this interface is often a lot more intuitive than using the CLI tool for managing more complex APIs.
 

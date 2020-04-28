@@ -1,5 +1,7 @@
 # Managing triggers
 
+Let's explore how to create and connect triggers to actions within the ICF web UI.
+
 ## List triggers for a namespace and region
 
 1. Select "Triggers" from the left-hand menu panel on the **Functions** homepage which will display the [management page for triggers](https://cloud.ibm.com/functions/triggers). It shows triggers created within the selected IBM Cloud namespace and region.
