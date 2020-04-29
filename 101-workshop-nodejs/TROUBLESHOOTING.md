@@ -16,6 +16,8 @@ ibmcloud fn [ action | trigger | api ] get <Name of entity>
 
 ## Action invoke errors
 
+Errors reported as a result of an `ibmcloud action invoke` command.
+
 ### Reserved properties error
 
 You may see the following error while attempting to invoke the an action with parameters:
