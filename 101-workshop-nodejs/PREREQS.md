@@ -20,7 +20,6 @@ To follow this course, you must:
 
 1. Have a basic understanding of [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) programming.
 
----
 
 ## Troubleshooting exercises
 
