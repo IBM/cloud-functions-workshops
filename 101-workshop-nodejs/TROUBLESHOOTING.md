@@ -1,5 +1,19 @@
 # Troubleshooting
 
+This guide is organized to describe error conditions by IBM Cloud Functions (ICF) entity type, such as actions, triggers and APIs, and the CLI commands the exhibit the error.
+
+## Contact us
+
+Please contact the course staff to report any errors that are not covered and be sure to include:
+
+* IBM Cloud Namespace and region
+* IBM CLI commands that exhibit the error and
+* Results of "get" commands on any affected actions, triggers or APIs. For example:
+
+```bash
+ibmcloud fn [ action | trigger | api ] get <Name of entity>
+```
+
 ## Action invoke errors
 
 ### Reserved properties error

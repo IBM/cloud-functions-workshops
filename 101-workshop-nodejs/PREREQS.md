@@ -26,14 +26,4 @@ To follow this course, you must:
 
 If you encounter an unexpected error when executing the steps of the exercises, please use this link to find tips on troubleshooting the reported error:
 
-* [Troubleshooting ](TROUBLESHOOTING.md)
-
-Please contact the course staff to report any errors that are not covered and be sure to  include:
-
-* IBM Cloud Namespace and region
-* IBM CLI commands that exhibit the error and
-* Results of "get" commands on any affected actions, triggers or APIs. For example:
-
-```bash
-ibmcloud fn [ action | trigger | api ] get <Name of entity>
-```
+* [Troubleshooting guide](TROUBLESHOOTING.md)
