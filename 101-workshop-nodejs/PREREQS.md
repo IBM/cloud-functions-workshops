@@ -17,3 +17,15 @@ To follow this course, you must:
 ## Recommended skills prior to taking this course
 
 1. Have a basic understanding of Node.js (JavaScript) programming.
+
+## Troubleshooting exercises
+
+If you encounter an unexpected error when executing the steps of the exercises, please use this link to find tips on troubleshooting error conditions:
+
+[Troubleshooting](TROUBLESHOOTING.md)
+
+Please feel free to contact the course staff to report any errors that are not covered.  When reporting, include as many details as possible including:
+
+* IBM Cloud Namespace and region
+* IBM CLI commands that exhibit the error and
+* Results of "get" commands on any affected actions, triggers or APIs.
