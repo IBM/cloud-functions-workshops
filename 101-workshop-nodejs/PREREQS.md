@@ -1,4 +1,6 @@
-## Prerequisites
+# Prerequisites
+
+## IBM Cloud Account and CLI
 
 To follow this course, you must:
 
