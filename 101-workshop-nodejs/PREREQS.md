@@ -1,6 +1,6 @@
 # Prerequisites
 
-## IBM Cloud Account and CLI
+## IBM Cloud Account and IBM Cloud Command Line Interface (CLI)
 
 To follow this course, you must:
 
@@ -18,7 +18,7 @@ To follow this course, you must:
 
 ## Recommended skills prior to taking this course
 
-- Have a basic understanding of [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) programming.
+1. Have a basic understanding of [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) programming.
 
 ## Troubleshooting exercises
 
