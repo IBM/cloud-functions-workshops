@@ -22,7 +22,7 @@ This exercise introduces  the different features of the IBM Cloud Web UI.
 1. Open the [IBM Cloud homepage](https://cloud.ibm.com/).
 2. Click the hamburger menu icon in the top left corner to show the menu.
 
-![IBM Cloud hamburger menu](images/101-ex5-ibmcloud-service-dropdown.png)
+![IBM Cloud hamburger menu](images/101-ex5-ibmcloud-dashboard-top-menu.png)
 
 3. Click "Functions" in the list to open the [ICF homepage](https://cloud.ibm.com/functions/).
 
