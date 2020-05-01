@@ -22,7 +22,7 @@ HTTP endpoints for web actions can be created and managed through the ICF Web UI
 
 Select "APIs" from the left-hand menu panel on the homepage.
 
-![API homepage](images/101-ex5-apis-homepage.png)
+![API homepage](images/101-ex5-api-list.png)
 
 ### Details overview
 
@@ -39,19 +39,45 @@ Using the menu on the left-hand side, different properties for the API can be ac
 
 ### Create APIs
 
-Click the "Create API" from the [APIs homepage](https://cloud.ibm.com/functions/).
+1. Return to the API listing page using the breadcrumb.
+
+![Use APIs breadcrumb](images/101-ex5-create-apis-hp.png)
 
 In this page, API details can either be filled out manually or imported from an existing Swagger file.
 
-1. Click on "Create Managed API”.
-![Creating an API](images/101-ex5-create-apis-hp.png)
-2. Fill out the "API name" field as "myapi".
-3. Fill out the "Base path for API" field as "/api".
-4. Click on the "Create Operation" button to add new HTTP endpoints to this API.
-![Creating an API](images/101-ex5-create-apis-basepath.png)
-5. Fill out the "Path" field as "/hello".
-6. Choose an action from the drop-down list.
-7. Click the "Create" button.
+2. Click on "Create API” button.
+
+![Create API](images/101-ex5-create-apis-hp.png)
+
+3. Fill out the "API name" field as "myapi".
+
+![Add API name](images/101-ex5-api-create-basic.png)
+
+Notice that the "Base path for API" is automatically filled out using the name you entered by adding a leading forward slash.
+
+4. Click on the "Create Operation" button.
+
+![Crete operation](images/101-ex5-api-create-operation.png)
+
+This will display a modal dialog.
+
+5. Fill out the "Path" field as "/hello2" and select the `hello1` action we created earlier from the dropdown list.
+
+![Fill in operation information](images/101-ex5-api-create-operation-modal.png)
+
+6. Click "Create".
+
+6. Select "Explore API" from the left menu.
+
+![Explore our new API](images/101-ex5-api-create-operation-modal.png)
+
+6. Click the "Try it" tab.
+
+![Try out API operations](images/101-ex5-api-details-explorer-get-tryit.png)
+
+7. Click the "Send" button and view the results.
+
+![HTTP request and response](images/101-ex5-api-details-explorer-get-tryit-result.png)
 
 {% hint style="success" %}
 As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI and the Cloud Functions plugin and more!
