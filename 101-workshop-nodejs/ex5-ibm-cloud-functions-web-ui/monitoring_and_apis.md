@@ -20,7 +20,7 @@ If you wish to retain and create views on activations across your account, you c
 
 HTTP endpoints for web actions can be created and managed through the ICF Web UI. Using this interface is often a lot more intuitive than using the CLI tool for managing more complex APIs.
 
-Select "APIs" from the left-hand menu panel on the homepage.
+1. Select "APIs" from the left-hand menu panel on the homepage.
 
 ![API homepage](images/101-ex5-api-list.png)
 
@@ -37,7 +37,7 @@ Using the menu on the left-hand side, different properties for the API can be ac
 * **Sharing** - Configure the exposing API with your internal users.
 * **API Explorer** - API documentation for your endpoints.
 
-### Create APIs
+### Create API
 
 1. Return to the API listing page using the breadcrumb.
 
@@ -61,24 +61,33 @@ Notice that the "Base path for API" is automatically filled out using the name y
 
 This will display a modal dialog.
 
-5. Fill out the "Path" field as "/hello2" and select the `hello1` action we created earlier from the dropdown list.
+5. Fill out the "Path" field as "/hello2" and select the `hello1` action we created earlier from the dropdown list and click "Create".
 
+<!--
+#######################################################
+TODO: Figure out how to add width="40%" to this image.
+#######################################################
+-->
 ![Fill in operation information](images/101-ex5-api-create-operation-modal.png)
-
-6. Click "Create".
 
 6. Select "Explore API" from the left menu.
 
 ![Explore our new API](images/101-ex5-api-create-operation-modal.png)
 
-6. Click the "Try it" tab.
+### Invoke API
+
+1. Click the "Try it" tab.
 
 ![Try out API operations](images/101-ex5-api-details-explorer-get-tryit.png)
 
-7. Click the "Send" button and view the results.
+2. Click the "Send" button and view the results.
 
 ![HTTP request and response](images/101-ex5-api-details-explorer-get-tryit-result.png)
 
+{% hint style="info" %}
+You can even copy the URL generated for your operation and try it from your browser.
+{% endhint %}
+
 {% hint style="success" %}
-As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI and the Cloud Functions plugin and more!
+Huge congratulations on exploring the ICF web UI! As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI and the Cloud Functions plugin and more.
 {% endhint %}
