@@ -94,7 +94,7 @@ let's see what the completed API definition looks like in the web UI.
 
 The API's overview is shown along with its operations and public endpoint.
 
-2. Select "GET" `/hello2` operation
+2. Select the `/hello2` *GET* operation
 
 ![Explore our the GET operation](images/101-ex5-api-greeting-explore-operation.png)
 
