@@ -74,19 +74,31 @@ TODO: Figure out how to add width="40%" to this image.
 
 After creating the operation for your API. you are returned to the actual API create page.  You must scroll down to the bottom and click "Create" to actually create the API:
 
-![Crete API](images/101-ex5-api-create-final.png)
+![Create API with operation](images/101-ex5-api-create-final.png)
 
 {% hint style="tip" %}
 As you may have noticed, you scrolled past *Security and Rate Limiting* and *CORS* options which are not covered in this course, but are valuable settings for real-world APIs that you can come back and try later.
 {% endhint %}
 
-7. Select "Explore API" from the left menu.
-
-![Explore our new API](images/101-ex5-api-create-operation-modal.png)
-
 {% hint style="info" %}
 Although we just created an API with an operation manually, you can also use the OpenAPI specification and manage your APIs via Swagger documents.  In fact, using ICF, you can download the resulting Swagger for any API you create from the CLI or web UI.
 {% endhint %}
+
+### Explore API and Operation
+
+let's see what the completed API definition looks like in the web UI.
+
+1. Select "Explore API" from the left menu.
+
+![Explore our new API](images/101-ex5-api-greeting-explore.png)
+
+The API's overview is shown along with its operations and public endpoint.
+
+2. Select "GET" `/hello2` operation
+
+![Explore our the GET operation](images/101-ex5-api-greeting-explore-operation.png)
+
+The "GET" operation's HTTP endpoint is displayed along with any declared  parameters and example `curl` command to invoke it from a command line.
 
 ### Invoke API
 
