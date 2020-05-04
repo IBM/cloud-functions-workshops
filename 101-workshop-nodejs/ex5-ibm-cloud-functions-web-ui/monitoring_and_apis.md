@@ -34,16 +34,16 @@ Using the menu on the left-hand side, different properties for the API can be ac
 
 * **Summary** - API overview page and monitoring dashboard for API invocations.
 * **Definition** - API configuration properties, allows updating properties live.
-* **Sharing** - Configure the exposing API with your internal users.
+* **Sharing and Keys** - Configure the exposing API with your internal users.
 * **API Explorer** - API documentation for your endpoints.
 
 ### Create API
 
+Now that we have viewed the API we created from the CLI, let's create a new API using the web interface.
+
 1. Return to the API listing page using the breadcrumb.
 
 ![Use APIs breadcrumb](images/101-ex5-api-breadcrumb.png)
-
-<!-- In this page, API details can either be filled out manually or imported from an existing Swagger file. -->
 
 2. Click on "Create API” button.
 
@@ -74,7 +74,13 @@ TODO: Figure out how to add width="40%" to this image.
 
 ![Explore our new API](images/101-ex5-api-create-operation-modal.png)
 
+{% hint style="info" %}
+Although we just created an API with an operation manually, you can also use the OpenAPI specification and manage your APIs via Swagger documents.  In fact, using ICF, you can download the resulting Swagger for any API you create from the CLI or web UI.
+{% endhint %}
+
 ### Invoke API
+
+Let's invoke the API we just created from the web interface.
 
 1. Click the "Try it" tab.
 
