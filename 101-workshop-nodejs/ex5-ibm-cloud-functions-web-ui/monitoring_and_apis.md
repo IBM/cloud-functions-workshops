@@ -100,6 +100,10 @@ The API's overview is shown along with its operations and public endpoint.
 
 The "GET" operation's HTTP endpoint is displayed along with any declared  parameters and example `curl` command to invoke it from a command line.
 
+{% hint style="info" %}
+You can even copy the URL generated for your GET operation and try it from a browser window.
+{% endhint %}
+
 ### Invoke API
 
 Final;y, let's invoke the `greeting` API's *GET* operation.
@@ -112,9 +116,7 @@ Final;y, let's invoke the `greeting` API's *GET* operation.
 
 ![HTTP request and response](images/images/101-ex5-api-greeting-explore-operation-tryit-result.png)
 
-{% hint style="info" %}
-You can even copy the URL generated for your operation and try it from your browser.
-{% endhint %}
+You should see the full HTTP request and response JSON objects with the expected "Hello World" message.
 
 {% hint style="success" %}
 Huge congratulations on exploring the ICF web UI! As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI and the Cloud Functions plugin and more.
