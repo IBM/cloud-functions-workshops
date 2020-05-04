@@ -47,7 +47,7 @@ Now that we have viewed the API we created from the CLI, let's create a new API 
 
 2. Click on "Create API” button.
 
-![Create API](images/101-ex5-api-list-create.png)
+![Create new API](images/101-ex5-api-list-create.png)
 
 3. Fill out the "API name" field as "myapi".
 
@@ -62,6 +62,16 @@ Notice that the "Base path for API" is automatically filled out using the name y
 This will display a modal dialog.
 
 5. Fill out the "Path" field as "/hello2" and select the `hello1` action we created earlier from the dropdown list and click "Create".
+
+6. Scroll down to bottom and click "Create".
+
+After creating the operation for your API. you are returned to the actual API create page.  You must scroll down to the bottom and click "Create" to actually create the API:
+
+![Crete API](images/101-ex5-api-create-final.png)
+
+{% hint style="tip" %}
+As you may have noticed, you scrolled past *Security and Rate Limiting* and *CORS* options which are not covered in this course, but are valuable settings for real-world APIs that you can come back and try later.
+{% endhint %}
 
 <!--
 #######################################################
