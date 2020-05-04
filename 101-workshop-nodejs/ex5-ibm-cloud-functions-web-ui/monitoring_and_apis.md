@@ -110,12 +110,7 @@ Final;y, let's invoke the `greeting` API's *GET* operation.
 
 2. Click the "Send" button and view the results.
 
-<!--
-#######################################################
-TODO: Figure out how to add width="40%" to this image.
-#######################################################
--->
-![HTTP request and response](images/101-ex5-api-details-explorer-get-tryit-result.png)
+![HTTP request and response](images/images/101-ex5-api-greeting-explore-operation-tryit-result.png)
 
 {% hint style="info" %}
 You can even copy the URL generated for your operation and try it from your browser.
