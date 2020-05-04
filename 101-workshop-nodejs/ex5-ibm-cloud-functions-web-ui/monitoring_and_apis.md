@@ -110,6 +110,11 @@ Let's invoke the API we just created from the web interface.
 
 2. Click the "Send" button and view the results.
 
+<!--
+#######################################################
+TODO: Figure out how to add width="40%" to this image.
+#######################################################
+-->
 ![HTTP request and response](images/101-ex5-api-details-explorer-get-tryit-result.png)
 
 {% hint style="info" %}
