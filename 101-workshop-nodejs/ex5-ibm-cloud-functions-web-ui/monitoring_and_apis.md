@@ -119,5 +119,5 @@ Final;y, let's invoke the `greeting` API's *GET* operation.
 You should see the full HTTP request and response JSON objects with the expected "Hello World" message.
 
 {% hint style="success" %}
-Huge congratulations on exploring the ICF web UI! As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI and the Cloud Functions plugin and more.
+Huge congratulations on exploring the ICF web UI! As you can see, you can do everything within the web UI that can be done from the IBM Cloud CLI with the Cloud Functions plugin and more.
 {% endhint %}
