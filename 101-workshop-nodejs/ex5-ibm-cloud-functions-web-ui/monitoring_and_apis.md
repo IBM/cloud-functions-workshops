@@ -47,7 +47,7 @@ Now that we have viewed the API we created from the CLI, let's create a new API 
 
 2. Click on "Create API” button.
 
-![Create API](images/101-ex5-api-list0-create.png)
+![Create API](images/101-ex5-api-list-create.png)
 
 3. Fill out the "API name" field as "myapi".
 
