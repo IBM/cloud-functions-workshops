@@ -43,11 +43,11 @@ Using the menu on the left-hand side, different properties for the API can be ac
 
 ![Use APIs breadcrumb](images/101-ex5-api-breadcrumb.png)
 
-In this page, API details can either be filled out manually or imported from an existing Swagger file.
+<!-- In this page, API details can either be filled out manually or imported from an existing Swagger file. -->
 
 2. Click on "Create API” button.
 
-![Create API](images/101-ex5-create-apis-hp.png)
+![Create API](images/101-ex5-api-list0-create.png)
 
 3. Fill out the "API name" field as "myapi".
 
