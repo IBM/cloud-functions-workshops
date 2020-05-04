@@ -61,7 +61,14 @@ Notice that the "Base path for API" is automatically filled out using the name y
 
 This will display a modal dialog.
 
-5. Fill out the "Path" field as "/hello2" and select the `hello1` action we created earlier from the dropdown list and click "Create".
+5. Fill out the "Path" field as "/hello2" and select the `hello2` action we created earlier from the dropdown list and click "Create".
+
+<!--
+#######################################################
+TODO: Figure out how to add width="40%" to this image.
+#######################################################
+-->
+![Fill in operation information](images/101-ex5-api-create-operation-modal.png)
 
 6. Scroll down to bottom and click "Create".
 
@@ -73,14 +80,7 @@ After creating the operation for your API. you are returned to the actual API cr
 As you may have noticed, you scrolled past *Security and Rate Limiting* and *CORS* options which are not covered in this course, but are valuable settings for real-world APIs that you can come back and try later.
 {% endhint %}
 
-<!--
-#######################################################
-TODO: Figure out how to add width="40%" to this image.
-#######################################################
--->
-![Fill in operation information](images/101-ex5-api-create-operation-modal.png)
-
-6. Select "Explore API" from the left menu.
+7. Select "Explore API" from the left menu.
 
 ![Explore our new API](images/101-ex5-api-create-operation-modal.png)
 
