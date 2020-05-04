@@ -86,7 +86,7 @@ Although we just created an API with an operation manually, you can also use the
 
 ### Explore API and Operation
 
-let's see what the completed API definition looks like in the web UI.
+Let's see what the completed API definition looks like in the web UI.
 
 1. Select "Explore API" from the left menu.
 
@@ -102,11 +102,11 @@ The "GET" operation's HTTP endpoint is displayed along with any declared  parame
 
 ### Invoke API
 
-Let's invoke the API we just created from the web interface.
+Final;y, let's invoke the `greeting` API's *GET* operation.
 
 1. Click the "Try it" tab.
 
-![Try out API operations](images/101-ex5-api-details-explorer-get-tryit.png)
+![Try out API operations](images/101-ex5-api-greeting-explore-operation-tryit.png)
 
 2. Click the "Send" button and view the results.
 
