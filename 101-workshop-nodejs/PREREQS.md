@@ -23,5 +23,5 @@ An independent [step-by-step guide](https://github.com/IBM/cloud-functions-works
 {% endhint %}
 
 {% hint style="success" %}
-Now we are ready to start creating and invoking some serverless functions!
+Now we are ready to run all the lab exercises!
 {% endhint %}
