@@ -1,4 +1,13 @@
+
+{% hint style="tip" %}
+You may skip this section and continue onto the course. Feel free to reference this if you have any trouble during lab exercises.
+{% endhint %}
+
+---
+
 # Troubleshooting
+
+## Organization
 
 This guide is organized to describe error conditions by IBM Cloud Functions (ICF) entity type, such as actions, triggers and APIs, and the CLI commands the exhibit the error.
 
