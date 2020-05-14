@@ -16,11 +16,6 @@
 # limitations under the License.
 #
 -->
-
-# Serverless essentials
-
-In other words, _"What is serverless... and what is it good for?_.
-
 ## Learning objectives
 
 In this lesson, you will learn:
@@ -36,6 +31,10 @@ In this lesson, you will learn:
   * Polyglot programming languages
   * Logical functional compositions
   * Built-in event adapters to various services and data sources
+
+In short, _"What is serverless... and what is it good for?_.
+
+---
 
 Upon completion of this lesson, you should be able to:
 
