@@ -4,11 +4,12 @@
 
 To follow this course, you must:
 
-1. Register for an IBM Cloud account.
+1. Register for a free IBM Cloud account.
+    - [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
 
 2. Configure your IBM Cloud account.
-    - You will need to verify that the account has targeted a _region_ where the IBM Cloud Functions (ICF) service is available.
-    - You also need to verify that the account has targeted a _Cloud Foundry (CF) namespace_ as the default namespace.
+    - Note: You will need to have your account [target a supported region](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) where the IBM Cloud Functions (ICF) service is available.
+
 3. Install the [IBM Cloud Command Line Interface (CLI)](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started)
 4. Install the [Cloud Functions (CF)](https://cloud.ibm.com/functions/learn/cli) plugin.
 
