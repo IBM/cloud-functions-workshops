@@ -27,7 +27,7 @@
 - Top use cases for serverless
 - How IBM Cloud Functions implements serverless
 
-### Module 2 - Create and invoke actions
+### Module 2 - Create and invoke actions (lab)
 
 - Install lab prerequisites
 - Create and invoke actions
@@ -36,19 +36,19 @@
 - Asynchronous actions
 - Practice action sequences
 
-### Module 3 - Manage actions with packages
+### Module 3 - Manage actions with packages (lab)
 
 - Use packaged actions
 - Create your own packages
 
-### Module 4 - Connect actions to event sources
+### Module 4 - Connect actions to event sources (lab)
 
 - Understand the concepts
 - Create triggers
 - Practice rules
 - Connect trigger feeds
 
-### Module 5 - Expose APIs from actions
+### Module 5 - Expose APIs from actions (lab)
 
 - Understand the concepts
 - Create web-enabled actions
