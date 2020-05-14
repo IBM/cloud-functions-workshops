@@ -14,9 +14,9 @@ To perform course labs, you will need to follow these steps:
 
 ## Install the IBM Cloud Command Line Interface (CLI) and Cloud Functions plugin
 
-1. Install the [IBM Cloud Command Line Interface (CLI)](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started).
+1. Install the [IBM Cloud Command Line Interface (CLI)](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) by following the steps outlined on the linked page.
 
-2. Install the [Cloud Functions (CF)](https://cloud.ibm.com/functions/learn/cli) plugin.
+2. Install the [Cloud Functions (CF)](https://cloud.ibm.com/functions/learn/cli) plugin by following the steps outlined on the linked page.
 
 {% hint style="info" %}
 An independent [step-by-step guide](https://github.com/IBM/cloud-functions-workshops/tree/master/prereqs) (with screenshots) is available that covers both the IBM Cloud CLI and Cloud Functions plugin installations together.
