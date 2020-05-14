@@ -10,6 +10,6 @@ _After you complete this course, you will be able to:_
 
 - Automate your functions using alarm events
 
-- Expose functions as cloud APIs and return different content types
+- Expose functions as to the web accessible endpoints and as APIs that return different content types
 
 - Navigate the web user interface to perform similar tasks that mirror CLI commands
