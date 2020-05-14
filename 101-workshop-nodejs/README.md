@@ -17,7 +17,7 @@
 #
 -->
 
-# Welcome to the Serverless Computing Developer I course using IBM Cloud Functions
+# Welcome to the Serverless Computing Developer I course using Cloud Functions
 
 Hello, future serverless developers!
 
