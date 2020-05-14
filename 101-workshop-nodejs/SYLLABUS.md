@@ -57,6 +57,7 @@
 ### Module 6 - Use the Web User Interface (Web UI)
 
 - create and invoke an action
-- create a trigger
+- create triggers with implicit rules
+- expose web actions
 - create an API
 - explore the monitoring dashboard
