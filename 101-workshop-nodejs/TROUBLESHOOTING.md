@@ -1,11 +1,9 @@
 
+# Troubleshooting lab exercises
+
 {% hint style="tip" %}
 You may skip this section and continue onto the course. Feel free to reference this if you have any trouble during lab exercises.
 {% endhint %}
-
----
-
-# Troubleshooting
 
 ## Organization
 
