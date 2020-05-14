@@ -4,7 +4,7 @@ In order to put into practice the serverless concepts and patterns discussed in 
 
 To perform course labs, you will need to follow these steps:
 
-## Register for a free IBM Cloud Account
+## Register for a free IBM Cloud Account and target a supported region
 
 1. Register for a free IBM Cloud account using the linked instructions:
     - [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
