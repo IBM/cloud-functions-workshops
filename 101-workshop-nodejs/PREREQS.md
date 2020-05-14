@@ -9,12 +9,13 @@ To perform course labs, you will need to follow these steps:
 1. Register for a free IBM Cloud account using the linked instructions:
     - [https://cloud.ibm.com/registration](https://cloud.ibm.com/registration)
 
-2. Target a region that supports IBM Cloud Functions
-    - Click here for the latest [list of supported regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) where the IBM Cloud Functions (ICF) service is available.
+2. Target a region that supports IBM Cloud Functions using the following link:
+    - [Target a supported regions](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-cloudfunctions_regions) using the CLI.
 
 ## Install the IBM Cloud Command Line Interface (CLI) and Cloud Functions plugin
 
-1. Install the [IBM Cloud Command Line Interface (CLI)](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started)
+1. Install the [IBM Cloud Command Line Interface (CLI)](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started).
+
 2. Install the [Cloud Functions (CF)](https://cloud.ibm.com/functions/learn/cli) plugin.
 
 {% hint style="info" %}
