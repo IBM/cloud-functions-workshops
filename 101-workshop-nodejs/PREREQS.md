@@ -1,4 +1,4 @@
-# lab prerequisites
+# Install lab prerequisites
 
 In order to put into practice the serverless concepts and patterns discussed in the first chapter, we will use IBM Cloud and the IBM Cloud Functions service from this point on for all lab exercises.  This will require a free account on IBM Cloud to utilize the IBM Cloud Functions (ICF) service.
 
