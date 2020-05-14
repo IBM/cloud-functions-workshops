@@ -19,7 +19,7 @@
 
 ## Syllabus
 
-### Module 1 - Serverless basics
+### Module 1 - Serverless essentials
 
 - How serverless is simplifying the Ops landscape for developers
 - Understand the basic serverless programming model and semantics of IBM Cloud Functions
@@ -29,6 +29,7 @@
 
 ### Module 2 - Create and invoke actions
 
+- Install lab prerequisites
 - Create and invoke actions
 - Use action parameters
 - Retrieve action logs

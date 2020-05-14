@@ -17,9 +17,9 @@
 #
 -->
 
-# What is serverless?
+# Serverless essentials
 
-_"...and what is it good for?"_
+In other words, _"What is serverless... and what is it good for?_.
 
 ## Learning objectives
 
@@ -27,8 +27,8 @@ In this lesson, you will learn:
 
 * What serverless computing is and its characteristics
 * How serverless simplifies the operations landscape for developers
-* The basic serverless programming model, using the semantics of IBM Cloud Functions (ICF), which includes:
-  * The differences between Function-as-a-Service (FaaS) and Container-as-a-Service (CaaS) workloads and deployment models
+* The components of a serverless programming model based upon the Observer pattern
+* The differences between Function-as-a-Service (FaaS) and Container-as-a-Service (CaaS) workloads and deployment models
 * The top use cases for serverless, including:
   * Problems that serverless can best solve
   * Problems where traditional servers may work best
