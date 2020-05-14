@@ -23,5 +23,5 @@ An independent [step-by-step guide](https://github.com/IBM/cloud-functions-works
 {% endhint %}
 
 {% hint style="success" %}
-Let's begin our first lab using the CLI!
+Now we are ready to start creating and invoking some serverless functions!
 {% endhint %}
