@@ -34,7 +34,7 @@ True. You can invoke it and pass its parameters on invocation just like a normal
 (x) False
 
 [explanation]
-False. The action from the public package needs to bound to a logical name within a local namespace before default parameters can be applied to it.
+False. The action from the public package needs to be bound to a logical name within a local namespace before default parameters can be applied to it.
 [explanation]
 
 3. If you bind a parameter value to a package, that value cannot be overridden on invocation.
