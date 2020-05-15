@@ -82,7 +82,7 @@ Let's look more closely at the `read` action in the Cloudant package:
       (parameters: *apihost, *bluemixServiceName, dbname, *id, params)
    ```
 
-   This output shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are also defined at the **package** level. If you bind values for these parameters at the package level, you do not need to provide them when the action is invoked as they are inherited.  Then when invoking you only need to provide the required `id` parameter.
+   This output shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are also defined at the **package** level. If you bind values for these parameters at the package level, you do not need to provide them when the action is invoked as they are inherited.  Then when invoking you only need to provide the required document `id` parameter.
 
 ## Invoke actions in a package
 
