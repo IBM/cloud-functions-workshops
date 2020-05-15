@@ -21,7 +21,7 @@
 
 Hello, future serverless developers!
 
-Welcome to the course that is designed to teach you the essentials of serverless computing and how to develop serverless applications, composed of loosely coupled microservice-like functions. In this course, you will be guided through several labs that show you how to implement the essential concepts using [IBM Cloud Functions](https://cloud.ibm.com/functions) (ICF), a Functions-as-a-Service (FaaS) platform based on [Apache OpenWhisk](https://openwhisk.apache.org/), and the [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) language.
+Welcome to the course that is designed to teach you the essentials of serverless computing and how to develop serverless applications, composed of loosely coupled microservice-like functions. In this course, you will be guided through several labs that show you how to implement the essential concepts using [IBM Cloud Functions](https://cloud.ibm.com/functions) (ICF), a Function-as-a-Service (FaaS) platform based on [Apache OpenWhisk](https://openwhisk.apache.org/), and the [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) language.
 
 This course begins by providing an overview of serverless, its programming and deployment models and discusses its top use cases. Then we will put this knowledge into practice using the IBM Cloud Functions service on IBM Cloud. Once you follow some minimal steps to set up your development environment, we will dive into a series of "hands on" labs that will show you how easy it is to create, deploy, and invoke serverless functions using the Node.js language.
 
