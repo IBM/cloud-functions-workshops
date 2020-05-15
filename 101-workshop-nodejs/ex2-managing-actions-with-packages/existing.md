@@ -57,7 +57,9 @@ Using the `ibmcloud fn` CLI, you can get a list of packages in a namespace, list
 
    This output shows that the Cloudant package provides many actions, including `read-document` and `update-document` and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database when configured with your access credentials.
 
-   Also note that the Cloudant package defines bound parameters that are used by all actions in the package. They include `host`, `dbname` to identify the database instance as well as keys that are used to authenticate to the Cloudant service. The  authentication parameters actions use will vary depending on authentication protocol selected for Cloudant. In this example, `username` and `password` would be used for *Basic* authentication or `iamApiKey` and `iamUrl` would be used for *OAuth* standard authentication.
+   Also note that the Cloudant package defines bound parameters that are used by all actions in the package. As you can see, they  include `host`, `dbname` to identify the database instance.
+
+   There are also required authentication parameters actions need to access the database instance. The specific parameters needed will vary depending on the authentication protocol selected for Cloudant. In this case, `username` and `password` would be used for *Basic* authentication or `iamApiKey` and `iamUrl` would be used for *OAuth* standard authentication.
 
 {% hint style="info" %}
 * Parameters listed under the package with a prefix `'*'` are predefined, bound parameters.
