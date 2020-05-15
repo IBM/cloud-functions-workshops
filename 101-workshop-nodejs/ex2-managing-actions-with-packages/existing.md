@@ -41,14 +41,18 @@ Using the `ibmcloud fn` CLI, you can get a list of packages in a namespace, list
 
    ```bash
    package /whisk.system/cloudant: Cloudant database service
-      (parameters: *apihost, *bluemixServiceName, *dbname, *host, overwrite, *password, *username)
-   action /whisk.system/cloudant/read: Read document from database
-      (parameters: dbname, id, params)
-   action /whisk.system/cloudant/write: Write document in database
-      (parameters: dbname, doc)
-      ...
-   feed /whisk.system/cloudant/changes: Database change feed
-      (parameters: dbname, filter, query_params)
+      (parameters: *apihost, *bluemixServiceName, dbname, host, iamApiKey, iamUrl, overwrite, password, username)
+   ...
+   action /whisk.system/cloudant/read-document: Read document from database
+      (parameters: dbname, docid, params)
+   action /whisk.system/cloudant/update-document: Update document in database
+      (parameters: dbname, doc, params)
+   action /whisk.system/cloudant/delete-document: Delete document from database
+      (parameters: dbname, docid, docrev)
+   ...
+   feed   /whisk.system/cloudant/changes: Database change feed
+      (parameters: dbname, filter, iamApiKey, iamUrl, query_params)
+
    ```
 
    This output shows that the Cloudant package provides many actions, including `read` and `write` and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
