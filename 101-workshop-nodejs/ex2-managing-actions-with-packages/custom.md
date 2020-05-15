@@ -183,7 +183,7 @@ Invocation parameters are merged with the package parameters. The invocation par
 
 ## Share packages
 
-After the actions and feeds that comprise a package are debugged and tested, the package can be shared with all OpenWhisk users. Sharing the package makes it possible for the users to bind the package, invoke actions in the package, and author OpenWhisk rules and sequence actions.
+After the actions and feeds that comprise a package are debugged and tested, the package can be shared with all ICF users. Sharing the package makes it possible for the users to bind the package, invoke actions in the package, and author their own rules and sequence actions.
 
 1. Share the package with all users:
 

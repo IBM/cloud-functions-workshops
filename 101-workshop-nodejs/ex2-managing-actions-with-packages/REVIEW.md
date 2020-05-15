@@ -46,13 +46,13 @@ False. The action from the public package needs to be bound to a logical name wi
 False. The parameter value on invocation always overrides those on the package binding.
 [explanation]
 
-4. After creating a custom package as private, you can clone the package to make it public.
+4. After creating a custom package as private, you can update the package to make it public.
 
-(!) True
-(x) False
+(x) True
+(!) False
 
 [explanation]
-False. You simply need to update the package using the <code>--shared</code> flag and with a value of <code>yes</code>value.
+True. You simply need to update the package using the <code>--shared</code> flag and with a value of <code>yes</code>value.
 For example:
 <p><code>ibmcloud fn package update custom --shared yes</code></p>
 [explanation]
