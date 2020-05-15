@@ -109,7 +109,7 @@ Rules are used to associate one trigger with one action. After this kind of asso
 
 ![Trigger-Rule-Action Relationship](images/101-ex0-serverless-trigger-rule-action.png)
 
-With an appropriate set of rules, a single trigger event can invoke multiple actions. Events from multiple triggers can invoke the same action.
+With an appropriate set of rules, a single trigger event can invoke multiple actions and events from multiple triggers can invoke the same action.  The diagram below depicts these trigger-action relationships enabled using rules:
 
 | 1 Trigger, 2 Actions | 2 Triggers, 1 Action |
 :-------------------------:|:-------------------------:
