@@ -43,23 +43,21 @@ Using the `ibmcloud fn` CLI, you can get a list of packages in a namespace, list
    package /whisk.system/cloudant: Cloudant database service
       (parameters: *apihost, *bluemixServiceName, dbname, host, iamApiKey, iamUrl, overwrite, password, username)
    ...
-   action /whisk.system/cloudant/read-document: Read document from database
-      (parameters: dbname, docid, params)
-   action /whisk.system/cloudant/update-document: Update document in database
-      (parameters: dbname, doc, params)
-   action /whisk.system/cloudant/delete-document: Delete document from database
-      (parameters: dbname, docid, docrev)
+   action /whisk.system/cloudant/read: Read document from database
+      (parameters: dbname, id, params)
+   action /whisk.system/cloudant/write: Write document in database
+      (parameters: dbname, doc)
    ...
    feed   /whisk.system/cloudant/changes: Database change feed
       (parameters: dbname, filter, iamApiKey, iamUrl, query_params)
 
    ```
 
-   This output shows that the Cloudant package provides many actions, including `read-document` and `update-document` and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database when configured with your access credentials.
+   This output shows that the Cloudant package provides many **actions**, including `read` and `write` and a trigger **feed** called `changes`. The `changes` feed is a special action that causes triggers to be fired whenever changes to documents are made in the specified Cloudant database.
 
-   Also note that the Cloudant package defines bound parameters that are used by all actions in the package. As you can see, they  include `host`, `dbname` to identify the database instance.
+   Also note that the Cloudant **package** itself defines parameters that, if bound with values, can be used by all actions in the package automatically. For this package, they include `host`, `dbname` to identify the database instance.
 
-   There are also required authentication parameters actions need to access the database instance. The specific parameters needed will vary depending on the authentication protocol selected for Cloudant. In this case, `username` and `password` would be used for *Basic* authentication or `iamApiKey` and `iamUrl` would be used for *OAuth* standard authentication.
+   There Cloudant package also declares required authentication parameters that all actions will need to access the database instance. The specific parameters needed will vary depending on the authentication protocol selected for Cloudant. In this case, `username` and `password` would be used for *Basic* authentication or `iamApiKey` and `iamUrl` would be used for *OAuth* standard authentication.
 
 {% hint style="info" %}
 * Parameters listed under the package with a prefix `'*'` are predefined, bound parameters.
@@ -73,7 +71,7 @@ Any entity listed under a package inherits specific bound parameters from the pa
 
 Let's look more closely at the `read` action in the Cloudant package:
 
-1. Get a description of the `/whisk.system/cloudant/read` action:
+1. Get a description of the `/whisk.system/cloudant/read-document` action:
 
    ```bash
    ibmcloud fn action get --summary /whisk.system/cloudant/read
@@ -81,10 +79,10 @@ Let's look more closely at the `read` action in the Cloudant package:
 
    ```text
    action /whisk.system/cloudant/read: Read document from database
-      (parameters: *apihost, *bluemixServiceName, *dbname, *host, *id, params, *password, *username)
+      (parameters: *apihost, *bluemixServiceName, dbname, *id, params)
    ```
 
-   This output shows that the Cloudant `read` action lists eight parameters, seven of which are predefined. These include the database and document ID (`id`) to retrieve.
+   This output shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are also defined at the **package** level. If you bind values for these parameters at the package level, you do not need to provide them when the action is invoked as they are inherited.  Then when invoking you only need to provide the required `id` parameter.
 
 ## Invoke actions in a package
 
