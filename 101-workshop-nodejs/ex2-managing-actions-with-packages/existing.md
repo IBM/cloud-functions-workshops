@@ -55,7 +55,7 @@ Using the `ibmcloud fn` CLI, you can get a list of packages in a namespace, list
 
    ```
 
-   This output shows that the Cloudant package provides many actions, including `read` and `write` and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database.
+   This output shows that the Cloudant package provides many actions, including `read-document` and `update-document` and a trigger feed called `changes`. The `changes` feed causes triggers to be fired when documents are added to the specified Cloudant database when configured with your access credentials.
 
    The Cloudant package also defines the parameters `username`, `password`, `host`, and `dbname`. These parameters must be specified for the actions and feeds to be meaningful. The parameters allow the actions to operate on a specific Cloudant account.
 
