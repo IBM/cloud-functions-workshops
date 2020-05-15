@@ -57,7 +57,7 @@ Using the `ibmcloud fn` CLI, you can get a list of packages in a namespace, list
 
    Also note that the Cloudant **package** itself defines parameters that, if bound with values, can be used by all actions in the package automatically. For this package, they include `host` and `dbname` to identify the database instance.
 
-   There Cloudant package also declares required authentication parameters that all actions will need to access the database instance. The specific parameters needed will vary depending on the authentication protocol selected for Cloudant. In this case, `username` and `password` would be used for *Basic* authentication or `iamApiKey` and `iamUrl` would be used for *OAuth* standard authentication.
+   The Cloudant package also declares authentication parameters that all actions will need to access the database instance. The specific parameters needed will vary depending on the authentication protocol selected for Cloudant. In this case, `username` and `password` would be used for *Basic* authentication or `iamApiKey` and `iamUrl` would be used for *OAuth* standard authentication.
 
 {% hint style="info" %}
 * Parameters listed under the package with a prefix `'*'` are predefined, bound parameters.
@@ -82,7 +82,11 @@ Let's look more closely at the `read` action in the Cloudant package:
       (parameters: *apihost, *bluemixServiceName, dbname, *id, params)
    ```
 
-   This output shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are also defined at the **package** level. If you bind values for these parameters at the package level, you do not need to provide them when the action is invoked as they are inherited.  Then when invoking you only need to provide the required document `id` parameter.
+   **Some parameters are bound and inherited from the package**
+
+   The output shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are predefined at the **package** level.
+
+    This means that when you create the package, you can bind values for these parameters, and they are automatically inherited by the action when invoked.  For the `read` action, you would only need to provide the required document `id` parameter when invoking; all other values are inherited.
 
 ## Invoke actions in a package
 
