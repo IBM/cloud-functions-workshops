@@ -71,7 +71,7 @@ Any entity listed under a package inherits specific bound parameters from the pa
 
 Let's look more closely at the `read` action in the Cloudant package:
 
-1. Get a description of the `/whisk.system/cloudant/read-document` action:
+1. Get a description of the `/whisk.system/cloudant/read` action:
 
    ```bash
    ibmcloud fn action get --summary /whisk.system/cloudant/read
