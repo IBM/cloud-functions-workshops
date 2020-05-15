@@ -84,7 +84,7 @@ Let's look more closely at the `read` action in the Cloudant package:
 
 2. Identify the parameters that are predefined and inherited from the Cloudant package
 
-   The output from above shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are predefined at the **package** level and thier values would be inherited on invocations. This means that the only parameter required uniquely on each invocation would be the document `id` parameter.
+   The output from above shows that the Cloudant `read` action has five parameters. Three of these parameters, `apihost`, `bluemixServiceName` and `dbname` are predefined at the **package** level and their values would be inherited on invocations. This means that the only parameter required uniquely on each invocation would be the document `id` parameter.
 
 ## Invoke actions in a package
 
