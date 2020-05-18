@@ -4,7 +4,7 @@
 
 IBM Cloud Functions (ICF) Web UI comes with a [comprehensive visualization dashboard](https://cloud.ibm.com/functions/dashboard) for monitoring invocations of actions and triggers within a region and namespace.
 
-Developers can see activation results, invocation times, and logging output through the dashboard. An activation summary and timeline are displayed and can be filtered by action name.  Trigger invocations can also be excluded from the view.
+Developers can see activation results, invocation times, and logging output through the dashboard. An activation summary and timeline are displayed and can be filtered by action name.  Trigger invocations can also be excluded from the view. In the screenshot below, all activations for actions residing in the namespace `test-iam-namespace` are shown:
 
 ![Monitoring dashboard](images/101-ex5-monitoring.png)
 
