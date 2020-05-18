@@ -19,7 +19,7 @@
 
 # Review: IBM Cloud Functions (ICF) Web User Interface (Web UI)
 
-1. When using the ICF Web UI, you can accomplish everything you can using the CLI.
+1. When using the ICF Web UI, you can accomplish almost everything you can using the CLI.
 
 (x) True
 (!) False
