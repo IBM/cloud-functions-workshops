@@ -219,6 +219,8 @@ Web actions have many more features. See the sICF [documentation](https://cloud.
 
 ### Example - HTTP redirect
 
+If you have a backend URL that keeps changing, you can provide users with a front-end URL backed by a cloud function that performs a seamless redirect.
+
 1. Create a new web action from the following source code in `redirect.js`:
 
       ```javascript
@@ -280,6 +282,8 @@ This section includes a few examples of web actions returning other content type
 
 ### Example: HTML response
 
+If you want to dynamically generate HTML content for web browser access, functions are a great way to do so based upon the latest backend data.
+
 1. Create a new web action named `html` from the following source code in html.js:
 
       ```javascript
@@ -321,6 +325,8 @@ This section includes a few examples of web actions returning other content type
       ```
 
 ### Example: SVG Response
+
+You can generate SVG graphics such as statistical or usage graphs based upon live data using a cloud function.
 
 1. Create a new web action named `atom` that has the following code that includes base64-encoded SVG content in the `body`:
 
