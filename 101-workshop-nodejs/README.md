@@ -17,7 +17,7 @@
 #
 -->
 
-# Welcome to the Serverless Computing using Cloud Functions - Developer I
+# Welcome to the Serverless Computing using Cloud Functions - Developer I course
 
 Hello, future serverless developers!
 
@@ -40,5 +40,5 @@ Without further ado, welcome to the future of cloud development; you'll never wa
 Are you ready? Let's go!
 
 {% hint style="info" %}
-Although this course uses the [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) language in its examples, you are free to use your favorite supported language, such as Python, PHP or Swift by simply supplying your own equivalent functional code.
+Although this course uses the [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) language in its labs, you are free to use your favorite supported language, such as Python, PHP or Swift by simply supplying your own equivalent functional code.
 {% endhint %}
