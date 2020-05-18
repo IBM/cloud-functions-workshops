@@ -45,7 +45,7 @@ False. Web actions are provided all HTTP request information as parsed input arg
 [ ] ibmcloud fn action get <code>&lt;action_name&gt;</code> --http
 
 [explanation]
-The `action get` retrieves the full action record which will include the URL. Supplying the `--url` flag limits the result to just the HTTP endpoint value assigned to the action.
+The <code>action get</code> retrieves the full action record which will include the URL. Supplying the <code>--url</code> flag limits the result to just the HTTP endpoint value assigned to the action.
 [explanation]
 
 4. If you have a web action that returns a JSON object, the caller must append <code>.json</code> to the web action's URL to get a successful response.
