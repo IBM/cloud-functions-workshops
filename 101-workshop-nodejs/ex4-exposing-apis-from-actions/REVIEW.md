@@ -39,10 +39,10 @@ False. Web actions are provided all HTTP request information as parsed input arg
 
 3. Which command would you use to retrieve the HTTP endpoint for a web action?
 
-[!] ibmcloud fn api get <code>ACTION_NAME</code> --url
-[x] ibmcloud fn action get <code>ACTION_NAME</code> --url
-[ ] ibmcloud fn api get <code>ACTION_NAME</code> --http
-[ ] ibmcloud fn action get <code>ACTION_NAME</code> --http
+[!] ibmcloud fn api get <code>&lt;action_name&gt;</code> --url
+[x] ibmcloud fn action get <code>&lt;action_name&gt;</code> --url
+[ ] ibmcloud fn api get <code>&lt;action_name&gt;</code> --http
+[ ] ibmcloud fn action get <code>&lt;action_name&gt;</code> --http
 
 [explanation]
 The `action get` retrieves the full action record which will include the URL. Supplying the `--url` flag limits the result to just the HTTP endpoint value assigned to the action.
