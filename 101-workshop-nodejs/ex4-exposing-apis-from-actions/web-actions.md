@@ -215,7 +215,7 @@ If a `content-type` header value is not declared in the action result’s `heade
 
 ## Additional features of web actions
 
-Web actions have many more features. See the sICF [documentation](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web) for full details on all these capabilities.
+Web actions have many more features. See the ICF [documentation](https://cloud.ibm.com/docs/openwhisk?topic=cloud-functions-actions_web) for full details on all these capabilities.
 
 ### Example - HTTP redirect
 
@@ -280,7 +280,7 @@ If you have a backend URL that keeps changing, you can provide users with a fron
 
 This section includes a few examples of web actions returning other content types. You can follow along by trying these examples in your browser.
 
-### Example: HTML response
+### **Example: HTML response**
 
 If you want to dynamically generate HTML content for web browser access, functions are a great way to do so based upon the latest backend data.
 
@@ -324,7 +324,7 @@ If you want to dynamically generate HTML content for web browser access, functio
       <html><body>Hello World!</body></html>
       ```
 
-### Example: SVG Response
+### **Example: SVG Response**
 
 You can generate SVG graphics such as statistical or usage graphs based upon live data using a cloud function.
 
@@ -372,7 +372,7 @@ You can generate SVG graphics such as statistical or usage graphs based upon liv
 If you want to see the unencoded SVG XML source, you can save the image file to your local computer and view it in a text editor.
 {% endhint %}
 
-### Example: Manual JSON response
+### **Example: Manual JSON response**
 
 If our function is only able to return a response in JSON, you can set the `content-type` manually in the function. This is so the caller doesn’t need to append `.json` to the URL.
 
