@@ -17,11 +17,11 @@
 #
 -->
 
-# Welcome to the Serverless Computing - Developer I - using Cloud Functions
+# Welcome to the Serverless Computing using Cloud Functions - Developer I
 
 Hello, future serverless developers!
 
-Welcome to a course that is designed to teach you serverless computing essentials! Here you will learn how to develop serverless applications composed of loosely coupled microservice-like functions. Although many cloud providers offer different implementations of serverless using cloud functions, in this course, you will be guided through several labs that demonstrate how to implement essential concepts using [IBM Cloud Functions](https://cloud.ibm.com/functions) (ICF), a Functions-as-a-Service (FaaS) platform based on [Apache OpenWhisk](https://openwhisk.apache.org/), and the [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) language.
+Welcome to a course that is designed to teach you serverless computing essentials! Here you will learn how to develop serverless applications composed of loosely coupled microservice-like functions. Although many cloud providers offer different implementations of serverless using cloud functions, this course specifically guides you through several labs that demonstrate how to implement essential concepts using [IBM Cloud Functions](https://cloud.ibm.com/functions) (ICF). ICF is a Functions-as-a-Service (FaaS) platform based on [Apache OpenWhisk](https://openwhisk.apache.org/).
 
 This course will also walk you through the following:
 
@@ -40,5 +40,5 @@ Without further ado, welcome to the future of cloud development; you'll never wa
 Are you ready? Let's go!
 
 {% hint style="info" %}
-Although this course uses the Node.js language in its examples, you are free to use your favorite supported language, such as Python, PHP or Swift by simply supplying equivalent functional code.
+Although this course uses the [Node.js](https://nodejs.org/) ([JavaScript](https://nodejs.org/about/)) language in its examples, you are free to use your favorite supported language, such as Python, PHP or Swift by simply supplying your own equivalent functional code.
 {% endhint %}
