@@ -36,4 +36,3 @@ Actions are stateless code snippets (functions) that run on the ICF platform. Th
 Actions can be used to do many things. For example, an action can be used to respond to a database change, aggregate a set of API calls, post a Tweet, or even work with AI and analytics services to detect objects in an image or streamed video.
 
 Actions can be explicitly invoked or run in response to an event. In either case, each run of an action results in an activation record that is identified by a unique activation ID. The input to an action and the result of an action are a dictionary of key-value pairs, where the key is a string and the value a valid JSON value. Actions can also be composed of calls to other actions or a defined sequence of actions.
- value a valid JSON value. Actions can also be composed of calls to other actions or a defined sequence of actions.
